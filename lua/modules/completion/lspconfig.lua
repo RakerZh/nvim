@@ -43,7 +43,6 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
 })
 
 
-require("grammar-guard").init()
 
 local enhance_attach = function(client,bufnr)
   if client.resolved_capabilities.document_formatting then
@@ -103,6 +102,9 @@ lspconfig.rust_analyzer.setup {
   capabilities = capabilities,
 }
 
+
+require("grammar-guard").init()
+
 lspconfig.grammar_guard.setup {
   root_dir = function()
             return vim.fn.getcwd()
@@ -124,6 +126,8 @@ lspconfig.grammar_guard.setup {
       },
   },
 }
+
+
 
 
 local servers = {
