@@ -30,7 +30,8 @@ ui['akinsho/nvim-bufferline.lua'] = {
 ui['kyazdani42/nvim-tree.lua'] = {
   cmd = {'NvimTreeToggle','NvimTreeOpen'},
   config = conf.nvim_tree,
-  requires = 'kyazdani42/nvim-web-devicons'
+  requires = 'kyazdani42/nvim-web-devicons',
+--  config = function() require'nvim-tree'.setup {} end
 }
 
 ui['lewis6991/gitsigns.nvim'] = {
