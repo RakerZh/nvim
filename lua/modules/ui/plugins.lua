@@ -9,10 +9,10 @@ ui['glepnir/dashboard-nvim'] = {
   config = conf.dashboard
 }
 
-ui['glepnir/galaxyline.nvim'] = {
+ui['NTBBloodbath/galaxyline.nvim'] = {
   branch = 'main',
   config = conf.galaxyline,
-  requires = 'kyazdani42/nvim-web-devicons'
+  requires = {'kyazdani42/nvim-web-devicons',opt=true}
 }
 
 ui['lukas-reineke/indent-blankline.nvim'] = {

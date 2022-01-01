@@ -50,4 +50,7 @@ completion['mattn/emmet-vim'] = {
 completion['brymer-meneses/grammar-guard.nvim'] = {
 }
 
+completion["folke/lua-dev.nvim"] = {
+}
+
 return completion

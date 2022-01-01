@@ -9,7 +9,46 @@ end
 
 local saga = require 'lspsaga'
 saga.init_lsp_saga({
-  code_action_icon = '💡'
+  code_action_icon = '💡',
+   debug = false,
+  use_saga_diagnostic_sign = true,
+  -- diagnostic sign
+  error_sign = "",
+  warn_sign = "",
+  hint_sign = "",
+  infor_sign = "",
+  diagnostic_header_icon = "   ",
+  -- code action title icon
+  code_action_prompt = {
+    enable = true,
+    sign = true,
+    sign_priority = 40,
+    virtual_text = true,
+  },
+  finder_definition_icon = "  ",
+  finder_reference_icon = "  ",
+  max_preview_lines = 10,
+  finder_action_keys = {
+    open = "o",
+    vsplit = "s",
+    split = "i",
+    quit = "q",
+    scroll_down = "<C-f>",
+    scroll_up = "<C-b>",
+  },
+  code_action_keys = {
+    quit = "q",
+    exec = "<CR>",
+  },
+  rename_action_keys = {
+    quit = "<C-c>",
+    exec = "<CR>",
+  },
+  definition_preview_icon = "  ",
+  border_style = "single",
+  rename_prompt_prefix = "➤",
+  server_filetype_map = {},
+  diagnostic_prefix_format = "%d. ",
 })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -60,6 +99,17 @@ lspconfig.gopls.setup {
     completeUnimported=true,
   }
 }
+
+local luadev = require("lua-dev").setup({
+  -- add any options here, or leave empty to use the default settings
+  -- lspconfig = {
+  --   cmd = {"lua-language-server"}
+  -- },
+ })
+
+lspconfig.sumneko_lua.setup(luadev)
+
+
 
 lspconfig.sumneko_lua.setup {
   cmd = {
@@ -139,3 +189,4 @@ for _,server in ipairs(servers) do
     on_attach = enhance_attach
   }
 end
+
