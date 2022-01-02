@@ -1,8 +1,8 @@
 local config = {}
 
 function config.galaxyline()
-  require('modules.ui.eviline1')
--- require('galaxyline.themes.eviline')
+--  require('modules.ui.eviline1')
+ require('galaxyline.themes.eviline')
 end
 
 function config.nvim_bufferline()
