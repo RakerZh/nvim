@@ -35,7 +35,7 @@ tools['iamcco/markdown-preview.nvim'] = {
 }
 
 tools['sindrets/diffview.nvim'] = {
-  requires = {{'nvim-lua/pleanry.nvim',opt = true}},
+  requires = {{'nvim-lua/plenary.nvim',opt = true}},
   config = conf.diffview,
 }
 
