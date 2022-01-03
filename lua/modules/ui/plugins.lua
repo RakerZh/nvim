@@ -38,7 +38,8 @@ ui['lewis6991/gitsigns.nvim'] = {
   event = {'BufRead','BufNewFile'},
   branch = 'main',
   config = conf.gitsigns,
-  requires = {'nvim-lua/plenary.nvim',opt=true}
+  requires = {'nvim-lua/plenary.nvim'}
 }
+
 
 return ui
