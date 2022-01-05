@@ -90,6 +90,7 @@ function plugins.convert_compile_file()
       end
     end
   end
+
   table.remove(lines,#lines)
 
   if vim.fn.isdirectory(data_dir .. 'lua') ~= 1 then

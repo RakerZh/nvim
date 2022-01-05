@@ -90,6 +90,7 @@ local enhance_attach = function(client,bufnr)
   api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 end
 
+
 lspconfig.gopls.setup {
   cmd = {"gopls","--remote=auto"},
   on_attach = enhance_attach,

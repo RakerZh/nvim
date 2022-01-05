@@ -52,9 +52,7 @@ local golines_format = function()
   end)
 
   uv.shutdown(stdin, function()
-    print("stdin shutdown",stdin)
     uv.close(handle, function()
-      print("process closed", handle,pid)
     end)
   end)
 end
