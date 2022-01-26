@@ -37,7 +37,7 @@ completion['glepnir/smartinput.nvim'] = {
 
 completion['mattn/vim-sonictemplate'] = {
   cmd = 'Template',
-  ft = {'go','typescript','lua','javascript','vim','rust','markdown'},
+  ft = {'go','typescript','lua','javascript','vim','rust','markdown', 'cpp'},
   config = conf.vim_sonictemplate,
 }
 

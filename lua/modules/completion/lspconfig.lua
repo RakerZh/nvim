@@ -101,18 +101,11 @@ lspconfig.gopls.setup {
   }
 }
 
-local luadev = require("lua-dev").setup({
-  -- add any options here, or leave empty to use the default settings
-  -- lspconfig = {
-  --   cmd = {"lua-language-server"}
-  -- },
- })
-
-lspconfig.sumneko_lua.setup(luadev)
 
 
 
 lspconfig.sumneko_lua.setup {
+  require("lua-dev").setup{};
   cmd = {
     global.home.."/workconfig/lua-language-server/bin/lua-language-server",
     "-E",
@@ -131,6 +124,7 @@ lspconfig.sumneko_lua.setup {
     },
   }
 }
+
 
 lspconfig.tsserver.setup {
   on_attach = function(client)
