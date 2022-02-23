@@ -41,5 +41,11 @@ ui['lewis6991/gitsigns.nvim'] = {
   requires = {'nvim-lua/plenary.nvim'}
 }
 
+ui['rcarriga/nvim-dap-ui'] = {
+   requires = {"mfussenegger/nvim-dap"},
+   config = conf.dapui,
+}
+
+
 
 return ui

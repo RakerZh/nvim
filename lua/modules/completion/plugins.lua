@@ -47,14 +47,16 @@ completion['mattn/emmet-vim'] = {
   config = conf.emmet,
 }
 
-completion['brymer-meneses/grammar-guard.nvim'] = {
-}
-
 completion["folke/lua-dev.nvim"] = {
 }
 
 completion['ray-x/go.nvim'] = {
   config = function() require'go'.setup {} end
 }
+
+completion["dvdsk/prosesitter"] = {
+  config = conf.prosesitter
+}
+
 
 return completion

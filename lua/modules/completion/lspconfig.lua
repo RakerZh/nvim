@@ -136,10 +136,10 @@ lspconfig.tsserver.setup {
 lspconfig.clangd.setup {
   cmd = {
     "clangd",
-    "--background-index",
-    "--suggest-missing-includes",
-    "--clang-tidy",
-    "--header-insertion=iwyu",
+--    "--background-index",
+--    "--suggest-missing-includes",
+--    "--clang-tidy",
+--    "--header-insertion=iwyu",
   },
 }
 
@@ -147,31 +147,32 @@ lspconfig.rust_analyzer.setup {
   capabilities = capabilities,
 }
 
-
-require("grammar-guard").init()
-
-lspconfig.grammar_guard.setup {
-  root_dir = function()
-            return vim.fn.getcwd()
-          end,
-  settings = {
-      ltex = {
-            enabled = {"latex", "markdown"},
-            language = "en",
-            diagnosticSeverity = "information",
-            setenceCacheSize = 2000,
-            additionalRules = {
-                enablePickRules = true,
-                motherTongue = "en",
-            },
-            trace = { server = "verbose"},
-            dictionary = {},
-            disabledRules = {},
-            hiddenFalsePositives = {},
-      },
-  },
+lspconfig.prosesitter.setup {
+  vale_bin = vim.fn.stdpath("data") .. "/prosesitter/vale",
+	vale_cfg = vim.fn.stdpath("data") .. "/prosesitter/vale_cfg.ini",
+	-- override default behaviour for a languag
+	ext = {
+		py = {
+			queries = {
+				strings = "[(string) ] @capture",
+				comments = "[(comment)+ ] @capture",
+			},
+			lint_target = "both",
+			disabled = false,
+		},
+		tex = {
+			lint_target = "strings",
+			disabled = false,
+		},
+		sh = {
+			lint_target = "comments",
+		},
+	},
+	-- highlight groups to use for lint errors, warnings and suggestions
+	severity_to_hl = { error = "SpellBad", warning = "SpellRare", suggestion = "SpellCap" },
+	auto_enable = true, -- do not start linting files on open (default = true)
+	default_cmds = false, -- do not add commands (default = true)
 }
-
 
 
 

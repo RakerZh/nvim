@@ -34,9 +34,25 @@ tools['iamcco/markdown-preview.nvim'] = {
   end
 }
 
+tools['mfussenegger/nvim-dap'] = {
+}
+
+tools['Shatur/neovim-cmake'] = {
+  requires = {{'nvim-lua/plenary.nvim',opt = true}},
+}
+
 tools['sindrets/diffview.nvim'] = {
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
   config = conf.diffview,
+}
+
+tools['searleser97/cpbooster.vim'] = {
+}
+
+
+tools['TimUntersberger/neogit'] = {
+  requires = {{'nvim-lua/plenary.nvim',opt = true}},
+  config = conf.neogit,
 }
 
 return tools
