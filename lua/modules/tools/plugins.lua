@@ -51,7 +51,7 @@ tools['searleser97/cpbooster.vim'] = {
 
 
 tools['TimUntersberger/neogit'] = {
-  requires = {{'nvim-lua/plenary.nvim',opt = true}},
+  requires = {'nvim-lua/plenary.nvim'},
   config = conf.neogit,
 }
 
