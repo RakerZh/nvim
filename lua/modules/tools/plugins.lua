@@ -1,6 +1,9 @@
 local tools = {}
 local conf = require('modules.tools.config')
 
+tools['nvim-lua/plenary.nvim'] = {
+}
+
 tools['kristijanhusak/vim-dadbod-ui'] = {
   cmd = {'DBUIToggle','DBUIAddConnection','DBUI','DBUIFindBuffer','DBUIRenameBuffer'},
   config = conf.vim_dadbod_ui,
@@ -43,7 +46,9 @@ tools['Shatur/neovim-cmake'] = {
 
 tools['sindrets/diffview.nvim'] = {
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
-  config = conf.diffview,
+  config = function ()
+    require('diffview')
+  end
 }
 
 tools['searleser97/cpbooster.vim'] = {
@@ -51,8 +56,10 @@ tools['searleser97/cpbooster.vim'] = {
 
 
 tools['TimUntersberger/neogit'] = {
-  requires = {'nvim-lua/plenary.nvim'},
-  config = conf.neogit,
+  requires = {{'nvim-lua/plenary.nvim',opt = true}},
+  config = function ()
+    require('neogit')
+  end
 }
 
 return tools

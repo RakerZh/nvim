@@ -1,7 +1,7 @@
 local ui = {}
 local conf = require('modules.ui.config')
 
-ui['glepnir/zephyr-nvim'] = {
+ui['RakerZh/zephyr-nvim'] = {
   config = [[vim.cmd('colorscheme zephyr')]]
 }
 
@@ -28,7 +28,7 @@ ui['akinsho/nvim-bufferline.lua'] = {
 }
 
 ui['kyazdani42/nvim-tree.lua'] = {
-  cmd = {'NvimTreeToggle','NvimTreeOpen'},
+--  cmd = {'NvimTreeToggle','NvimTreeOpen'},
   config = conf.nvim_tree,
   requires = 'kyazdani42/nvim-web-devicons',
 --  config = function() require'nvim-tree'.setup {} end
@@ -44,6 +44,11 @@ ui['lewis6991/gitsigns.nvim'] = {
 ui['rcarriga/nvim-dap-ui'] = {
    requires = {"mfussenegger/nvim-dap"},
    config = conf.dapui,
+}
+ui['theHamsta/nvim-dap-virtual-text'] = {
+   config = function ()
+     require("nvim-dap-virtual-text").setup()
+   end
 }
 
 

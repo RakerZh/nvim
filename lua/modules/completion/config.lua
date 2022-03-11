@@ -33,7 +33,7 @@ function config.telescope()
   if not packer_plugins['plenary.nvim'].loaded then
     vim.cmd [[packadd plenary.nvim]]
     vim.cmd [[packadd popup.nvim]]
-    vim.cmd [[packadd telescope-fzy-native.nvim]]
+    vim.cmd [[packadd telescope-fzf-native.nvim]]
   end
   require('telescope').setup {
     defaults = {
@@ -52,15 +52,16 @@ function config.telescope()
       qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
     },
     extensions = {
-        fzy_native = {
+        fzf = {
             override_generic_sorter = false,
             override_file_sorter = true,
+            case_mode = "smart_case",
         }
     }
   }
-  require('telescope').load_extension('fzy_native')
-  require'telescope'.load_extension('dotfiles')
-  require'telescope'.load_extension('gosource')
+  require('telescope').load_extension('fzf')
+  require('telescope').load_extension('dotfiles')
+  require('telescope').load_extension('gosource')
 end
 
 function config.vim_sonictemplate()

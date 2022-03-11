@@ -5,7 +5,7 @@ lang['nvim-treesitter/nvim-treesitter'] = {
   event = 'BufRead',
   after = 'telescope.nvim',
   config = conf.nvim_treesitter,
---  commit = '668de0951a36ef17016074f1120b6aacbe6c4515',
+--  commit = ' b8129fac90a44412eed542b35b1e7ff1fe38cc64',
 }
 
 lang['nvim-treesitter/nvim-treesitter-textobjects'] = {
