@@ -57,13 +57,7 @@ function config.nvim_tree()
 --    end
 --  )
 
-  -- vim.g.nvim_tree_hide_dotfiles = 1
   vim.g.nvim_tree_indent_markers = 1
---  view.mappings.list = {
---    ["l"] = ":lua require'nvim-tree'.on_keypress('edit')<CR>",
---    ["s"] = ":lua require'nvim-tree'.on_keypress('vsplit')<CR>",
---    ["i"] = ":lua require'nvim-tree'.on_keypress('split')<CR>",
---  }
   vim.g.nvim_tree_icons = {
     default =  '',
     symlink =  '',
@@ -97,8 +91,6 @@ function config.nvim_tree()
   open_on_tab         = false,
   hijack_cursor       = false,
   update_cwd          = false,
---  update_focused_file.enable = true,
---  filters.dotfiles = true,
   update_to_buf_dir   = {
     enable = true,
     auto_open = true,
@@ -113,7 +105,7 @@ function config.nvim_tree()
     }
   },
   update_focused_file = {
-    enable      = false,
+    enable      = true,
     update_cwd  = false,
     ignore_list = {}
   },
@@ -122,7 +114,7 @@ function config.nvim_tree()
     args = {}
   },
   filters = {
-    dotfiles = false,
+    dotfiles = true,
     custom = {}
   },
   git = {
@@ -138,7 +130,12 @@ function config.nvim_tree()
     auto_resize = false,
     mappings = {
       custom_only = false,
-      list = {}
+      list = {
+            ["l"] = ":lua require'nvim-tree'.on_keypress('edit')<CR>",
+            ["s"] = ":lua require'nvim-tree'.on_keypress('vsplit')<CR>",
+            ["i"] = ":lua require'nvim-tree'.on_keypress('split')<CR>",
+ 
+      }
     },
     number = false,
     relativenumber = false,
