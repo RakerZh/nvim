@@ -12,6 +12,8 @@ local plug_map = {
     -- person keymap
     ["n|mf"]             = map_cr("<cmd>lua require('internal.fsevent').file_event()<CR>"):with_silent():with_nowait():with_noremap();
     ["n|gb"]             = map_cr("BufferLinePick"):with_noremap():with_silent(),
+--    ["n|<A-h>"]          = map_cr(
+--    ["n|∂"]              = map_cr("<A-d>"):with_noremap():with_silent(),
     -- Packer
     ["n|<leader>pu"]     = map_cr("PackerUpdate"):with_silent():with_noremap():with_nowait();
     ["n|<leader>pi"]     = map_cr("PackerInstall"):with_silent():with_noremap():with_nowait();
@@ -36,18 +38,24 @@ local plug_map = {
     ["n|<Leader>ce"]     = map_cr('Lspsaga show_line_diagnostics'):with_noremap():with_silent(),
     ["n|<Leader>ct"]      = map_args("Template"),
     ["n|<Leader>tf"]     = map_cu('DashboardNewFile'):with_noremap():with_silent(),
+    ["n|<Leader>;"]      = map_cr("LspStop"):with_noremap():with_silent(),
+
     -- Plugin nvim-tree
-    --
     ["n|<Leader>R"]      = map_cr('NvimTreeRefresh'):with_noremap():with_silent(),
     ["n|<Leader>e"]      = map_cr('NvimTreeToggle'):with_noremap():with_silent(),
     ["n|<Leader>F"]      = map_cr('NvimTreeFindFile'):with_noremap():with_silent(),
+
     -- Plugin MarkdownPreview
     ["n|<Leader>om"]     = map_cu('MarkdownPreview'):with_noremap():with_silent(),
+
     -- Plugin DadbodUI
     ["n|<Leader>od"]     = map_cr('DBUIToggle'):with_noremap():with_silent(),
+
     -- Plugin Floaterm
-    ["n|<A-d>"]          = map_cu('Lspsaga open_floaterm'):with_noremap():with_silent(),
-    ["t|<A-d>"]          = map_cu([[<C-\><C-n>:Lspsaga close_floaterm<CR>]]):with_noremap():with_silent(),
+--    ["n|<A-d>"]          = map_cu('Lspsaga open_floaterm'):with_noremap():with_silent(),
+    ["n|∂"]              = map_cu('Lspsaga open_floaterm'):with_noremap():with_silent(),
+-- ["t|<A-d>"]          = map_cu([[<C-\><C-n>:Lspsaga close_floaterm<CR>]]):with_noremap():with_silent(),
+    ["t|∂"]              = map_cu([[<C-\><C-n>:Lspsaga close_floaterm<CR>]]):with_noremap():with_silent(),
     ["n|<Leader>g"]      = map_cu("Lspsaga open_floaterm lazygit"):with_noremap():with_silent(),
     -- Far.vim
     ["n|<Leader>fz"]     = map_cr('Farf'):with_noremap():with_silent();
