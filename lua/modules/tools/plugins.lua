@@ -62,4 +62,18 @@ tools['TimUntersberger/neogit'] = {
   end
 }
 
+tools['github/copilot.vim'] = {
+
+}
+
+tools['famiu/bufdelete.nvim'] = {
+  config = function ()
+--    require('bufdelete').BufferDelete(0, true)
+-- Wipeout buffer number 100 without force
+--    require('bufdelete').BufferWipeout(0)
+end
+
+}
+
+
 return tools

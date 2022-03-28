@@ -135,12 +135,13 @@ lspconfig.tsserver.setup {
 
 lspconfig.clangd.setup {
   cmd = {
+--    global.home.."/workconfig/cclangd/clangd.sh"
     "clangd",
---    "--background-index",
+    "--background-index"
 --    "--suggest-missing-includes",
-   "--clang-tidy",
+--   "--clang-tidy",
 --    "--header-insertion=iwyu",
-  },
+     },
 }
 
 lspconfig.rust_analyzer.setup {

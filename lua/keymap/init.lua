@@ -44,6 +44,9 @@ local plug_map = {
     ["n|<Leader>R"]      = map_cr('NvimTreeRefresh'):with_noremap():with_silent(),
     ["n|<Leader>e"]      = map_cr('NvimTreeToggle'):with_noremap():with_silent(),
     ["n|<Leader>F"]      = map_cr('NvimTreeFindFile'):with_noremap():with_silent(),
+    ["n|<Leader>rh"]      = map_cr('NvimTreeResize +5'):with_noremap():with_silent():with_nowait(),
+    ["n|<Leader>r1"]      = map_cr('NvimTreeResize +10'):with_noremap():with_silent():with_nowait(),
+    ["n|<Leader>rl"]      = map_cr('NvimTreeResize -2'):with_noremap():with_silent():with_nowait(),
 
     -- Plugin MarkdownPreview
     ["n|<Leader>om"]     = map_cu('MarkdownPreview'):with_noremap():with_silent(),
