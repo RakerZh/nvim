@@ -57,7 +57,6 @@ function config.nvim_tree()
 --    end
 --  )
 
-  vim.g.nvim_tree_indent_markers = 1
   vim.g.nvim_tree_icons = {
     default =  '',
     symlink =  '',
@@ -134,7 +133,6 @@ function config.nvim_tree()
             ["l"] = ":lua require'nvim-tree'.on_keypress('edit')<CR>",
             ["s"] = ":lua require'nvim-tree'.on_keypress('vsplit')<CR>",
             ["i"] = ":lua require'nvim-tree'.on_keypress('split')<CR>",
- 
       }
     },
     number = false,
@@ -144,6 +142,11 @@ function config.nvim_tree()
   trash = {
     cmd = "trash",
     require_confirm = true
+  },
+  render = {
+    indent_markers ={
+      enable = true,
+    }
   }
 }
 end

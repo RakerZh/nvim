@@ -12,6 +12,7 @@ local plug_map = {
     -- person keymap
     ["n|mf"]             = map_cr("<cmd>lua require('internal.fsevent').file_event()<CR>"):with_silent():with_nowait():with_noremap();
     ["n|gb"]             = map_cr("BufferLinePick"):with_noremap():with_silent(),
+    ["n|<leader>bd"]             = map_cr("Bdelete"):with_noremap():with_silent(),
 --    ["n|<A-h>"]          = map_cr(
 --    ["n|∂"]              = map_cr("<A-d>"):with_noremap():with_silent(),
     -- Packer
