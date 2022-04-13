@@ -62,5 +62,9 @@ completion["dvdsk/prosesitter"] = {
   config = conf.prosesitter
 }
 
+completion["p00f/clangd_extensions.nvim"] ={
+  config = conf.clangd_extension
+}
+
 
 return completion
