@@ -54,17 +54,7 @@ completion['mattn/emmet-vim'] = {
 completion["folke/lua-dev.nvim"] = {
 }
 
-completion['ray-x/go.nvim'] = {
-  config = function() require'go'.setup {} end
-}
 
-completion["dvdsk/prosesitter"] = {
-  config = conf.prosesitter
-}
-
-completion["p00f/clangd_extensions.nvim"] ={
-  config = conf.clangd_extension
-}
 
 
 return completion

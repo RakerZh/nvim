@@ -52,6 +52,7 @@ tools['sindrets/diffview.nvim'] = {
 }
 
 tools['searleser97/cpbooster.vim'] = {
+
 }
 
 
@@ -72,8 +73,27 @@ tools['famiu/bufdelete.nvim'] = {
 -- Wipeout buffer number 100 without force
 --    require('bufdelete').BufferWipeout(0)
 end
+}
+
+tools['ray-x/go.nvim'] = {
 
 }
+
+tools['p00f/clangd_extensions.nvim'] = {
+    config = function ()
+        require('clangd_extensions')
+    end
+}
+
+tools['dvdsk/prosesitter'] = {
+    config = function ()
+      require('prosesitter')
+    end
+}
+
+
+
+
 
 
 return tools

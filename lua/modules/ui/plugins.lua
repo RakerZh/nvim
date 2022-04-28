@@ -50,6 +50,8 @@ ui['theHamsta/nvim-dap-virtual-text'] = {
      require("nvim-dap-virtual-text").setup()
    end
 }
+ui['mechatroner/rainbow_csv'] = {
+}
 
 
 
