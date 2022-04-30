@@ -101,10 +101,10 @@ lspconfig.gopls.setup {
   }
 }
 
-lspconfig.clangd.setup {
-  cmd = {"clangd"},
-  filetypes = { "c", "cpp", "objc", "objcpp" },
-}
+--lspconfig.clangd.setup {
+--  cmd = {"clangd"},
+--  filetypes = { "c", "cpp", "objc", "objcpp" },
+--}
 
 
 lspconfig.sumneko_lua.setup {

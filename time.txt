@@ -1,0 +1,81 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.005  000.005: --- NVIM STARTING ---
+000.641  000.636: locale set
+001.019  000.378: inits 1
+001.035  000.016: window checked
+001.036  000.002: parsing arguments
+003.147  002.111: expanding arguments
+003.202  000.055: inits 2
+003.743  000.541: init highlight
+003.747  000.004: waiting for UI
+005.660  001.913: done waiting for UI
+005.671  000.010: init screen for UI
+005.689  000.018: init default mappings
+005.722  000.034: init default autocommands
+006.682  000.054  000.054: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/ftplugin.vim
+006.838  000.027  000.027: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/indent.vim
+046.406  001.160  001.160: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/zephyr-nvim/colors/zephyr.vim
+049.781  000.012  000.012: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/opt/vim-sonictemplate/ftdetect/stpl.vim
+049.798  042.860  041.688: sourcing /Users/rakerzhang/.config/nvim/init.lua
+049.813  001.149: sourcing vimrc file(s)
+050.011  000.037  000.037: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/filetype.lua
+053.431  000.057  000.057: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/go.nvim/ftdetect/go.vim
+053.634  003.592  003.535: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/filetype.vim
+053.816  000.042  000.042: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/syntax/synload.vim
+053.859  000.184  000.142: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/syntax/syntax.vim
+054.512  000.048  000.048: sourcing /Users/rakerzhang/.config/nvim/plugin/cursorhold_nvim.vim
+054.579  000.039  000.039: sourcing /Users/rakerzhang/.config/nvim/plugin/difftools.vim
+054.670  000.062  000.062: sourcing /Users/rakerzhang/.config/nvim/plugin/whitespace.vim
+055.202  000.016  000.016: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/gzip.vim
+055.249  000.019  000.019: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/health.vim
+055.315  000.034  000.034: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/man.vim
+055.349  000.010  000.010: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/matchit.vim
+055.385  000.010  000.010: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/matchparen.vim
+055.421  000.014  000.014: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/netrwPlugin.vim
+055.557  000.007  000.007: sourcing /Users/rakerzhang/.local/share/nvim/rplugin.vim
+055.561  000.117  000.110: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/rplugin.vim
+055.638  000.047  000.047: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/shada.vim
+055.682  000.015  000.015: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/spellfile.vim
+055.721  000.012  000.012: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/tarPlugin.vim
+055.753  000.009  000.009: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/tohtml.vim
+055.789  000.014  000.014: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/tutor.vim
+055.835  000.014  000.014: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/plugin/zipPlugin.vim
+056.417  002.311: loading rtp plugins
+056.789  000.031  000.031: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/bufdelete.nvim/plugin/bufdelete.vim
+058.318  000.356  000.356: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/copilot.vim/autoload/copilot.vim
+058.338  001.311  000.955: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/copilot.vim/plugin/copilot.vim
+058.518  000.018  000.018: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/cpbooster.vim/plugin/cpbooster.vim
+058.787  000.115  000.115: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/dashboard-nvim/plugin/dashboard.vim
+059.083  000.072  000.072: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/diffview.nvim/plugin/diffview.vim
+059.360  000.062  000.062: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/galaxyline.nvim/plugin/galaxyline.lua
+059.480  000.017  000.017: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/go.nvim/plugin/go.vim
+059.821  000.143  000.143: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/neogit/plugin/neogit.vim
+062.198  002.161  002.161: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/neovim-cmake/plugin/cmake.lua
+062.467  000.050  000.050: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/nvim-dap/plugin/dap.lua
+062.734  000.023  000.023: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/plugin/nvim-web-devicons.vim
+062.912  000.022  000.022: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+063.166  000.053  000.053: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/rainbow_csv/plugin/rainbow_csv.vim
+063.420  002.924: loading packages
+063.483  000.063: loading after plugins
+063.492  000.009: inits 3
+063.779  000.287: reading ShaDa
+064.278  000.499: opening buffers
+065.290  000.608  000.608: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/rainbow_csv/autoload/rainbow_csv.vim
+065.510  000.624: BufEnter autocommands
+065.511  000.001: editing files in windows
+065.706  000.088  000.088: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/dashboard-nvim/autoload/dashboard.vim
+066.850  001.027  001.027: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/dashboard-nvim/autoload/dashboard/utils.vim
+067.200  000.286  000.286: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/dashboard-nvim/autoload/dashboard/header.vim
+067.901  000.241  000.241: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/dashboard-nvim/autoload/dashboard/section.vim
+068.442  000.119  000.119: sourcing /opt/homebrew/Cellar/neovim/0.7.0/share/nvim/runtime/autoload/provider/clipboard.vim
+070.166  000.269  000.269: sourcing /Users/rakerzhang/.local/share/nvim/site/pack/packer/start/dashboard-nvim/syntax/dashboard.vim
+070.920  003.379: VimEnter autocommands
+070.921  000.001: UIEnter autocommands
+070.923  000.002: before starting main loop
+076.826  005.903: first screen update
+076.826  000.001: --- NVIM STARTED ---
