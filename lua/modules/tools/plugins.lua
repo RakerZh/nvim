@@ -79,21 +79,16 @@ tools['ray-x/go.nvim'] = {
 
 }
 
-tools['p00f/clangd_extensions.nvim'] = {
-    config = function ()
-        require('clangd_extensions')
-    end
-}
-
 tools['dvdsk/prosesitter'] = {
     config = function ()
       require('prosesitter')
     end
 }
 
-
-
-
-
+tools['rcarriga/nvim-notify'] = {
+  config = function()
+    require('notify')
+  end
+}
 
 return tools

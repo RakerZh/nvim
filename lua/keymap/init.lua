@@ -45,8 +45,8 @@ local plug_map = {
     ["n|<Leader>R"]      = map_cr('NvimTreeRefresh'):with_noremap():with_silent(),
     ["n|<Leader>e"]      = map_cr('NvimTreeToggle'):with_noremap():with_silent(),
     ["n|<Leader>F"]      = map_cr('NvimTreeFindFile'):with_noremap():with_silent(),
-    ["n|<Leader>rh"]      = map_cr('NvimTreeResize -1'):with_noremap():with_silent():with_nowait(),
-    ["n|<Leader>r1"]      = map_cr('NvimTreeResize -10'):with_noremap():with_silent():with_nowait(),
+    ["n|<Leader>rj"]      = map_cr('NvimTreeResize -1'):with_noremap():with_silent():with_nowait(),
+    ["n|<Leader>rh"]      = map_cr('NvimTreeResize -10'):with_noremap():with_silent():with_nowait(),
     ["n|<Leader>rl"]      = map_cr('NvimTreeResize +2'):with_noremap():with_silent():with_nowait(),
 
     ["n|<Leader>bh"]     = map_cr("BufferLinePickClose"):with_noremap():with_silent():with_nowait(),

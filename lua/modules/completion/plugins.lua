@@ -54,6 +54,11 @@ completion['mattn/emmet-vim'] = {
 completion["folke/lua-dev.nvim"] = {
 }
 
+completion['p00f/clangd_extensions.nvim'] = {
+    config = function ()
+        require('clangd_extensions')
+    end
+}
 
 
 
