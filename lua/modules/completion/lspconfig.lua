@@ -1,7 +1,7 @@
 local api = vim.api
 local lspconfig = require 'lspconfig'
 local global = require 'core.global'
-local format = require('modules.completion.format')
+local format = require'modules.completion.format'
 
 if not packer_plugins['lspsaga.nvim'].loaded then
   vim.cmd [[packadd lspsaga.nvim]]
@@ -81,8 +81,6 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
     update_in_insert = false,
 })
 
-
-
 local enhance_attach = function(client,bufnr)
   if client.resolved_capabilities.document_formatting then
     format.lsp_before_save()
@@ -131,7 +129,7 @@ lspconfig.sumneko_lua.setup {
 
 lspconfig.tsserver.setup {
   on_attach = function(client)
-    client.resolved_capabilities.document_formatting = false
+    client.server_capabilities.document_formatting = false
     enhance_attach(client)
   end
 }

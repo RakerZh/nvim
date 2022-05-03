@@ -2,9 +2,20 @@
 
 -- local plugin = "My Awesome Plugin"
 
-local plugin = "My Awesome Plugin"
+ local notification = {}
 
-vim.notify("This is an error message.\nSomething went wrong!", "error", {
+function notification.post()
+  pcall(function()
+    require("telescope").load_extension("notify")
+  end)
+
+  require("notify").setup({
+    background_colour = "#121212",
+  })
+end
+
+
+--[[vim.notify("This is an error message.\nSomething went wrong!", "error", {
   title = plugin,
   on_open = function()
     vim.notify("Attempting recovery.", vim.lsp.log_levels.WARN, {
@@ -22,12 +33,12 @@ vim.notify("This is an error message.\nSomething went wrong!", "error", {
       })
     end)
   end,
-})
+}) --]]
 
-require("notify").setup {
+--[[require("notify").setup {
   stages = 'fade_in_slide_out',
-  background_colour = 'FloatShadown',
-  timout = 3000,
+  background_colour = "Normal",
+  timout = 5000,
   render = "default",
   minimum_width = 50,
   icons = {
@@ -38,8 +49,13 @@ require("notify").setup {
     TRACE = "✎",
   },
 }
+]]--
 
-vim.notify = require('notify')
+
+
+
+
+--vim.notify = require('notify')
 
 --[[ vim.notify("This is an error message.\nSomething went wrong!", "error", {
   title = plugin,
@@ -88,3 +104,5 @@ vim.notify = require('notify')
     end,
 })
 --]]
+--
+return notification

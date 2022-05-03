@@ -49,7 +49,7 @@ local plug_map = {
     ["n|<Leader>rh"]      = map_cr('NvimTreeResize -10'):with_noremap():with_silent():with_nowait(),
     ["n|<Leader>rl"]      = map_cr('NvimTreeResize +2'):with_noremap():with_silent():with_nowait(),
 
-    ["n|<Leader>bh"]     = map_cr("BufferLinePickClose"):with_noremap():with_silent():with_nowait(),
+    ["n|<Leader>bk"]     = map_cr("BufferLinePickClose"):with_noremap():with_silent(),
     -- Plugin MarkdownPreview
     ["n|<Leader>om"]     = map_cu('MarkdownPreview'):with_noremap():with_silent(),
 
