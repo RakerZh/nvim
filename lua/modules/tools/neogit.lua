@@ -37,7 +37,7 @@
     --   }
     -- }
     --
-    diffview = false
+    diffview = true
   },
   -- Setting any section to `false` will make the section not render at all
   sections = {

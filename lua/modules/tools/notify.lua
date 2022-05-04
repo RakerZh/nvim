@@ -2,7 +2,7 @@
 
 -- local plugin = "My Awesome Plugin"
 
- local notification = {}
+local notification = {}
 
 function notification.post()
   pcall(function()
