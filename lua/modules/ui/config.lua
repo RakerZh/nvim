@@ -104,10 +104,8 @@ function config.nvim_bufferline()
           return buf.name:match('%.jpg') or buf.name:match('%.png')
           or buf.name:match('%.gif') or buf.name:match('%.ico')
         end
-
       }
-  }
-
+    }
   }
 end
 
