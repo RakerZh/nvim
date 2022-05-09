@@ -51,6 +51,7 @@ ui['theHamsta/nvim-dap-virtual-text'] = {
    end
 }
 ui['mechatroner/rainbow_csv'] = {
+  ft = 'csv',
 }
 
 

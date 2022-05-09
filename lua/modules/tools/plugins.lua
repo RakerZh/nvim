@@ -41,6 +41,7 @@ tools['mfussenegger/nvim-dap'] = {
 }
 
 tools['Shatur/neovim-cmake'] = {
+  ft = {'cpp','c','h','hpp'},
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
 }
 
@@ -70,7 +71,7 @@ tools['famiu/bufdelete.nvim'] = {
 }
 
 tools['ray-x/go.nvim'] = {
-
+  ft = 'go',
 }
 
 tools['dvdsk/prosesitter'] = {

@@ -3,17 +3,21 @@ local conf = require('modules.completion.config')
 
 completion['neovim/nvim-lspconfig'] = {
   event = 'BufReadPre',
-  config = conf.nvim_lsp,
+  config = function ()
+    require('modules.completion.lspconfig')
+  end
 }
 
 completion['tami5/lspsaga.nvim'] = {
   cmd = 'Lspsaga',
 }
 
-completion['hrsh7th/nvim-compe'] = {
-  event = 'InsertEnter',
-  config = conf.nvim_compe,
-}
+--completion['hrsh7th/nvim-compe'] = {
+--  event = 'InsertEnter',
+--  config = conf.nvim_compe,
+--}
+
+
 
 completion['hrsh7th/vim-vsnip'] = {
   event = 'InsertCharPre',
@@ -52,7 +56,25 @@ completion['mattn/emmet-vim'] = {
 }
 
 completion["folke/lua-dev.nvim"] = {
+
 }
+
+completion['hrsh7th/cmp-nvim-lsp'] = {
+
+}
+completion['hrsh7th/cmp-buffer'] = {
+
+}
+completion['hrsh7th/cmp-path'] = {
+
+}
+completion['hrsh7th/cmp-cmdline'] = {
+
+}
+
+completion['hrsh7th/nvim-cmp'] = {
+}
+
 
 completion['p00f/clangd_extensions.nvim'] = {
     config = function ()

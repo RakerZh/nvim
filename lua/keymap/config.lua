@@ -7,6 +7,7 @@ local function check_back_space()
     end
 end
 
+
 local t = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
@@ -21,7 +22,7 @@ _G.tab_complete = function()
   elseif check_back_space() then
     return t "<Tab>"
   else
-    return vim.fn['compe#complete']()
+    return vim.fn['cmp#complete']()
   end
 end
 
