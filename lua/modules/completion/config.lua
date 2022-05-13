@@ -4,10 +4,6 @@ function config.nvim_lsp()
   require('modules.completion.lspconfig')
 end
 
-function config.vim_vsnip()
-  vim.g.vsnip_snippet_dir = os.getenv('HOME') .. '/.config/nvim/snippets'
-end
-
 function config.telescope()
   if not packer_plugins['plenary.nvim'].loaded then
     vim.cmd [[packadd plenary.nvim]]

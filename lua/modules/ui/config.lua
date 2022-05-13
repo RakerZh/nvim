@@ -1,3 +1,6 @@
+
+-- TODO nvim bufferline config
+
 local config = {}
 
 function config.galaxyline()
@@ -10,7 +13,7 @@ function config.nvim_bufferline()
   require('bufferline').setup {
     options = {
       mode = "buffers",
-      numbers = "both",
+      numbers = "none",
       close_command = "bdelete! %d",
       right_mouse_command = "bdelete! %d",
       left_mouse_command = "buffer %d",
@@ -409,6 +412,16 @@ function config.indent_blakline()
   }
   -- because lazy load indent-blankline so need readd this autocmd
   vim.cmd('autocmd CursorMoved * IndentBlanklineRefresh')
+end
+
+function config.fzf_lua()
+  vim.api.nvim_set_keymap('n', '<c-P>', "<cmd>lua require('fzf-lua').files()<CR>",
+    { noremap = true, silent = true })
+  vim.api.nvim_set_keymap('n', '<c-W>', "<cmd>lua require('fzf-lua').word()<CR>",
+    { noremap = true, silent = true })
+
+  require('fzf-lua').setup {
+  }
 end
 
 return config

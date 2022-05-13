@@ -70,10 +70,6 @@ tools['famiu/bufdelete.nvim'] = {
 
 }
 
-tools['ray-x/go.nvim'] = {
-  ft = 'go',
-}
-
 tools['dvdsk/prosesitter'] = {
     config = function ()
       require('prosesitter')
@@ -84,6 +80,12 @@ tools['rcarriga/nvim-notify'] = {
   config = function()
     require('notify')
   end
+}
+
+tools['akinsho/toggleterm.nvim'] = {
+    config = function()
+        require('toggleterm')
+    end
 }
 
 return tools

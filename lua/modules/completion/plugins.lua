@@ -21,7 +21,9 @@ completion['tami5/lspsaga.nvim'] = {
 
 completion['hrsh7th/vim-vsnip'] = {
   event = 'InsertCharPre',
-  config = conf.vim_vsnip
+  config = function()
+  vim.g.vsnip_snippet_dir = os.getenv('HOME') .. '/.config/nvim/snippets'
+  end
 }
 
 completion['nvim-telescope/telescope.nvim'] = {
@@ -55,26 +57,19 @@ completion['mattn/emmet-vim'] = {
   config = conf.emmet,
 }
 
-completion["folke/lua-dev.nvim"] = {
+completion["folke/lua-dev.nvim"] = {}
 
-}
+completion['hrsh7th/cmp-nvim-lsp'] = {}
 
-completion['hrsh7th/cmp-nvim-lsp'] = {
+completion['hrsh7th/cmp-buffer'] = {}
 
-}
-completion['hrsh7th/cmp-buffer'] = {
+completion['hrsh7th/cmp-path'] = {}
 
-}
-completion['hrsh7th/cmp-path'] = {
+completion['hrsh7th/cmp-cmdline'] = {}
 
-}
-completion['hrsh7th/cmp-cmdline'] = {
+completion['hrsh7th/cmp-copilot'] = {}
 
-}
-
-completion['hrsh7th/nvim-cmp'] = {
-}
-
+completion['hrsh7th/nvim-cmp'] = {}
 
 completion['p00f/clangd_extensions.nvim'] = {
     config = function ()
@@ -82,6 +77,9 @@ completion['p00f/clangd_extensions.nvim'] = {
     end
 }
 
-
+completion['ray-x/go.nvim'] = {
+  ft = 'go',
+  branch = 'serverCapcities',
+}
 
 return completion

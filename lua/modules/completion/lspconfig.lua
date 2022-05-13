@@ -82,8 +82,18 @@ local kind_icons = {
   Struct = "",
   Event = "",
   Operator = "",
-  TypeParameter = ""
+  TypeParameter = "",
+  Copilot = "ﮧ"
 }
+
+local has_words_before = function()
+  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+end
+
+local feedkey = function(key, mode)
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
+end
 
 local cmp = require'cmp'
   cmp.setup {
@@ -106,6 +116,31 @@ local cmp = require'cmp'
       ['<C-Space>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+      ["<Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+        -- local copilot_keys = vim.fn["copilot#Accept"]()
+        -- if copilot_keys ~="" then
+        --  vim.api.nvim_feedkeys(copilot_keys,"i",true)
+        if packer_plugins["vim-vsnip"].loaded then
+--      elseif vim.fn["vsnip#available"](1) == 1 then
+          feedkey("<Plug>(vsnip-expand-or-jump)", "")
+        elseif has_words_before() then
+        cmp.complete()
+        else
+          fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
+        end
+      end
+    end, { "i", "s" }),
+
+    ["<S-Tab>"] = cmp.mapping(function()
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif vim.fn["vsnip#jumpable"](-1) == 1 then
+        feedkey("<Plug>(vsnip-jump-prev)", "")
+      end
+    end, { "i", "s" }),
     }),
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
@@ -116,6 +151,7 @@ local cmp = require'cmp'
     }, {
       { name = 'buffer' },
       { name = 'path' },
+      { name = 'copilot' },
     }),
     view = {
       entries = {"custom", selection_order = 'near_cursor' }
@@ -135,7 +171,6 @@ local cmp = require'cmp'
         return vim_item
       end
   },
-
   }
 
   cmp.setup.filetype('gitcommit', {
@@ -190,7 +225,6 @@ local enhance_attach = function(client,bufnr)
   api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 end
 
-
 lspconfig.gopls.setup {
   cmd = {"gopls","--remote=auto"},
   on_attach = enhance_attach,
@@ -229,6 +263,16 @@ local luadev = require("lua-dev").setup({
 })
 
 lspconfig.sumneko_lua.setup(luadev)
+
+
+if not packer_plugins["go.nvim"].loaded then
+  vim.cmd [[packadd go.nvim]]
+  require('go').setup({
+        lsp_cfg = {
+          capabilities = capabilities,
+        }
+  })
+end
 
 --lspconfig.sumneko_lua.setup {
 --  cmd = {
@@ -272,4 +316,3 @@ for _,server in ipairs(servers) do
     on_attach = enhance_attach
   }
 end
-

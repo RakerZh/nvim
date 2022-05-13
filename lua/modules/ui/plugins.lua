@@ -50,6 +50,12 @@ ui['theHamsta/nvim-dap-virtual-text'] = {
      require("nvim-dap-virtual-text").setup()
    end
 }
+
+ui['ibhagwan/fzf-lua'] = {
+  config = conf.fzf_lua,
+  requires = {'kyazdani42/nvim-web-devicons',opt = true}
+}
+
 ui['mechatroner/rainbow_csv'] = {
   ft = 'csv',
 }
