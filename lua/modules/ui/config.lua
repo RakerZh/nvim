@@ -417,7 +417,7 @@ end
 function config.fzf_lua()
   vim.api.nvim_set_keymap('n', '<c-P>', "<cmd>lua require('fzf-lua').files()<CR>",
     { noremap = true, silent = true })
-  vim.api.nvim_set_keymap('n', '<c-W>', "<cmd>lua require('fzf-lua').word()<CR>",
+  vim.api.nvim_set_keymap('n', '<c-W>', "<cmd>lua require('fzf-lua').live_grep()<CR>",
     { noremap = true, silent = true })
 
   require('fzf-lua').setup {
