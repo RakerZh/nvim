@@ -120,14 +120,11 @@ local cmp = require'cmp'
       if cmp.visible() then
         cmp.select_next_item()
       else
-        -- local copilot_keys = vim.fn["copilot#Accept"]()
-        -- if copilot_keys ~="" then
-        --  vim.api.nvim_feedkeys(copilot_keys,"i",true)
         if packer_plugins["vim-vsnip"].loaded then
 --      elseif vim.fn["vsnip#available"](1) == 1 then
           feedkey("<Plug>(vsnip-expand-or-jump)", "")
         elseif has_words_before() then
-        cmp.complete()
+          cmp.complete()
         else
           fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
         end
@@ -148,11 +145,11 @@ local cmp = require'cmp'
       -- { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
-    }, {
       { name = 'buffer' },
       { name = 'path' },
-      { name = 'copilot' },
-    }),
+      { name = "copilot", group_index = 2}
+    }
+   ),
     view = {
       entries = {"custom", selection_order = 'near_cursor' }
     },

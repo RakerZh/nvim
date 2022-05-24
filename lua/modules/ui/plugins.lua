@@ -1,19 +1,35 @@
 local ui = {}
 local conf = require('modules.ui.config')
 
-ui['RakerZh/zephyr-nvim'] = {
+ui['glepnir/zephyr-nvim'] = {
   config = [[vim.cmd('colorscheme zephyr')]]
+}
+ui['EdenEast/nightfox.nvim'] = {}
+ui['folke/tokyonight.nvim'] = {}
+ui['rmehri01/onenord.nvim'] = {}
+
+ui['Shatur/neovim-ayu'] = {
+  config = function()
+    require('ayu').setup({
+      mirage = false,
+      overrides = {},
+    })
+  end
+}
+
+ui['nvim-lualine/lualine.nvim'] = {
+  config = conf.lualine,
+  requires = {'kyazdani42/nvim-web-devicons',opt=true}
 }
 
 ui['glepnir/dashboard-nvim'] = {
   config = conf.dashboard
 }
 
-ui['NTBBloodbath/galaxyline.nvim'] = {
-  branch = 'main',
-  config = conf.galaxyline,
-  requires = {'kyazdani42/nvim-web-devicons',opt=true}
-}
+--ui['NTBBloodbath/galaxyline.nvim'] = {
+--  config = conf.galaxyline,
+--  requires = {'kyazdani42/nvim-web-devicons',opt=true}
+--}
 
 ui['lukas-reineke/indent-blankline.nvim'] = {
   event = 'BufRead',
@@ -59,7 +75,5 @@ ui['ibhagwan/fzf-lua'] = {
 ui['mechatroner/rainbow_csv'] = {
   ft = 'csv',
 }
-
-
 
 return ui

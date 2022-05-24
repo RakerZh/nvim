@@ -45,6 +45,11 @@ tools['Shatur/neovim-cmake'] = {
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
 }
 
+tools['RakerZh/xmake-nvim'] = {
+
+}
+
+
 tools['sindrets/diffview.nvim'] = {
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
   config = function ()

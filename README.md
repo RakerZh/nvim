@@ -21,7 +21,7 @@
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [go.nvim](https://github.com/ray-x/go.nvim)
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [lspsaga.nvim]()
+- [lspsaga.nvim]()(original repo no longer, but forked repo)
 - [lua-dev.nvim](https://github.com/folke/lua-dev.nvim)
 - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
 - [neogit](https://github.com/TimUntersberger/neogit)
@@ -59,8 +59,5 @@
 - [vim-vsnip]()
 - [vista.vim](https://github.com/liuchengxu/vista.vim)
 - [zephyr-nvim](https://github.com/glepnir/zephyr-nvim) 
-
-
-
 
 This config is inspired from glepnir

@@ -1,11 +1,16 @@
-
--- TODO nvim bufferline config
-
 local config = {}
 
 function config.galaxyline()
 --  require('modules.ui.eviline1')
  require('galaxyline.themes.eviline')
+end
+function config.lualine()
+  local evil_lualine = require'modules.ui.evil_lualine'
+  require('lualine').setup{
+    options = {
+       themes = evil_lualine,
+    },
+  }
 end
 
 function config.nvim_bufferline()
@@ -261,7 +266,7 @@ function config.nvim_tree()
     },
     open_file = {
       quit_on_open = false,
-      resize_window = false,
+      resize_window = true,
       window_picker = {
         enable = true,
         chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",

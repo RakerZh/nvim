@@ -67,9 +67,22 @@ completion['hrsh7th/cmp-path'] = {}
 
 completion['hrsh7th/cmp-cmdline'] = {}
 
-completion['hrsh7th/cmp-copilot'] = {}
-
 completion['hrsh7th/nvim-cmp'] = {}
+
+completion["zbirenbaum/copilot.lua"] = {
+  event = {"VimEnter"},
+  config = function()
+    vim.defer_fn(function()
+      require("copilot").setup()
+    end, 100)
+  end,
+}
+
+completion["zbirenbaum/copilot-cmp"] = {
+    after = { "copilot.lua", "nvim-cmp" },
+}
+
+
 
 completion['p00f/clangd_extensions.nvim'] = {
     config = function ()
@@ -79,7 +92,6 @@ completion['p00f/clangd_extensions.nvim'] = {
 
 completion['ray-x/go.nvim'] = {
   ft = 'go',
-  branch = 'serverCapcities',
 }
 
 return completion
