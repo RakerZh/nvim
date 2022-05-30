@@ -140,6 +140,7 @@ local cmp = require'cmp'
     end, { "i", "s" }),
     }),
     sources = cmp.config.sources({
+      { name = "copilot"},
       { name = 'nvim_lsp' },
       { name = 'vsnip' }, -- For vsnip users.
       -- { name = 'luasnip' }, -- For luasnip users.
@@ -147,7 +148,6 @@ local cmp = require'cmp'
       -- { name = 'snippy' }, -- For snippy users.
       { name = 'buffer' },
       { name = 'path' },
-      { name = "copilot", group_index = 2}
     }
    ),
     view = {
@@ -172,12 +172,14 @@ local cmp = require'cmp'
 
   cmp.setup.filetype('gitcommit', {
     sources = cmp.config.sources({
-      { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
+      { name = 'cmp_git' },
+      -- You can specify the `cmp_git` source if you were installed it.
     }, {
       { name = 'buffer' },
     })
   })
-   -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+   -- Use buffer source for `/` (if you enabled `native_menu`,
+   -- this won't work anymore).
   cmp.setup.cmdline('/', {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
@@ -185,7 +187,8 @@ local cmp = require'cmp'
     }
 })
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').update_capabilities(
+        vim.lsp.protocol.make_client_capabilities())
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 function _G.reload_lsp()
@@ -220,6 +223,8 @@ local enhance_attach = function(client,bufnr)
     format.lsp_before_save()
   end
   api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+  api.nvim_buf_set_option(bufnr, "formatexpr", "v:lua.vim.lsp.formatexpr()")
+	api.nvim_buf_set_option(bufnr, "tagfunc", "v:lua.vim.lsp.tagfunc")
 end
 
 lspconfig.gopls.setup {
@@ -230,6 +235,7 @@ lspconfig.gopls.setup {
     usePlaceholders=true,
     completeUnimported=true,
   }
+
 }
 
 lspconfig.clangd.setup {
@@ -262,14 +268,7 @@ local luadev = require("lua-dev").setup({
 lspconfig.sumneko_lua.setup(luadev)
 
 
-if not packer_plugins["go.nvim"].loaded then
-  vim.cmd [[packadd go.nvim]]
-  require('go').setup({
-        lsp_cfg = {
-          capabilities = capabilities,
-        }
-  })
-end
+
 
 --lspconfig.sumneko_lua.setup {
 --  cmd = {
@@ -303,13 +302,16 @@ lspconfig.rust_analyzer.setup {
   capabilities = capabilities,
 }
 
-
+lspconfig.pyright.setup {
+  capabilities = capabilities,
+}
 local servers = {
-  'dockerls','bashls','pyright'
+  'dockerls','bashls',
 }
 
 for _,server in ipairs(servers) do
   lspconfig[server].setup {
-    on_attach = enhance_attach
+    on_attach = enhance_attach,
+    capabilities = capabilities
   }
 end

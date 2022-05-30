@@ -68,8 +68,8 @@ tools['TimUntersberger/neogit'] = {
   end
 }
 
-tools['github/copilot.vim'] = {
-}
+--tools['github/copilot.vim'] = {
+--}
 
 tools['famiu/bufdelete.nvim'] = {
 

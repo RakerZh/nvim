@@ -4,6 +4,7 @@ local conf = require('modules.ui.config')
 ui['glepnir/zephyr-nvim'] = {
   config = [[vim.cmd('colorscheme zephyr')]]
 }
+
 ui['EdenEast/nightfox.nvim'] = {}
 ui['folke/tokyonight.nvim'] = {}
 ui['rmehri01/onenord.nvim'] = {}
@@ -37,7 +38,6 @@ ui['lukas-reineke/indent-blankline.nvim'] = {
   config = conf.indent_blakline
 }
 
-
 ui['akinsho/bufferline.nvim'] = {
   config = conf.nvim_bufferline,
   requires = 'kyazdani42/nvim-web-devicons'
@@ -61,6 +61,7 @@ ui['rcarriga/nvim-dap-ui'] = {
    requires = {"mfussenegger/nvim-dap"},
    config = conf.dapui,
 }
+
 ui['theHamsta/nvim-dap-virtual-text'] = {
    config = function ()
      require("nvim-dap-virtual-text").setup()

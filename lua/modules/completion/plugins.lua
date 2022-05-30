@@ -70,10 +70,13 @@ completion['hrsh7th/cmp-cmdline'] = {}
 completion['hrsh7th/nvim-cmp'] = {}
 
 completion["zbirenbaum/copilot.lua"] = {
+  after = 'lualine.nvim',
   event = {"VimEnter"},
   config = function()
     vim.defer_fn(function()
-      require("copilot").setup()
+      require("copilot").setup{
+      ft_disable = { "markdown",},
+    }
     end, 100)
   end,
 }
@@ -92,6 +95,10 @@ completion['p00f/clangd_extensions.nvim'] = {
 
 completion['ray-x/go.nvim'] = {
   ft = 'go',
+  config = function()
+      vim.cmd [[packadd go.nvim]]
+      require('go').setup({})
+  end
 }
 
 return completion
