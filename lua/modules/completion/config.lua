@@ -32,6 +32,11 @@ function config.telescope()
             override_file_sorter = true,
             case_mode = "smart_case",
         }
+    },
+    pickers = {
+      colorscheme = {
+        enable_preview = true,
+      }
     }
   }
   require('telescope').load_extension('fzf')
