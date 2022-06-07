@@ -17,8 +17,6 @@ completion['tami5/lspsaga.nvim'] = {
 --  config = conf.nvim_compe,
 --}
 
-
-
 completion['hrsh7th/vim-vsnip'] = {
   event = 'InsertCharPre',
   config = function()
@@ -35,6 +33,7 @@ completion['nvim-telescope/telescope.nvim'] = {
     {'nvim-telescope/telescope-fzf-native.nvim',opt = true},
   }
 }
+
 completion['nvim-telescope/telescope-fzf-native.nvim'] = {
   run = 'make',
 }
@@ -70,7 +69,7 @@ completion['hrsh7th/cmp-cmdline'] = {}
 completion['hrsh7th/nvim-cmp'] = {}
 
 completion["zbirenbaum/copilot.lua"] = {
-  after = 'lualine.nvim',
+--  after = 'lualine.nvim',
   event = {"VimEnter"},
   config = function()
     vim.defer_fn(function()
@@ -85,8 +84,6 @@ completion["zbirenbaum/copilot-cmp"] = {
     after = { "copilot.lua", "nvim-cmp" },
 }
 
-
-
 completion['p00f/clangd_extensions.nvim'] = {
     config = function ()
         require('clangd_extensions')
@@ -99,6 +96,12 @@ completion['ray-x/go.nvim'] = {
       vim.cmd [[packadd go.nvim]]
       require('go').setup({})
   end
+}
+completion["nvim-neorg/neorg"] = {
+  config = function()
+    require('neorg').setup{}
+  end,
+  requires = {"nvim-lua/plenary.nvim", opt = true}
 }
 
 return completion

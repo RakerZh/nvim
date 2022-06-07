@@ -2,35 +2,39 @@ local ui = {}
 local conf = require('modules.ui.config')
 
 ui['glepnir/zephyr-nvim'] = {
-  config = [[vim.cmd('colorscheme zephyr')]]
+  config = conf.zephyr
 }
 
-ui['EdenEast/nightfox.nvim'] = {}
-ui['folke/tokyonight.nvim'] = {}
-ui['rmehri01/onenord.nvim'] = {}
+--ui['EdenEast/nightfox.nvim'] = {}
+--ui['folke/tokyonight.nvim'] = {}
+--ui['rmehri01/onenord.nvim'] = {}
+--ui['catppuccin/nvim'] = {
+--  as = "catppuccin",
+--  config = conf.catppuccinm
+--}
 
-ui['Shatur/neovim-ayu'] = {
+--[[ui['Shatur/neovim-ayu'] = {
   config = function()
     require('ayu').setup({
       mirage = false,
       overrides = {},
     })
   end
-}
+}]]--
 
-ui['nvim-lualine/lualine.nvim'] = {
+--[[ui['nvim-lualine/lualine.nvim'] = {
   config = conf.lualine,
   requires = {'kyazdani42/nvim-web-devicons',opt=true}
-}
+}]]--
 
 ui['glepnir/dashboard-nvim'] = {
   config = conf.dashboard
 }
 
---ui['NTBBloodbath/galaxyline.nvim'] = {
---  config = conf.galaxyline,
---  requires = {'kyazdani42/nvim-web-devicons',opt=true}
---}
+ui['NTBBloodbath/galaxyline.nvim'] = {
+  config = conf.galaxyline, 
+  requires = {'kyazdani42/nvim-web-devicons',opt=true}
+}
 
 ui['lukas-reineke/indent-blankline.nvim'] = {
   event = 'BufRead',

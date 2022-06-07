@@ -2,14 +2,23 @@ local config = {}
 
 function config.galaxyline()
 --  require('modules.ui.eviline1')
- require('galaxyline.themes.eviline')
+ require('galaxyline.ui.eviline')
 end
-function config.lualine()
-  local evil_lualine = require'modules.ui.evil_lualine'
-  require('lualine').setup{
-    options = {
-       themes = evil_lualine,
+
+function config.zephyr()
+--  require('modules.ui.eviline1')
+    vim.cmd('colorscheme zephyr')
+end
+
+function config.catppuccinm()
+  require("catppuccin").setup{
+    integration = {
+      nvimtree = {
+        show_root = true,
+      }
     },
+    neogit = true,
+    lsp_saga = true,
   }
 end
 
@@ -119,7 +128,7 @@ end
 
 function config.dashboard()
   local home = os.getenv('HOME')
-  vim.g.dashboard_footer_icon = '🐬 '
+  vim.g.dashboard_footer_icon = ' '
   vim.g.dashboard_preview_command = 'cat'
   vim.g.dashboard_preview_pipeline = 'lolcat -F 0.3'
   vim.g.dashboard_preview_file = home .. '/.config/nvim/static/neovim.cat'

@@ -1,6 +1,7 @@
 -- vim.notify = require('notify')
 
 -- local plugin = "My Awesome Plugin"
+-- TODO lsp notify
 
 local notification = {}
 
@@ -13,7 +14,6 @@ function notification.post()
     background_colour = "#121212",
   })
 end
-
 
 --[[vim.notify("This is an error message.\nSomething went wrong!", "error", {
   title = plugin,
@@ -50,10 +50,6 @@ end
   },
 }
 ]]--
-
-
-
-
 
 --vim.notify = require('notify')
 
