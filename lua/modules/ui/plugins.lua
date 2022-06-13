@@ -1,19 +1,19 @@
-local ui = {}
+local package = require('core.pack').package
 local conf = require('modules.ui.config')
 
-ui['glepnir/zephyr-nvim'] = {
+package{'glepnir/zephyr-nvim',
   config = conf.zephyr
 }
 
---ui['EdenEast/nightfox.nvim'] = {}
---ui['folke/tokyonight.nvim'] = {}
---ui['rmehri01/onenord.nvim'] = {}
---ui['catppuccin/nvim'] = {
+--package{'EdenEast/nightfox.nvim'  {}
+--package{'folke/tokyonight.nvim'  {}
+--package{'rmehri01/onenord.nvim'  {}
+--package{'catppuccin/nvim'  {
 --  as = "catppuccin",
 --  config = conf.catppuccinm
 --}
 
---[[ui['Shatur/neovim-ayu'] = {
+--[[package{'Shatur/neovim-ayu'  {
   config = function()
     require('ayu').setup({
       mirage = false,
@@ -22,63 +22,63 @@ ui['glepnir/zephyr-nvim'] = {
   end
 }]]--
 
---[[ui['nvim-lualine/lualine.nvim'] = {
+--[[package{'nvim-lualine/lualine.nvim'  {
   config = conf.lualine,
   requires = {'kyazdani42/nvim-web-devicons',opt=true}
 }]]--
 
-ui['glepnir/dashboard-nvim'] = {
+package{'glepnir/dashboard-nvim',
   config = conf.dashboard
 }
 
-ui['NTBBloodbath/galaxyline.nvim'] = {
+package{'glepnir/galaxyline.nvim',
+  branch = 'main',
   config = conf.galaxyline, 
   requires = {'kyazdani42/nvim-web-devicons',opt=true}
 }
 
-ui['lukas-reineke/indent-blankline.nvim'] = {
+package{'lukas-reineke/indent-blankline.nvim',
   event = 'BufRead',
   branch = 'master',
   config = conf.indent_blakline
 }
 
-ui['akinsho/bufferline.nvim'] = {
+package{'akinsho/bufferline.nvim',
   config = conf.nvim_bufferline,
   requires = 'kyazdani42/nvim-web-devicons'
 }
 
-ui['kyazdani42/nvim-tree.lua'] = {
+package{'kyazdani42/nvim-tree.lua',
 --  cmd = {'NvimTreeToggle','NvimTreeOpen'},
   config = conf.nvim_tree,
   requires = 'kyazdani42/nvim-web-devicons',
 --  config = function() require'nvim-tree'.setup {} end
 }
 
-ui['lewis6991/gitsigns.nvim'] = {
+package{'lewis6991/gitsigns.nvim',
   event = {'BufRead','BufNewFile'},
   branch = 'main',
   config = conf.gitsigns,
   requires = {'nvim-lua/plenary.nvim'}
 }
 
-ui['rcarriga/nvim-dap-ui'] = {
+package{'rcarriga/nvim-dap-ui',
    requires = {"mfussenegger/nvim-dap"},
    config = conf.dapui,
 }
 
-ui['theHamsta/nvim-dap-virtual-text'] = {
+package{'theHamsta/nvim-dap-virtual-text',
    config = function ()
      require("nvim-dap-virtual-text").setup()
    end
 }
 
-ui['ibhagwan/fzf-lua'] = {
+package{'ibhagwan/fzf-lua',
   config = conf.fzf_lua,
   requires = {'kyazdani42/nvim-web-devicons',opt = true}
 }
 
-ui['mechatroner/rainbow_csv'] = {
+package{'mechatroner/rainbow_csv',
   ft = 'csv',
 }
 
-return ui

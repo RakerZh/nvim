@@ -1,96 +1,90 @@
-local tools = {}
-local conf = require('modules.tools.config')
+local package = require('core.pack').package
+local conf = require('modules.ui.config')
 
-tools['nvim-lua/plenary.nvim'] = {
-}
+package{'nvim-lua/plenary.nvim'}
 
-tools['kristijanhusak/vim-dadbod-ui'] = {
+package{'kristijanhusak/vim-dadbod-ui',
   cmd = {'DBUIToggle','DBUIAddConnection','DBUI','DBUIFindBuffer','DBUIRenameBuffer'},
   config = conf.vim_dadbod_ui,
   requires = {{'tpope/vim-dadbod',opt = true}}
 }
 
-tools['editorconfig/editorconfig-vim'] = {
+package{'editorconfig/editorconfig-vim',
   ft = { 'go','typescript','javascript','vim','rust','zig','c','cpp' }
 }
 
-tools['glepnir/prodoc.nvim'] = {
+package{'glepnir/prodoc.nvim',
   event = 'BufReadPre'
 }
 
-tools['liuchengxu/vista.vim'] = {
+package{'liuchengxu/vista.vim',
   cmd = 'Vista',
   config = conf.vim_vista
 }
 
-tools['brooth/far.vim'] = {
+package{'brooth/far.vim',
   cmd = {'Far','Farp'},
   config = function ()
     vim.g['far#source'] = 'rg'
   end
 }
 
-tools['iamcco/markdown-preview.nvim'] = {
+package{'iamcco/markdown-preview.nvim',
   ft = 'markdown',
   config = function ()
     vim.g.mkdp_auto_start = 0
   end
 }
 
-tools['mfussenegger/nvim-dap'] = {
+package{'mfussenegger/nvim-dap',
 }
 
-tools['Shatur/neovim-cmake'] = {
+package{'Shatur/neovim-cmake',
   ft = {'cpp','c','h','hpp'},
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
 }
 
-tools['RakerZh/xmake-nvim'] = {
 
-}
-
-
-tools['sindrets/diffview.nvim'] = {
+package{'sindrets/diffview.nvim',
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
   config = function ()
     require('diffview')
   end
 }
 
-tools['searleser97/cpbooster.vim'] = {
+package{'searleser97/cpbooster.vim',
 
 }
 
-tools['TimUntersberger/neogit'] = {
+package{'TimUntersberger/neogit',
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
   config = function ()
     require('neogit')
   end
 }
 
---tools['github/copilot.vim'] = {
+--package{'github/copilot.vim',
 --}
 
-tools['famiu/bufdelete.nvim'] = {
+package{'famiu/bufdelete.nvim',
 
 }
 
-tools['dvdsk/prosesitter'] = {
+package{'dvdsk/prosesitter',
     config = function ()
       require('prosesitter')
     end
 }
 
-tools['rcarriga/nvim-notify'] = {
+package{'rcarriga/nvim-notify',
   config = function()
     require('notify')
   end
 }
 
-tools['akinsho/toggleterm.nvim'] = {
+package{'akinsho/toggleterm.nvim',
     config = function()
         require('toggleterm')
     end
 }
 
-return tools

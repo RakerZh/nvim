@@ -1,30 +1,16 @@
-local completion = {}
+local package = require('core.pack').package
 local conf = require('modules.completion.config')
 
-completion['neovim/nvim-lspconfig'] = {
-  event = 'BufReadPre',
-  config = function ()
-    require('modules.completion.lspconfig')
-  end
+package {'neovim/nvim-lspconfig',
+ ft = {'go','lua','sh','rust','c'},
+ config = conf.nvim_lsp,
 }
 
-completion['tami5/lspsaga.nvim'] = {
+package {'tami5/lspsaga.nvim',
   cmd = 'Lspsaga',
 }
 
---completion['hrsh7th/nvim-compe'] = {
---  event = 'InsertEnter',
---  config = conf.nvim_compe,
---}
-
-completion['hrsh7th/vim-vsnip'] = {
-  event = 'InsertCharPre',
-  config = function()
-  vim.g.vsnip_snippet_dir = os.getenv('HOME') .. '/.config/nvim/snippets'
-  end
-}
-
-completion['nvim-telescope/telescope.nvim'] = {
+package {'nvim-telescope/telescope.nvim',
   cmd = 'Telescope',
   config = conf.telescope,
   requires = {
@@ -34,74 +20,83 @@ completion['nvim-telescope/telescope.nvim'] = {
   }
 }
 
-completion['nvim-telescope/telescope-fzf-native.nvim'] = {
+package {'nvim-telescope/telescope-fzf-native.nvim',
   run = 'make',
 }
 
+--package ["folke/lua-dev.nvim"] = {}
 
-completion['glepnir/smartinput.nvim'] = {
+-- package ['hrsh7th/cmp-cmdline'] = {}
+
+package {'hrsh7th/nvim-cmp',
+  event = 'InsertEnter',
+  config = conf.nvim_cmp,
+  requires = {
+    {'hrsh7th/cmp-nvim-lsp', after = 'nvim-lspconfig' },
+    {'hrsh7th/cmp-path' , after = 'nvim-cmp'},
+    {'hrsh7th/cmp-buffer', after = 'nvim-cmp' },
+    {'saadparwaiz1/cmp_luasnip', after = "LuaSnip" },
+  },
+}
+
+package {'L3MON4D3/LuaSnip',
+  event = 'InsertCharPre',
+  config = conf.lua_snip
+}
+
+package {'windwp/nvim-autopairs',
+  event = 'InsertEnter',
+  config = conf.auto_pairs,
+}
+
+package {'glepnir/smartinput.nvim',
   ft = 'go',
   config = conf.smart_input
 }
 
-completion['mattn/vim-sonictemplate'] = {
+package {'mattn/vim-sonictemplate',
   cmd = 'Template',
-  ft = {'go','typescript','lua','javascript','vim','rust','markdown', 'cpp'},
+  ft = {'go','typescript','lua','javascript','vim','rust','markdown'},
   config = conf.vim_sonictemplate,
 }
 
-completion['mattn/emmet-vim'] = {
-  event = 'InsertEnter',
+package {'mattn/emmet-vim',
   ft = {'html','css','javascript','javascriptreact','vue','typescript','typescriptreact'},
   config = conf.emmet,
 }
 
-completion["folke/lua-dev.nvim"] = {}
 
-completion['hrsh7th/cmp-nvim-lsp'] = {}
-
-completion['hrsh7th/cmp-buffer'] = {}
-
-completion['hrsh7th/cmp-path'] = {}
-
-completion['hrsh7th/cmp-cmdline'] = {}
-
-completion['hrsh7th/nvim-cmp'] = {}
-
-completion["zbirenbaum/copilot.lua"] = {
+package {"zbirenbaum/copilot.lua",
 --  after = 'lualine.nvim',
   event = {"VimEnter"},
   config = function()
     vim.defer_fn(function()
-      require("copilot").setup{
-      ft_disable = { "markdown",},
-    }
+      require("copilot").setup()
     end, 100)
   end,
 }
 
-completion["zbirenbaum/copilot-cmp"] = {
-    after = { "copilot.lua", "nvim-cmp" },
+package {"zbirenbaum/copilot-cmp",
+  module = "copilot_cmp",
 }
 
-completion['p00f/clangd_extensions.nvim'] = {
+package {'p00f/clangd_extensions.nvim',
     config = function ()
         require('clangd_extensions')
     end
 }
 
-completion['ray-x/go.nvim'] = {
+package {'ray-x/go.nvim',
   ft = 'go',
   config = function()
       vim.cmd [[packadd go.nvim]]
       require('go').setup({})
-  end
+  end,
 }
-completion["nvim-neorg/neorg"] = {
+
+package {"nvim-neorg/neorg",
   config = function()
-    require('neorg').setup{}
+    require('neorg').setup()
   end,
   requires = {"nvim-lua/plenary.nvim", opt = true}
 }
-
-return completion

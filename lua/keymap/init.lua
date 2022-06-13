@@ -6,8 +6,8 @@ local map_args = bind.map_args
 require('keymap.config')
 
 local plug_map = {
-    -- ["i|<TAB>"]      = map_cmd('v:lua.tab_complete()'):with_expr():with_silent(),
-    -- ["i|<S-TAB>"]    = map_cmd('v:lua.s_tab_complete()'):with_silent():with_expr(),
+   ["i|<TAB>"]      = map_cmd('v:lua.smart_tab()'):with_expr():with_silent(),
+   ["i|<S-TAB>"]    = map_cmd('v:lua.smart_shift_tab()'):with_silent():with_expr(),
 --    ["i|<CR>"]       = map_cmd([[compe#confirm({ 'keys': "\<Plug>delimitMateCR", 'mode': '' })]]):with_noremap():with_expr():with_nowait(),
     -- person keymap
     ["n|mf"]             = map_cr("<cmd>lua require('internal.fsevent').file_event()<CR>"):with_silent():with_nowait():with_noremap();
@@ -40,6 +40,13 @@ local plug_map = {
     ["n|<Leader>ct"]      = map_args("Template"),
     ["n|<Leader>tf"]     = map_cu('DashboardNewFile'):with_noremap():with_silent(),
     ["n|<Leader>;"]      = map_cr("LspStop"):with_noremap():with_silent(),
+
+    ["n|<leader>1"]     = map_cr("BufferLineGoToBuffer 1"):with_silent():with_noremap():with_nowait();
+    ["n|<leader>2"]     = map_cr("BufferLineGoToBuffer 2"):with_silent():with_noremap():with_nowait();
+    ["n|<leader>3"]     = map_cr("BufferLineGoToBuffer 3"):with_silent():with_noremap():with_nowait();
+    ["n|<leader>4"]     = map_cr("BufferLineGoToBuffer 4"):with_silent():with_noremap():with_nowait();
+    ["n|<leader>5"]     = map_cr("BufferLineGoToBuffer 5"):with_silent():with_noremap():with_nowait();
+    ["n|<leader>6"]     = map_cr("BufferLineGoToBuffer 6"):with_silent():with_noremap():with_nowait();
 
     -- Plugin nvim-tree
     ["n|<Leader>R"]      = map_cr('NvimTreeRefresh'):with_noremap():with_silent(),

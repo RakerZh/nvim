@@ -15,14 +15,7 @@ end
 
 function autocmd.load_autocmds()
   local definitions = {
-    packer = {
-      {"BufWritePost","*.lua","lua require('core.pack').auto_compile()"};
-    },
     bufs = {
-      -- Reload vim config automatically
-      {"BufWritePost",[[$VIM_PATH/{*.vim,*.yaml,vimrc} nested source $MYVIMRC | redraw]]};
-      -- Reload Vim script automatically if setlocal autoread
-      {"BufWritePost,FileWritePost","*.vim", [[nested if &l:autoread > 0 | source <afile> | echo 'source ' . bufname('%') | endif]]};
       {"BufWritePre","/tmp/*","setlocal noundofile"};
       {"BufWritePre","COMMIT_EDITMSG","setlocal noundofile"};
       {"BufWritePre","MERGE_MSG","setlocal noundofile"};
@@ -46,7 +39,6 @@ function autocmd.load_autocmds()
 
     ft = {
       {"FileType", "dashboard", "set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2"};
-      {"BufNewFile,BufRead","*.toml"," setf toml"},
     };
 
     yank = {
