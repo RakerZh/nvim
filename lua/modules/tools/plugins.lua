@@ -2,6 +2,7 @@ local package = require('core.pack').package
 local conf = require('modules.ui.config')
 
 package{'kristijanhusak/vim-dadbod-ui',
+  disable = true,
   cmd = {'DBUIToggle','DBUIAddConnection','DBUI','DBUIFindBuffer','DBUIRenameBuffer'},
   config = conf.vim_dadbod_ui,
   requires = {{'tpope/vim-dadbod',opt = true}}
@@ -13,6 +14,10 @@ package{'editorconfig/editorconfig-vim',
 
 package{'glepnir/prodoc.nvim',
   event = 'BufReadPre'
+}
+
+package{"mfussenegger/nvim-dap",
+  cmd = 'dapload'
 }
 
 package{'liuchengxu/vista.vim',
@@ -34,7 +39,10 @@ package{'iamcco/markdown-preview.nvim',
   end
 }
 
-package{'mfussenegger/nvim-dap'}
+package{ 'theHamsta/nvim-dap-virtual-text', 
+  requires = {{'mfussenegger/nvim-dap',opt = true}},
+}
+
 
 package{'Shatur/neovim-cmake',
   ft = {'cpp','c','h','hpp'},
@@ -44,16 +52,12 @@ package{'Shatur/neovim-cmake',
 
 package{'sindrets/diffview.nvim',
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
-  config = function ()
-    require('diffview')
-  end
 }
 
-package{'searleser97/cpbooster.vim',
-
-}
+package{'searleser97/cpbooster.vim'}
 
 package{'TimUntersberger/neogit',
+  cmd = 'neoload',
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
   config = function ()
     require('neogit')

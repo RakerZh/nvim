@@ -28,7 +28,6 @@ package{'glepnir/zephyr-nvim',
 }]]--
 
 package{'glepnir/dashboard-nvim',
-  after = 'fzf-lua',
   config = conf.dashboard,
 }
 
@@ -53,26 +52,17 @@ package{'kyazdani42/nvim-tree.lua',
   cmd = 'NvimTreeToggle',
   config = conf.nvim_tree,
   requires = 'kyazdani42/nvim-web-devicons',
---  config = function() require'nvim-tree'.setup {} end
 }
 
 package{'lewis6991/gitsigns.nvim',
---  event = {'BufRead','BufNewFile'},
-  config = conf.gitsigns,
+  config = function()
+    require('gitsigns').setup()
+  end
 }
 
 package{'rcarriga/nvim-dap-ui',
-   requires = {"mfussenegger/nvim-dap"},
-   config = conf.dapui,
+  requires = {"mfussenegger/nvim-dap",opt=true},
 }
-
-package{'theHamsta/nvim-dap-virtual-text',
-   config = function ()
-     require("nvim-dap-virtual-text").setup()
-   end
-}
-
-
 
 package{'mechatroner/rainbow_csv',
   ft = 'csv',

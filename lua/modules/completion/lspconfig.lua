@@ -65,9 +65,9 @@ lspconfig.gopls.setup {
 
 lspconfig.sumneko_lua.setup {
   cmd = {
-    home.."/Workspace/lua-language-server/bin/lua-language-server",
+    home.."/workconfig/lua-language-server/bin/lua-language-server",
     "-E",
-    home.."/Workspace/lua-language-server/main.lua"
+    home.."/workconfig/lua-language-server/main.lua"
   };
   settings = {
     Lua = {
@@ -90,7 +90,7 @@ lspconfig.tsserver.setup {
   end
 }
 
--lspconfig.clangd.setup {
+lspconfig.clangd.setup {
   cmd = {
     "clangd",
     "--background-index",

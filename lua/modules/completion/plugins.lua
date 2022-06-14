@@ -2,7 +2,7 @@ local package = require('core.pack').package
 local conf = require('modules.completion.config')
 
 package {'neovim/nvim-lspconfig',
-  ft = {'lua','sh','rust','c','go'},
+  ft = {'go','lua','sh'},
   config = conf.nvim_lsp,
 }
 
@@ -21,6 +21,7 @@ package {'hrsh7th/nvim-cmp',
     {'hrsh7th/cmp-nvim-lsp', after = 'nvim-lspconfig' },
     {'hrsh7th/cmp-path' , after = 'nvim-cmp'},
     {'hrsh7th/cmp-buffer', after = 'nvim-cmp' },
+    {'hrsh7th/cmp-cmdline', after = "LuaSnip" },
     {'saadparwaiz1/cmp_luasnip', after = "LuaSnip" },
   },
 }
