@@ -1,7 +1,7 @@
 local api = vim.api
 local home = os.getenv("HOME")
 local lspconfig = require 'lspconfig'
-local format = require'modules.completion.format'
+local format = require('modules.completion.format')
 
 if not packer_plugins['lspsaga.nvim'].loaded then
   vim.cmd [[packadd lspsaga.nvim]]
@@ -9,19 +9,14 @@ end
 
 local saga = require 'lspsaga'
 saga.init_lsp_saga({
-  code_action_icon = '💡',
+  code_action_icon = '💡'
 })
-
-local kind_icons = {
-  Copilot = "ﮧ"
-}
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-if not packer_plugins['cmp_nvim_lsp'].loaded then
-    vim.cmd [[packadd cmp_nvim_lsp]]
+if not packer_plugins['cmp-nvim-lsp'].loaded then
+  vim.cmd [[packadd cmp-nvim-lsp]]
 end
-
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 function _G.reload_lsp()
@@ -52,7 +47,7 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
 })
 
 local enhance_attach = function(client,bufnr)
-  if client.resolved_capabilities.document_formatting then
+  if client.server_capabilities.document_formatting then
     format.lsp_before_save()
   end
   api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
@@ -66,48 +61,13 @@ lspconfig.gopls.setup {
     usePlaceholders=true,
     completeUnimported=true,
   }
-
 }
-
-lspconfig.clangd.setup {
-  cmd = {
-        "clangd",
-        "--background-index",
-        "--sugggest-missing-includes",
-        "--clang-tidy",
-        "--header-insertion=iwyu",
-  },
-}
-
---[[local luadev = require("lua-dev").setup({
-  lspconfig = {
-      cmd = {
-        home.."/workconfig/lua-language-server/bin/lua-language-server",
-        "-E",
-        home.."/workconfig/lua-language-server/main.lua"
-      };
-      settings = {
-      Lua = {
-        diagnostics = {
-          enable = true,
-          globals = {"vim","packer_plugins"}
-        },
-        runtime = {version = "LuaJIT"},
-        workspace = {
-          library = vim.list_extend({[vim.fn.expand("$VIMRUNTIME/lua")] = true},{}),
-        },
-      },
-    }
-  },
-})
-
-lspconfig.sumneko_lua.setup(luadev)]]--
 
 lspconfig.sumneko_lua.setup {
   cmd = {
-    home.."/workconfig/lua-language-server/bin/lua-language-server",
+    home.."/Workspace/lua-language-server/bin/lua-language-server",
     "-E",
-    home.."/workconfig/lua-language-server/main.lua"
+    home.."/Workspace/lua-language-server/main.lua"
   };
   settings = {
     Lua = {
@@ -130,12 +90,26 @@ lspconfig.tsserver.setup {
   end
 }
 
+-lspconfig.clangd.setup {
+  cmd = {
+    "clangd",
+    "--background-index",
+    "--suggest-missing-includes",
+    "--clang-tidy",
+    "--header-insertion=iwyu",
+  },
+}
+
+lspconfig.rust_analyzer.setup {
+  capabilities = capabilities,
+}
+
 local servers = {
-  'dockerls','bashls','pyright','rust_analyzer'
+  'dockerls','bashls','pyright', 'rust_analyzer'
 }
 
 for _,server in ipairs(servers) do
   lspconfig[server].setup {
-    on_attach = enhance_attach,
+    on_attach = enhance_attach
   }
 end

@@ -1,5 +1,50 @@
 local config = {}
 
+function config.fzf_lua()
+  vim.api.nvim_set_keymap('n', '<c-P>', "<cmd>lua require('fzf-lua').files()<CR>",
+    { noremap = true, silent = true })
+  vim.api.nvim_set_keymap('n', '<c-W>', "<cmd>lua require('fzf-lua').live_grep()<CR>",
+    { noremap = true, silent = true })
+
+  require('fzf-lua').setup {
+  }
+end
+
+
+function config.telescope()
+    if not packer_plugins['plenary.nvim'].loaded then
+        vim.cmd [[packadd plenary.nvim]]
+        vim.cmd [[packadd popup.nvim]]
+        vim.cmd [[packadd telescope-fzy-native.nvim]]
+        vim.cmd [[packadd telescope-file-broswer.nvim]]
+    end
+    require('telescope').setup {
+        defaults = {
+            prompt_prefix = '🔭 ',
+            selection_caret = " ",
+            layout_config = {
+                horizontal = {prompt_position = "top", results_width = 0.6},
+                vertical = {mirror = false}
+            },
+            sorting_strategy = 'ascending',
+            file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
+            grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep
+                .new,
+            qflist_previewer = require'telescope.previewers'.vim_buffer_qflist
+                .new
+        },
+        extensions = {
+            fzy_native = {
+                override_generic_sorter = false,
+                override_file_sorter = true
+            }
+        }
+    }
+    require('telescope').load_extension('fzy_native')
+    require'telescope'.load_extension('dotfiles')
+    require'telescope'.load_extension('gosource')
+end
+
 function config.delimimate()
   vim.g.delimitMate_expand_cr = 0
   vim.g.delimitMate_expand_space = 1
@@ -24,16 +69,6 @@ function config.nvim_colorizer()
       mode = 'foreground';
     }
   }
-end
-
-function config.vim_cursorwod()
-  vim.api.nvim_command('augroup user_plugin_cursorword')
-  vim.api.nvim_command('autocmd!')
-  vim.api.nvim_command('autocmd FileType NvimTree,lspsagafinder,dashboard,vista let b:cursorword = 0')
-  vim.api.nvim_command('autocmd WinEnter * if &diff || &pvw | let b:cursorword = 0 | endif')
-  vim.api.nvim_command('autocmd InsertEnter * let b:cursorword = 0')
-  vim.api.nvim_command('autocmd InsertLeave * let b:cursorword = 1')
-  vim.api.nvim_command('augroup END')
 end
 
 return config

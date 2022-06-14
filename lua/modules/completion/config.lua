@@ -77,7 +77,7 @@ function config.nvim_cmp()
 			{ name = "luasnip", group_index = 2 },
 			{ name = "path", group_index = 2 },
 			{ name = "buffer", group_index = 2 },
-      { name = "copilot", group_index = 2 },
+--      { name = "copilot", group_index = 2 },
 			},
 		}
 	)
@@ -112,10 +112,6 @@ function config.vim_sonictemplate()
     vim.g.sonictemplate_postfix_key = '<C-,>'
     vim.g.sonictemplate_vim_template_dir =
         os.getenv("HOME") .. '/.config/nvim/template'
-end
-
-function config.smart_input()
-    require('smartinput').setup {['go'] = {';', ':=', ';'}}
 end
 
 function config.emmet()

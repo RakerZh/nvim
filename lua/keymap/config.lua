@@ -14,17 +14,17 @@ end
 
 --- move to prev/next item in completion menuone
 --- jump to prev/next snippet's placeholder
-_G.tab_complete = function()
+_G.smart_tab = function()
   local cmp = require('cmp')
   local ok,luasnip = pcall(require,'luasnip')
   if cmp.visible() and not ok then
     return t "<C-n>"
   elseif ok and luasnip.expand_or_jumpable() then  
-      return t "<Plug>luasnip-expand-or-jump"
+    return t "<Plug>luasnip-expand-or-jump"
   elseif check_back_space() then
     return t "<Tab>"
   else
-      return t "<C-n>"
+    return t "<C-n>"
   end
 end
 

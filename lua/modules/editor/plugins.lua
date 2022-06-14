@@ -1,9 +1,24 @@
 local package = require('core.pack').package
 local conf = require('modules.editor.config')
 
-package{'Raimondi/delimitMate',
+--[[package{'Raimondi/delimitMate',
   event = 'InsertEnter',
   config = conf.delimimate,
+}]]
+
+package{'ibhagwan/fzf-lua',
+  config = conf.fzf_lua,
+  requires = {'kyazdani42/nvim-web-devicons',opt = true}
+}
+
+package {'nvim-telescope/telescope.nvim',
+  cmd = 'Telescope',
+  config = conf.telescope,
+  requires = {
+    {'nvim-lua/popup.nvim', opt = true},
+    {'nvim-lua/plenary.nvim',opt = true},
+    {'nvim-telescope/telescope-fzf-native.nvim',opt = true},
+  }
 }
 
 package{'rhysd/accelerated-jk',
@@ -13,11 +28,6 @@ package{'rhysd/accelerated-jk',
 package{'norcalli/nvim-colorizer.lua',
   ft = { 'html','css','sass','vim','typescript','typescriptreact'},
   config = conf.nvim_colorizer
-}
-
-package{'itchyny/vim-cursorword',
-  event = {'BufReadPre','BufNewFile'},
-  config = conf.vim_cursorwod
 }
 
 package{'hrsh7th/vim-eft',
@@ -43,3 +53,4 @@ package{'rhysd/vim-operator-surround',
 package{'kana/vim-niceblock',
   opt = true
 }
+package{'antoinemadec/FixCursorHold.nvim', event = 'BufReadPre'}

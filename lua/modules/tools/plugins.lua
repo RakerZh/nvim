@@ -1,8 +1,6 @@
 local package = require('core.pack').package
 local conf = require('modules.ui.config')
 
-package{'nvim-lua/plenary.nvim'}
-
 package{'kristijanhusak/vim-dadbod-ui',
   cmd = {'DBUIToggle','DBUIAddConnection','DBUI','DBUIFindBuffer','DBUIRenameBuffer'},
   config = conf.vim_dadbod_ui,
@@ -36,8 +34,7 @@ package{'iamcco/markdown-preview.nvim',
   end
 }
 
-package{'mfussenegger/nvim-dap',
-}
+package{'mfussenegger/nvim-dap'}
 
 package{'Shatur/neovim-cmake',
   ft = {'cpp','c','h','hpp'},

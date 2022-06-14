@@ -2,26 +2,12 @@ local package = require('core.pack').package
 local conf = require('modules.completion.config')
 
 package {'neovim/nvim-lspconfig',
- ft = {'go','lua','sh','rust','c'},
- config = conf.nvim_lsp,
+  ft = {'lua','sh','rust','c','go'},
+  config = conf.nvim_lsp,
 }
 
 package {'tami5/lspsaga.nvim',
   cmd = 'Lspsaga',
-}
-
-package {'nvim-telescope/telescope.nvim',
-  cmd = 'Telescope',
-  config = conf.telescope,
-  requires = {
-    {'nvim-lua/popup.nvim', opt = true},
-    {'nvim-lua/plenary.nvim',opt = true},
-    {'nvim-telescope/telescope-fzf-native.nvim',opt = true},
-  }
-}
-
-package {'nvim-telescope/telescope-fzf-native.nvim',
-  run = 'make',
 }
 
 --package ["folke/lua-dev.nvim"] = {}
@@ -49,11 +35,6 @@ package {'windwp/nvim-autopairs',
   config = conf.auto_pairs,
 }
 
-package {'glepnir/smartinput.nvim',
-  ft = 'go',
-  config = conf.smart_input
-}
-
 package {'mattn/vim-sonictemplate',
   cmd = 'Template',
   ft = {'go','typescript','lua','javascript','vim','rust','markdown'},
@@ -66,7 +47,7 @@ package {'mattn/emmet-vim',
 }
 
 
-package {"zbirenbaum/copilot.lua",
+--[[package {"zbirenbaum/copilot.lua",
 --  after = 'lualine.nvim',
   event = {"VimEnter"},
   config = function()
@@ -74,11 +55,11 @@ package {"zbirenbaum/copilot.lua",
       require("copilot").setup()
     end, 100)
   end,
-}
+}]]
 
-package {"zbirenbaum/copilot-cmp",
+--[[package {"zbirenbaum/copilot-cmp",
   module = "copilot_cmp",
-}
+}]]
 
 package {'p00f/clangd_extensions.nvim',
     config = function ()

@@ -139,7 +139,7 @@ function config.dashboard()
       action ='SessionLoad'},
       {icon = '  ',
       desc = 'Recently opened files                   ',
-      action =  'Telescope oldfiles',
+      action =  'DashboardFindHistory',
       shortcut = 'SPC f h'},
       {icon = '  ',
       desc = 'Find  File                              ',
@@ -151,14 +151,13 @@ function config.dashboard()
       shortcut = 'SPC f b'},
       {icon = '  ',
       desc = 'Find  word                              ',
-      action = 'FzfLua live_grep ',
-      shortcut = 'SPC f b'},
+      aciton = 'DashboardFindWord',
+      shortcut = 'SPC f w'},
       {icon = '  ',
       desc = 'Open Personal dotfiles                  ',
       action = 'Telescope dotfiles path=' .. home ..'/.dotfiles',
       shortcut = 'SPC f d'},
-    }
-
+  }
 end
 
 function config.nvim_tree()
@@ -363,36 +362,7 @@ function config.dapui( )
 end
 
 function config.gitsigns()
-  if not packer_plugins['plenary.nvim'].loaded then
-    vim.cmd [[packadd plenary.nvim]]
-  end
-  require('gitsigns').setup {
-    signs = {
-      add = {hl = 'GitGutterAdd', text = '▋'},
-      change = {hl = 'GitGutterChange',text= '▋'},
-      delete = {hl= 'GitGutterDelete', text = '▋'},
-      topdelete = {hl ='GitGutterDeleteChange',text = '▔'},
-      changedelete = {hl = 'GitGutterChange', text = '▎'},
-    },
-    keymaps = {
-       -- Default keymap options
-       noremap = true,
-       buffer = true,
-
-       ['n ]g'] = { expr = true, "&diff ? ']g' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'"},
-       ['n [g'] = { expr = true, "&diff ? '[g' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'"},
-
-       ['n <leader>hs'] = '<cmd>lua require"gitsigns".stage_hunk()<CR>',
-       ['n <leader>hu'] = '<cmd>lua require"gitsigns".undo_stage_hunk()<CR>',
-       ['n <leader>hr'] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
-       ['n <leader>hp'] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
-       ['n <leader>hb'] = '<cmd>lua require"gitsigns".blame_line()<CR>',
-
-       -- Text objects
-       ['o ih'] = ':<C-U>lua require"gitsigns".text_object()<CR>',
-       ['x ih'] = ':<C-U>lua require"gitsigns".text_object()<CR>'
-     },
-  }
+  require('gitsigns').setup()
 end
 
 function config.indent_blakline()
@@ -439,16 +409,6 @@ function config.indent_blakline()
   }
   -- because lazy load indent-blankline so need readd this autocmd
   vim.cmd('autocmd CursorMoved * IndentBlanklineRefresh')
-end
-
-function config.fzf_lua()
-  vim.api.nvim_set_keymap('n', '<c-P>', "<cmd>lua require('fzf-lua').files()<CR>",
-    { noremap = true, silent = true })
-  vim.api.nvim_set_keymap('n', '<c-W>', "<cmd>lua require('fzf-lua').live_grep()<CR>",
-    { noremap = true, silent = true })
-
-  require('fzf-lua').setup {
-  }
 end
 
 return config
