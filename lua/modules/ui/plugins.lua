@@ -60,10 +60,6 @@ package{'lewis6991/gitsigns.nvim',
   end
 }
 
-package{'rcarriga/nvim-dap-ui',
-  requires = {"mfussenegger/nvim-dap",opt=true},
-}
-
 package{'mechatroner/rainbow_csv',
   ft = 'csv',
 }

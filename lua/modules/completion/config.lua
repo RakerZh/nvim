@@ -8,6 +8,7 @@ end
 function config.nvim_lsp()
   require('modules.completion.lspconfig')
 end
+
 function config.nvim_cmp()
 	local cmp = require("cmp")
 
@@ -80,7 +81,7 @@ function config.nvim_cmp()
 			{ name = "luasnip"},
 			{ name = "path"},
 			{ name = "buffer"},
-      { name = "cmdline"},
+--      { name = "cmdline"},
 --      { name = "copilot"},
 			},
 		}

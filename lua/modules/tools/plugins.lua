@@ -16,9 +16,6 @@ package{'glepnir/prodoc.nvim',
   event = 'BufReadPre'
 }
 
-package{"mfussenegger/nvim-dap",
-  cmd = 'dapload'
-}
 
 package{'liuchengxu/vista.vim',
   cmd = 'Vista',
@@ -39,15 +36,11 @@ package{'iamcco/markdown-preview.nvim',
   end
 }
 
-package{ 'theHamsta/nvim-dap-virtual-text', 
-  requires = {{'mfussenegger/nvim-dap',opt = true}},
-}
-
-
-package{'Shatur/neovim-cmake',
+--[[package{'Shatur/neovim-cmake',
   ft = {'cpp','c','h','hpp'},
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
-}
+  -- require dap
+}]]
 
 
 package{'sindrets/diffview.nvim',

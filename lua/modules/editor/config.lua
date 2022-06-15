@@ -1,16 +1,5 @@
 local config = {}
 
-function config.fzf_lua()
-  vim.api.nvim_set_keymap('n', '<c-P>', "<cmd>lua require('fzf-lua').files()<CR>",
-    { noremap = true, silent = true })
-  vim.api.nvim_set_keymap('n', '<c-W>', "<cmd>lua require('fzf-lua').live_grep()<CR>",
-    { noremap = true, silent = true })
-
-  require('fzf-lua').setup {
-  }
-end
-
-
 function config.telescope()
     if not packer_plugins['plenary.nvim'].loaded then
         vim.cmd [[packadd plenary.nvim]]
@@ -43,14 +32,7 @@ function config.telescope()
     require('telescope').load_extension('fzy_native')
     require'telescope'.load_extension('dotfiles')
     require'telescope'.load_extension('gosource')
-end
-
-function config.delimimate()
-  vim.g.delimitMate_expand_cr = 0
-  vim.g.delimitMate_expand_space = 1
-  vim.g.delimitMate_smart_quotes = 1
-  vim.g.delimitMate_expand_inside_quotes = 0
-  vim.api.nvim_command('au FileType markdown let b:delimitMate_nesting_quotes = ["`"]')
+    require('telescope').load_extension('file_browser')
 end
 
 function config.nvim_colorizer()

@@ -6,33 +6,33 @@ local conf = require('modules.editor.config')
   config = conf.delimimate,
 }]]
 
-package{'ibhagwan/fzf-lua',
+--[[package{'ibhagwan/fzf-lua',
   config = conf.fzf_lua,
   requires = {'kyazdani42/nvim-web-devicons',opt = true}
-}
+}]]
 
-package {'nvim-telescope/telescope.nvim',
-  cmd = 'Telescope',
+package{'nvim-telescope/telescope-fzy-native.nvim'}
+package{'nvim-telescope/telescope-file-browser.nvim'}
+package{'nvim-lua/popup.nvim',opt = true}
+
+package{'nvim-telescope/telescope.nvim',
   config = conf.telescope,
   requires = {
-    {'nvim-lua/popup.nvim', opt = true},
-    {'nvim-lua/plenary.nvim',opt = true},
-    {'nvim-telescope/telescope-fzf-native.nvim',opt = true},
-    {'nvim-telescope/telescope-file-browser.nvim', opt = true},
+    {'nvim-lua/plenary.nvim', opt = true},
+    {'nvim-lua/popup.nvim',opt = true},
+    {'nvim-telescope/telescope-fzy-native.nvim',opt = true},
+    {'nvim-telescope/telescope-file-browser.nvim',opt = true},
   }
 }
 
-package{'rhysd/accelerated-jk',
-  opt = true
-}
+package{'rhysd/accelerated-jk', opt = true }
 
 package{'norcalli/nvim-colorizer.lua',
   ft = { 'html','css','sass','vim','typescript','typescriptreact'},
   config = conf.nvim_colorizer
 }
 
-package{'hrsh7th/vim-eft',
-  opt = true,
+package{'hrsh7th/vim-eft', opt = true,
   config = function()
     vim.g.eft_ignorecase = true
   end
@@ -51,7 +51,6 @@ package{'rhysd/vim-operator-surround',
   requires = 'kana/vim-operator-user'
 }
 
-package{'kana/vim-niceblock',
-  opt = true
-}
+package{'kana/vim-niceblock', opt = true }
+
 package{'antoinemadec/FixCursorHold.nvim', event = 'BufReadPre'}

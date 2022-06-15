@@ -8,8 +8,6 @@ package{'nvim-treesitter/nvim-treesitter',
   config = conf.nvim_treesitter,
 }
 
-package{'nvim-treesitter/nvim-treesitter-textobjects',
-  after = 'nvim-treesitter'
-}
+package{'nvim-treesitter/nvim-treesitter-textobjects', after = 'nvim-treesitter' }
 
 package {'glepnir/smartinput.nvim', ft = 'go',config = conf.smart_input}
