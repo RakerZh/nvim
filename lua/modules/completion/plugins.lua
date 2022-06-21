@@ -5,8 +5,9 @@ package {'neovim/nvim-lspconfig',
   config = conf.nvim_lsp,
 }
 
-package {'tami5/lspsaga.nvim',
+package {'glepnir/lspsaga.nvim',
   cmd = 'Lspsaga',
+  branch = 'features',
 }
 
 --package ["folke/lua-dev.nvim"] = {}
@@ -30,10 +31,10 @@ package {'L3MON4D3/LuaSnip',
   config = conf.lua_snip
 }
 
-package {'windwp/nvim-autopairs',
+--[[package {'windwp/nvim-autopairs',
   event = 'InsertEnter',
   config = conf.auto_pairs,
-}
+}]]
 
 package {'mattn/vim-sonictemplate',
   cmd = 'Template',

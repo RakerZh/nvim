@@ -6,6 +6,7 @@ function config.telescope()
         vim.cmd [[packadd popup.nvim]]
         vim.cmd [[packadd telescope-fzy-native.nvim]]
         vim.cmd [[packadd telescope-file-broswer.nvim]]
+        vim.cmd [[packadd telescope-ui-select.nvim]]
     end
     require('telescope').setup {
         defaults = {
@@ -26,6 +27,11 @@ function config.telescope()
             fzy_native = {
                 override_generic_sorter = false,
                 override_file_sorter = true
+            },
+            ["ui-select"] = {
+              require("telescope.themes").get_dropdown {
+
+              }
             }
         }
     }
@@ -33,24 +39,11 @@ function config.telescope()
     require'telescope'.load_extension('dotfiles')
     require'telescope'.load_extension('gosource')
     require('telescope').load_extension('file_browser')
+    require('telescope').load_extension('ui-select')
 end
 
 function config.nvim_colorizer()
-  require 'colorizer'.setup {
-    css = { rgb_fn = true; };
-    scss = { rgb_fn = true; };
-    sass = { rgb_fn = true; };
-    stylus = { rgb_fn = true; };
-    vim = { names = true; };
-    tmux = { names = false; };
-    'javascript';
-    'javascriptreact';
-    'typescript';
-    'typescriptreact';
-    html = {
-      mode = 'foreground';
-    }
-  }
+  require('colorizer').setup()
 end
 
 return config

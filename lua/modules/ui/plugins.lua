@@ -2,7 +2,8 @@ local package = require('core.pack').package
 local conf = require('modules.ui.config')
 
 package{'glepnir/zephyr-nvim',
-  config = conf.zephyr
+  config = conf.zephyr,
+  requires = { 'nvim-treesitter/nvim-treesitter', opt = true}
 }
 
 --package{'EdenEast/nightfox.nvim'  {}
@@ -63,4 +64,5 @@ package{'lewis6991/gitsigns.nvim',
 package{'mechatroner/rainbow_csv',
   ft = 'csv',
 }
+package{'nvim-telescope/telescope-ui-select.nvim'}
 

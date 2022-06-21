@@ -19,7 +19,8 @@ local plug_map = {
     ["n|<leader>pi"]     = map_cr("PackerInstall"):with_silent():with_noremap():with_nowait();
     ["n|<leader>pc"]     = map_cr("PackerCompile"):with_silent():with_noremap():with_nowait();
     -- Lsp mapp work when insertenter and lsp start
-    ["n|<leader>li"]     = map_cr("LspInfo"):with_noremap():with_silent():with_nowait(), ["n|<leader>ll"]     = map_cr("LspLog"):with_noremap():with_silent():with_nowait(),
+    ["n|<leader>li"]     = map_cr("LspInfo"):with_noremap():with_silent():with_nowait(), 
+    ["n|<leader>ll"]     = map_cr("LspLog"):with_noremap():with_silent():with_nowait(),
     ["n|<leader>lr"]     = map_cr("LspRestart"):with_noremap():with_silent():with_nowait(),
     ["n|<C-f>"]          = map_cmd("<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>"):with_silent():with_noremap():with_nowait(),
     ["n|<C-b>"]          = map_cmd("<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>"):with_silent():with_noremap():with_nowait(),
@@ -63,10 +64,10 @@ local plug_map = {
     ["n|<Leader>od"]     = map_cr('DBUIToggle'):with_noremap():with_silent(),
 
     -- Plugin Floaterm
---    ["n|<A-d>"]          = map_cu('Lspsaga open_floaterm'):with_noremap():with_silent(),
-    ["n|∂"]              = map_cu('Lspsaga open_floaterm'):with_noremap():with_silent(),
--- ["t|<A-d>"]          = map_cu([[<C-\><C-n>:Lspsaga close_floaterm<CR>]]):with_noremap():with_silent(),
-    ["t|∂"]              = map_cu([[<C-\><C-n>:Lspsaga close_floaterm<CR>]]):with_noremap():with_silent(),
+    ["n|<A-d>"]          = map_cu('Lspsaga open_floaterm'):with_noremap():with_silent(),
+--    ["n|∂"]              = map_cu('Lspsaga open_floaterm'):with_noremap():with_silent(),
+    ["t|<A-d>"]          = map_cu([[<C-\><C-n>:Lspsaga close_floaterm<CR>]]):with_noremap():with_silent(),
+--    ["t|∂"]              = map_cu([[<C-\><C-n>:Lspsaga close_floaterm<CR>]]):with_noremap():with_silent(),
     ["n|<Leader>g"]      = map_cu("Lspsaga open_floaterm lazygit"):with_noremap():with_silent(),
     -- Far.vim
     ["n|<Leader>fz"]     = map_cr('Farf'):with_noremap():with_silent();

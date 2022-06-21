@@ -1,4 +1,4 @@
-local api = vim.api
+local api = vim.apilspconfig
 local home = os.getenv("HOME")
 local lspconfig = require 'lspconfig'
 local format = require('modules.completion.format')
@@ -88,6 +88,7 @@ lspconfig.tsserver.setup {
   on_attach = function(client)
     client.server_capabilities.document_formatting = false
     enhance_attach(client)
+    capabilities = capabilities
   end
 }
 
