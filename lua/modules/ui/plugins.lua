@@ -28,6 +28,8 @@ package{'glepnir/zephyr-nvim',
   requires = {'kyazdani42/nvim-web-devicons',opt=true}
 }]]--
 
+package{'~/github/init_vim'}
+
 package{'glepnir/dashboard-nvim',
   config = conf.dashboard,
 }

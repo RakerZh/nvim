@@ -130,4 +130,13 @@ function config.emmet()
     vim.g.user_emmet_mode = 'i'
 end
 
+function config.neorg()
+  -- latest
+  require('neorg').setup{
+    load = {
+      ["core.defaults"] = {},
+    }
+  }
+end
+
 return config

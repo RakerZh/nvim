@@ -7,7 +7,6 @@ package {'neovim/nvim-lspconfig',
 
 package {'glepnir/lspsaga.nvim',
   cmd = 'Lspsaga',
-  branch = 'features',
 }
 
 --package ["folke/lua-dev.nvim"] = {}
@@ -77,8 +76,8 @@ package {'ray-x/go.nvim',
 }
 
 package {"nvim-neorg/neorg",
-  config = function()
-    require('neorg').setup()
-  end,
+  ft = 'norg',
+  after = 'nvim-treesitter',
+  config = conf.neorg,
   requires = {"nvim-lua/plenary.nvim", opt = true}
 }
