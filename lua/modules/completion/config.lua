@@ -113,7 +113,6 @@ function config.auto_pairs()
     'confirm_done',
     cmp_autopairs.on_confirm_done({
       map_char = { tex = '' } }))
-  cmp_autopairs.lisp[#cmp_autopairs.lisp+1] = "racket"
 
 end
 
@@ -134,7 +133,7 @@ function config.neorg()
   -- latest
   require('neorg').setup{
     load = {
-      ["core.defaults"] = {},
+      ["core.defaults"] = {}
     }
   }
 end

@@ -6,10 +6,9 @@ local format = require('modules.completion.format')
 if not packer_plugins['lspsaga.nvim'].loaded then
   vim.cmd [[packadd lspsaga.nvim]]
 end
-
 local saga = require 'lspsaga'
 saga.init_lsp_saga({
-  code_action_icon = '💡'
+  symbol_in_winbar = true,
 })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -33,19 +32,27 @@ end
 vim.cmd('command! -nargs=0 LspLog call v:lua.open_lsp_log()')
 vim.cmd('command! -nargs=0 LspRestart call v:lua.reload_lsp()')
 
-vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    -- Enable underline, use default values
-    underline = true,
-    -- Enable virtual text, override spacing to 4
-    virtual_text = true,
-    signs = {
-      enable = true,
-      priority = 20
-    },
-    -- Disable a feature
-    update_in_insert = false,
-})
+local signs = {
+  Error   =   " ",
+  Warn    =   " ",
+  Info    =   " ",
+  Hint    =   "ﴞ ",
+}
+
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type 
+  vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
+end
+
+vim.diagnostic.config {
+  signs = true,
+  update_in_insert = false,
+  underline = true,
+  severity_sort = true,
+  virtual_text = {
+    source = true,
+  },
+}
 
 local enhance_attach = function(client,bufnr)
   if client.server_capabilities.document_formatting then
@@ -103,10 +110,25 @@ lspconfig.clangd.setup {
 
 lspconfig.rust_analyzer.setup {
   capabilities = capabilities,
+  settings = {
+    ["rust-analyzer"] = 
+    {
+      assist = {
+        importGranularity = "module",
+        importPrefix = "self",
+      },
+      cargo = {
+        loadOutDirsFromCheck = true
+      },
+      procMacro = {
+        enable = true
+      }
+    }
+  }
 }
 
 local servers = {
-  'dockerls','bashls','pyright', 'rust_analyzer'
+  'dockerls','bashls','pyright', 'tsserver'
 }
 
 for _,server in ipairs(servers) do

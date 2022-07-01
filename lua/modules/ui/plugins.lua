@@ -43,7 +43,7 @@ package{'glepnir/galaxyline.nvim',
 package{'lukas-reineke/indent-blankline.nvim',
   event = 'BufRead',
   branch = 'master',
-  config = conf.indent_blakline
+  config = conf.indent_blankline
 }
 
 package{'akinsho/bufferline.nvim',

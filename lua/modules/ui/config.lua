@@ -128,6 +128,7 @@ end
 function config.dashboard()
   local home = os.getenv('HOME')
   local db = require('dashboard')
+  db.session_directory = home .. '/.cache/nvim/session'
   db.preview_command = 'cat | lolcat -F 0.3'
   db.preview_file_path = home .. '/.config/nvim/static/neovim.cat'
   db.preview_file_height = 12
@@ -322,12 +323,13 @@ function config.gitsigns()
   require('gitsigns').setup()
 end
 
-function config.indent_blakline()
+function config.indent_blankline()
   vim.g.indent_blankline_char = "│"
   vim.g.indent_blankline_show_first_indent_level = true
   vim.g.indent_blankline_filetype_exclude = {
     "startify",
     "dashboard",
+    "DogicPrompt",
     "dotooagenda",
     "log",
     "fugitive",
@@ -348,7 +350,7 @@ function config.indent_blakline()
     "flutterToolsOutline",
     "" -- for all buffers without a file type
   }
-  vim.g.indent_blankline_buftype_exclude = {"terminal", "nofile"}
+  vim.g.indent_blankline_buftype_exclude = {"terminal", "nofile", "prompt"}
   vim.g.indent_blankline_show_trailing_blankline_indent = false
   vim.g.indent_blankline_show_current_context = true
   vim.g.indent_blankline_context_patterns = {

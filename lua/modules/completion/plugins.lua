@@ -2,6 +2,7 @@ local package = require('core.pack').package
 local conf = require('modules.completion.config')
 
 package {'neovim/nvim-lspconfig',
+  ft = {'go','lua','sh','rust','c','cpp','python' },
   config = conf.nvim_lsp,
 }
 
@@ -11,16 +12,15 @@ package {'glepnir/lspsaga.nvim',
 
 --package ["folke/lua-dev.nvim"] = {}
 
--- package ['hrsh7th/cmp-cmdline'] = {}
 package{'hrsh7th/cmp-nvim-lsp'}
 
 package {'hrsh7th/nvim-cmp',
   event = 'InsertEnter',
   config = conf.nvim_cmp,
   requires = {
+    {'hrsh7th/cmp-nvim-lsp', after = 'nvim-lspconfig'},
     {'hrsh7th/cmp-path' , after = 'nvim-cmp'},
     {'hrsh7th/cmp-buffer', after = 'nvim-cmp' },
---    {'hrsh7th/cmp-cmdline', after = "LuaSnip" },
     {'saadparwaiz1/cmp_luasnip', after = "LuaSnip" },
   },
 }
@@ -30,10 +30,10 @@ package {'L3MON4D3/LuaSnip',
   config = conf.lua_snip
 }
 
---[[package {'windwp/nvim-autopairs',
+package {'windwp/nvim-autopairs',
   event = 'InsertEnter',
   config = conf.auto_pairs,
-}]]
+}
 
 package {'mattn/vim-sonictemplate',
   cmd = 'Template',
