@@ -58,7 +58,7 @@ local plug_map = {
 
     ["n|<Leader>bc"]     = map_cr("BufferLinePickClose"):with_noremap():with_silent():with_nowait(),
     -- Plugin MarkdownPreview
-    ["n|<Leader>om"]     = map_cu('MarkdownPreview'):with_noremap():with_silent(),
+--    ["n|<Leader>om"]     = map_cu('Glow'):with_noremap():with_silent(),
 
     -- Plugin DadbodUI
     ["n|<Leader>od"]     = map_cr('DBUIToggle'):with_noremap():with_silent(),

@@ -29,19 +29,15 @@ package{'brooth/far.vim',
   end
 }
 
-package{'iamcco/markdown-preview.nvim',
-  ft = 'markdown',
-  config = function ()
-    vim.g.mkdp_auto_start = 0
-  end
-}
-
 --[[package{'Shatur/neovim-cmake',
   ft = {'cpp','c','h','hpp'},
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
   -- require dap
 }]]
 
+package{'euclio/vim-markdown-composer',
+  config = conf.markdown_composer,
+}
 
 package{'sindrets/diffview.nvim',
   requires = {{'nvim-lua/plenary.nvim',opt = true}},

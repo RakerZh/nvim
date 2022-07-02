@@ -55,4 +55,8 @@ function config.vim_vista()
   }
 end
 
+function config.markdown_composer()
+  vim.g.markdown_composer_syntax_theme = "dark"
+end
+
 return config
