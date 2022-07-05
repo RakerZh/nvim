@@ -8,7 +8,7 @@ if not packer_plugins['lspsaga.nvim'].loaded then
 end
 local saga = require 'lspsaga'
 saga.init_lsp_saga({
-  symbol_in_winbar = true,
+--  symbol_in_winbar = true,
 })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
