@@ -23,11 +23,6 @@ package{'glepnir/zephyr-nvim',
   end
 }]]--
 
---[[package{'nvim-lualine/lualine.nvim'  {
-  config = conf.lualine,
-  requires = {'kyazdani42/nvim-web-devicons',opt=true}
-}]]--
-
 package{'~/github/init_vim'}
 
 package{'glepnir/dashboard-nvim',
@@ -39,6 +34,7 @@ package{'glepnir/galaxyline.nvim',
   config = conf.galaxyline, 
   requires = {'kyazdani42/nvim-web-devicons',opt=true}
 }
+
 
 package{'lukas-reineke/indent-blankline.nvim',
   event = 'BufRead',

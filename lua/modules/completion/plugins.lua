@@ -48,7 +48,6 @@ package {'mattn/emmet-vim',
 
 
 --[[package {"zbirenbaum/copilot.lua",
---  after = 'lualine.nvim',
   event = {"VimEnter"},
   config = function()
     vim.defer_fn(function()

@@ -9,7 +9,7 @@ package{'kristijanhusak/vim-dadbod-ui',
 }
 
 package{'editorconfig/editorconfig-vim',
-  ft = { 'go','typescript','javascript','vim','rust','zig','c','cpp' }
+  ft = { 'go','typescript','javascript','vim','rust','c','cpp' }
 }
 
 package{'glepnir/prodoc.nvim',
@@ -34,10 +34,6 @@ package{'brooth/far.vim',
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
   -- require dap
 }]]
-
-package{'euclio/vim-markdown-composer',
-  config = conf.markdown_composer,
-}
 
 package{'sindrets/diffview.nvim',
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
@@ -66,11 +62,7 @@ package{'dvdsk/prosesitter',
     end
 }
 
-package{'rcarriga/nvim-notify',
-  config = function()
-    require('notify')
-  end
-}
+package{'rcarriga/nvim-notify'}
 
 package{'akinsho/toggleterm.nvim',
     config = function()
