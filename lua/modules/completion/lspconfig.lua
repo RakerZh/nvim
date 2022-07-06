@@ -6,9 +6,12 @@ local format = require('modules.completion.format')
 if not packer_plugins['lspsaga.nvim'].loaded then
   vim.cmd [[packadd lspsaga.nvim]]
 end
-local saga = require 'lspsaga'
+
+local saga = require('lspsaga')
 saga.init_lsp_saga({
---  symbol_in_winbar = true,
+  symbol_in_winbar = {
+    enable = true
+  }
 })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

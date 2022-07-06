@@ -45,3 +45,21 @@ api.nvim_create_autocmd({'WinLeave','BufLeave','InsertEnter'},{
     end
   end
 })
+
+api.nvim_create_autocmd({'BufEnter'},{
+  group = my_group,
+  pattern = '*',
+  callback = function()
+    if vim.bo.filetype == 'NvimTree' then
+      local val = '%#WinbarNvimTreeIcon#   %*'
+      local path = vim.fn.getcwd()
+      local home = os.getenv("HOME")
+      path = path:gsub(home,'~')
+      val = val .. '%#WinbarPath#' ..path ..'%*'
+      api.nvim_set_hl(0,'WinbarNvimTreeIcon',{fg = '#98be65'})
+      api.nvim_set_hl(0,'WinbarPath',{fg = '#fab795'})
+      api.nvim_win_set_option(0,'winbar',val)
+    end
+  end
+})
+

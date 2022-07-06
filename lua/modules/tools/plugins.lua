@@ -70,3 +70,7 @@ package{'akinsho/toggleterm.nvim',
     end
 }
 
+package{'glepnir/template.nvim',
+    config = conf.template_nvim,
+}
+
