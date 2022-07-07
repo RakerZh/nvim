@@ -1,5 +1,5 @@
 local package = require('core.pack').package
-local conf = require('modules.ui.config')
+local conf = require('modules.tools.config')
 
 package{'kristijanhusak/vim-dadbod-ui',
   disable = true,
@@ -71,6 +71,6 @@ package{'akinsho/toggleterm.nvim',
 }
 
 package{'glepnir/template.nvim',
-    config = conf.template_nvim,
+    config = conf.template_nvim
 }
 

@@ -35,16 +35,10 @@ package {'windwp/nvim-autopairs',
   config = conf.auto_pairs,
 }
 
-package {'mattn/vim-sonictemplate',
-  cmd = 'Template',
-  ft = {'go','typescript','lua','javascript','vim','rust','markdown'},
-  config = conf.vim_sonictemplate,
-}
-
-package {'mattn/emmet-vim',
+--[[package {'mattn/emmet-vim',
   ft = {'html','css','javascript','javascriptreact','vue','typescript','typescriptreact'},
   config = conf.emmet,
-}
+}]]
 
 
 --[[package {"zbirenbaum/copilot.lua",

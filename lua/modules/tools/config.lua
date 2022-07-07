@@ -1,8 +1,7 @@
 local config = {}
-local home = os.getenv("HOME")
 
 local function load_env_file()
-  local env_file = home..'/.env'
+  local env_file = os.getenv("HOME")..'/.env'
   local env_contents = {}
   if vim.fn.filereadable(env_file) ~= 1 then
     print('.env file does not exist')

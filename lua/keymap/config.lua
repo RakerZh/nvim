@@ -14,11 +14,12 @@ _G.smart_tab = function()
   local cmp = require('cmp')
   local ok,luasnip = pcall(require,'luasnip')
   local luasnip_status = false
+
   if ok then 
     luasnip_status = luasnip.expand_or_jumpable
   end
 
-  if cmp.visible() and luasnip_status then
+  if cmp.visible() and not luasnip_status then
     return "<C-n>"
   elseif luasnip_status then  
     return "<Plug>luasnip-expand-or-jump"
@@ -33,7 +34,7 @@ _G.smart_shift_tab = function()
     local cmp = require('cmp')
     local _,luasnip = pcall(require, 'luasnip')
 
-    if cmp.visible() == 1 then
+    if cmp.visible() then
         return "<C-p>"
     elseif luasnip.jumpable(-1) then
         return "<cmd>lua require'luasnip'.jump(-1)<CR>"
