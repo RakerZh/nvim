@@ -71,6 +71,7 @@ package{'akinsho/toggleterm.nvim',
 }
 
 package{'glepnir/template.nvim',
-    config = conf.template_nvim
+    config = conf.template_nvim,
+    commit = "3317b5854688a91f6c8c5290714c5b8b8b5fd8d8"
 }
 

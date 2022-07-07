@@ -35,7 +35,7 @@ function config.vim_dadbod_ui()
   vim.g.db_ui_win_position = 'left'
   vim.g.db_ui_use_nerd_fonts = 1
   vim.g.db_ui_winwidth = 35
-  vim.g.db_ui_save_location = home .. '/.cache/vim/db_ui_queries'
+  vim.g.db_ui_save_location = os.getenv("HOME") .. '/.cache/vim/db_ui_queries'
   vim.g.dbs = load_dbs()
 end
 
@@ -57,7 +57,7 @@ end
 
 function config.template_nvim()
   local temp = require('template')
-  temp.temp_dir = '~/.config/nvim/template'
+  temp.temp_dir = '~/.config/nvim/template/'
   temp.author = 'RakerZh'
   temp.email = 'rustz6607@gmail.com'
 end
