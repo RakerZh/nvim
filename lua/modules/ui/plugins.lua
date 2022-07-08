@@ -38,7 +38,9 @@ package({
   config = conf.indent_blankline,
 })
 
-package({ 'akinsho/bufferline.nvim', config = conf.nvim_bufferline, requires = 'kyazdani42/nvim-web-devicons' })
+package({ 'akinsho/bufferline.nvim',
+  config = conf.nvim_bufferline,
+  requires = 'kyazdani42/nvim-web-devicons' })
 
 package({
   'kyazdani42/nvim-tree.lua',
