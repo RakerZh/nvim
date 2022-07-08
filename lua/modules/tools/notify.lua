@@ -7,11 +7,11 @@ local notification = {}
 
 function notification.post()
   pcall(function()
-    require("telescope").load_extension("notify")
+    require('telescope').load_extension('notify')
   end)
 
-  require("notify").setup({
-    background_colour = "#121212",
+  require('notify').setup({
+    background_colour = '#121212',
   })
 end
 
@@ -49,7 +49,8 @@ end
     TRACE = "✎",
   },
 }
-]]--
+]]
+--
 
 --vim.notify = require('notify')
 

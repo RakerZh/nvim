@@ -1,9 +1,9 @@
-  if packer_plugins['plenary.nvim'] and not packer_plugins['plenary.nvim'].loaded then
-   vim.cmd [[packadd plenary.nvim]]
-  end
+if packer_plugins['plenary.nvim'] and not packer_plugins['plenary.nvim'].loaded then
+  vim.cmd([[packadd plenary.nvim]])
+end
 
-  require'neogit'.setup {
-    disable_signs = false,
+require('neogit').setup({
+  disable_signs = false,
   disable_hint = false,
   disable_context_highlighting = false,
   disable_commit_confirmation = false,
@@ -13,16 +13,16 @@
   disable_builtin_notifications = false,
   use_magit_keybindings = false,
   commit_popup = {
-      kind = "split",
+    kind = 'split',
   },
   -- Change the default way of opening neogit
-  kind = "tab",
+  kind = 'tab',
   -- customize displayed signs
   signs = {
     -- { CLOSED, OPENED }
-    section = { ">", "v" },
-    item = { ">", "v" },
-    hunk = { "", "" },
+    section = { '>', 'v' },
+    item = { '>', 'v' },
+    hunk = { '', '' },
   },
   integrations = {
     -- Neogit only provides inline diffs. If you want a more traditional way to look at diffs, you can use `sindrets/diffview.nvim`.
@@ -37,42 +37,39 @@
     --   }
     -- }
     --
-    diffview = true
+    diffview = true,
   },
   -- Setting any section to `false` will make the section not render at all
   sections = {
     untracked = {
-      folded = false
+      folded = false,
     },
     unstaged = {
-      folded = false
+      folded = false,
     },
     staged = {
-      folded = false
+      folded = false,
     },
     stashes = {
-      folded = true
+      folded = true,
     },
     unpulled = {
-      folded = true
+      folded = true,
     },
     unmerged = {
-      folded = false
+      folded = false,
     },
     recent = {
-      folded = true
+      folded = true,
     },
   },
-    mappings = {
+  mappings = {
     -- modify status buffer mappings
     status = {
       -- Adds a mapping with "B" as key that does the "BranchPopup" command
-      ["B"] = "BranchPopup",
+      ['B'] = 'BranchPopup',
       -- Removes the default mapping of "s"
-      ["s"] = "",
-    }
-  }
-
-
-  }
-
+      ['s'] = '',
+    },
+  },
+})
