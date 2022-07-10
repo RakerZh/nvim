@@ -21,12 +21,12 @@ package({ 'glepnir/zephyr-nvim', config = conf.zephyr, requires = { 'nvim-treesi
 }]]
 --
 
-package({ '~/github/init_vim' })
+-- package({ '~/github/init_vim' })
 
-package({ 'glepnir/dashboard-nvim', config = conf.dashboard })
+package({ 'glepnir/dashboard-nvim',
+  config = conf.dashboard })
 
-package({
-  'glepnir/galaxyline.nvim',
+package({ 'glepnir/galaxyline.nvim',
   branch = 'main',
   config = conf.galaxyline,
   requires = { 'kyazdani42/nvim-web-devicons', opt = true },

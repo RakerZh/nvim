@@ -1,6 +1,5 @@
 #include <iostream>
 #include <algorithm>
-#include <complex>
 #include <deque>
 #include <iterator>
 #include <list>
@@ -11,6 +10,11 @@
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
+
+class Solution {
+public:
+
+};
 
 int main()
 {
