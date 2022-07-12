@@ -1,27 +1,7 @@
 local package = require('core.pack').package
 local conf = require('modules.ui.config')
 
-package({ 'glepnir/zephyr-nvim', config = conf.zephyr, requires = { 'nvim-treesitter/nvim-treesitter', opt = true } })
-
---package{'EdenEast/nightfox.nvim'  {}
---package{'folke/tokyonight.nvim'  {}
---package{'rmehri01/onenord.nvim'  {}
---package{'catppuccin/nvim'  {
---  as = "catppuccin",
---  config = conf.catppuccinm
---}
-
---[[package{'Shatur/neovim-ayu'  {
-  config = function()
-    require('ayu').setup({
-      mirage = false,
-      overrides = {},
-    })
-  end
-}]]
---
-
--- package({ '~/github/init_vim' })
+package({ 'RakerZh/zephyr-nvim', config = conf.zephyr, requires = { 'nvim-treesitter/nvim-treesitter', opt = true } })
 
 package({ 'glepnir/dashboard-nvim',
   config = conf.dashboard })
