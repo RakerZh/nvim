@@ -55,6 +55,7 @@ nmap({
   { '<Leader>fg', cmd('Telescope gif_files'), opts(noremap, silent) },
   { '<Leader>fw', cmd('Telescope grep_string'), opts(noremap, silent) },
   { '<Leader>fh', cmd('Telescope oldfiles'), opts(noremap, silent) },
+  { '<Leader>fj', cmd('Telescope help_tags'), opts(noremap, silent) },
   { '<Leader>gc', cmd('Telescope git_commits'), opts(noremap, silent) },
   { '<Leader>gc', cmd('Telescope dotfiles path' .. home .. '/.dotfiles'), opts(noremap, silent) },
   -- Buffline
