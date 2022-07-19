@@ -8,7 +8,7 @@ function config.telescope()
     vim.cmd([[packadd telescope-file-broswer.nvim]])
     vim.cmd([[packadd telescope-ui-select.nvim]])
   end
-  local zephyr =  require('zephyr')
+  local zephyr = require('zephyr')
   require('telescope').setup({
     defaults = {
       prompt_prefix = '🔭 ',

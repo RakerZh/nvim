@@ -15,12 +15,13 @@ saga.init_lsp_saga({
   },
   show_outline = {
     win_position = 'left',
-  }
+  },
 })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-if not packer_plugins['cmp-nvim-lsp'].loaded then vim.cmd([[packadd cmp-nvim-lsp]])
+if not packer_plugins['cmp-nvim-lsp'].loaded then
+  vim.cmd([[packadd cmp-nvim-lsp]])
 end
 
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)

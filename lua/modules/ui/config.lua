@@ -120,7 +120,7 @@ function config.dashboard()
   local db = require('dashboard')
   db.session_directory = home .. '/.cache/nvim/session'
   db.preview_command = 'cat | lolcat -F 0.3'
---  db.preview_command = 'chafa -c 256 --fg-only'
+  --  db.preview_command = 'chafa -c 256 --fg-only'
   db.preview_file_path = '~/.config/nvim/static/neovim.cat'
   db.preview_file_height = 12
   db.preview_file_width = 80

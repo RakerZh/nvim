@@ -1,9 +1,11 @@
 local package = require('core.pack').package
 local conf = require('modules.completion.config')
 
-package({ 'neovim/nvim-lspconfig',
+package({
+  'neovim/nvim-lspconfig',
   ft = { 'go', 'lua', 'sh', 'rust', 'c', 'cpp', 'python' },
-  config = conf.nvim_lsp })
+  config = conf.nvim_lsp,
+})
 
 package({ 'glepnir/lspsaga.nvim', cmd = 'Lspsaga' })
 
@@ -23,13 +25,9 @@ package({
   },
 })
 
-package({ 'L3MON4D3/LuaSnip',
-  event = 'InsertCharPre',
-  config = conf.lua_snip })
+package({ 'L3MON4D3/LuaSnip', event = 'InsertCharPre', config = conf.lua_snip })
 
-package({ 'windwp/nvim-autopairs',
-  event = 'InsertEnter',
-  config = conf.auto_pairs })
+package({ 'windwp/nvim-autopairs', event = 'InsertEnter', config = conf.auto_pairs })
 
 --[[package {"zbirenbaum/copilot.lua",
   event = {"VimEnter"},

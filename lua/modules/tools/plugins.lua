@@ -66,4 +66,3 @@ package({
 package({ 'glepnir/template.nvim', config = conf.template_nvim })
 
 -- package({ '~/space/docnote.nvim/'})
-
