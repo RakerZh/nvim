@@ -1,9 +1,12 @@
 local package = require('core.pack').package
 local conf = require('modules.ui.config')
 
-package({ 'RakerZh/zephyr-nvim', config = conf.zephyr, requires = { 'nvim-treesitter/nvim-treesitter', opt = true } })
+package({ 'RakerZh/zephyr-nvim',
+  config = conf.zephyr,
+  requires = { 'nvim-treesitter/nvim-treesitter', opt = true } })
 
-package({ 'glepnir/dashboard-nvim', config = conf.dashboard })
+package({ 'glepnir/dashboard-nvim',
+  config = conf.dashboard })
 
 package({
   'glepnir/galaxyline.nvim',
@@ -18,7 +21,9 @@ package({
   config = conf.indent_blankline,
 })
 
-package({ 'akinsho/bufferline.nvim', config = conf.nvim_bufferline, requires = 'kyazdani42/nvim-web-devicons' })
+package({ 'akinsho/bufferline.nvim',
+  config = conf.nvim_bufferline,
+  requires = 'kyazdani42/nvim-web-devicons' })
 
 package({
   'kyazdani42/nvim-tree.lua',

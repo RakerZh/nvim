@@ -13,9 +13,6 @@ saga.init_lsp_saga({
   symbol_in_winbar = {
     enable = true,
   },
-  show_outline = {
-    win_position = 'left',
-  },
 })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

@@ -36,6 +36,7 @@ nmap({
   -- Lspsaga floaterminal
   { '<A-d>', cmd('Lspsaga open_floaterm'), opts(noremap, silent) },
   { '<Leader>g', cmd('Lspsaga open_floaterm lazygit'), opts(noremap, silent) },
+  { '<Leader>ls', cmd('LSoutlineToggle'), opts(noremap, silent) },
   -- dashboard create file
   { '<Leader>n', cmd('DashboardNewFile'), opts(noremap, silent) },
   { '<Leader>ss', cmd('SessionSave'), opts(noremap, silent) },
