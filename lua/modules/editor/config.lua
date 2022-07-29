@@ -1,14 +1,14 @@
 local config = {}
 
 function config.telescope()
-  if not packer_plugins['plenary.nvim'].loaded then
-    vim.cmd([[packadd plenary.nvim]])
+  if not packer_plugins['popup.nvim'].loaded then
     vim.cmd([[packadd popup.nvim]])
-    vim.cmd([[packadd telescope-fzy-native.nvim]])
+    vim.cmd([[packadd plenary.nvim]])
     vim.cmd([[packadd telescope-file-broswer.nvim]])
+    vim.cmd([[packadd telescope-fzy-native.nvim]])
     vim.cmd([[packadd telescope-ui-select.nvim]])
   end
-  local zephyr = require('zephyr')
+
   require('telescope').setup({
     defaults = {
       prompt_prefix = '🔭 ',

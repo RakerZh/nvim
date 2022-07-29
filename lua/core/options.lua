@@ -115,3 +115,11 @@ if vim.loop.os_uname().sysname == 'Darwin' then
   vim.g.python_host_prog = '/usr/bin/python'
   vim.g.python3_host_prog = '/usr/local/bin/python3'
 end
+
+if vim.g.neovide then
+  vim.g.neovide_fullscreen = true
+  vim.g.neovide_cursor_antialiasing = true
+  vim.o.guifont = 'JetBrainsMono Nerd Font:h17'
+  vim.g.neovide_input_macos_alt_is_meta = false
+  vim.g.neovide_frameless = true
+end

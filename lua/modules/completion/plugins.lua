@@ -43,13 +43,6 @@ package({ 'windwp/nvim-autopairs', event = 'InsertEnter', config = conf.auto_pai
 }]]
 
 package({
-  'p00f/clangd_extensions.nvim',
-  config = function()
-    require('clangd_extensions')
-  end,
-})
-
-package({
   'ray-x/go.nvim',
   ft = 'go',
   config = function()

@@ -18,7 +18,6 @@ package({ 'nvim-treesitter/nvim-treesitter-textobjects', after = 'nvim-treesitte
 
 package({ 'glepnir/smartinput.nvim', ft = { 'go', 'lua' }, config = conf.smart_input })
 
-package({ 'nvim-telescope/telescope-fzy-native.nvim' })
 package({ 'nvim-telescope/telescope-file-browser.nvim' })
 
 package({
@@ -60,3 +59,10 @@ package({ 'rhysd/vim-operator-surround', event = 'BufRead', requires = 'kana/vim
 package({ 'kana/vim-niceblock', opt = true })
 
 package({ 'antoinemadec/FixCursorHold.nvim', event = 'BufReadPre' })
+
+package({
+  'jedrzejboczar/possession.nvim',
+  requires = {
+    { 'nvim-lua/plenary.nvim' },
+  },
+})
