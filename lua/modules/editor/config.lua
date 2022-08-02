@@ -45,7 +45,7 @@ function config.nvim_colorizer()
 end
 
 function config.smart_input()
-  require('smartinput').setup({
+  require('mcc').setup({
     ['go'] = { ';', ':=', ';' },
     ['lua'] = { '!', '~=', '!' },
   })

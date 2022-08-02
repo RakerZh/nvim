@@ -16,7 +16,7 @@ package({
 
 package({ 'nvim-treesitter/nvim-treesitter-textobjects', after = 'nvim-treesitter' })
 
-package({ 'glepnir/smartinput.nvim', ft = { 'go', 'lua' }, config = conf.smart_input })
+package({ 'glepnir/mcc.nvim', ft = { 'go', 'lua' }, config = conf.smart_input })
 
 package({ 'nvim-telescope/telescope-file-browser.nvim' })
 
