@@ -11,8 +11,6 @@ package({
 
 package({ 'editorconfig/editorconfig-vim', ft = { 'go', 'typescript', 'javascript', 'vim', 'rust', 'c', 'cpp' } })
 
-package({ 'glepnir/prodoc.nvim', event = 'BufReadPre' })
-
 package({ 'liuchengxu/vista.vim', cmd = 'Vista', config = conf.vim_vista })
 
 package({
@@ -64,5 +62,7 @@ package({
 })
 
 package({ 'glepnir/template.nvim', config = conf.template_nvim })
+
+package({ 'glepnir/coman.nvim', event = 'BufRead' })
 
 -- package({ '~/space/docnote.nvim/'})
