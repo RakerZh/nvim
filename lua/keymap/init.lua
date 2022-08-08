@@ -70,7 +70,7 @@ nmap({
   { '<Leader>8', cmd('BufferLineGoToBuffer 8'), opts(noremap, silent) },
   -- coman
   { 'gcc', cmd('ComComment'), opts(noremap, silent) },
-  { 'gcj', cmd('ComAnnotation'), opts(noremap, silent )},
+  { 'gcj', cmd('ComAnnotation'), opts(noremap, silent) },
   -- vista
   { '<Leader>v', cmd('Vista'), opts(noremap, silent) },
   -- vim-operator-surround
