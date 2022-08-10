@@ -119,7 +119,7 @@ end
 if vim.g.neovide then
   vim.g.neovide_fullscreen = true
   vim.g.neovide_cursor_antialiasing = true
-  vim.o.guifont = 'JetBrainsMono Nerd Font:h17'
+  vim.o.guifont = 'JetBrainsMono Nerd Font:h18'
   vim.g.neovide_input_macos_alt_is_meta = false
   vim.g.neovide_frameless = true
 end

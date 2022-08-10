@@ -59,6 +59,8 @@ nmap({
   { '<Leader>fj', cmd('Telescope help_tags'), opts(noremap, silent) },
   { '<Leader>gc', cmd('Telescope git_commits'), opts(noremap, silent) },
   { '<Leader>gc', cmd('Telescope dotfiles path' .. home .. '/.dotfiles'), opts(noremap, silent) },
+  -- zoxide
+  { '<Leader>fq', cmd('Telescope zoxide list'), opts(noremap, silent) },
   -- Buffline
   { '<Leader>1', cmd('BufferLineGoToBuffer 1'), opts(noremap, silent) },
   { '<Leader>2', cmd('BufferLineGoToBuffer 2'), opts(noremap, silent) },

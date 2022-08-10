@@ -7,6 +7,7 @@ function config.telescope()
     vim.cmd([[packadd telescope-file-broswer.nvim]])
     vim.cmd([[packadd telescope-fzy-native.nvim]])
     vim.cmd([[packadd telescope-ui-select.nvim]])
+    vim.cmd([[packadd telescope-zoxide]])
   end
 
   require('telescope').setup({
@@ -38,6 +39,7 @@ function config.telescope()
   require('telescope').load_extension('file_browser')
   require('telescope').load_extension('ui-select')
   require('telescope').load_extension('find_template')
+  require('telescope').load_extension('zoxide')
 end
 
 function config.nvim_colorizer()

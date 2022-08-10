@@ -20,6 +20,7 @@ package({ 'glepnir/mcc.nvim', ft = { 'go', 'lua' }, config = conf.smart_input })
 
 package({ 'nvim-telescope/telescope-file-browser.nvim' })
 
+package({ 'jvgrootveld/telescope-zoxide' })
 package({
   'nvim-telescope/telescope.nvim',
   cmd = 'Telescope',
@@ -30,6 +31,7 @@ package({
     { 'nvim-telescope/telescope-fzy-native.nvim', opt = true },
     { 'nvim-telescope/telescope-file-browser.nvim', opt = true },
     { 'nvim-telescope/telescope-ui-select.nvim', opt = true },
+    { 'jvgrootveld/telescope-zoxide', opt = true },
   },
 })
 
