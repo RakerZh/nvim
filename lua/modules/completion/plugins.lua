@@ -51,10 +51,10 @@ package({
   end,
 })
 
-package({
+--[[package({
   'nvim-neorg/neorg',
   ft = 'norg',
   after = 'nvim-treesitter',
   config = conf.neorg,
   requires = { 'nvim-lua/plenary.nvim', opt = true },
-})
+})]]

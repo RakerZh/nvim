@@ -27,7 +27,7 @@ package({
   -- require dap
 }]]
 
-package({ 'sindrets/diffview.nvim', requires = { { 'nvim-lua/plenary.nvim', opt = true } } })
+package({ 'sindrets/diffview.nvim', requires = { { 'nvim-lua/plenary.nvim' } } })
 
 package({ 'searleser97/cpbooster.vim' })
 
