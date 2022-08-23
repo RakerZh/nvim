@@ -21,7 +21,6 @@ function config.nvim_bufferline()
       middle_mouse_command = nil,
       modified_icon = '✥',
       always_show_bufferline = false,
-      indicator_icon = '▎',
       buffer_close_icon = '',
       close_icon = '',
       left_trunc_marker = '',
