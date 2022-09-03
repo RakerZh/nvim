@@ -70,7 +70,7 @@ vim.opt.showcmd = false
 -- vim.opt.iskeyword:remove('_')
 
 -- just for nightly
-vim.opt.cmdheight = 0
+vim.opt.cmdheight = 1
 vim.opt.cmdwinheight = 5
 vim.opt.equalalways = false
 vim.opt.laststatus = 2
@@ -83,7 +83,7 @@ vim.opt.winblend = 10
 vim.opt.undofile = true
 vim.opt.synmaxcol = 2500
 vim.opt.formatoptions = '1jcroql'
-vim.opt.textwidth = 60
+vim.opt.textwidth = 100
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.tabstop = 2

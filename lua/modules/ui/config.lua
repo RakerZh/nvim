@@ -167,15 +167,14 @@ function config.nvim_tree()
   require('nvim-tree').setup({
     disable_netrw = false,
     hijack_cursor = true,
-    hijack_netrw = true,
     view = {
+      adaptive_size = true,
       width = 30,
       height = 30,
       side = 'left',
       preserve_window_proportions = false,
       number = false,
       relativenumber = false,
-      signcolumn = 'yes',
       mappings = {
         custom_only = false,
         list = {
@@ -187,16 +186,6 @@ function config.nvim_tree()
     },
     renderer = {
       icons = {
-        webdev_colors = true,
-        git_placement = 'before',
-        padding = ' ',
-        symlink_arrow = ' ➛ ',
-        show = {
-          file = true,
-          folder = true,
-          folder_arrow = true,
-          git = true,
-        },
         glyphs = {
           default = '',
           symlink = '',
@@ -221,9 +210,8 @@ function config.nvim_tree()
           },
         },
       },
-      special_files = { 'Cargo.toml', 'Makefile', 'README.md', 'readme.md' },
     },
-  }) -- END_DEFAULT_OPTS
+  })
 end
 
 function config.gitsigns()

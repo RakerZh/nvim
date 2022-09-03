@@ -20,7 +20,6 @@
 `L+F` NvimTreeFindFile 
 `L+e` NvimTreeToggle
 `L+R` NvimTreeRefresh
-`L+om` MarkdownPreview 
 ``
 mf
 

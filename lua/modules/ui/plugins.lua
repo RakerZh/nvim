@@ -7,6 +7,8 @@ package({
   requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
 })
 
+package({ 'kyazdani42/nvim-web-devicons' })
+
 package({ 'glepnir/dashboard-nvim', config = conf.dashboard })
 
 package({
@@ -27,8 +29,8 @@ package({ 'akinsho/bufferline.nvim', config = conf.nvim_bufferline, requires = '
 package({
   'kyazdani42/nvim-tree.lua',
   cmd = 'NvimTreeToggle',
-  config = conf.nvim_tree,
   requires = 'kyazdani42/nvim-web-devicons',
+  config = conf.nvim_tree,
 })
 
 package({

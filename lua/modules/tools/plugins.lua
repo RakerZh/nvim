@@ -65,4 +65,11 @@ package({ 'glepnir/template.nvim', config = conf.template_nvim })
 
 package({ 'glepnir/coman.nvim', event = 'BufRead' })
 
+package({
+  'akinsho/git-conflict.nvim',
+  tag = '*',
+  config = function()
+    require('git-conflict').setup()
+  end,
+})
 -- package({ '~/space/docnote.nvim/'})
