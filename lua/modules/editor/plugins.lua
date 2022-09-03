@@ -8,7 +8,6 @@ local conf = require('modules.editor.config')
 
 package({
   'nvim-treesitter/nvim-treesitter',
-  event = 'BufRead',
   run = ':TSUpdate',
   after = 'telescope.nvim',
   config = conf.nvim_treesitter,
