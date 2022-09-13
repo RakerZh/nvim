@@ -72,4 +72,10 @@ package({
     require('git-conflict').setup()
   end,
 })
+
+package({
+  'jghauser/follow-md-links.nvim'
+})
+
 -- package({ '~/space/docnote.nvim/'})
+

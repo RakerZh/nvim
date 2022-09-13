@@ -5,21 +5,6 @@ local conf = require('modules.editor.config')
   config = conf.fzf_lua,
   requires = {'kyazdani42/nvim-web-devicons',opt = true}
 }]]
-
-package({
-  'nvim-treesitter/nvim-treesitter',
-  run = ':TSUpdate',
-  after = 'telescope.nvim',
-  config = conf.nvim_treesitter,
-})
-
-package({ 'nvim-treesitter/nvim-treesitter-textobjects', after = 'nvim-treesitter' })
-
-package({ 'glepnir/mcc.nvim', ft = { 'go', 'lua' }, config = conf.smart_input })
-
-package({ 'nvim-telescope/telescope-file-browser.nvim' })
-
-package({ 'jvgrootveld/telescope-zoxide' })
 package({
   'nvim-telescope/telescope.nvim',
   cmd = 'Telescope',
@@ -33,6 +18,23 @@ package({
     { 'jvgrootveld/telescope-zoxide', opt = true },
   },
 })
+
+package({
+  'nvim-treesitter/nvim-treesitter',
+  event = 'BufRead',
+  run = ':TSUpdate',
+  after = 'telescope.nvim',
+  config = conf.nvim_treesitter,
+})
+
+package({ 'nvim-treesitter/nvim-treesitter-textobjects', after = 'nvim-treesitter' })
+
+package({ 'glepnir/mcc.nvim', ft = { 'go', 'lua' }, config = conf.smart_input })
+
+package({ 'nvim-telescope/telescope-file-browser.nvim' })
+
+package({ 'jvgrootveld/telescope-zoxide' })
+
 
 package({ 'rhysd/accelerated-jk', opt = true })
 
@@ -57,9 +59,7 @@ package({
 
 package({ 'rhysd/vim-operator-surround', event = 'BufRead', requires = 'kana/vim-operator-user' })
 
-package({ 'kana/vim-niceblock', opt = true })
-
-package({ 'antoinemadec/FixCursorHold.nvim', event = 'BufReadPre' })
+-- package({ 'antoinemadec/FixCursorHold.nvim', event = 'BufReadPre' })
 
 package({
   'jedrzejboczar/possession.nvim',
