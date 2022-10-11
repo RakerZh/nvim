@@ -35,7 +35,6 @@ package({ 'nvim-telescope/telescope-file-browser.nvim' })
 
 package({ 'jvgrootveld/telescope-zoxide' })
 
-
 package({ 'rhysd/accelerated-jk', opt = true })
 
 package({ 'norcalli/nvim-colorizer.lua', config = conf.nvim_colorizer })

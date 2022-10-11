@@ -15,6 +15,7 @@ package({ 'hrsh7th/cmp-nvim-lsp' })
 
 package({
   'hrsh7th/nvim-cmp',
+  commit = '99ef854322d0de9269044ee197b6c9ca14911d96',
   event = 'InsertEnter',
   config = conf.nvim_cmp,
   requires = {

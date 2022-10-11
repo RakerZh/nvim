@@ -74,8 +74,7 @@ package({
 })
 
 package({
-  'jghauser/follow-md-links.nvim'
+  'jghauser/follow-md-links.nvim',
 })
 
 -- package({ '~/space/docnote.nvim/'})
-
