@@ -40,8 +40,7 @@ package({
   end,
 })
 
---package{'github/copilot.vim',
---}
+-- package({ 'github/copilot.vim' })
 
 package({ 'famiu/bufdelete.nvim' })
 
