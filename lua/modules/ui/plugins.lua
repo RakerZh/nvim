@@ -41,4 +41,5 @@ package({
 })
 
 package({ 'mechatroner/rainbow_csv', ft = 'csv' })
+package({ 'jupyter-vim/jupyter-vim' })
 package({ 'nvim-telescope/telescope-ui-select.nvim' })
