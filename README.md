@@ -4,4 +4,6 @@ This config is inspired from glepnir's config [Nvim](https://github.com/glepnir/
 
 You can also checkout [Cosynvim](https://github.com/glepnir/cosynvim).
 
+## Plug List
+
 # Licenese MIT
