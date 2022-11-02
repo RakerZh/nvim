@@ -7,6 +7,10 @@ package({
   requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
 })
 
+package({
+  'folke/tokyonight.nvim',
+})
+
 package({ 'kyazdani42/nvim-web-devicons' })
 
 package({ 'glepnir/dashboard-nvim', config = conf.dashboard })
