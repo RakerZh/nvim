@@ -79,6 +79,7 @@ nmap({
   { 'sa', '<Plug>(operator-surround-append)', opts(noremap, silent) },
   { 'sd', '<Plug>(operator-surround-delete)', opts(noremap, silent) },
   { 'sr', '<Plug>(operator-surround-replace)', opts(noremap, silent) },
+  { '<leader>p', cmd('lua require("nabla").popup()<CR>'), opts(noremap, silent) },
 })
 
 tmap({ '<A-d>', [[<C-\><C-n>:Lspsaga close_floaterm<CR>]], opts(noremap, silent) })

@@ -76,4 +76,7 @@ package({
   'jghauser/follow-md-links.nvim',
 })
 
+package({
+  'jbyuki/nabla.nvim',
+})
 -- package({ '~/space/docnote.nvim/'})
