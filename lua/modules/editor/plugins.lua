@@ -5,6 +5,7 @@ local conf = require('modules.editor.config')
   config = conf.fzf_lua,
   requires = {'kyazdani42/nvim-web-devicons',opt = true}
 }]]
+
 package({
   'nvim-telescope/telescope.nvim',
   cmd = 'Telescope',

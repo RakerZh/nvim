@@ -79,4 +79,11 @@ package({
 package({
   'jbyuki/nabla.nvim',
 })
+
+package({
+  'lukas-reineke/headlines.nvim',
+  config = function()
+    require('headlines').setup()
+  end,
+})
 -- package({ '~/space/docnote.nvim/'})

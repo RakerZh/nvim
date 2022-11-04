@@ -58,7 +58,6 @@ function config.template_nvim()
   local temp = require('template')
   temp.temp_dir = '~/.config/nvim/template/'
   temp.author = 'RakerZh'
-  temp.email = 'rustz6607@gmail.com'
 end
 
 return config
