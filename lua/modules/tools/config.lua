@@ -60,4 +60,8 @@ function config.template_nvim()
   temp.author = 'RakerZh'
 end
 
+function config.headlines()
+  require('headlines').setup()
+end
+
 return config

@@ -82,8 +82,6 @@ package({
 
 package({
   'lukas-reineke/headlines.nvim',
-  config = function()
-    require('headlines').setup()
-  end,
+  config = conf.headlines(),
 })
 -- package({ '~/space/docnote.nvim/'})
