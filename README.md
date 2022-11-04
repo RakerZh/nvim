@@ -6,4 +6,5 @@ You can also checkout [Cosynvim](https://github.com/glepnir/cosynvim).
 
 ## Plug List
 
+ 
 # Licenese MIT
