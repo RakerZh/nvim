@@ -116,12 +116,16 @@ lspconfig.rust_analyzer.setup({
   capabilities = capabilities,
   settings = {
     ['rust-analyzer'] = {
-      assist = {
-        importGranularity = 'module',
-        importPrefix = 'self',
+      imports = {
+        granularity = {
+          group = 'module',
+        },
+        prefix = 'self',
       },
       cargo = {
-        loadOutDirsFromCheck = true,
+        buildScripts = {
+          enable = true,
+        },
       },
       procMacro = {
         enable = true,
