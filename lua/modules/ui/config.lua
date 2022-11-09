@@ -120,10 +120,21 @@ function config.dashboard()
   local z = require('zephyr')
 
   db.session_directory = home .. '/.cache/nvim/session'
-  db.preview_command = 'cat | lolcat -F 0.1 '
-  db.preview_file_path = home .. '/.config/nvim/static/neovim.cat'
-  db.preview_file_height = 20
-  db.preview_file_width = 80
+  -- db.preview_command = 'cat | lolcat -F 0.05 '
+  db.custom_header = {
+    '',
+    '  █████╗ ███████╗ █████╗ ██╗  ██╗██╗    ██╗     ██╗███╗   ██╗██╗   ██╗██╗  ██╗ ',
+    ' ██╔══██╗██╔════╝██╔══██╗██║  ██║██║    ██║     ██║████╗  ██║██║   ██║╚██╗██╔╝ ',
+    ' ███████║███████╗███████║███████║██║    ██║     ██║██╔██╗ ██║██║   ██║ ╚███╔╝ ',
+    ' ██╔══██║╚════██║██╔══██║██╔══██║██║    ██║     ██║██║╚██╗██║██║   ██║ ██╔██╗ ',
+    ' ██║  ██║███████║██║  ██║██║  ██║██║    ███████╗██║██║ ╚████║╚██████╔╝██╔╝ ██╗ ',
+    ' ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝    ╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝ ',
+    '',
+  }
+
+  -- db.preview_file_path = home .. '/.config/nvim/static/neovim.cat'
+  -- db.preview_file_height = 12
+  -- db.preview_file_width = 80
   db.custom_center = {
     {
       icon = '  ',
@@ -141,7 +152,7 @@ function config.dashboard()
     },
     {
       icon = '  ',
-      icon_hl = { fg = z.cyan },
+      icon_hl = { fg = '#dce3e5' },
       desc = 'Find  File                              ',
       action = 'Telescope find_files find_command=rg,--hidden,--files',
       shortcut = 'SPC f f',
@@ -155,7 +166,7 @@ function config.dashboard()
     },
     {
       icon = '  ',
-      icon_hl = { fg = z.orange },
+      icon_hl = { fg = '#e6653a' },
       desc = 'Find  word                              ',
       aciton = 'Telescope live_grep',
       shortcut = 'SPC f w',
@@ -167,7 +178,16 @@ function config.dashboard()
       action = 'Telescope dotfiles path=' .. home .. '/.dotfiles',
       shortcut = 'SPC f d',
     },
+    {
+      icon = '  ',
+      icon_hl = { fg = z.yellow },
+      desc = 'Change working directory                ',
+      action = 'Telescope zoxide',
+      shortcut = 'SPC f q',
+    },
   }
+  vim.cmd('highlight DashboardCenter guifg=#9fb2ca')
+  vim.cmd('highlight DashboardHeader guifg=#e1acb8')
 end
 
 function config.nvim_tree()

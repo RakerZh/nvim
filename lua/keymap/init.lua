@@ -53,12 +53,13 @@ nmap({
   { '<Leader>fa', cmd('Telescope live_grep'), opts(noremap, silent) },
   { '<Leader>fb', cmd('Telescope file_browser'), opts(noremap, silent) },
   { '<Leader>ff', cmd('Telescope find_files'), opts(noremap, silent) },
-  { '<Leader>fg', cmd('Telescope gif_files'), opts(noremap, silent) },
+  { '<Leader>fs', cmd('Telescope git_status'), opts(noremap, silent) },
+  { '<Leader>fk', cmd('Telescope keymaps'), opts(noremap, silent) },
   { '<Leader>fw', cmd('Telescope grep_string'), opts(noremap, silent) },
   { '<Leader>fh', cmd('Telescope oldfiles'), opts(noremap, silent) },
   { '<Leader>fj', cmd('Telescope help_tags'), opts(noremap, silent) },
   { '<Leader>gc', cmd('Telescope git_commits'), opts(noremap, silent) },
-  { '<Leader>gc', cmd('Telescope dotfiles path' .. home .. '/.dotfiles'), opts(noremap, silent) },
+  -- { '<Leader>gc', cmd('Telescope dotfiles path' .. home .. '/.dotfiles'), opts(noremap, silent) },
   -- zoxide
   { '<Leader>fq', cmd('Telescope zoxide list'), opts(noremap, silent) },
   -- Buffline
