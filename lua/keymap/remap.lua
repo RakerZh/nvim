@@ -23,6 +23,7 @@ nmap({
   { '<C-l>', '<C-w>l', opts(noremap) },
   { '<C-j>', '<C-w>j', opts(noremap) },
   { '<C-k>', '<C-w>k', opts(noremap) },
+  { '<esc>', cmd('noh'), opts(noremap) },
   -- resize window
   { '<A-[>', cmd('vertical resize -5'), opts(noremap, silent) },
   { '<A-]>', cmd('vertical resize +5'), opts(noremap, silent) },

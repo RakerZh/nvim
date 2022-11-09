@@ -18,5 +18,6 @@ public:
 
 int main()
 {
+  Solution solution;
 
 }

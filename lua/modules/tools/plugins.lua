@@ -77,10 +77,6 @@ package({
 })
 
 package({
-  'jbyuki/nabla.nvim',
-})
-
-package({
   'lukas-reineke/headlines.nvim',
   config = conf.headlines(),
 })

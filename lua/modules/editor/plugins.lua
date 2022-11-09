@@ -72,3 +72,8 @@ package({
     end
   end,
 })
+
+package({
+  'phaazon/hop.nvim',
+  config = conf.hop,
+  event = 'BufRead'})
