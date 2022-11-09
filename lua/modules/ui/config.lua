@@ -120,9 +120,9 @@ function config.dashboard()
   local z = require('zephyr')
 
   db.session_directory = home .. '/.cache/nvim/session'
- db.preview_command = 'cat | lolcat -F 0.1 '
-  db.preview_file_path = home .. '/.config/nvim/static/4.ans'
-  db.preview_file_height = 20 
+  db.preview_command = 'cat | lolcat -F 0.1 '
+  db.preview_file_path = home .. '/.config/nvim/static/neovim.cat'
+  db.preview_file_height = 20
   db.preview_file_width = 80
   db.custom_center = {
     {
@@ -141,28 +141,28 @@ function config.dashboard()
     },
     {
       icon = '  ',
-      icon_hl = { fg = z.cyan},
+      icon_hl = { fg = z.cyan },
       desc = 'Find  File                              ',
       action = 'Telescope find_files find_command=rg,--hidden,--files',
       shortcut = 'SPC f f',
     },
     {
       icon = '  ',
-      icon_hl = { fg = z.blue},
+      icon_hl = { fg = z.blue },
       desc = 'File Browser                            ',
       action = 'Telescope file_browser',
       shortcut = 'SPC f b',
     },
     {
       icon = '  ',
-      icon_hl = { fg = z.orange},
+      icon_hl = { fg = z.orange },
       desc = 'Find  word                              ',
       aciton = 'Telescope live_grep',
       shortcut = 'SPC f w',
     },
     {
       icon = '  ',
-      icon_hl = { fg = z.redwine},
+      icon_hl = { fg = z.redwine },
       desc = 'Open Personal dotfiles                  ',
       action = 'Telescope dotfiles path=' .. home .. '/.dotfiles',
       shortcut = 'SPC f d',
