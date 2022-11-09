@@ -58,7 +58,7 @@ nmap({
   { '<Leader>fw', cmd('Telescope grep_string'), opts(noremap, silent) },
   { '<Leader>fh', cmd('Telescope oldfiles'), opts(noremap, silent) },
   { '<Leader>fj', cmd('Telescope help_tags'), opts(noremap, silent) },
-  { '<Leader>gc', cmd('Telescope git_commits'), opts(noremap, silent) },
+  { '<Leader>fg', cmd('Telescope git_commits'), opts(noremap, silent) },
   -- { '<Leader>gc', cmd('Telescope dotfiles path' .. home .. '/.dotfiles'), opts(noremap, silent) },
   -- zoxide
   { '<Leader>fq', cmd('Telescope zoxide list'), opts(noremap, silent) },

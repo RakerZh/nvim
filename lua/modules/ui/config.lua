@@ -188,6 +188,7 @@ function config.dashboard()
   }
   vim.cmd('highlight DashboardCenter guifg=#9fb2ca')
   vim.cmd('highlight DashboardHeader guifg=#e1acb8')
+  vim.cmd('highlight DashboardFooter guifg=#5E81AC')
 end
 
 function config.nvim_tree()
