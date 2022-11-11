@@ -102,7 +102,7 @@ lspconfig.tsserver.setup({
   end,
 })
 
-lspconfig.clangd.setup({
+--[[ lspconfig.clangd.setup({
   cmd = {
     'clangd',
     '--background-index',
@@ -110,7 +110,8 @@ lspconfig.clangd.setup({
     '--clang-tidy',
     '--header-insertion=iwyu',
   },
-})
+}) ]]
+--
 
 lspconfig.rust_analyzer.setup({
   capabilities = capabilities,

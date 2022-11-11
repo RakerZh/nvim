@@ -185,6 +185,20 @@ function config.dashboard()
       action = 'Telescope zoxide',
       shortcut = 'SPC f q',
     },
+    {
+      icon = '  ',
+      icon_hl = { fg = z.gray },
+      desc = 'Show keymaps                            ',
+      action = 'Telescope keymaps',
+      shortcut = 'SPC f k',
+    },
+    {
+      icon = 'ﰖ  ',
+      icon_hl = { fg = z.violet },
+      desc = 'Search   commits                        ',
+      action = 'Telescope git_commits',
+      shortcut = 'SPC f g',
+    },
   }
   vim.cmd('highlight DashboardCenter guifg=#9fb2ca')
   vim.cmd('highlight DashboardHeader guifg=#e1acb8')
