@@ -88,4 +88,8 @@ package({
   "mzlogin/vim-markdown-toc",
 })
 
+-- package({
+--   "mickael-menu/zk-nvim",
+-- })
+
 -- package({ '~/space/docnote.nvim/'})
