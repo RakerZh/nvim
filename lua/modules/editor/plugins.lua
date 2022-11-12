@@ -57,7 +57,7 @@ package({
 	requires = "kana/vim-operator-user",
 })
 
-package({ "rhysd/vim-operator-surround", event = "BufRead", requires = "kana/vim-operator-user" })
+-- package({ "rhysd/vim-operator-surround", event = "BufRead", requires = "kana/vim-operator-user" })
 
 -- package({ 'antoinemadec/FixCursorHold.nvim', event = 'BufReadPre' })
 

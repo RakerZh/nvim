@@ -80,4 +80,8 @@ package({
 	"lukas-reineke/headlines.nvim",
 	config = conf.headlines(),
 })
+
+package({
+  "renerocksai/telekasten.nvim"
+})
 -- package({ '~/space/docnote.nvim/'})

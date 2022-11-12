@@ -76,10 +76,6 @@ nmap({
 	{ "gcj", cmd("ComAnnotation"), opts(noremap, silent) },
 	-- vista
 	{ "<Leader>v", cmd("Vista"), opts(noremap, silent) },
-	-- vim-operator-surround
-	{ "sa", "<Plug>(operator-surround-append)", opts(noremap, silent) },
-	{ "sd", "<Plug>(operator-surround-delete)", opts(noremap, silent) },
-	{ "sr", "<Plug>(operator-surround-replace)", opts(noremap, silent) },
 })
 
 tmap({ "<A-d>", [[<C-\><C-n>:Lspsaga close_floaterm<CR>]], opts(noremap, silent) })
