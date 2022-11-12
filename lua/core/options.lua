@@ -14,7 +14,7 @@ vim.opt.sessionoptions = "curdir,help,tabpages,winsize"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.wildignorecase = true
 vim.opt.wildignore =
-	".git,.hg,.svn,*.pyc,*.o,*.out,*.jpg,*.jpeg,*.png,*.gif,*.zip,**/tmp/**,*.DS_Store,**/node_modules/**,**/bower_modules/**"
+  ".git,.hg,.svn,*.pyc,*.o,*.out,*.jpg,*.jpeg,*.png,*.gif,*.zip,**/tmp/**,*.DS_Store,**/node_modules/**,**/bower_modules/**"
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.swapfile = false
@@ -100,29 +100,29 @@ vim.opt.conceallevel = 2
 vim.opt.concealcursor = "niv"
 
 if vim.loop.os_uname().sysname == "Darwin" then
-	vim.g.clipboard = {
-		name = "macOS-clipboard",
-		copy = {
-			["+"] = "pbcopy",
-			["*"] = "pbcopy",
-		},
-		paste = {
-			["+"] = "pbpaste",
-			["*"] = "pbpaste",
-		},
-		cache_enabled = 0,
-	}
-	vim.g.python_host_prog = "/usr/bin/python"
-	vim.g.python3_host_prog = "/usr/local/bin/python3"
+  vim.g.clipboard = {
+    name = "macOS-clipboard",
+    copy = {
+      ["+"] = "pbcopy",
+      ["*"] = "pbcopy",
+    },
+    paste = {
+      ["+"] = "pbpaste",
+      ["*"] = "pbpaste",
+    },
+    cache_enabled = 0,
+  }
+  vim.g.python_host_prog = "/usr/bin/python"
+  vim.g.python3_host_prog = "/usr/local/bin/python3"
 end
 
 if vim.g.neovide then
-	vim.g.neovide_fullscreen = false
-	vim.g.neovide_cursor_antialiasing = true
-	vim.o.guifont = "JetBrainsMono Nerd Font:h18"
-	vim.g.neovide_input_macos_alt_is_meta = false
-	vim.g.neovide_frameless = true
-	vim.g.neovide_scale_factor = 0.95
-	vim.g.neovide_scroll_animation_length = 0.13
-	vim.g.neovide_cursor_vfx_mode = "railgun"
+  vim.g.neovide_fullscreen = false
+  vim.g.neovide_cursor_antialiasing = true
+  vim.o.guifont = "JetBrainsMono Nerd Font:h18"
+  vim.g.neovide_input_macos_alt_is_meta = false
+  vim.g.neovide_frameless = true
+  vim.g.neovide_scale_factor = 0.95
+  vim.g.neovide_scroll_animation_length = 0.13
+  vim.g.neovide_cursor_vfx_mode = "railgun"
 end
