@@ -84,6 +84,9 @@ nmap({
   { "gcj", cmd("ComAnnotation"), opts(noremap, silent) },
   -- vista
   { "<Leader>v", cmd("Vista"), opts(noremap, silent) },
+  -- Hop
+  { "f", cmd("HopWordAC") },
+  { "F", cmd("HopWordBC") },
 })
 
 tmap({ "<A-d>", [[<C-\><C-n>:Lspsaga close_floaterm<CR>]], opts(noremap, silent) })
