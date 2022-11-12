@@ -103,7 +103,6 @@ lspconfig.tsserver.setup({
 })
 
 lspconfig.clangd.setup({
-<<<<<<< HEAD
 	cmd = {
 		"clangd",
 		"--background-index",
@@ -111,15 +110,13 @@ lspconfig.clangd.setup({
 		"--clang-tidy",
 		"--header-insertion=iwyu",
 	},
-=======
-  cmd = {
-    'clangd',
-    '--background-index',
-    '--suggest-missing-includes',
-    '--clang-tidy',
-    '--header-insertion=iwyu',
-  },
->>>>>>> 680cc7a660d77703c003d9652cb04c110b8438ec
+	cmd = {
+		"clangd",
+		"--background-index",
+		"--suggest-missing-includes",
+		"--clang-tidy",
+		"--header-insertion=iwyu",
+	},
 })
 
 lspconfig.rust_analyzer.setup({

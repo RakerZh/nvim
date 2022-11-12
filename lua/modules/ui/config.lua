@@ -132,7 +132,6 @@ function config.dashboard()
 		"",
 	}
 
-<<<<<<< HEAD
 	-- db.preview_file_path = home .. '/.config/nvim/static/neovim.cat'
 	-- db.preview_file_height = 12
 	-- db.preview_file_width = 80
@@ -204,79 +203,6 @@ function config.dashboard()
 	vim.cmd("highlight DashboardCenter guifg=#9fb2ca")
 	vim.cmd("highlight DashboardHeader guifg=#e1acb8")
 	vim.cmd("highlight DashboardFooter guifg=#5E81AC")
-=======
-  -- db.preview_file_path = home .. '/.config/nvim/static/neovim.cat'
-  -- db.preview_file_height = 12
-  -- db.preview_file_width = 80
-  db.custom_center = {
-    {
-      icon = '  ',
-      icon_hl = { fg = z.red },
-      desc = 'Update Plugins                          ',
-      shortcut = 'SPC p u',
-      action = 'PackerUpdate',
-    },
-    {
-      icon = '  ',
-      icon_hl = { fg = z.yellow },
-      desc = 'Recently opened files                   ',
-      action = 'Telescope oldfiles',
-      shortcut = 'SPC f h',
-    },
-    {
-      icon = '  ',
-      icon_hl = { fg = '#dce3e5' },
-      desc = 'Find  File                              ',
-      action = 'Telescope find_files find_command=rg,--hidden,--files',
-      shortcut = 'SPC f f',
-    },
-    {
-      icon = '  ',
-      icon_hl = { fg = z.blue },
-      desc = 'File Browser                            ',
-      action = 'Telescope file_browser',
-      shortcut = 'SPC f b',
-    },
-    {
-      icon = '  ',
-      icon_hl = { fg = '#e6653a' },
-      desc = 'Find  word                              ',
-      aciton = 'Telescope live_grep',
-      shortcut = 'SPC f w',
-    },
-    {
-      icon = '  ',
-      icon_hl = { fg = z.redwine },
-      desc = 'Open Personal dotfiles                  ',
-      action = 'Telescope dotfiles path=' .. home .. '/.dotfiles',
-      shortcut = 'SPC f d',
-    },
-    {
-      icon = '  ',
-      icon_hl = { fg = z.yellow },
-      desc = 'Change working directory                ',
-      action = 'Telescope zoxide',
-      shortcut = 'SPC f q',
-    },
-    {
-      icon = '  ',
-      icon_hl = { fg = z.gray },
-      desc = 'Show keymaps                            ',
-      action = 'Telescope keymaps',
-      shortcut = 'SPC f k',
-    },
-    {
-      icon = 'ﰖ  ',
-      icon_hl = { fg = z.violet },
-      desc = 'Search   commits                       ',
-      action = 'Telescope git_commits',
-      shortcut = 'SPC f g',
-    },
-  }
-  vim.cmd('highlight DashboardCenter guifg=#9fb2ca')
-  vim.cmd('highlight DashboardHeader guifg=#e1acb8')
-  vim.cmd('highlight DashboardFooter guifg=#5E81AC')
->>>>>>> 680cc7a660d77703c003d9652cb04c110b8438ec
 end
 
 function config.nvim_tree()
