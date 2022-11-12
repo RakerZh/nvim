@@ -82,6 +82,7 @@ package({
 })
 
 package({
-  "renerocksai/telekasten.nvim"
+	"mzlogin/vim-markdown-toc",
 })
+
 -- package({ '~/space/docnote.nvim/'})
