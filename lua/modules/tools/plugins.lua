@@ -1,26 +1,26 @@
-local package = require("core.pack").package
-local conf = require("modules.tools.config")
+local package = require('core.pack').package
+local conf = require('modules.tools.config')
 
 package({
-  "kristijanhusak/vim-dadbod-ui",
+  'kristijanhusak/vim-dadbod-ui',
   disable = true,
-  cmd = { "DBUIToggle", "DBUIAddConnection", "DBUI", "DBUIFindBuffer", "DBUIRenameBuffer" },
+  cmd = { 'DBUIToggle', 'DBUIAddConnection', 'DBUI', 'DBUIFindBuffer', 'DBUIRenameBuffer' },
   config = conf.vim_dadbod_ui,
-  requires = { { "tpope/vim-dadbod", opt = true } },
+  requires = { { 'tpope/vim-dadbod', opt = true } },
 })
 
 package({
-  "editorconfig/editorconfig-vim",
-  ft = { "go", "typescript", "javascript", "vim", "rust", "c", "cpp" },
+  'editorconfig/editorconfig-vim',
+  ft = { 'go', 'typescript', 'javascript', 'vim', 'rust', 'c', 'cpp' },
 })
 
-package({ "liuchengxu/vista.vim", cmd = "Vista", config = conf.vim_vista })
+package({ 'liuchengxu/vista.vim', cmd = 'Vista', config = conf.vim_vista })
 
 package({
-  "brooth/far.vim",
-  cmd = { "Far", "Farp" },
+  'brooth/far.vim',
+  cmd = { 'Far', 'Farp' },
   config = function()
-    vim.g["far#source"] = "rg"
+    vim.g['far#source'] = 'rg'
   end,
 })
 
@@ -30,62 +30,62 @@ package({
   -- require dap
 }]]
 
-package({ "sindrets/diffview.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
+package({ 'sindrets/diffview.nvim', requires = { { 'nvim-lua/plenary.nvim' } } })
 
-package({ "searleser97/cpbooster.vim" })
+package({ 'searleser97/cpbooster.vim' })
 
 package({
-  "TimUntersberger/neogit",
-  cmd = "neoload",
-  requires = { { "nvim-lua/plenary.nvim", opt = true } },
+  'TimUntersberger/neogit',
+  cmd = 'neoload',
+  requires = { { 'nvim-lua/plenary.nvim', opt = true } },
   config = function()
-    require("neogit")
+    require('neogit')
   end,
 })
 
 -- package({ 'github/copilot.vim' })
 
-package({ "famiu/bufdelete.nvim" })
+package({ 'famiu/bufdelete.nvim' })
 
 package({
-  "dvdsk/prosesitter",
+  'dvdsk/prosesitter',
   config = function()
-    require("prosesitter")
+    require('prosesitter')
   end,
 })
 
-package({ "rcarriga/nvim-notify" })
+package({ 'rcarriga/nvim-notify' })
 
 package({
-  "akinsho/toggleterm.nvim",
+  'akinsho/toggleterm.nvim',
   config = function()
-    require("toggleterm")
+    require('toggleterm')
   end,
 })
 
-package({ "glepnir/template.nvim", config = conf.template_nvim })
+package({ 'glepnir/template.nvim', config = conf.template_nvim })
 
-package({ "glepnir/coman.nvim", event = "BufRead" })
+package({ 'glepnir/coman.nvim', event = 'BufRead' })
 
 package({
-  "akinsho/git-conflict.nvim",
-  tag = "*",
+  'akinsho/git-conflict.nvim',
+  tag = '*',
   config = function()
-    require("git-conflict").setup()
+    require('git-conflict').setup()
   end,
 })
 
 package({
-  "jghauser/follow-md-links.nvim",
+  'jghauser/follow-md-links.nvim',
 })
 
 package({
-  "lukas-reineke/headlines.nvim",
+  'lukas-reineke/headlines.nvim',
   config = conf.headlines(),
 })
 
 package({
-  "mzlogin/vim-markdown-toc",
+  'mzlogin/vim-markdown-toc',
 })
 
 -- package({

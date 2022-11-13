@@ -1,53 +1,53 @@
-local package = require("core.pack").package
-local conf = require("modules.ui.config")
+local package = require('core.pack').package
+local conf = require('modules.ui.config')
 
 package({
-  "RakerZh/zephyr-nvim",
+  'RakerZh/zephyr-nvim',
   config = conf.zephyr,
-  requires = { "nvim-treesitter/nvim-treesitter", opt = true },
+  requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
 })
 
 package({
-  "folke/tokyonight.nvim",
+  'folke/tokyonight.nvim',
 })
 
-package({ "kyazdani42/nvim-web-devicons" })
+package({ 'kyazdani42/nvim-web-devicons' })
 
-package({ "glepnir/dashboard-nvim", config = conf.dashboard })
+package({ 'glepnir/dashboard-nvim', config = conf.dashboard })
 
 package({
-  "glepnir/galaxyline.nvim",
-  branch = "main",
+  'glepnir/galaxyline.nvim',
+  branch = 'main',
   config = conf.galaxyline,
-  requires = { "kyazdani42/nvim-web-devicons", opt = true },
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true },
 })
 
 package({
-  "lukas-reineke/indent-blankline.nvim",
+  'lukas-reineke/indent-blankline.nvim',
   --  event = 'BufRead',
   config = conf.indent_blankline,
 })
 
 package({
-  "akinsho/bufferline.nvim",
+  'akinsho/bufferline.nvim',
   config = conf.nvim_bufferline,
-  requires = "kyazdani42/nvim-web-devicons",
+  requires = 'kyazdani42/nvim-web-devicons',
 })
 
 package({
-  "kyazdani42/nvim-tree.lua",
-  cmd = "NvimTreeToggle",
-  requires = "kyazdani42/nvim-web-devicons",
+  'kyazdani42/nvim-tree.lua',
+  cmd = 'NvimTreeToggle',
+  requires = 'kyazdani42/nvim-web-devicons',
   config = conf.nvim_tree,
 })
 
 package({
-  "lewis6991/gitsigns.nvim",
+  'lewis6991/gitsigns.nvim',
   config = function()
-    require("gitsigns").setup()
+    require('gitsigns').setup()
   end,
 })
 
-package({ "mechatroner/rainbow_csv", ft = "csv" })
+package({ 'mechatroner/rainbow_csv', ft = 'csv' })
 -- package({ 'jupyter-vim/jupyter-vim' })
-package({ "nvim-telescope/telescope-ui-select.nvim" })
+package({ 'nvim-telescope/telescope-ui-select.nvim' })

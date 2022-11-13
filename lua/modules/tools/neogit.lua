@@ -1,8 +1,8 @@
-if packer_plugins["plenary.nvim"] and not packer_plugins["plenary.nvim"].loaded then
+if packer_plugins['plenary.nvim'] and not packer_plugins['plenary.nvim'].loaded then
   vim.cmd([[packadd plenary.nvim]])
 end
 
-require("neogit").setup({
+require('neogit').setup({
   disable_signs = false,
   disable_hint = false,
   disable_context_highlighting = false,
@@ -13,16 +13,16 @@ require("neogit").setup({
   disable_builtin_notifications = false,
   use_magit_keybindings = false,
   commit_popup = {
-    kind = "split",
+    kind = 'split',
   },
   -- Change the default way of opening neogit
-  kind = "tab",
+  kind = 'tab',
   -- customize displayed signs
   signs = {
     -- { CLOSED, OPENED }
-    section = { ">", "v" },
-    item = { ">", "v" },
-    hunk = { "", "" },
+    section = { '>', 'v' },
+    item = { '>', 'v' },
+    hunk = { '', '' },
   },
   integrations = {
     -- Neogit only provides inline diffs. If you want a more traditional way to look at diffs, you can use `sindrets/diffview.nvim`.
@@ -67,9 +67,9 @@ require("neogit").setup({
     -- modify status buffer mappings
     status = {
       -- Adds a mapping with "B" as key that does the "BranchPopup" command
-      ["B"] = "BranchPopup",
+      ['B'] = 'BranchPopup',
       -- Removes the default mapping of "s"
-      ["s"] = "",
+      ['s'] = '',
     },
   },
 })

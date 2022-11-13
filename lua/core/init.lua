@@ -18,16 +18,16 @@ vim.g.loaded_netrwSettings = 1
 vim.g.loaded_netrwFileHandlers = 1
 vim.g.did_load_filetypes = 0
 vim.g.do_filetype_lua = 1
-vim.g.mapleader = " "
+vim.g.mapleader = ' '
 
-vim.api.nvim_set_keymap("n", " ", "", { noremap = true })
-vim.api.nvim_set_keymap("x", " ", "", { noremap = true })
+vim.api.nvim_set_keymap('n', ' ', '', { noremap = true })
+vim.api.nvim_set_keymap('x', ' ', '', { noremap = true })
 
-local pack = require("core.pack")
+local pack = require('core.pack')
 
 pack.ensure_plugins()
-require("core.options")
+require('core.options')
 pack.load_compile()
-require("keymap")
-require("internal.event")
-require("internal.global")
+require('keymap')
+require('internal.event')
+require('internal.global')

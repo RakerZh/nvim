@@ -61,22 +61,22 @@ function keymap.new_opts(...)
 end
 
 function keymap.cmd(str)
-  return "<cmd>" .. str .. "<CR>"
+  return '<cmd>' .. str .. '<CR>'
 end
 
 -- visual
 function keymap.cu(str)
-  return "<C-u><cmd>" .. str .. "<CR>"
+  return '<C-u><cmd>' .. str .. '<CR>'
 end
 
 --@private
 local keymap_set = function(mode, tbl)
   vim.validate({
-    tbl = { tbl, "table" },
+    tbl = { tbl, 'table' },
   })
   local len = #tbl
   if len < 2 then
-    vim.notify("keymap must has rhs")
+    vim.notify('keymap must has rhs')
     return
   end
 
@@ -88,10 +88,10 @@ end
 local function map(mod)
   return function(tbl)
     vim.validate({
-      tbl = { tbl, "table" },
+      tbl = { tbl, 'table' },
     })
 
-    if type(tbl[1]) == "table" and type(tbl[2]) == "table" then
+    if type(tbl[1]) == 'table' and type(tbl[2]) == 'table' then
       for _, v in pairs(tbl) do
         keymap_set(mod, v)
       end
@@ -101,11 +101,11 @@ local function map(mod)
   end
 end
 
-keymap.nmap = map("n")
-keymap.imap = map("i")
-keymap.cmap = map("c")
-keymap.vmap = map("v")
-keymap.xmap = map("x")
-keymap.tmap = map("t")
+keymap.nmap = map('n')
+keymap.imap = map('i')
+keymap.cmap = map('c')
+keymap.vmap = map('v')
+keymap.xmap = map('x')
+keymap.tmap = map('t')
 
 return keymap

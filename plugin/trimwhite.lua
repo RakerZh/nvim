@@ -9,14 +9,14 @@ local function trim_space(opts, preview_ns, preview_buf)
   local new_lines = {}
   local preview_buf_line = 0
   for i, line in ipairs(lines) do
-    local startidx, endidx = string.find(line, "%s+$")
+    local startidx, endidx = string.find(line, '%s+$')
     if startidx ~= nil then
       -- Highlight the match if in command preview mode
       if preview_ns ~= nil then
         vim.api.nvim_buf_add_highlight(
           buf,
           preview_ns,
-          "Substitute",
+          'Substitute',
           line1 + i - 2,
           startidx - 1,
           endidx
@@ -24,7 +24,7 @@ local function trim_space(opts, preview_ns, preview_buf)
         -- Add lines and highlight to the preview buffer
         -- if inccommand=split
         if preview_buf ~= nil then
-          local prefix = string.format("|%d| ", line1 + i - 1)
+          local prefix = string.format('|%d| ', line1 + i - 1)
           vim.api.nvim_buf_set_lines(
             preview_buf,
             preview_buf_line,
@@ -35,7 +35,7 @@ local function trim_space(opts, preview_ns, preview_buf)
           vim.api.nvim_buf_add_highlight(
             preview_buf,
             preview_ns,
-            "Substitute",
+            'Substitute',
             preview_buf_line,
             #prefix + startidx - 1,
             #prefix + endidx
@@ -45,7 +45,7 @@ local function trim_space(opts, preview_ns, preview_buf)
       end
     end
     if not preview_ns then
-      new_lines[#new_lines + 1] = string.gsub(line, "%s+$", "")
+      new_lines[#new_lines + 1] = string.gsub(line, '%s+$', '')
     end
   end
   -- Don't make any changes to the buffer if previewing
@@ -60,7 +60,7 @@ local function trim_space(opts, preview_ns, preview_buf)
 end
 -- Create the user command
 vim.api.nvim_create_user_command(
-  "TrimTrailingWhitespace",
+  'TrimTrailingWhitespace',
   trim_space,
-  { nargs = "?", range = "%", addr = "lines", preview = trim_space }
+  { nargs = '?', range = '%', addr = 'lines', preview = trim_space }
 )
