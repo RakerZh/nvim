@@ -61,3 +61,18 @@ api.nvim_create_autocmd({ 'BufEnter' }, {
     end
   end,
 })
+
+api.nvim_create_autocmd('Filetype', {
+  group = my_group,
+  pattern = '*.c,*.cpp,*.lua,*.go,*.rs,*.py,*.ts,*.tsx',
+  callback = function()
+    vim.cmd('syntax off')
+  end,
+})
+
+api.nvim_create_autocmd('LspAttach', {
+  group = my_group,
+  callback = function(opt)
+    require('internal.format'):event(opt.buf)
+  end,
+})
