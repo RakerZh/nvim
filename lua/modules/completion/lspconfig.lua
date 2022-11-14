@@ -110,13 +110,6 @@ lspconfig.clangd.setup({
     '--clang-tidy',
     '--header-insertion=iwyu',
   },
-  cmd = {
-    'clangd',
-    '--background-index',
-    '--suggest-missing-includes',
-    '--clang-tidy',
-    '--header-insertion=iwyu',
-  },
 })
 
 lspconfig.rust_analyzer.setup({
