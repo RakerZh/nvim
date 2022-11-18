@@ -1,23 +1,20 @@
-#include <iostream>
 #include <algorithm>
+#include <array>
 #include <deque>
+#include <iostream>
 #include <iterator>
 #include <list>
-#include <memory>
 #include <map>
-#include <array>
+#include <memory>
 #include <string>
-#include <vector>
 #include <unordered_map>
 #include <unordered_set>
+#include <vector>
+
+using namespace std;
 
 class Solution {
 public:
-
 };
 
-int main()
-{
-  Solution solution;
-
-}
+int main() { Solution solution; }
