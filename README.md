@@ -14,7 +14,4 @@ You can also checkout [Cosynvim](https://github.com/glepnir/cosynvim).
   <img src="https://user-images.githubusercontent.com/76530956/201507323-5603bd53-8b3f-4adc-9047-367a625bae35.png"
 </p>
 
-
-
-
 # Licenese MIT

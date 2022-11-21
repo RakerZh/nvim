@@ -94,3 +94,5 @@ package({
 
 -- package({ '~/space/docnote.nvim/'})
 package({ 'simnalamburt/vim-mundo' })
+
+package({ 'preservim/vim-markdown' })
