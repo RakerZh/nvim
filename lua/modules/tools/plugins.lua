@@ -80,11 +80,6 @@ package({
 })
 
 package({
-  'lukas-reineke/headlines.nvim',
-  config = conf.headlines(),
-})
-
-package({
   'mzlogin/vim-markdown-toc',
 })
 

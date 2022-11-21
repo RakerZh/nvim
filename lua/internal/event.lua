@@ -73,6 +73,6 @@ api.nvim_create_autocmd('Filetype', {
 api.nvim_create_autocmd('LspAttach', {
   group = my_group,
   callback = function(opt)
-    require('internal.format'):event(opt.buf)
+    require('internal.formatter'):event(opt.buf)
   end,
 })
