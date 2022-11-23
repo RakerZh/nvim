@@ -260,14 +260,14 @@ end
 function cli.load(plugins)
   local all_repos = cli:get_all_repos()
   local found = false
-  for i=1, #plugins do
-    for _,repo in pairs(all_repos) do
+  for i = 1, #plugins do
+    for _, repo in pairs(all_repos) do
       if repo[1] == plugins[i] then
         found = true
       end
     end
     if not found then
-      error("plugins not found")
+      error('plugins not found')
       break
     end
     found = false
@@ -279,7 +279,7 @@ end
 
 function cli:meta(arg)
   return function()
-      self[arg]()
+    self[arg]()
   end
 end
 
