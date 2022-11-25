@@ -7,7 +7,7 @@ package({
   config = conf.nvim_lsp,
 })
 
-package({ 'glepnir/lspsaga.nvim', cmd = 'Lspsaga' })
+package({ 'glepnir/lspsaga.nvim', after = 'nvim-lspconfig', config = conf.lspsaga })
 
 --package ["folke/lua-dev.nvim"] = {}
 

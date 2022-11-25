@@ -110,11 +110,11 @@ function config.auto_pairs()
   )
 end
 
-function config.neorg()
-  -- latest
-  require('neorg').setup({
-    load = {
-      ['core.defaults'] = {},
+function config.lspsaga()
+  local saga = require('lspsaga')
+  saga.init_lsp_saga({
+    symbol_in_winbar = {
+      enable = true,
     },
   })
 end

@@ -38,7 +38,30 @@ lspconfig.gopls.setup({
   },
 })
 
+local home = os.getenv('HOME')
+lspconfig.sumneko_lua.setup({
+  capabilities = capabilities,
+  cmd = {
+    home .. '/workconfig/lua-language-server/bin/lua-language-server',
+    '-E',
+    home .. '/workconfig/lua-language-server/main.lua',
+  },
+  settings = {
+    Lua = {
+      diagnostics = {
+        enable = true,
+        globals = { 'vim', 'packer_plugins' },
+      },
+      runtime = { version = 'LuaJIT' },
+      workspace = {
+        library = vim.list_extend({ [vim.fn.expand('$VIMRUNTIME/lua')] = true }, {}),
+      },
+    },
+  },
+})
+
 lspconfig.clangd.setup({
+  capabilities = capabilities,
   cmd = {
     'clangd',
     '--background-index',
@@ -70,43 +93,17 @@ lspconfig.rust_analyzer.setup({
   },
 })
 
-local home = os.getenv('HOME')
-lspconfig.sumneko_lua.setup({
-  cmd = {
-    home .. '/workconfig/lua-language-server/bin/lua-language-server',
-    '-E',
-    home .. '/workconfig/lua-language-server/main.lua',
-  },
-  settings = {
-    Lua = {
-      diagnostics = {
-        enable = true,
-        globals = { 'vim', 'packer_plugins' },
-      },
-      runtime = { version = 'LuaJIT' },
-      workspace = {
-        library = vim.list_extend({ [vim.fn.expand('$VIMRUNTIME/lua')] = true }, {}),
-      },
-    },
-  },
-})
-
-lspconfig.tsserver.setup({
-  on_attach = function(client)
-    client.server_capabilities.document_formatting = false
-    enhance_attach(client)
-  end,
-})
-
 local servers = {
   'dockerls',
-  'bashls',
   'pyright',
-  'tsserver',
+  'bashls',
   'zls',
   'jsonls',
+  'tsserver',
 }
 
 for _, server in ipairs(servers) do
-  lspconfig[server].setup({})
+  lspconfig[server].setup({
+    capabilities = capabilities,
+  })
 end
