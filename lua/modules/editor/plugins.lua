@@ -78,3 +78,9 @@ package({
   config = conf.hop,
   event = 'BufRead',
 })
+
+package({ 'glepnir/hlsearch.nvim',
+    event = 'BufRead',
+    config = function()
+    require('hlsearch').setup()
+end})
