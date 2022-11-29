@@ -91,5 +91,3 @@ package({
 package({ 'simnalamburt/vim-mundo' })
 
 package({ 'preservim/vim-markdown' })
-
-

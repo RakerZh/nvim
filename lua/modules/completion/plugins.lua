@@ -9,13 +9,10 @@ package({
 
 package({ 'glepnir/lspsaga.nvim', after = 'nvim-lspconfig', config = conf.lspsaga })
 
---package ["folke/lua-dev.nvim"] = {}
-
 package({ 'hrsh7th/cmp-nvim-lsp' })
 
 package({
   'hrsh7th/nvim-cmp',
-  commit = '99ef854322d0de9269044ee197b6c9ca14911d96',
   event = 'InsertEnter',
   config = conf.nvim_cmp,
   requires = {
@@ -29,20 +26,6 @@ package({
 package({ 'L3MON4D3/LuaSnip', event = 'InsertCharPre', config = conf.lua_snip })
 
 package({ 'windwp/nvim-autopairs', event = 'InsertEnter', config = conf.auto_pairs })
-
---[[ package({
-  'zbirenbaum/copilot.lua',
-  event = { 'VimEnter' },
-  config = function()
-    vim.defer_fn(function()
-      require('copilot').setup()
-    end, 100)
-  end,
-})]]
-
---[[package {"zbirenbaum/copilot-cmp",
-  module = "copilot_cmp",
-}]]
 
 package({
   'ray-x/go.nvim',

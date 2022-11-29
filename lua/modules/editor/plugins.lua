@@ -73,14 +73,19 @@ package({
   end,
 })
 
+-- package({ 'phaazon/hop.nvim', config = conf.hop, event = 'BufRead', })
+
 package({
-  'phaazon/hop.nvim',
-  config = conf.hop,
+  'glepnir/hlsearch.nvim',
   event = 'BufRead',
+  config = function()
+    require('hlsearch').setup()
+  end,
 })
 
-package({ 'glepnir/hlsearch.nvim',
-    event = 'BufRead',
-    config = function()
-    require('hlsearch').setup()
-end})
+package({
+  'ggandor/leap.nvim',
+  config = function()
+    require('leap').set_default_keymaps()
+  end,
+})
