@@ -65,7 +65,7 @@ package({
 
 package({ 'glepnir/template.nvim', config = conf.template_nvim })
 
-package({ 'glepnir/coman.nvim', event = 'BufRead' })
+package({ 'glepnir/coman.nvim', event = 'BufRead', config = conf.coman })
 
 package({
   'akinsho/git-conflict.nvim',

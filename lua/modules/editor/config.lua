@@ -12,7 +12,7 @@ function config.telescope()
 
   require('telescope').setup({
     defaults = {
-      file_ignore_patterns = { 'build,node_modules' },
+      file_ignore_patterns = { 'build' },
       prompt_prefix = '  ',
       selection_caret = ' ',
       layout_config = {

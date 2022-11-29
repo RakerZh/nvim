@@ -60,4 +60,40 @@ function config.template_nvim()
   temp.author = 'RakerZh'
 end
 
+function config.coman()
+  local custom_template = require('coman').custom_template
+  -- tbl is the function relate table. index 1 is function name
+  -- others are params name with type (if have)
+  custom_template['c'] = function(tbl, cms)
+    local insert = table.insert
+    local space = ' '
+    local contents = {}
+    for i, v in pairs(tbl) do
+      if i == 1 then
+        insert(contents, '/**')
+        insert(contents, ' *' .. space .. '@Description' .. space .. v)
+      else
+        insert(contents, ' *' .. space .. '@param' .. space .. v)
+      end
+    end
+    insert(contents, ' */')
+    return contents
+  end
+  custom_template['cpp'] = function(tbl, cms)
+    local insert = table.insert
+    local space = ' '
+    local contents = {}
+    for i, v in pairs(tbl) do
+      if i == 1 then
+        insert(contents, '/**')
+        insert(contents, ' *' .. space .. '@Description' .. space .. v)
+      else
+        insert(contents, ' *' .. space .. '@param' .. space .. v)
+      end
+    end
+    insert(contents, ' */')
+    return contents
+  end
+end
+
 return config
