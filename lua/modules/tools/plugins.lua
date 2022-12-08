@@ -92,4 +92,4 @@ package({ 'simnalamburt/vim-mundo' })
 
 package({ 'preservim/vim-markdown' })
 
-package({ 'RakerZh/min-preview.nvim'})
+package({ '~/space/min-preview.nvim' })

@@ -38,7 +38,11 @@ package({ 'jvgrootveld/telescope-zoxide' })
 
 package({ 'rhysd/accelerated-jk', opt = true })
 
-package({ 'norcalli/nvim-colorizer.lua', config = conf.nvim_colorizer, ft = 'lua' })
+package({
+  'norcalli/nvim-colorizer.lua',
+  config = conf.nvim_colorizer,
+  ft = { 'lua', 'css', 'js', 'scss' },
+})
 
 package({
   'hrsh7th/vim-eft',

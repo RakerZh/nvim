@@ -23,9 +23,10 @@ opt.redrawtime = 1500
 opt.ignorecase = true
 opt.smartcase = true
 opt.infercase = true
+opt.relativenumber = true
 
 if vim.fn.executable('rg') == 1 then
-  opt.grepformat = '%f:%l:%c:%m,%f:%l:%m'
+  format = '%f:%l:%c:%m,%f:%l:%m'
   opt.grepprg = 'rg --vimgrep --no-heading --smart-case'
 end
 

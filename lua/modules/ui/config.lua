@@ -5,7 +5,6 @@ function config.galaxyline()
 end
 
 function config.zephyr()
-  --  require('modules.ui.eviline1')
   vim.cmd('colorscheme zephyr')
 end
 

@@ -36,9 +36,9 @@ package({
 
 package({
   'kyazdani42/nvim-tree.lua',
-  cmd = 'NvimTreeToggle',
   requires = 'kyazdani42/nvim-web-devicons',
   config = conf.nvim_tree,
+  tag = 'nightly',
 })
 
 package({
