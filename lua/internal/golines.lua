@@ -24,7 +24,7 @@ local golines_format = function()
 
   local handle, pid = uv.spawn('golines', {
     stdio = { stdin, stdout, stderr },
-    args = { '--max-len=80', file },
+    args = { '--max-len=120', file },
   }, function(code, signal) -- on exit
   end)
 

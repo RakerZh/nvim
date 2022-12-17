@@ -63,7 +63,11 @@ package({
   end,
 })
 
-package({ 'glepnir/template.nvim', config = conf.template_nvim })
+package({
+  'glepnir/template.nvim',
+  commit = '72770a34abe487013256b315c1706bc1a948d733',
+  config = conf.template_nvim,
+})
 
 package({ 'glepnir/coman.nvim', event = 'BufRead', config = conf.coman })
 
@@ -92,4 +96,4 @@ package({ 'simnalamburt/vim-mundo' })
 
 package({ 'preservim/vim-markdown' })
 
-package({ '~/space/min-preview.nvim' })
+package({ 'RakerZh/min-preview.nvim' })

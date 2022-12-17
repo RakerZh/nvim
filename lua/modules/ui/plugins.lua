@@ -22,9 +22,22 @@ package({
   requires = { 'kyazdani42/nvim-web-devicons', opt = true },
 })
 
+local enable_indent_filetype = {
+  'go',
+  'lua',
+  'sh',
+  'rust',
+  'cpp',
+  'typescript',
+  'typescriptreact',
+  'javascript',
+  'json',
+  'python',
+}
+
 package({
   'lukas-reineke/indent-blankline.nvim',
-  --  event = 'BufRead',
+  ft = enable_indent_filetype,
   config = conf.indent_blankline,
 })
 
