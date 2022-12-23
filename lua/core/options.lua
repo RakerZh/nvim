@@ -93,10 +93,10 @@ end
 if vim.g.neovide then
   vim.g.neovide_fullscreen = false
   vim.g.neovide_cursor_antialiasing = true
-  vim.o.guifont = 'JetBrainsMono Nerd Font:h18'
+  vim.o.guifont = 'Operator Mono Lig Light:h18'
+  vim.o.neovide_transparency = 0.0
   vim.g.neovide_input_macos_alt_is_meta = false
   vim.g.neovide_frameless = true
-  vim.g.neovide_scale_factor = 0.95
   vim.g.neovide_scroll_animation_length = 0.13
   vim.g.neovide_cursor_vfx_mode = 'railgun'
 end
