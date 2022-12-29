@@ -41,7 +41,7 @@ package({ 'rhysd/accelerated-jk', opt = true })
 package({
   'norcalli/nvim-colorizer.lua',
   config = conf.nvim_colorizer,
-  ft = { 'lua', 'css', 'js', 'scss' },
+  ft = { 'lua', 'css', 'js', 'scss', 'toml' },
 })
 
 package({

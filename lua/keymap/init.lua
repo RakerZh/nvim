@@ -22,16 +22,6 @@ nmap({
   { '<Leader>li', cmd('LspInfo'), opts(noremap, silent) },
   { '<Leader>ll', cmd('LspLog'), opts(noremap, silent) },
   { '<Leader>lr', cmd('LspRestart'), opts(noremap, silent) },
-  {
-    '<C-f>',
-    cmd("lua require('lspsaga.action').smart_scroll_with_saga(1)"),
-    opts(noremap, silent),
-  },
-  {
-    '<C-b>',
-    cmd("lua require('lspsaga.action').smart_scroll_with_saga(-1)"),
-    opts(noremap, silent),
-  },
   -- Lspsaga
   { '[e', cmd('Lspsaga diagnostic_jump_next'), opts(noremap, silent) },
   { ']e', cmd('Lspsaga diagnostic_jump_prev'), opts(noremap, silent) },
