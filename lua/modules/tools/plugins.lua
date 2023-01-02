@@ -84,13 +84,9 @@ package({
   'mzlogin/vim-markdown-toc',
 })
 
--- package({
---   "mickael-menu/zk-nvim",
--- })
-
 -- package({ '~/space/docnote.nvim/'})
 package({ 'simnalamburt/vim-mundo' })
 
 package({ 'preservim/vim-markdown' })
 
--- package({ 'RakerZh/min-preview.nvim' })
+package({ 'RakerZh/min-preview.nvim' })

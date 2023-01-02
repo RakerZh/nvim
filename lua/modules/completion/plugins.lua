@@ -35,11 +35,3 @@ package({
     require('go').setup({})
   end,
 })
-
---[[package({
-  'nvim-neorg/neorg',
-  ft = 'norg',
-  after = 'nvim-treesitter',
-  config = conf.neorg,
-  requires = { 'nvim-lua/plenary.nvim', opt = true },
-})]]

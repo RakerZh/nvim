@@ -34,22 +34,12 @@ package({ 'nvim-telescope/telescope-file-browser.nvim' })
 
 package({ 'jvgrootveld/telescope-zoxide' })
 
-package({ 'rhysd/accelerated-jk' })
-
 package({
   'norcalli/nvim-colorizer.lua',
   config = conf.nvim_colorizer,
-  ft = { 'lua', 'css', 'js', 'scss', 'toml' },
 })
 
 -- package({ 'antoinemadec/FixCursorHold.nvim', event = 'BufReadPre' })
-
-package({
-  'jedrzejboczar/possession.nvim',
-  dependencies = {
-    'nvim-lua/plenary.nvim',
-  },
-})
 
 -- package({ 'phaazon/hop.nvim', config = conf.hop, event = 'BufRead', })
 
