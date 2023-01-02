@@ -40,11 +40,8 @@ vim.g.markdown_fenced_languages = {
 vim.api.nvim_set_keymap('n', ' ', '', { noremap = true })
 vim.api.nvim_set_keymap('x', ' ', '', { noremap = true })
 
-local pack = require('core.pack')
-
-pack.ensure_plugins()
+require('core.pack'):boot_strap()
 require('core.options')
-pack.load_compile()
 require('keymap')
 require('internal.event')
-require('internal.global')
+--require('internal.global')

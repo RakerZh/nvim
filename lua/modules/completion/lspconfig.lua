@@ -2,9 +2,6 @@ local lspconfig = require('lspconfig')
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-if not packer_plugins['cmp-nvim-lsp'].loaded then
-  vim.cmd([[packadd cmp-nvim-lsp]])
-end
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 local signs = {
@@ -30,31 +27,46 @@ vim.diagnostic.config({
 })
 
 lspconfig.gopls.setup({
-  cmd = { 'gopls', '--remote=auto' },
+  cmd = { 'gopls', 'serve' },
   capabilities = capabilities,
   init_options = {
     usePlaceholders = true,
     completeUnimported = true,
   },
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+    },
+  },
 })
 
 local home = os.getenv('HOME')
 lspconfig.sumneko_lua.setup({
+  on_attach = function(client, _)
+    client.server_capabilities.semanticTokensProvider = nil
+  end,
   capabilities = capabilities,
-  cmd = {
-    home .. '/workconfig/lua-language-server/bin/lua-language-server',
-    '-E',
-    home .. '/workconfig/lua-language-server/main.lua',
-  },
   settings = {
     Lua = {
       diagnostics = {
         enable = true,
-        globals = { 'vim', 'packer_plugins' },
+        globals = { 'vim' },
       },
       runtime = { version = 'LuaJIT' },
       workspace = {
-        library = vim.list_extend({ [vim.fn.expand('$VIMRUNTIME/lua')] = true }, {}),
+        library = (function()
+          local lib = {}
+          for _, path in ipairs(vim.api.nvim_get_runtime_file('lua', true)) do
+            lib[#lib + 1] = path:sub(1, -5)
+          end
+          return lib
+        end)(),
+      },
+      telemetry = {
+        enable = false,
       },
     },
   },
@@ -106,4 +118,10 @@ for _, server in ipairs(servers) do
   lspconfig[server].setup({
     capabilities = capabilities,
   })
+end
+
+vim.lsp.handlers['workspace/diagnostic/refresh'] = function(_, _, ctx)
+  local ns = vim.lsp.diagnostic.get_namespace(ctx.client_id)
+  pcall(vim.diagnostic.reset, ns)
+  return true
 end

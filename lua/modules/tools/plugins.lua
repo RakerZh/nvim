@@ -3,10 +3,9 @@ local conf = require('modules.tools.config')
 
 package({
   'kristijanhusak/vim-dadbod-ui',
-  disable = true,
   cmd = { 'DBUIToggle', 'DBUIAddConnection', 'DBUI', 'DBUIFindBuffer', 'DBUIRenameBuffer' },
   config = conf.vim_dadbod_ui,
-  requires = { { 'tpope/vim-dadbod', opt = true } },
+  dependencies = { 'tpope/vim-dadbod' },
 })
 
 package({
@@ -30,14 +29,14 @@ package({
   -- require dap
 }]]
 
-package({ 'sindrets/diffview.nvim', requires = { { 'nvim-lua/plenary.nvim' } } })
+package({ 'sindrets/diffview.nvim', requires = { 'nvim-lua/plenary.nvim' } })
 
 package({ 'searleser97/cpbooster.vim' })
 
 package({
   'TimUntersberger/neogit',
-  cmd = 'neoload',
-  requires = { { 'nvim-lua/plenary.nvim', opt = true } },
+  cmd = 'Neoload',
+  dependencies = { 'nvim-lua/plenary.nvim' },
   config = function()
     require('neogit')
   end,
@@ -65,7 +64,6 @@ package({
 
 package({
   'glepnir/template.nvim',
-  commit = '72770a34abe487013256b315c1706bc1a948d733',
   config = conf.template_nvim,
 })
 
@@ -73,7 +71,6 @@ package({ 'glepnir/coman.nvim', event = 'BufRead', config = conf.coman })
 
 package({
   'akinsho/git-conflict.nvim',
-  tag = '*',
   config = function()
     require('git-conflict').setup()
   end,
@@ -96,4 +93,4 @@ package({ 'simnalamburt/vim-mundo' })
 
 package({ 'preservim/vim-markdown' })
 
-package({ 'RakerZh/min-preview.nvim' })
+-- package({ 'RakerZh/min-preview.nvim' })

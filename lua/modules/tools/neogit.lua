@@ -1,7 +1,3 @@
-if packer_plugins['plenary.nvim'] and not packer_plugins['plenary.nvim'].loaded then
-  vim.cmd([[packadd plenary.nvim]])
-end
-
 require('neogit').setup({
   disable_signs = false,
   disable_hint = false,

@@ -1,29 +1,21 @@
 #!/usr/local/bin/lua
 
 local arguments = {
-  install = true,
   sync = true,
-  update = true,
   clean = true,
   doctor = true,
   debug = true,
   help = true,
---  load = true,
+  modules = true,
 }
 
 local argument
--- Plugins = {}
 
 if #arg == 0 then
   argument = arguments[1]
 else
-  if #arg > 1 then
-    --[[if arg[1] ~= 'debug' and arg[1] ~= 'load' then
-      error('you passed multiple arguments.')
-    end]]
-    if arg[1] ~= 'debug' then
-      error('you passed multiple arguments.')
-    end
+  if #arg > 1 and arg[1] ~= 'debug' then
+    error('you passed multiple arguments.')
   end
 
   if not arguments[arg[1]] then
@@ -31,20 +23,13 @@ else
   end
   argument = arg[1]
 
-  --[[if arg[1] == 'load' then
-    for i=2, #arg do
-      table.insert(Plugins,arg[i])
-    end
-  end]]
-
   if arg[1] == 'debug' then
-    local tmp_tbl = {table.unpack(arg,2,#arg)}
-    for i, k in pairs(tmp_tbl) do
-      tmp_tbl[i] = 'modules/'..k ..'/plugins'
+    local modules = [[let g:disable_modules="]]
+    for _, k in pairs({ table.unpack(arg, 2, #arg) } or {}) do
+      modules = modules ..','.. 'modules/' .. k .. '/plugins'
     end
-    local vim_var = 'let g:disable_modules="' .. table.concat(tmp_tbl,',') .. '"'
-    os.execute([[nvim --headless -c ']] .. vim_var ..[[ | lua=require"core.pack".Packer:cli_compile()']])
-    os.execute('nvim')
+    modules = modules .. '"'
+    os.execute("nvim --cmd '" .. modules .."'")
     return
   end
 end
@@ -52,14 +37,11 @@ end
 if argument == 'help' then
   local usage = {
     'Neovim bot usage:',
-    '  install      install all',
-    '  update       update all plugins',
-    '  sync         Sync configuration and compile',
+    '  sync         Sync Plugins',
     '  clean        clean the direcotries',
     '  doctor       check the plugins info',
     '  debug        dynamic disable modules for debug',
     '  help         show the usage of bot',
---    '  load         specified plugins',
   }
   for _, msg in pairs(usage) do
     print(msg)
@@ -69,6 +51,10 @@ end
 
 local handle
 handle = io.popen([[nvim --clean --headless --cmd 'echo $VIMRUNTIME|q' 2>&1]], 'r')
+if not handle then
+  return
+end
+
 local rtp = handle:read('*a')
 handle:close()
 
@@ -82,7 +68,7 @@ package.path = package.path .. ';' .. rtp .. '/lua/vim/?.lua;' .. config_path ..
 local cli = require('core.cli')
 local helper = require('core.helper')
 
-if argument ~= 'doctor' and argument ~= 'clean' then
+if argument ~= 'doctor' and argument ~= 'clean' and argument ~= 'modules' then
   helper.test_internet()
 end
 
@@ -93,5 +79,4 @@ cli:env_init()
 
 helper.peach('🤖 Glepnir Neovim Config Bot Running...')
 
--- cli:meta(argument,Plugins)()
 cli:meta(argument)()

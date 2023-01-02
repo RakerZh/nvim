@@ -1,8 +1,51 @@
 {
     "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+    "Lua.diagnostics.disable": [
+        "unused-local"
+    ],
     "Lua.diagnostics.globals": [
         "vim",
         "packer_plugins",
         "test"
+    ],
+    "Lua.workspace.library": [
+        "/Users/rakerzhang/.config/nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/lazy.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/lspsaga.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/nvim-lspconfig",
+        "/Users/rakerzhang/.local/share/nvim/lazy/coman.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/hlsearch.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/LuaSnip",
+        "/Users/rakerzhang/.local/share/nvim/lazy/nvim-cmp",
+        "/Users/rakerzhang/.local/share/nvim/lazy/nvim-autopairs",
+        "/Users/rakerzhang/.local/share/nvim/lazy/nvim-treesitter-textobjects",
+        "/Users/rakerzhang/.local/share/nvim/lazy/nvim-treesitter",
+        "/Users/rakerzhang/.local/share/nvim/lazy/telescope-fzy-native.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/popup.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/telescope.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/follow-md-links.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/cmp-nvim-lsp",
+        "/Users/rakerzhang/.local/share/nvim/lazy/prosesitter",
+        "/Users/rakerzhang/.local/share/nvim/lazy/diffview.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/bufdelete.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/telescope-file-browser.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/gitsigns.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/telescope-zoxide",
+        "/Users/rakerzhang/.local/share/nvim/lazy/telescope-ui-select.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/toggleterm.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/template.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/leap.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/galaxyline.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/bufferline.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/git-conflict.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/plenary.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/possession.nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/zephyr-nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/dashboard-nvim",
+        "/Users/rakerzhang/.local/share/nvim/lazy/nvim-web-devicons",
+        "/Users/rakerzhang/.local/share/nvim/lazy/nvim-notify",
+        "/Users/rakerzhang/.local/share/nvim/lazy/nvim-tree.lua",
+        "/usr/local/share/nvim/runtime",
+        "${3rd}/luassert/library"
     ]
 }

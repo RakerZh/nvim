@@ -1,25 +1,14 @@
 local package = require('core.pack').package
 local conf = require('modules.ui.config')
 
-package({
-  'RakerZh/zephyr-nvim',
-  config = conf.zephyr,
-  requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
-})
-
---[[ package({
-  'folke/tokyonight.nvim',
-})]]
-
-package({ 'kyazdani42/nvim-web-devicons' })
+package({ 'RakerZh/zephyr-nvim', config = conf.zephyr })
 
 package({ 'glepnir/dashboard-nvim', config = conf.dashboard })
 
 package({
   'glepnir/galaxyline.nvim',
-  branch = 'main',
   config = conf.galaxyline,
-  requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+  dependencies = { 'kyazdani42/nvim-web-devicons' },
 })
 
 local enable_indent_filetype = {
@@ -44,14 +33,13 @@ package({
 package({
   'akinsho/bufferline.nvim',
   config = conf.nvim_bufferline,
-  requires = 'kyazdani42/nvim-web-devicons',
+  dependencies = { 'kyazdani42/nvim-web-devicons' },
 })
 
 package({
   'kyazdani42/nvim-tree.lua',
-  requires = 'kyazdani42/nvim-web-devicons',
+  dependencies = { 'kyazdani42/nvim-web-devicons' },
   config = conf.nvim_tree,
-  tag = 'nightly',
 })
 
 package({

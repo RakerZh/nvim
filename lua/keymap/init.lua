@@ -15,74 +15,78 @@ imap({
 
 nmap({
   -- packer
-  { '<Leader>pu', cmd('PackerUpdate'), opts(noremap, silent) },
-  { '<Leader>pi', cmd('PackerInstall'), opts(noremap, silent) },
-  { '<Leader>pc', cmd('PackerCompile'), opts(noremap, silent) },
+  { '<Leader>pu', cmd('Lazy update') },
+  { '<Leader>pi', cmd('Lazy install') },
   -- Lsp
-  { '<Leader>li', cmd('LspInfo'), opts(noremap, silent) },
-  { '<Leader>ll', cmd('LspLog'), opts(noremap, silent) },
-  { '<Leader>lr', cmd('LspRestart'), opts(noremap, silent) },
+  { '<Leader>li', cmd('LspInfo') },
+  { '<Leader>ll', cmd('LspLog') },
+  { '<Leader>lr', cmd('LspRestart') },
   -- Lspsaga
-  { '[e', cmd('Lspsaga diagnostic_jump_next'), opts(noremap, silent) },
-  { ']e', cmd('Lspsaga diagnostic_jump_prev'), opts(noremap, silent) },
+  { '[e', cmd('Lspsaga diagnostic_jump_next') },
+  { ']e', cmd('Lspsaga diagnostic_jump_prev') },
   { '[c', cmd('Lspsaga show_cursor_diagnostics') },
-  { 'K', cmd('Lspsaga hover_doc'), opts(noremap, silent) },
-  { 'ga', cmd('Lspsaga code_action'), opts(noremap, silent) },
-  { 'gd', cmd('Lspsaga peek_definition'), opts(noremap, silent) },
-  { 'gs', cmd('Lspsaga signature_hel'), opts(noremap, silent) },
-  { 'gr', cmd('Lspsaga rename'), opts(noremap, silent) },
-  { 'gh', cmd('Lspsaga lsp_finder'), opts(noremap, silent) },
+  { 'K', cmd('Lspsaga hover_doc') },
+  { 'ga', cmd('Lspsaga code_action') },
+  { 'gd', cmd('Lspsaga peek_definition') },
+  { 'gs', cmd('Lspsaga signature_hel') },
+  { 'gr', cmd('Lspsaga rename') },
+  { 'gh', cmd('Lspsaga lsp_finder') },
   -- Lspsaga floaterminal
-  { '<A-d>', cmd('Lspsaga open_floaterm'), opts(noremap, silent) },
-  { '<Leader>g', cmd('Lspsaga open_floaterm lazygit'), opts(noremap, silent) },
-  { '<Leader>ls', cmd('Lspsaga outline'), opts(noremap, silent) },
+  { '<A-d>', cmd('Lspsaga open_floaterm') },
+  { '<Leader>g', cmd('Lspsaga open_floaterm lazygit') },
+  { '<Leader>ls', cmd('Lspsaga outline') },
   -- dashboard create file
-  { '<Leader>n', cmd('DashboardNewFile'), opts(noremap, silent) },
-  { '<Leader>ss', cmd('SessionSave'), opts(noremap, silent) },
-  { '<Leader>sl', cmd('SessionLoad'), opts(noremap, silent) },
+  { '<Leader>n', cmd('DashboardNewFile') },
+  { '<Leader>ss', cmd('SessionSave') },
+  { '<Leader>sl', cmd('SessionLoad') },
   -- nvimtree
-  { '<Leader>e', cmd('NvimTreeToggle'), opts(noremap, silent) },
+  { '<Leader>e', cmd('NvimTreeToggle') },
   --{'<Leader>kh',cmd('NvimTreeResize -10'),opts(noremap,silent)},
   --{'<Leader>kl',cmd('NvimTreeResize +2'),opts(noremap,silent)},
 
   -- dadbodui
-  { '<Leader>od', cmd('DBUIToggle'), opts(noremap, silent) },
+  { '<Leader>od', cmd('DBUIToggle') },
   -- Telescope
-  { '<Leader>b', cmd('Telescope buffers'), opts(noremap, silent) },
-  { '<Leader>fa', cmd('Telescope live_grep'), opts(noremap, silent) },
-  { '<Leader>fb', cmd('Telescope file_browser'), opts(noremap, silent) },
-  { '<Leader>ff', cmd('Telescope find_files'), opts(noremap, silent) },
-  { '<Leader>fs', cmd('Telescope git_status'), opts(noremap, silent) },
-  { '<Leader>fk', cmd('Telescope keymaps'), opts(noremap, silent) },
-  { '<Leader>fw', cmd('Telescope grep_string'), opts(noremap, silent) },
-  { '<Leader>fh', cmd('Telescope oldfiles'), opts(noremap, silent) },
-  { '<Leader>fj', cmd('Telescope help_tags'), opts(noremap, silent) },
-  { '<Leader>fg', cmd('Telescope git_commits'), opts(noremap, silent) },
-  -- { '<Leader>gc', cmd('Telescope dotfiles path' .. home .. '/.dotfiles'), opts(noremap, silent) },
+  { '<Leader>b', cmd('Telescope buffers') },
+  { '<Leader>fa', cmd('Telescope live_grep') },
+  { '<Leader>fb', cmd('Telescope file_browser') },
+  { '<Leader>ff', cmd('Telescope find_files') },
+  { '<Leader>fs', cmd('Telescope git_status') },
+  { '<Leader>fk', cmd('Telescope keymaps') },
+  { '<Leader>fw', cmd('Telescope grep_string') },
+  { '<Leader>fh', cmd('Telescope oldfiles') },
+  { '<Leader>fj', cmd('Telescope help_tags') },
+  { '<Leader>fg', cmd('Telescope git_commits') },
+  -- { '<Leader>gc', cmd('Telescope dotfiles path' .. home .. '/.dotfiles'),   },
   -- zoxide
-  { '<Leader>fq', cmd('Telescope zoxide list'), opts(noremap, silent) },
+  { '<Leader>fq', cmd('Telescope zoxide list') },
   -- Buffline
-  { '<Leader>1', cmd('BufferLineGoToBuffer 1'), opts(noremap, silent) },
-  { '<Leader>2', cmd('BufferLineGoToBuffer 2'), opts(noremap, silent) },
-  { '<Leader>3', cmd('BufferLineGoToBuffer 3'), opts(noremap, silent) },
-  { '<Leader>4', cmd('BufferLineGoToBuffer 4'), opts(noremap, silent) },
-  { '<Leader>5', cmd('BufferLineGoToBuffer 5'), opts(noremap, silent) },
-  { '<Leader>6', cmd('BufferLineGoToBuffer 6'), opts(noremap, silent) },
-  { '<Leader>7', cmd('BufferLineGoToBuffer 7'), opts(noremap, silent) },
-  { '<Leader>8', cmd('BufferLineGoToBuffer 8'), opts(noremap, silent) },
-  -- coman
-  { 'gcc', cmd('ComComment'), opts(noremap, silent) },
-  { 'gcj', cmd('ComAnnotation'), opts(noremap, silent) },
+  { '<Leader>1', cmd('BufferLineGoToBuffer 1') },
+  { '<Leader>2', cmd('BufferLineGoToBuffer 2') },
+  { '<Leader>3', cmd('BufferLineGoToBuffer 3') },
+  { '<Leader>4', cmd('BufferLineGoToBuffer 4') },
+  { '<Leader>5', cmd('BufferLineGoToBuffer 5') },
+  { '<Leader>6', cmd('BufferLineGoToBuffer 6') },
+  { '<Leader>7', cmd('BufferLineGoToBuffer 7') },
+  { '<Leader>8', cmd('BufferLineGoToBuffer 8') },
   -- vista
-  { '<Leader>v', cmd('Vista'), opts(noremap, silent) },
-  -- Hop
-  -- { 'f', cmd('HopWordAC') },
-  -- { 'F', cmd('HopWordBC') },
+  { '<Leader>v', cmd('Vista') },
+  {
+    '<Leader>t',
+    function()
+      return ':Template '
+    end,
+    opts(expr),
+  },
 })
 
-tmap({ '<A-d>', [[<C-\><C-n>:Lspsaga close_floaterm<CR>]], opts(noremap, silent) })
+--  coman
+nmap({ 'gcc', cmd('ComComment') })
+xmap({ 'gcc', ':ComComment<CR>' })
+nmap({ 'gcj', cmd('ComAnnotation') })
 
-xmap({
-  { 'gcc', ':ComComment<CR>', opts(noremap, silent) },
-  { 'ga', cu('Lspsaga code_action'), opts(noremap, silent) },
-})
+-- Lspsaga floaterminal
+nmap({ '<A-d>', cmd('Lspsaga open_floaterm') })
+tmap({ '<A-d>', [[<C-\><C-n>:Lspsaga close_floaterm<CR>]] })
+
+xmap({ 'ga', cmd('Lspsaga code_action') })

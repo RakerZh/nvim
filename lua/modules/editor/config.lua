@@ -1,15 +1,6 @@
 local config = {}
 
 function config.telescope()
-  if not packer_plugins['popup.nvim'].loaded then
-    vim.cmd([[packadd popup.nvim]])
-    vim.cmd([[packadd plenary.nvim]])
-    vim.cmd([[packadd telescope-file-broswer.nvim]])
-    vim.cmd([[packadd telescope-fzy-native.nvim]])
-    vim.cmd([[packadd telescope-ui-select.nvim]])
-    vim.cmd([[packadd telescope-zoxide]])
-  end
-
   require('telescope').setup({
     defaults = {
       file_ignore_patterns = { 'build' },
@@ -101,13 +92,6 @@ function config.nvim_treesitter()
         },
       },
     },
-  })
-end
-
-function config.hop()
-  local hop = require('hop')
-  hop.setup({
-    keys = 'etovxqpdygfblzhckisuran',
   })
 end
 

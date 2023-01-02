@@ -42,15 +42,3 @@ _G.smart_shift_tab = function()
     return '<S-Tab>'
   end
 end
-
-_G.enhance_nice_block = function(key)
-  if not packer_plugins['vim-niceblock'].loaded then
-    vim.cmd([[packadd vim-niceblock]])
-  end
-  local map = {
-    I = '<Plug>(niceblock-I)',
-    ['gI'] = '<Plug>(niceblock-gI)',
-    A = '<Plug>(niceblock-A)',
-  }
-  return t(map[key])
-end
