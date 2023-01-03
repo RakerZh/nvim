@@ -36,11 +36,11 @@ package({
   dependencies = { 'kyazdani42/nvim-web-devicons' },
 })
 
-package({
+--[[package({
   'kyazdani42/nvim-tree.lua',
   dependencies = { 'kyazdani42/nvim-web-devicons' },
   config = conf.nvim_tree,
-})
+})]]
 
 package({
   'lewis6991/gitsigns.nvim',

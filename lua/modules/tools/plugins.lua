@@ -13,16 +13,6 @@ package({
   ft = { 'go', 'typescript', 'javascript', 'vim', 'rust', 'c', 'cpp' },
 })
 
-package({ 'liuchengxu/vista.vim', cmd = 'Vista', config = conf.vim_vista })
-
-package({
-  'brooth/far.vim',
-  cmd = { 'Far', 'Farp' },
-  config = function()
-    vim.g['far#source'] = 'rg'
-  end,
-})
-
 --[[package{'Shatur/neovim-cmake',
   ft = {'cpp','c','h','hpp'},
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
@@ -30,8 +20,6 @@ package({
 }]]
 
 package({ 'sindrets/diffview.nvim', requires = { 'nvim-lua/plenary.nvim' } })
-
-package({ 'searleser97/cpbooster.vim' })
 
 package({
   'TimUntersberger/neogit',
@@ -46,21 +34,7 @@ package({
 
 package({ 'famiu/bufdelete.nvim' })
 
-package({
-  'dvdsk/prosesitter',
-  config = function()
-    require('prosesitter')
-  end,
-})
-
 package({ 'rcarriga/nvim-notify' })
-
-package({
-  'akinsho/toggleterm.nvim',
-  config = function()
-    require('toggleterm')
-  end,
-})
 
 package({
   'glepnir/template.nvim',
@@ -80,13 +54,6 @@ package({
   'jghauser/follow-md-links.nvim',
 })
 
-package({
-  'mzlogin/vim-markdown-toc',
-})
-
 -- package({ '~/space/docnote.nvim/'})
-package({ 'simnalamburt/vim-mundo' })
-
-package({ 'preservim/vim-markdown' })
 
 package({ 'RakerZh/min-preview.nvim' })
