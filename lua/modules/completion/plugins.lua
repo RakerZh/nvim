@@ -3,14 +3,12 @@ local conf = require('modules.completion.config')
 
 package({
   'neovim/nvim-lspconfig',
-  ft = { 'go', 'lua', 'sh', 'rust', 'c', 'cpp', 'python' },
+  ft = { 'go', 'lua', 'sh', 'rust', 'c', 'cpp', 'python', 'json', 'typescript', 'typescriptreact' },
   config = conf.nvim_lsp,
   dependencies = {
     { 'glepnir/lspsaga.nvim', config = conf.lspsaga },
   },
 })
-
-package({ 'hrsh7th/cmp-nvim-lsp' })
 
 package({
   'hrsh7th/nvim-cmp',

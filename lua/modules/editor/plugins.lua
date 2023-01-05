@@ -30,10 +30,6 @@ package({
 
 package({ 'glepnir/mcc.nvim', ft = { 'go', 'lua', 'rust', 'cpp' }, config = conf.smart_input })
 
-package({ 'nvim-telescope/telescope-file-browser.nvim' })
-
-package({ 'jvgrootveld/telescope-zoxide' })
-
 package({
   'norcalli/nvim-colorizer.lua',
   config = conf.nvim_colorizer,
@@ -55,5 +51,17 @@ package({
   'ggandor/leap.nvim',
   config = function()
     require('leap').set_default_keymaps()
+  end,
+})
+
+package({
+  'folke/todo-comments.nvim',
+  requires = 'nvim-lua/plenary.nvim',
+  config = function()
+    require('todo-comments').setup({
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    })
   end,
 })

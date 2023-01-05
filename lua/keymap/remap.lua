@@ -17,7 +17,7 @@ nmap({
   { ']b', cmd('bn') },
   { '[b', cmd('bp') },
   -- remove trailing white space
-  { '<Leader>t', cmd('TrimTrailingWhitespace') },
+  { '<Leader>w', cmd('TrimTrailingWhitespace') },
   -- window jump
   { '<C-h>', '<C-w>h' },
   { '<C-l>', '<C-w>l' },
@@ -52,12 +52,12 @@ imap({
 
 -- commandline remap
 cmap({
-  { '<C-b>', '<Left>' },
-  { '<C-f>', '<Right>' },
+  { '<C-h>', '<Left>' },
+  { '<C-l>', '<Right>' },
   { '<C-a>', '<Home>' },
   { '<C-e>', '<End>' },
   { '<C-d>', '<Del>' },
-  { '<C-h>', '<BS>' },
+  { '<C-b>', '<BS>' },
 })
 
 -- tmap({ '<Esc>', [[<C-\><C-n>]] })

@@ -78,4 +78,14 @@ function config.coman()
   end
 end
 
+function config.neotree()
+  require('neo-tree').setup({
+    filesystem = {
+      filtered_items = {
+        hide_dotfile = false,
+      },
+    },
+  })
+end
+
 return config

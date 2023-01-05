@@ -30,12 +30,6 @@ package({
   config = conf.indent_blankline,
 })
 
-package({
-  'akinsho/bufferline.nvim',
-  config = conf.nvim_bufferline,
-  dependencies = { 'kyazdani42/nvim-web-devicons' },
-})
-
 --[[package({
   'kyazdani42/nvim-tree.lua',
   dependencies = { 'kyazdani42/nvim-web-devicons' },
@@ -44,9 +38,10 @@ package({
 
 package({
   'lewis6991/gitsigns.nvim',
-  config = function()
-    require('gitsigns').setup()
-  end,
+  event = { 'BufRead', 'BufNewFile' },
+  config = conf.gitsigns,
 })
 
 package({ 'mechatroner/rainbow_csv', ft = 'csv' })
+
+package({ 'akinsho/bufferline.nvim', dependencies = 'kyazdani42/nvim-web-devicons' })

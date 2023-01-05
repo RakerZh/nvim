@@ -41,8 +41,8 @@ function config.nvim_cmp()
           Operator = '',
           TypeParameter = ' ',
         }
+
         local meta_type = vim_item.kind
-        -- load lspkind icons
         vim_item.kind = lspkind_icons[vim_item.kind] .. ''
         vim_item.menu = ({
           buffer = ' Buffer',

@@ -10,7 +10,7 @@ package({
 
 package({
   'editorconfig/editorconfig-vim',
-  ft = { 'go', 'typescript', 'javascript', 'vim', 'rust', 'c', 'cpp' },
+  ft = { 'go', 'typescript', 'javascript', 'rust', 'c', 'cpp' },
 })
 
 --[[package{'Shatur/neovim-cmake',
@@ -19,7 +19,11 @@ package({
   -- require dap
 }]]
 
-package({ 'sindrets/diffview.nvim', requires = { 'nvim-lua/plenary.nvim' } })
+package({
+  'sindrets/diffview.nvim',
+  config = conf.diffview,
+  dependencies = { 'nvim-lua/plenary.nvim' },
+})
 
 package({
   'TimUntersberger/neogit',
@@ -32,13 +36,27 @@ package({
 
 -- package({ 'github/copilot.vim' })
 
-package({ 'famiu/bufdelete.nvim' })
-
-package({ 'rcarriga/nvim-notify' })
+package({
+  'folke/noice.nvim',
+  config = function()
+    require('noice').setup({
+      -- add any options here
+    })
+  end,
+  dependencies = {
+    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+    'MunifTanjim/nui.nvim',
+    -- OPTIONAL:
+    --   `nvim-notify` is only needed, if you want to use the notification view.
+    --   If not available, we use `mini` as the fallback
+    'rcarriga/nvim-notify',
+  },
+})
 
 package({
   'glepnir/template.nvim',
   config = conf.template_nvim,
+  ft = { 'lua', 'rust', 'go', 'cpp' },
 })
 
 package({ 'glepnir/coman.nvim', event = 'BufRead', config = conf.coman })
@@ -57,3 +75,22 @@ package({
 -- package({ '~/space/docnote.nvim/'})
 
 package({ 'RakerZh/min-preview.nvim' })
+
+package({
+  'nvim-neo-tree/neo-tree.nvim',
+  dependencies = {
+    'nvim-lua/plenary.nvim',
+    'nvim-tree/nvim-web-devicons',
+  },
+  config = conf.neotree,
+})
+
+-- package({
+--   'nvim-tree/nvim-tree.lua',
+--   dependencies = {
+--     'nvim-tree/nvim-web-devicons', -- optional, for file icons
+--   },
+--   config = function ()
+--     require('nvim-tree').setup()
+--   end
+-- })
