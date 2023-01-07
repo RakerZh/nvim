@@ -28,7 +28,11 @@ package({
   dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
 })
 
-package({ 'glepnir/mcc.nvim', ft = { 'go', 'lua', 'rust', 'cpp' }, config = conf.smart_input })
+package({
+  'glepnir/mutchar.nvim',
+  ft = { 'c', 'go', 'lua', 'rust', 'cpp' },
+  config = conf.smart_input,
+})
 
 package({
   'norcalli/nvim-colorizer.lua',

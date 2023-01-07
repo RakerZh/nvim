@@ -8,11 +8,6 @@ package({
   dependencies = { 'tpope/vim-dadbod' },
 })
 
-package({
-  'editorconfig/editorconfig-vim',
-  ft = { 'go', 'typescript', 'javascript', 'rust', 'c', 'cpp' },
-})
-
 --[[package{'Shatur/neovim-cmake',
   ft = {'cpp','c','h','hpp'},
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
@@ -71,8 +66,6 @@ package({
 package({
   'jghauser/follow-md-links.nvim',
 })
-
--- package({ '~/space/docnote.nvim/'})
 
 package({ 'RakerZh/min-preview.nvim' })
 
