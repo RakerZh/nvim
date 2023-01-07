@@ -63,9 +63,7 @@ package({
   end,
 })
 
-package({
-  'jghauser/follow-md-links.nvim',
-})
+package({ 'jghauser/follow-md-links.nvim' })
 
 package({ 'RakerZh/min-preview.nvim' })
 

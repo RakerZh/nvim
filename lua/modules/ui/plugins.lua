@@ -6,6 +6,12 @@ package({ 'RakerZh/zephyr-nvim', config = conf.zephyr })
 package({ 'glepnir/dashboard-nvim', config = conf.dashboard })
 
 package({
+  'akinsho/bufferline.nvim',
+  version = 'v3.*',
+  dependencies = 'kyazdani42/nvim-web-devicons',
+})
+
+package({
   'glepnir/galaxyline.nvim',
   config = conf.galaxyline,
   dependencies = { 'kyazdani42/nvim-web-devicons' },
@@ -43,5 +49,3 @@ package({
 })
 
 package({ 'mechatroner/rainbow_csv', ft = 'csv' })
-
-package({ 'akinsho/bufferline.nvim', dependencies = 'kyazdani42/nvim-web-devicons' })
