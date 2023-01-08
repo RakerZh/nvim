@@ -99,56 +99,6 @@ function config.dashboard()
   vim.cmd('highlight DashboardFooter guifg=#5E81AC')
 end
 
-function config.nvim_tree()
-  require('nvim-tree').setup({
-    disable_netrw = false,
-    hijack_cursor = true,
-    view = {
-      adaptive_size = true,
-      width = 30,
-      side = 'left',
-      preserve_window_proportions = false,
-      number = false,
-      relativenumber = false,
-      mappings = {
-        custom_only = false,
-        list = {
-          { key = { 'l' }, action = 'edit' },
-          { key = { 's' }, action = 'split' },
-          { key = { 'v' }, action = 'vsplit' },
-        },
-      },
-    },
-    renderer = {
-      icons = {
-        glyphs = {
-          default = '',
-          symlink = '',
-          folder = {
-            arrow_closed = '',
-            arrow_open = '',
-            default = '',
-            open = '',
-            empty = '',
-            empty_open = '',
-            symlink = '',
-            symlink_open = '',
-          },
-          git = {
-            unstaged = '✗',
-            staged = '',
-            unmerged = ' ',
-            renamed = '',
-            untracked = 'ﲉ',
-            deleted = '',
-            ignored = '◌',
-          },
-        },
-      },
-    },
-  })
-end
-
 function config.gitsigns()
   require('gitsigns').setup({
     signs = {
@@ -219,6 +169,18 @@ function config.indent_blankline()
       'if_statement',
       'while',
       'for',
+    },
+  })
+end
+
+function config.todo()
+  require('todo-comments').setup({
+    keywords = {
+      FIX = { icon = ' ', color = '#cc3b1d', alt = { 'FIXME', 'BUG', 'FIXIT', 'ISSUE' } },
+      PERF = { icon = ' ', color = '#64a9ab', alt = { 'OPTIM', 'PERFORMANCE', 'OPTIMIZE' } },
+      TEST = { icon = ' ', color = 'test', alt = { 'TESTING' } },
+      PASSED = { icon = ' ', color = '#6da063', alt = { 'PASS' } },
+      FAILED = { icon = ' ', color = '#d45d44', alt = { 'FAIL' } },
     },
   })
 end

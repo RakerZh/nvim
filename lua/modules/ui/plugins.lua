@@ -6,15 +6,9 @@ package({ 'RakerZh/zephyr-nvim', config = conf.zephyr })
 package({ 'glepnir/dashboard-nvim', config = conf.dashboard })
 
 package({
-  'akinsho/bufferline.nvim',
-  version = 'v3.*',
-  dependencies = 'kyazdani42/nvim-web-devicons',
-})
-
-package({
   'glepnir/galaxyline.nvim',
   config = conf.galaxyline,
-  dependencies = { 'kyazdani42/nvim-web-devicons' },
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
 })
 
 local enable_indent_filetype = {
@@ -49,3 +43,18 @@ package({
 })
 
 package({ 'mechatroner/rainbow_csv', ft = 'csv' })
+
+package({
+  'folke/todo-comments.nvim',
+  requires = 'nvim-lua/plenary.nvim',
+  config = conf.todo,
+})
+
+package({
+  'akinsho/bufferline.nvim',
+  version = 'v3.*',
+  dependencies = 'nvim-tree/nvim-web-devicons',
+  config = function()
+    require('bufferline').setup()
+  end,
+})

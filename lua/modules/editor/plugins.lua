@@ -1,6 +1,8 @@
 local package = require('core.pack').package
 local conf = require('modules.editor.config')
 
+-- TODO: fzf-lua implemented
+--
 --[[package{'ibhagwan/fzf-lua',
   config = conf.fzf_lua,
   dependencies = {'kyazdani42/nvim-web-devicons'}
@@ -55,17 +57,5 @@ package({
   'ggandor/leap.nvim',
   config = function()
     require('leap').set_default_keymaps()
-  end,
-})
-
-package({
-  'folke/todo-comments.nvim',
-  requires = 'nvim-lua/plenary.nvim',
-  config = function()
-    require('todo-comments').setup({
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    })
   end,
 })
