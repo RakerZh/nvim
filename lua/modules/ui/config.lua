@@ -175,12 +175,25 @@ end
 
 function config.todo()
   require('todo-comments').setup({
+    -- TEST:
+    -- FIX:
+    -- TODO:
+    -- WARN:
+    -- PERF:
+    --
+    -- NOTE:
+    -- INFO:
+    --
+    -- PASSED:
+    -- FAILED:
+    -- Link:
     keywords = {
-      FIX = { icon = ' ', color = '#cc3b1d', alt = { 'FIXME', 'BUG', 'FIXIT', 'ISSUE' } },
+      FIX = { icon = ' ', color = '#cc3b1d', alt = { 'FIXME', 'BUG', 'FIXIT', 'ISSUE', 'fix' } },
       PERF = { icon = ' ', color = '#64a9ab', alt = { 'OPTIM', 'PERFORMANCE', 'OPTIMIZE' } },
-      TEST = { icon = ' ', color = 'test', alt = { 'TESTING' } },
-      PASSED = { icon = ' ', color = '#6da063', alt = { 'PASS' } },
-      FAILED = { icon = ' ', color = '#d45d44', alt = { 'FAIL' } },
+      TEST = { icon = ' ', color = 'test', alt = { 'TESTING', 'test' } },
+      PASSED = { icon = ' ', color = '#6da063', alt = { 'PASS', 'pass' } },
+      FAILED = { icon = ' ', color = '#d45d44', alt = { 'FAIL', 'fail' } },
+      Ref = { icon = ' ', color = '#5a636b', alt = { 'Link', 'LINK', 'REF', 'link' } },
     },
   })
 end

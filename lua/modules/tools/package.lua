@@ -17,13 +17,13 @@ package({
 package({
   'sindrets/diffview.nvim',
   config = conf.diffview,
-  dependencies = { 'nvim-lua/plenary.nvim' },
+  dependencies = { { 'nvim-lua/plenary.nvim' } },
 })
 
 package({
   'TimUntersberger/neogit',
   cmd = 'Neoload',
-  dependencies = { 'nvim-lua/plenary.nvim' },
+  dependencies = { { 'nvim-lua/plenary.nvim' } },
   config = function()
     require('neogit')
   end,
@@ -38,13 +38,14 @@ package({
       -- add any options here
     })
   end,
+  commit = 'eadc279a27abc34ffcde84596e24e7780add11b1',
   dependencies = {
     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-    'MunifTanjim/nui.nvim',
+    { 'MunifTanjim/nui.nvim' },
     -- OPTIONAL:
     --   `nvim-notify` is only needed, if you want to use the notification view.
     --   If not available, we use `mini` as the fallback
-    'rcarriga/nvim-notify',
+    { 'rcarriga/nvim-notify' },
   },
 })
 
@@ -70,18 +71,15 @@ package({ 'RakerZh/min-preview.nvim' })
 package({
   'nvim-neo-tree/neo-tree.nvim',
   dependencies = {
-    'nvim-lua/plenary.nvim',
-    'nvim-tree/nvim-web-devicons',
+    { 'nvim-lua/plenary.nvim' },
+    { 'nvim-tree/nvim-web-devicons' },
   },
   config = conf.neotree,
 })
 
--- package({
---   'nvim-tree/nvim-tree.lua',
---   dependencies = {
---     'nvim-tree/nvim-web-devicons', -- optional, for file icons
---   },
---   config = function ()
---     require('nvim-tree').setup()
---   end
--- })
+package({
+  'nvim-neorg/neorg',
+  ft = 'norg',
+  dependencies = { { 'nvim-treesitter/nvim-treesitter' }, { 'nvim-telescope/telescope.nvim' } },
+  config = conf.neorg,
+})

@@ -46,14 +46,14 @@ package({ 'mechatroner/rainbow_csv', ft = 'csv' })
 
 package({
   'folke/todo-comments.nvim',
-  requires = 'nvim-lua/plenary.nvim',
+  dependencies = { { 'nvim-lua/plenary.nvim' } },
   config = conf.todo,
 })
 
 package({
   'akinsho/bufferline.nvim',
   version = 'v3.*',
-  dependencies = 'nvim-tree/nvim-web-devicons',
+  dependencies = { { 'nvim-tree/nvim-web-devicons' } },
   config = function()
     require('bufferline').setup()
   end,
