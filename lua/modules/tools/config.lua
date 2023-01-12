@@ -88,19 +88,10 @@ function config.neotree()
   })
 end
 
-function config.neorg()
-  require('neorg').setup({
-    load = {
-      ['core.defaults'] = {},
-      ['core.norg.dirman'] = {
-        config = {
-          workspaces = {
-            work = '~/notes/work',
-            home = '~/notes/home',
-          },
-        },
-      },
-    },
+function config.notify()
+  require('notify').setup({
+    background_colour = '#4C566A',
+    timeout = 3000,
   })
 end
 

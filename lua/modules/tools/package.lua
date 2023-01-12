@@ -14,6 +14,8 @@ package({
   -- require dap
 }]]
 
+-- package({ 'github/copilot.vim' })
+
 package({
   'sindrets/diffview.nvim',
   config = conf.diffview,
@@ -29,7 +31,7 @@ package({
   end,
 })
 
--- package({ 'github/copilot.vim' })
+package({ 'rcarriga/nvim-notify', config = conf.notify })
 
 package({
   'folke/noice.nvim',
@@ -40,12 +42,7 @@ package({
   end,
   commit = 'eadc279a27abc34ffcde84596e24e7780add11b1',
   dependencies = {
-    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
     { 'MunifTanjim/nui.nvim' },
-    -- OPTIONAL:
-    --   `nvim-notify` is only needed, if you want to use the notification view.
-    --   If not available, we use `mini` as the fallback
-    { 'rcarriga/nvim-notify' },
   },
 })
 
