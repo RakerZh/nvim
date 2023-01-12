@@ -27,6 +27,7 @@ nmap({
   { '[c', cmd('Lspsaga show_cursor_diagnostics') },
   { 'K', cmd('Lspsaga hover_doc') },
   { 'ga', cmd('Lspsaga code_action') },
+
   { 'gd', cmd('Lspsaga peek_definition') },
   { 'gs', cmd('Lspsaga signature_hel') },
   { 'gr', cmd('Lspsaga rename') },
@@ -37,8 +38,11 @@ nmap({
   { '<Leader>ls', cmd('Lspsaga outline') },
   -- dashboard create file
   { '<Leader>n', cmd('DashboardNewFile') },
-  { '<Leader>ss', cmd('SessionSave') },
-  { '<Leader>sl', cmd('SessionLoad') },
+  { '<Leader>sl', cmd('Lspsaga show_line_diagnostics') },
+  { '<Leader>ci,', cmd('Lspsaga incoming_calls') },
+  { '<Leader>co,', cmd('Lspsaga outgoing_calls') },
+  -- { '<Leader>ss', cmd('SessionSave') },
+  -- { '<Leader>sl', cmd('SessionLoad') },
   -- nvimtree
   --{'<Leader>kh',cmd('NvimTreeResize -10'),opts(noremap,silent)},
   --{'<Leader>kl',cmd('NvimTreeResize +2'),opts(noremap,silent)},

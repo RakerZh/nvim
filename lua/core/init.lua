@@ -37,10 +37,11 @@ vim.g.markdown_fenced_languages = {
   'lua',
 }
 
+vim.opt.termguicolors = true
+
 vim.api.nvim_set_keymap('n', ' ', '', { noremap = true })
 vim.api.nvim_set_keymap('x', ' ', '', { noremap = true })
 
--- vim.opt.termguicolors = true
 require('core.pack'):boot_strap()
 require('core.options')
 require('keymap')

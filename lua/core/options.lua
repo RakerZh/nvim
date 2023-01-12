@@ -63,7 +63,6 @@ vim.wo.showbreak = 'NONE'
 opt.foldlevelstart = 99
 opt.foldmethod = 'marker'
 
-opt.background = 'light'
 opt.number = true
 opt.signcolumn = 'yes'
 opt.spelloptions = 'camel'

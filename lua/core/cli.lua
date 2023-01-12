@@ -108,6 +108,7 @@ function cli:installer(type)
       else
         local url = 'git clone https://github.com/'
         local cmd = type == 'install' and url .. name .. ' ' .. path or 'git -C ' .. path .. ' pull'
+        -- https://github.com/glepnir/lspsaga.nvim.git
         local failed = helper.run_git(name, cmd, type)
         table.insert(res, failed)
       end
