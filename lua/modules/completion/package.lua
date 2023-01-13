@@ -6,7 +6,7 @@ package({
   ft = { 'go', 'lua', 'sh', 'rust', 'c', 'cpp', 'python', 'json', 'typescript', 'typescriptreact' },
   config = conf.nvim_lsp,
   dependencies = {
-    { 'glepnir/lspsaga.nvim', config = conf.lspsaga },
+    { 'glepnir/lspsaga.nvim', event = 'BufRead', config = conf.lspsaga },
   },
 })
 
