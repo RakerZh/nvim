@@ -32,7 +32,7 @@ nmap({
   { 'gs', cmd('Lspsaga signature_hel') },
   { 'gr', cmd('Lspsaga rename') },
   { 'gh', cmd('Lspsaga lsp_finder') },
---  { '<Leader>g', cmd('Lspsaga term_toggle lazygit') },
+  --  { '<Leader>g', cmd('Lspsaga term_toggle lazygit') },
   { '<Leader>o', cmd('Lspsaga outline') },
   -- dashboard create file
   { '<Leader>n', cmd('DashboardNewFile') },
