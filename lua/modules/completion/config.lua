@@ -99,7 +99,7 @@ end
 function config.lspsaga()
   require('lspsaga').setup({
     ui = {
-      border = 'roundede',
+      border = 'rounded',
       colors = {
         --float window normal bakcground color
         normal_bg = '#2a2b2d',

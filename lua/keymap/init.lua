@@ -37,8 +37,8 @@ nmap({
   -- dashboard create file
   { '<Leader>n', cmd('DashboardNewFile') },
   { '<Leader>sl', cmd('Lspsaga show_line_diagnostics') },
-  { '<Leader>ci,', cmd('Lspsaga incoming_calls') },
-  { '<Leader>co,', cmd('Lspsaga outgoing_calls') },
+  { '<Leader>ci', cmd('Lspsaga incoming_calls') },
+  { '<Leader>co', cmd('Lspsaga outgoing_calls') },
   -- { '<Leader>ss', cmd('SessionSave') },
   -- { '<Leader>sl', cmd('SessionLoad') },
   -- nvimtree
