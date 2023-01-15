@@ -135,14 +135,15 @@ function cli.clean()
   os.execute('rm -rf ' .. cli.lazy_dir)
 end
 
-function cli.doctor()
+function cli.doctor(pack_name)
   local list = cli:get_all_packages()
   if not list then
     return
   end
 
   helper.yellow('🔹 Total: ' .. vim.tbl_count(list) + 1 .. ' Plugins')
-  for k, v in pairs(list) do
+  local packs = pack_name and { [pack_name] = list[pack_name] } or list
+  for k, v in pairs(packs) do
     helper.blue('\t' .. '✨' .. k)
     if v.type then
       helper.write('purple')('\tType: ')
@@ -185,8 +186,8 @@ function cli.modules()
 end
 
 function cli:meta(arg)
-  return function()
-    self[arg]()
+  return function(data)
+    self[arg](data)
   end
 end
 
