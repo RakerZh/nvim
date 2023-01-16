@@ -68,13 +68,13 @@
 <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/diffs-b77240d2f242.js"></script>
   
 
-  <title>nvim/winbar.lua at main · glepnir/nvim · GitHub</title>
+  <title>nvim/tmux.lua at main · glepnir/nvim · GitHub</title>
 
 
 
     
 
-  <meta name="request-id" content="C612:7461:E51894:1469F8F:63C4DA4C" data-pjax-transient="true"/><meta name="html-safe-nonce" content="8db6a8a286d8fab3f00f7d440306c16c823aa698747fc950bb26659c76f773ea" data-pjax-transient="true"/><meta name="visitor-payload" content="eyJyZWZlcnJlciI6IiIsInJlcXVlc3RfaWQiOiJDNjEyOjc0NjE6RTUxODk0OjE0NjlGOEY6NjNDNERBNEMiLCJ2aXNpdG9yX2lkIjoiNDEyODQxNzU0MTIwMDg2MTc3MiIsInJlZ2lvbl9lZGdlIjoiaWFkIiwicmVnaW9uX3JlbmRlciI6ImlhZCJ9" data-pjax-transient="true"/><meta name="visitor-hmac" content="f8c854d78e7902979bcd3d7c4c6af5e6e968d9d2c3ce4b45da1c75d7048768d6" data-pjax-transient="true"/>
+  <meta name="request-id" content="C60C:6A16:E57038:146BB9C:63C4DA46" data-pjax-transient="true"/><meta name="html-safe-nonce" content="54ba556fc66bd507b42e57b042a4d9a74ce364dd02965de1d6af970e363c3cd4" data-pjax-transient="true"/><meta name="visitor-payload" content="eyJyZWZlcnJlciI6IiIsInJlcXVlc3RfaWQiOiJDNjBDOjZBMTY6RTU3MDM4OjE0NkJCOUM6NjNDNERBNDYiLCJ2aXNpdG9yX2lkIjoiNDIyNDQ4ODUyOTMxODk1OTY4NiIsInJlZ2lvbl9lZGdlIjoiaWFkIiwicmVnaW9uX3JlbmRlciI6ImlhZCJ9" data-pjax-transient="true"/><meta name="visitor-hmac" content="7966a349aa49219331cf2e483f8d52d48a64b818c0e024040354fcb8821a829a" data-pjax-transient="true"/>
 
 
     <meta name="hovercard-subject-tag" content="repository:291502113" data-turbo-transient>
@@ -113,8 +113,8 @@
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
     <meta property="fb:app_id" content="1401488693436528">
     <meta name="apple-itunes-app" content="app-id=1477376905" />
-      <meta name="twitter:image:src" content="https://opengraph.githubassets.com/86310912df719a1905f62c52aaab8e03d25ca576c11985e65c5305ae238a7b26/glepnir/nvim" /><meta name="twitter:site" content="@github" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="nvim/winbar.lua at main · glepnir/nvim" /><meta name="twitter:description" content="neovim configuration written in lua. Contribute to glepnir/nvim development by creating an account on GitHub." />
-      <meta property="og:image" content="https://opengraph.githubassets.com/86310912df719a1905f62c52aaab8e03d25ca576c11985e65c5305ae238a7b26/glepnir/nvim" /><meta property="og:image:alt" content="neovim configuration written in lua. Contribute to glepnir/nvim development by creating an account on GitHub." /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="600" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="nvim/winbar.lua at main · glepnir/nvim" /><meta property="og:url" content="https://github.com/glepnir/nvim" /><meta property="og:description" content="neovim configuration written in lua. Contribute to glepnir/nvim development by creating an account on GitHub." />
+      <meta name="twitter:image:src" content="https://opengraph.githubassets.com/86310912df719a1905f62c52aaab8e03d25ca576c11985e65c5305ae238a7b26/glepnir/nvim" /><meta name="twitter:site" content="@github" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="nvim/tmux.lua at main · glepnir/nvim" /><meta name="twitter:description" content="neovim configuration written in lua. Contribute to glepnir/nvim development by creating an account on GitHub." />
+      <meta property="og:image" content="https://opengraph.githubassets.com/86310912df719a1905f62c52aaab8e03d25ca576c11985e65c5305ae238a7b26/glepnir/nvim" /><meta property="og:image:alt" content="neovim configuration written in lua. Contribute to glepnir/nvim development by creating an account on GitHub." /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="600" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="nvim/tmux.lua at main · glepnir/nvim" /><meta property="og:url" content="https://github.com/glepnir/nvim" /><meta property="og:description" content="neovim configuration written in lua. Contribute to glepnir/nvim development by creating an account on GitHub." />
       
     <link rel="assets" href="https://github.githubassets.com/">
 
@@ -143,7 +143,7 @@
 
 
 
-    <link rel="canonical" href="https://github.com/glepnir/nvim/blob/main/lua/internal/winbar.lua" data-turbo-transient>
+    <link rel="canonical" href="https://github.com/glepnir/nvim/blob/main/lua/internal/tmux.lua" data-turbo-transient>
   <meta name="turbo-body-classes" content="logged-out env-production page-responsive page-blob">
 
 
@@ -197,7 +197,7 @@
         <div class="flex-1">
           <a href="/signup?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&amp;source=header-repo"
             class="d-inline-block d-lg-none flex-order-1 f5 no-underline border color-border-default rounded-2 px-2 py-1 color-fg-inherit"
-            data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/glepnir/nvim/blob/main/lua/internal/winbar.lua&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="83f37f91ed3def8c817d0f0a149a0b15df2e49402b421b02e5894f558f29c93b"
+            data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/glepnir/nvim/blob/main/lua/internal/tmux.lua&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="67422eb4a42b577cd1db7ddcdd03318d2f507a62aaef54b66f891d62bf5825eb"
           >
             Sign&nbsp;up
           </a>
@@ -229,7 +229,7 @@
         <ul class="list-style-none f5 px-lg-4 border-lg-right mb-4 mb-lg-0 pr-lg-7">
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center pb-lg-3" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Actions&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Actions;&quot;}" href="/features/actions">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center pb-lg-3" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Actions&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Actions;&quot;}" href="/features/actions">
       <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" class="octicon octicon-workflow color-fg-subtle mr-3">
     <path fill-rule="evenodd" d="M1 3a2 2 0 012-2h6.5a2 2 0 012 2v6.5a2 2 0 01-2 2H7v4.063C7 16.355 7.644 17 8.438 17H12.5v-2.5a2 2 0 012-2H21a2 2 0 012 2V21a2 2 0 01-2 2h-6.5a2 2 0 01-2-2v-2.5H8.437A2.938 2.938 0 015.5 15.562V11.5H3a2 2 0 01-2-2V3zm2-.5a.5.5 0 00-.5.5v6.5a.5.5 0 00.5.5h6.5a.5.5 0 00.5-.5V3a.5.5 0 00-.5-.5H3zM14.5 14a.5.5 0 00-.5.5V21a.5.5 0 00.5.5H21a.5.5 0 00.5-.5v-6.5a.5.5 0 00-.5-.5h-6.5z"></path>
 </svg>
@@ -242,7 +242,7 @@
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center pb-lg-3" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Packages&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Packages;&quot;}" href="/features/packages">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center pb-lg-3" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Packages&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Packages;&quot;}" href="/features/packages">
       <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" class="octicon octicon-package color-fg-subtle mr-3">
     <path fill-rule="evenodd" d="M12.876.64a1.75 1.75 0 00-1.75 0l-8.25 4.762a1.75 1.75 0 00-.875 1.515v9.525c0 .625.334 1.203.875 1.515l8.25 4.763a1.75 1.75 0 001.75 0l8.25-4.762a1.75 1.75 0 00.875-1.516V6.917a1.75 1.75 0 00-.875-1.515L12.876.639zm-1 1.298a.25.25 0 01.25 0l7.625 4.402-7.75 4.474-7.75-4.474 7.625-4.402zM3.501 7.64v8.803c0 .09.048.172.125.216l7.625 4.402v-8.947L3.501 7.64zm9.25 13.421l7.625-4.402a.25.25 0 00.125-.216V7.639l-7.75 4.474v8.947z"></path>
 </svg>
@@ -255,7 +255,7 @@
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center pb-lg-3" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Security&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Security;&quot;}" href="/features/security">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center pb-lg-3" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Security&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Security;&quot;}" href="/features/security">
       <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" class="octicon octicon-shield-check color-fg-subtle mr-3">
     <path d="M16.53 9.78a.75.75 0 00-1.06-1.06L11 13.19l-1.97-1.97a.75.75 0 00-1.06 1.06l2.5 2.5a.75.75 0 001.06 0l5-5z"></path><path fill-rule="evenodd" d="M12.54.637a1.75 1.75 0 00-1.08 0L3.21 3.312A1.75 1.75 0 002 4.976V10c0 6.19 3.77 10.705 9.401 12.83.386.145.812.145 1.198 0C18.229 20.704 22 16.19 22 10V4.976c0-.759-.49-1.43-1.21-1.664L12.54.637zm-.617 1.426a.25.25 0 01.154 0l8.25 2.676a.25.25 0 01.173.237V10c0 5.461-3.28 9.483-8.43 11.426a.2.2 0 01-.14 0C6.78 19.483 3.5 15.46 3.5 10V4.976c0-.108.069-.203.173-.237l8.25-2.676z"></path>
 </svg>
@@ -268,7 +268,7 @@
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center pb-lg-3" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Codespaces&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Codespaces;&quot;}" href="/features/codespaces">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center pb-lg-3" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Codespaces&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Codespaces;&quot;}" href="/features/codespaces">
       <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" class="octicon octicon-codespaces color-fg-subtle mr-3">
     <path fill-rule="evenodd" d="M3.5 3.75C3.5 2.784 4.284 2 5.25 2h13.5c.966 0 1.75.784 1.75 1.75v7.5A1.75 1.75 0 0118.75 13H5.25a1.75 1.75 0 01-1.75-1.75v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h13.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25H5.25zM1.5 15.75c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v4a1.75 1.75 0 01-1.75 1.75H3.25a1.75 1.75 0 01-1.75-1.75v-4zm1.75-.25a.25.25 0 00-.25.25v4c0 .138.112.25.25.25h17.5a.25.25 0 00.25-.25v-4a.25.25 0 00-.25-.25H3.25z"></path><path fill-rule="evenodd" d="M10 17.75a.75.75 0 01.75-.75h6.5a.75.75 0 010 1.5h-6.5a.75.75 0 01-.75-.75zm-4 0a.75.75 0 01.75-.75h.5a.75.75 0 010 1.5h-.5a.75.75 0 01-.75-.75z"></path>
 </svg>
@@ -281,7 +281,7 @@
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center pb-lg-3" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Copilot&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Copilot;&quot;}" href="/features/copilot">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center pb-lg-3" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Copilot&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Copilot;&quot;}" href="/features/copilot">
       <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" class="octicon octicon-copilot color-fg-subtle mr-3">
     <path d="M9.75 14a.75.75 0 01.75.75v2.5a.75.75 0 01-1.5 0v-2.5a.75.75 0 01.75-.75zm4.5 0a.75.75 0 01.75.75v2.5a.75.75 0 01-1.5 0v-2.5a.75.75 0 01.75-.75z"></path><path fill-rule="evenodd" d="M12 2c-2.214 0-4.248.657-5.747 1.756a7.43 7.43 0 00-.397.312c-.584.235-1.077.546-1.474.952-.85.87-1.132 2.037-1.132 3.368 0 .368.014.733.052 1.086l-.633 1.478-.043.022A4.75 4.75 0 000 15.222v1.028c0 .529.31.987.564 1.293.28.336.637.653.967.918a13.262 13.262 0 001.299.911l.024.015.006.004.04.025.144.087c.124.073.304.177.535.3.46.245 1.122.57 1.942.894C7.155 21.344 9.439 22 12 22s4.845-.656 6.48-1.303c.819-.324 1.481-.65 1.941-.895a13.797 13.797 0 00.68-.386l.039-.025.006-.004.024-.015a8.829 8.829 0 00.387-.248c.245-.164.577-.396.912-.663.33-.265.686-.582.966-.918.256-.306.565-.764.565-1.293v-1.028a4.75 4.75 0 00-2.626-4.248l-.043-.022-.633-1.478c.038-.353.052-.718.052-1.086 0-1.331-.282-2.499-1.132-3.368-.397-.406-.89-.717-1.474-.952a7.386 7.386 0 00-.397-.312C16.248 2.657 14.214 2 12 2zm-8 9.654l.038-.09c.046.06.094.12.145.177.793.9 2.057 1.259 3.782 1.259 1.59 0 2.739-.544 3.508-1.492.131-.161.249-.331.355-.508a32.948 32.948 0 00.344 0c.106.177.224.347.355.508.77.948 1.918 1.492 3.508 1.492 1.725 0 2.989-.359 3.782-1.259.05-.057.099-.116.145-.177l.038.09v6.669a17.618 17.618 0 01-2.073.98C16.405 19.906 14.314 20.5 12 20.5c-2.314 0-4.405-.594-5.927-1.197A17.62 17.62 0 014 18.323v-6.67zm6.309-1.092a2.35 2.35 0 01-.38.374c-.437.341-1.054.564-1.964.564-1.573 0-2.292-.337-2.657-.75-.192-.218-.331-.506-.423-.89-.091-.385-.135-.867-.135-1.472 0-1.14.243-1.847.705-2.32.477-.487 1.319-.861 2.824-1.024 1.487-.16 2.192.138 2.533.529l.008.01c.264.308.429.806.43 1.568v.031a7.203 7.203 0 01-.09 1.079c-.143.967-.406 1.754-.851 2.301zm2.504-2.497a7.174 7.174 0 01-.063-.894v-.02c.001-.77.17-1.27.438-1.578.341-.39 1.046-.69 2.533-.529 1.506.163 2.347.537 2.824 1.025.462.472.705 1.179.705 2.319 0 1.21-.174 1.926-.558 2.361-.365.414-1.084.751-2.657.751-1.21 0-1.902-.393-2.344-.938-.475-.584-.742-1.44-.878-2.497z"></path>
 </svg>
@@ -294,7 +294,7 @@
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center pb-lg-3" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Code review&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Code review;&quot;}" href="/features/code-review">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center pb-lg-3" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Code review&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Code review;&quot;}" href="/features/code-review">
       <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" class="octicon octicon-code-review color-fg-subtle mr-3">
     <path d="M10.3 6.74a.75.75 0 01-.04 1.06l-2.908 2.7 2.908 2.7a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 011.06.04zm3.44 1.06a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.908-2.7-2.908-2.7z"></path><path fill-rule="evenodd" d="M1.5 4.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25zM3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25z"></path>
 </svg>
@@ -307,7 +307,7 @@
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center pb-lg-3" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Issues&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Issues;&quot;}" href="/features/issues">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center pb-lg-3" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Issues&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Issues;&quot;}" href="/features/issues">
       <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" class="octicon octicon-issue-opened color-fg-subtle mr-3">
     <path fill-rule="evenodd" d="M2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0zM12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zm0 13a2 2 0 100-4 2 2 0 000 4z"></path>
 </svg>
@@ -320,7 +320,7 @@
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Discussions&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Discussions;&quot;}" href="/features/discussions">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Discussions&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Discussions;&quot;}" href="/features/discussions">
       <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" class="octicon octicon-comment-discussion color-fg-subtle mr-3">
     <path fill-rule="evenodd" d="M1.75 1A1.75 1.75 0 000 2.75v9.5C0 13.216.784 14 1.75 14H3v1.543a1.457 1.457 0 002.487 1.03L8.061 14h6.189A1.75 1.75 0 0016 12.25v-9.5A1.75 1.75 0 0014.25 1H1.75zM1.5 2.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v9.5a.25.25 0 01-.25.25h-6.5a.75.75 0 00-.53.22L4.5 15.44v-2.19a.75.75 0 00-.75-.75h-2a.25.25 0 01-.25-.25v-9.5z"></path><path d="M22.5 8.75a.25.25 0 00-.25-.25h-3.5a.75.75 0 010-1.5h3.5c.966 0 1.75.784 1.75 1.75v9.5A1.75 1.75 0 0122.25 20H21v1.543a1.457 1.457 0 01-2.487 1.03L15.939 20H10.75A1.75 1.75 0 019 18.25v-1.465a.75.75 0 011.5 0v1.465c0 .138.112.25.25.25h5.5a.75.75 0 01.53.22l2.72 2.72v-2.19a.75.75 0 01.75-.75h2a.25.25 0 00.25-.25v-9.5z"></path>
 </svg>
@@ -337,14 +337,14 @@
             <li class="h4 color-fg-default my-1">Explore</li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to All features&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:All features;&quot;}" href="/features">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to All features&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:All features;&quot;}" href="/features">
       All features
 
     
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" target="_blank" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Documentation&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Documentation;&quot;}" href="https://docs.github.com">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" target="_blank" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Documentation&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Documentation;&quot;}" href="https://docs.github.com">
       Documentation
 
     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-link-external HeaderMenu-external-icon color-fg-subtle">
@@ -353,7 +353,7 @@
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" target="_blank" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to GitHub Skills&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:GitHub Skills;&quot;}" href="https://skills.github.com/">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" target="_blank" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to GitHub Skills&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:GitHub Skills;&quot;}" href="https://skills.github.com/">
       GitHub Skills
 
     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-link-external HeaderMenu-external-icon color-fg-subtle">
@@ -362,7 +362,7 @@
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" target="_blank" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Blog&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Blog;&quot;}" href="https://github.blog">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" target="_blank" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Product&quot;,&quot;action&quot;:&quot;click to go to Blog&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Blog;&quot;}" href="https://github.blog">
       Blog
 
     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-link-external HeaderMenu-external-icon color-fg-subtle">
@@ -387,28 +387,28 @@
             <li class="h4 color-fg-default my-1">For</li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to Enterprise&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Enterprise;&quot;}" href="/enterprise">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to Enterprise&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Enterprise;&quot;}" href="/enterprise">
       Enterprise
 
     
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to Teams&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Teams;&quot;}" href="/team">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to Teams&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Teams;&quot;}" href="/team">
       Teams
 
     
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to Startups&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Startups;&quot;}" href="/enterprise/startups">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to Startups&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Startups;&quot;}" href="/enterprise/startups">
       Startups
 
     
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" target="_blank" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to Education&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Education;&quot;}" href="https://education.github.com">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" target="_blank" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to Education&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Education;&quot;}" href="https://education.github.com">
       Education
 
     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-link-external HeaderMenu-external-icon color-fg-subtle">
@@ -421,14 +421,14 @@
             <li class="h4 color-fg-default my-1">By Solution</li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to CI/CD &amp;amp; Automation&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:CI/CD &amp;amp; Automation;&quot;}" href="/solutions/ci-cd/">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to CI/CD &amp;amp; Automation&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:CI/CD &amp;amp; Automation;&quot;}" href="/solutions/ci-cd/">
       CI/CD &amp; Automation
 
     
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" target="_blank" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to DevOps&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:DevOps;&quot;}" href="https://resources.github.com/devops/">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" target="_blank" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to DevOps&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:DevOps;&quot;}" href="https://resources.github.com/devops/">
       DevOps
 
     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-link-external HeaderMenu-external-icon color-fg-subtle">
@@ -437,7 +437,7 @@
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" target="_blank" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to DevSecOps&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:DevSecOps;&quot;}" href="https://resources.github.com/devops/fundamentals/devsecops/">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" target="_blank" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to DevSecOps&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:DevSecOps;&quot;}" href="https://resources.github.com/devops/fundamentals/devsecops/">
       DevSecOps
 
     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-link-external HeaderMenu-external-icon color-fg-subtle">
@@ -450,14 +450,14 @@
             <li class="h4 color-fg-default my-1">Case Studies</li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to Customer Stories&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Customer Stories;&quot;}" href="/customer-stories">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to Customer Stories&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Customer Stories;&quot;}" href="/customer-stories">
       Customer Stories
 
     
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" target="_blank" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to Resources&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Resources;&quot;}" href="https://resources.github.com/">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" target="_blank" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Solutions&quot;,&quot;action&quot;:&quot;click to go to Resources&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Resources;&quot;}" href="https://resources.github.com/">
       Resources
 
     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-link-external HeaderMenu-external-icon color-fg-subtle">
@@ -481,7 +481,7 @@
         <ul class="list-style-none f5 border-bottom pb-3 mb-3">
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Open Source&quot;,&quot;action&quot;:&quot;click to go to GitHub Sponsors&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:GitHub Sponsors;&quot;}" href="/sponsors">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Open Source&quot;,&quot;action&quot;:&quot;click to go to GitHub Sponsors&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:GitHub Sponsors;&quot;}" href="/sponsors">
       
       <div>
         <div class="color-fg-default h4">GitHub Sponsors</div>
@@ -495,7 +495,7 @@
         <ul class="list-style-none f5 border-bottom pb-3 mb-3">
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Open Source&quot;,&quot;action&quot;:&quot;click to go to The ReadME Project&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:The ReadME Project;&quot;}" href="/readme">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Open Source&quot;,&quot;action&quot;:&quot;click to go to The ReadME Project&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:The ReadME Project;&quot;}" href="/readme">
       
       <div>
         <div class="color-fg-default h4">The ReadME Project</div>
@@ -510,21 +510,21 @@
             <li class="h4 color-fg-default my-1">Repositories</li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Open Source&quot;,&quot;action&quot;:&quot;click to go to Topics&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Topics;&quot;}" href="/topics">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Open Source&quot;,&quot;action&quot;:&quot;click to go to Topics&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Topics;&quot;}" href="/topics">
       Topics
 
     
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Open Source&quot;,&quot;action&quot;:&quot;click to go to Trending&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Trending;&quot;}" href="/trending">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Open Source&quot;,&quot;action&quot;:&quot;click to go to Trending&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Trending;&quot;}" href="/trending">
       Trending
 
     
 </a></li>
 
             <li>
-  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Open Source&quot;,&quot;action&quot;:&quot;click to go to Collections&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Collections;&quot;}" href="/collections">
+  <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" data-analytics-event="{&quot;category&quot;:&quot;Header dropdown (logged out), Open Source&quot;,&quot;action&quot;:&quot;click to go to Collections&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Collections;&quot;}" href="/collections">
       Collections
 
     
@@ -536,7 +536,7 @@
 
 
                 <li class="HeaderMenu-item position-relative flex-wrap flex-justify-between flex-items-center d-block d-lg-flex flex-lg-nowrap flex-lg-items-center js-details-container js-header-menu-item">
-    <a class="HeaderMenu-link no-underline px-0 px-lg-2 py-3 py-lg-2 d-block d-lg-inline-block" data-analytics-event="{&quot;category&quot;:&quot;Header menu top item (logged out)&quot;,&quot;action&quot;:&quot;click to go to Pricing&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/winbar.lua;ref_cta:Pricing;&quot;}" href="/pricing">Pricing</a>
+    <a class="HeaderMenu-link no-underline px-0 px-lg-2 py-3 py-lg-2 d-block d-lg-inline-block" data-analytics-event="{&quot;category&quot;:&quot;Header menu top item (logged out)&quot;,&quot;action&quot;:&quot;click to go to Pricing&quot;,&quot;label&quot;:&quot;ref_page:/glepnir/nvim/blob/main/lua/internal/tmux.lua;ref_cta:Pricing;&quot;}" href="/pricing">Pricing</a>
 </li>
 
             </ul>
@@ -572,7 +572,7 @@
           spellcheck="false"
           autocomplete="off"
         >
-        <input type="hidden" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" value="sv0ZA7g3mF9of2BZJxaHige8Q9JfxrEnAZhB8P0mZF+u8YlHuNrQ/o/gZ2CRjLaUD3oRjlw8dM1Qf2/lyRXZiw==" />
+        <input type="hidden" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" value="ifKiNMF1l3sKX6HCbTWDrQ1WI7Temen9OvfOUW+jcgEl1oXVLSunUD6AY9MzuSW7SMeUjOccu/ajftRbfX83lQ==" />
         <input type="hidden" class="js-site-search-type-field" name="type" >
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" aria-hidden="true" class="mr-1 header-search-key-slash"><path fill="none" stroke="#979A9C" opacity=".4" d="M3.5.5h12c1.7 0 3 1.3 3 3v13c0 1.7-1.3 3-3 3h-12c-1.7 0-3-1.3-3-3v-13c0-1.7 1.3-3 3-3z"></path><path fill="#979A9C" d="M11.8 6L8 15.1h-.9L10.8 6h1z"></path></svg>
 
@@ -752,9 +752,9 @@
             </div>
 
           <div class="position-relative mr-lg-3 d-lg-inline-block">
-            <a href="/login?return_to=https%3A%2F%2Fgithub.com%2Fglepnir%2Fnvim%2Fblob%2Fmain%2Flua%2Finternal%2Fwinbar.lua"
+            <a href="/login?return_to=https%3A%2F%2Fgithub.com%2Fglepnir%2Fnvim%2Fblob%2Fmain%2Flua%2Finternal%2Ftmux.lua"
               class="HeaderMenu-link HeaderMenu-link--sign-in flex-shrink-0 no-underline d-block d-lg-inline-block border border-lg-0 rounded rounded-lg-0 p-2 p-lg-0"
-              data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/glepnir/nvim/blob/main/lua/internal/winbar.lua&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="309b277998191b922e6c901cbd96f20fcc1a25950bf16f0998c80be53aef81fb"
+              data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/glepnir/nvim/blob/main/lua/internal/tmux.lua&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="c7e9ddb225af22527e42e00505790f076ffb1812943a4751f075470f3a0ab50c"
               data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">
               Sign in
             </a>
@@ -762,7 +762,7 @@
 
             <a href="/signup?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&amp;source=header-repo&amp;source_repo=glepnir%2Fnvim"
               class="HeaderMenu-link HeaderMenu-link--sign-up flex-shrink-0 d-none d-lg-inline-block no-underline border color-border-default rounded px-2 py-1"
-              data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/glepnir/nvim/blob/main/lua/internal/winbar.lua&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="309b277998191b922e6c901cbd96f20fcc1a25950bf16f0998c80be53aef81fb"
+              data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/glepnir/nvim/blob/main/lua/internal/tmux.lua&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="c7e9ddb225af22527e42e00505790f076ffb1812943a4751f075470f3a0ab50c"
               data-analytics-event="{&quot;category&quot;:&quot;Sign up&quot;,&quot;action&quot;:&quot;click to sign up for account&quot;,&quot;label&quot;:&quot;ref_page:/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show;ref_cta:Sign up;ref_loc:header logged out&quot;}"
             >
               Sign up
@@ -866,14 +866,14 @@
       
 
   <li>
-          <a href="/login?return_to=%2Fglepnir%2Fnvim" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;notification subscription menu watch&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/glepnir/nvim/blob/main/lua/internal/winbar.lua&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="f6d110ccad84f78c9d662389bbf36b45df50fdfd675ca1ee75efca5049c04200" aria-label="You must be signed in to change notification settings" data-view-component="true" class="tooltipped tooltipped-s btn-sm btn">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-bell mr-2">
+          <a href="/login?return_to=%2Fglepnir%2Fnvim" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;notification subscription menu watch&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/glepnir/nvim/blob/main/lua/internal/tmux.lua&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="bb9e63a0a5167bd801a1e969875c5fbb1ef362e8b1ed4479cee27e41433ddda3" aria-label="You must be signed in to change notification settings" data-view-component="true" class="tooltipped tooltipped-s btn-sm btn">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-bell mr-2">
     <path d="M8 16a2 2 0 001.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 008 16z"></path><path fill-rule="evenodd" d="M8 1.5A3.5 3.5 0 004.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.018.018 0 00-.003.01l.001.006c0 .002.002.004.004.006a.017.017 0 00.006.004l.007.001h10.964l.007-.001a.016.016 0 00.006-.004.016.016 0 00.004-.006l.001-.007a.017.017 0 00-.003-.01l-1.703-2.554a1.75 1.75 0 01-.294-.97V5A3.5 3.5 0 008 1.5zM3 5a5 5 0 0110 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.518 1.518 0 0113.482 13H2.518a1.518 1.518 0 01-1.263-2.36l1.703-2.554A.25.25 0 003 7.947V5z"></path>
 </svg>Notifications
 </a>
   </li>
 
   <li>
-          <a icon="repo-forked" id="fork-button" href="/login?return_to=%2Fglepnir%2Fnvim" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;repo details fork button&quot;,&quot;repository_id&quot;:291502113,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/glepnir/nvim/blob/main/lua/internal/winbar.lua&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="9406081ec5611a5f338620a744e8b5687f5eb24ef8698bbe45ac17a047b3c221" data-view-component="true" class="btn-sm btn">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo-forked mr-2">
+          <a icon="repo-forked" id="fork-button" href="/login?return_to=%2Fglepnir%2Fnvim" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;repo details fork button&quot;,&quot;repository_id&quot;:291502113,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/glepnir/nvim/blob/main/lua/internal/tmux.lua&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="4afad408e2f912ca63af036180bba3d62d307955006e55358b988c91f12431c9" data-view-component="true" class="btn-sm btn">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo-forked mr-2">
     <path fill-rule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
 </svg>Fork
     <span id="repo-network-counter" data-pjax-replace="true" data-turbo-replace="true" title="66" data-view-component="true" class="Counter">66</span>
@@ -882,7 +882,7 @@
 
   <li>
         <div data-view-component="true" class="BtnGroup d-flex">
-        <a href="/login?return_to=%2Fglepnir%2Fnvim" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:291502113,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/glepnir/nvim/blob/main/lua/internal/winbar.lua&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="7f7436b6b10f004a226be27c4908cecb808cfe28ee0c5d893d92b3e247e5eec2" aria-label="You must be signed in to star a repository" data-view-component="true" class="tooltipped tooltipped-s btn-sm btn BtnGroup-item">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star v-align-text-bottom d-inline-block mr-2">
+        <a href="/login?return_to=%2Fglepnir%2Fnvim" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:291502113,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/glepnir/nvim/blob/main/lua/internal/tmux.lua&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="6f53b2529af1c5bbcdf55fbe643351b409ca54c80d9571aa5a5db7508eb5b49a" aria-label="You must be signed in to star a repository" data-view-component="true" class="tooltipped tooltipped-s btn-sm btn BtnGroup-item">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star v-align-text-bottom d-inline-block mr-2">
     <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path>
 </svg><span data-view-component="true" class="d-inline">
           Star
@@ -1056,7 +1056,7 @@
 
 
     
-<a class="d-none js-permalink-shortcut" data-hotkey="y" href="/glepnir/nvim/blob/11b63e43d8e00813e3a6ba5449b10bed2bafa449/lua/internal/winbar.lua">Permalink</a>
+<a class="d-none js-permalink-shortcut" data-hotkey="y" href="/glepnir/nvim/blob/11b63e43d8e00813e3a6ba5449b10bed2bafa449/lua/internal/tmux.lua">Permalink</a>
 
 <div class="d-flex flex-items-start flex-shrink-0 pb-3 flex-wrap flex-md-nowrap flex-justify-between flex-md-justify-start">
   
@@ -1064,7 +1064,7 @@
   <details
     class="js-branch-select-menu details-reset details-overlay mr-0 mb-0 "
     id="branch-select-menu"
-    data-hydro-click-payload="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;REFS_SELECTOR_MENU&quot;,&quot;repository_id&quot;:291502113,&quot;originating_url&quot;:&quot;https://github.com/glepnir/nvim/blob/main/lua/internal/winbar.lua&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="2babbf0681cf2503779126248028d11f97040947606ae37340f483e1a80c2b64">
+    data-hydro-click-payload="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;REFS_SELECTOR_MENU&quot;,&quot;repository_id&quot;:291502113,&quot;originating_url&quot;:&quot;https://github.com/glepnir/nvim/blob/main/lua/internal/tmux.lua&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="40193abb17617fd309a497e97630066604f7a1a726ae8b92476a28c8b6117ed4">
     <summary class="btn css-truncate"
             data-hotkey="w"
             title="Switch branches or tags">
@@ -1145,7 +1145,7 @@
               
 
 <template data-target="ref-selector.itemTemplate">
-  <a href="https://github.com/glepnir/nvim/blob/{{ urlEncodedRefName }}/lua/internal/winbar.lua" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}" >
+  <a href="https://github.com/glepnir/nvim/blob/{{ urlEncodedRefName }}/lua/internal/tmux.lua" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}" >
     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check">
     <path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
 </svg>
@@ -1187,7 +1187,7 @@
               
 
 <template data-target="ref-selector.itemTemplate">
-  <a href="https://github.com/glepnir/nvim/blob/{{ urlEncodedRefName }}/lua/internal/winbar.lua" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}" >
+  <a href="https://github.com/glepnir/nvim/blob/{{ urlEncodedRefName }}/lua/internal/tmux.lua" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}" >
     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check">
     <path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path>
 </svg>
@@ -1248,7 +1248,7 @@
 
 
   <h2 id="blob-path" class="breadcrumb flex-auto flex-self-center min-width-0 text-normal mx-2 width-full width-md-auto flex-order-1 flex-md-order-none mt-3 mt-md-0">
-    <span class="js-repo-root text-bold"><span class="js-path-segment d-inline-block wb-break-all"><a data-turbo-frame="repo-content-turbo-frame" href="/glepnir/nvim"><span>nvim</span></a></span></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-turbo-frame="repo-content-turbo-frame" href="/glepnir/nvim/tree/main/lua"><span>lua</span></a></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-turbo-frame="repo-content-turbo-frame" href="/glepnir/nvim/tree/main/lua/internal"><span>internal</span></a></span><span class="separator">/</span><strong class="final-path">winbar.lua</strong>
+    <span class="js-repo-root text-bold"><span class="js-path-segment d-inline-block wb-break-all"><a data-turbo-frame="repo-content-turbo-frame" href="/glepnir/nvim"><span>nvim</span></a></span></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-turbo-frame="repo-content-turbo-frame" href="/glepnir/nvim/tree/main/lua"><span>lua</span></a></span><span class="separator">/</span><span class="js-path-segment d-inline-block wb-break-all"><a data-turbo-frame="repo-content-turbo-frame" href="/glepnir/nvim/tree/main/lua/internal"><span>internal</span></a></span><span class="separator">/</span><strong class="final-path">tmux.lua</strong>
   </h2>
     <a href="/glepnir/nvim/find/main" data-pjax="" data-hotkey="t" data-view-component="true" class="btn mr-2 d-none d-md-block">    Go to file
 </a>
@@ -1259,7 +1259,7 @@
 </summary>
   <div data-view-component="true">      <ul class="dropdown-menu dropdown-menu-sw">
         <li class="d-block d-md-none">
-          <a class="dropdown-item d-flex flex-items-baseline" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FIND_FILE_BUTTON&quot;,&quot;repository_id&quot;:291502113,&quot;originating_url&quot;:&quot;https://github.com/glepnir/nvim/blob/main/lua/internal/winbar.lua&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="f5b8167c17f3aba0f5be62cb29a8b2bdaa04288ccd2b08d14ec48c2d107c6c1c" data-ga-click="Repository, find file, location:repo overview" data-hotkey="t" href="/glepnir/nvim/find/main">
+          <a class="dropdown-item d-flex flex-items-baseline" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FIND_FILE_BUTTON&quot;,&quot;repository_id&quot;:291502113,&quot;originating_url&quot;:&quot;https://github.com/glepnir/nvim/blob/main/lua/internal/tmux.lua&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="53aab9ea6d85a9a2c65fd2be2f97a6d76e4cae5d6d794cf9642c34902e9a5d18" data-ga-click="Repository, find file, location:repo overview" data-hotkey="t" href="/glepnir/nvim/find/main">
             <span class="flex-auto">Go to file</span>
             <span class="text-small color-fg-muted" aria-hidden="true">T</span>
 </a>        </li>
@@ -1271,13 +1271,13 @@
 </button>        </li>
         <li class="dropdown-divider" role="none"></li>
         <li>
-          <clipboard-copy data-toggle-for="blob-more-options-details" aria-label="Copy path" value="lua/internal/winbar.lua" data-view-component="true" class="dropdown-item cursor-pointer">
+          <clipboard-copy data-toggle-for="blob-more-options-details" aria-label="Copy path" value="lua/internal/tmux.lua" data-view-component="true" class="dropdown-item cursor-pointer">
     
             Copy path
 
 </clipboard-copy>        </li>
         <li>
-          <clipboard-copy data-toggle-for="blob-more-options-details" aria-label="Copy permalink" value="https://github.com/glepnir/nvim/blob/11b63e43d8e00813e3a6ba5449b10bed2bafa449/lua/internal/winbar.lua" data-view-component="true" class="dropdown-item cursor-pointer">
+          <clipboard-copy data-toggle-for="blob-more-options-details" aria-label="Copy permalink" value="https://github.com/glepnir/nvim/blob/11b63e43d8e00813e3a6ba5449b10bed2bafa449/lua/internal/tmux.lua" data-view-component="true" class="dropdown-item cursor-pointer">
     
             <span class="d-flex flex-items-baseline">
               <span class="flex-auto">Copy permalink</span>
@@ -1320,23 +1320,23 @@
             <a class="text-bold Link--primary" rel="author" data-hovercard-type="user" data-hovercard-url="/users/glepnir/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/glepnir">glepnir</a>
 
               <span class="markdown-title">
-                <a data-pjax="true" title="update" class="Link--secondary" href="/glepnir/nvim/commit/95d866fbf55c3f5d9531a1e3f7cb447dd9c97f37">update</a>
+                <a data-pjax="true" title="format with stylua" class="Link--secondary" href="/glepnir/nvim/commit/94c9e7e6562e64fd1d161fd5493494cc58fac717">format with stylua</a>
               </span>
           </div>
 
 
           <span class="ml-2">
-            <include-fragment accept="text/fragment+html" src="/glepnir/nvim/commit/95d866fbf55c3f5d9531a1e3f7cb447dd9c97f37/rollup?direction=e" class="d-inline"></include-fragment>
+            <include-fragment accept="text/fragment+html" src="/glepnir/nvim/commit/94c9e7e6562e64fd1d161fd5493494cc58fac717/rollup?direction=e" class="d-inline"></include-fragment>
           </span>
         </div>
         <div class="ml-3 d-flex flex-shrink-0 flex-items-center flex-justify-end color-fg-muted no-wrap">
           <span class="d-none d-md-inline">
             <span>Latest commit</span>
-            <a class="text-small text-mono Link--secondary" href="/glepnir/nvim/commit/95d866fbf55c3f5d9531a1e3f7cb447dd9c97f37" data-pjax>95d866f</a>
-            <span itemprop="dateModified"><relative-time datetime="2022-07-24T09:19:48Z" class="no-wrap">Jul 24, 2022</relative-time></span>
+            <a class="text-small text-mono Link--secondary" href="/glepnir/nvim/commit/94c9e7e6562e64fd1d161fd5493494cc58fac717" data-pjax>94c9e7e</a>
+            <span itemprop="dateModified"><relative-time datetime="2022-07-07T08:42:58Z" class="no-wrap">Jul 7, 2022</relative-time></span>
           </span>
 
-          <a data-pjax href="/glepnir/nvim/commits/main/lua/internal/winbar.lua" class="ml-3 no-wrap Link--primary no-underline">
+          <a data-pjax href="/glepnir/nvim/commits/main/lua/internal/tmux.lua" class="ml-3 no-wrap Link--primary no-underline">
             <svg text="gray" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-history">
     <path fill-rule="evenodd" d="M1.643 3.143L.427 1.927A.25.25 0 000 2.104V5.75c0 .138.112.25.25.25h3.646a.25.25 0 00.177-.427L2.715 4.215a6.5 6.5 0 11-1.18 4.458.75.75 0 10-1.493.154 8.001 8.001 0 101.6-5.684zM7.75 4a.75.75 0 01.75.75v2.992l2.028.812a.75.75 0 01-.557 1.392l-2.5-1A.75.75 0 017 8.25v-3.5A.75.75 0 017.75 4z"></path>
 </svg>
@@ -1362,7 +1362,7 @@
       <details-dialog
         class="Box Box--overlay d-flex flex-column anim-fade-in fast"
         aria-label="Users who have contributed to this file"
-        src="/glepnir/nvim/contributors-list/main/lua/internal/winbar.lua" preload>
+        src="/glepnir/nvim/contributors-list/main/lua/internal/tmux.lua" preload>
         <div class="Box-header">
           <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog>
             <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
@@ -1402,23 +1402,23 @@
 
   <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1">
 
-      68 lines (62 sloc)
+      27 lines (24 sloc)
       <span class="file-info-divider"></span>
-    1.65 KB
+    606 Bytes
   </div>
 
   <div class="d-flex py-1 py-md-0 flex-auto flex-order-1 flex-md-order-2 flex-sm-grow-0 flex-justify-between hide-sm hide-md">
       
 
     <div class="BtnGroup">
-        <a data-permalink-href="/glepnir/nvim/raw/11b63e43d8e00813e3a6ba5449b10bed2bafa449/lua/internal/winbar.lua" href="/glepnir/nvim/raw/main/lua/internal/winbar.lua" id="raw-url" data-view-component="true" class="js-permalink-replaceable-link btn-sm btn BtnGroup-item">    Raw
-</a>          <a data-permalink-href="/glepnir/nvim/blame/11b63e43d8e00813e3a6ba5449b10bed2bafa449/lua/internal/winbar.lua" href="/glepnir/nvim/blame/main/lua/internal/winbar.lua" data-hotkey="b" data-view-component="true" class="js-update-url-with-hash js-permalink-replaceable-link btn-sm btn BtnGroup-item">    Blame
+        <a data-permalink-href="/glepnir/nvim/raw/11b63e43d8e00813e3a6ba5449b10bed2bafa449/lua/internal/tmux.lua" href="/glepnir/nvim/raw/main/lua/internal/tmux.lua" id="raw-url" data-view-component="true" class="js-permalink-replaceable-link btn-sm btn BtnGroup-item">    Raw
+</a>          <a data-permalink-href="/glepnir/nvim/blame/11b63e43d8e00813e3a6ba5449b10bed2bafa449/lua/internal/tmux.lua" href="/glepnir/nvim/blame/main/lua/internal/tmux.lua" data-hotkey="b" data-view-component="true" class="js-update-url-with-hash js-permalink-replaceable-link btn-sm btn BtnGroup-item">    Blame
 </a>    </div>
 
     <div class="d-flex">
         
 <div class="ml-1" data-test-selector="edit-dropdown-menu-component">
-  <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="BtnGroup-parent js-update-url-with-hash " data-turbo="false" action="/glepnir/nvim/edit/main/lua/internal/winbar.lua" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="COV07x_W_girfJTpvB85ht-DTe0y4YfM2nyaEaxUXkIAybFwnVSenOEPWrRvhvSYAmKEy9rHBaONhtINEFx-8Q" autocomplete="off" />
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="BtnGroup-parent js-update-url-with-hash " data-turbo="false" action="/glepnir/nvim/edit/main/lua/internal/tmux.lua" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="jKRL5ljOPExR8QqERUtvsnoramKjRuGZAlXLz1n24FRDX7rbxjw-RpcSL0ITOy1OAvgQ2lxrlEsiiNxqQAp3LQ" autocomplete="off" />
       <button disabled="disabled" title="You must be signed in to make or propose changes" data-hotkey="e" data-disable-with="" data-test-selector="edit-icon-button" type="submit" data-view-component="true" class="btn-sm BtnGroup-item btn">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-pencil">
     <path fill-rule="evenodd" d="M11.013 1.427a1.75 1.75 0 012.474 0l1.086 1.086a1.75 1.75 0 010 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 01-.927-.928l.929-3.25a1.75 1.75 0 01.445-.758l8.61-8.61zm1.414 1.06a.25.25 0 00-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 000-.354l-1.086-1.086zM11.189 6.25L9.75 4.81l-6.286 6.287a.25.25 0 00-.064.108l-.558 1.953 1.953-.558a.249.249 0 00.108-.064l6.286-6.286z"></path>
 </svg>
@@ -1428,7 +1428,7 @@
 </summary>    <div class="SelectMenu right-0">
       <div class="SelectMenu-modal width-full">
         <div class="SelectMenu-list SelectMenu-list--borderless py-2">
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="SelectMenu-item js-update-url-with-hash " data-turbo="false" action="/glepnir/nvim/edit/main/lua/internal/winbar.lua" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="NryOFUOuJGKdrdLIxsqNmliZJ6_W5bSDIdU01NcB7Zk-kEuKwSxE9tfeHJUVU0CEhXjuiT7DNux2L3zIawnNKg" autocomplete="off" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="SelectMenu-item js-update-url-with-hash " data-turbo="false" action="/glepnir/nvim/edit/main/lua/internal/tmux.lua" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="nUKm1G5DYwb1lWBWsNTSzIZW6tritujwJpSlCyXgVBJSuVfp8LFhDDN2RZDmpJAw_oWQYh2bnSIGSbKuPBzDaw" autocomplete="off" />
               <button disabled="disabled" title="You must be signed in to make or propose changes" data-test-selector="edit-text-button" type="submit" data-view-component="true" class="btn-invisible btn width-full d-flex flex-justify-between color-fg-muted text-normal p-0">    <div class="mr-5">Edit this file</div>
               <div class="color-fg-muted">E</div>
 </button></form>
@@ -1479,14 +1479,14 @@
                 </a>
             </li>
           <li>
-            <a class="dropdown-item" href="/glepnir/nvim/raw/main/lua/internal/winbar.lua">
+            <a class="dropdown-item" href="/glepnir/nvim/raw/main/lua/internal/tmux.lua">
               View raw
             </a>
           </li>
             <li>
                           </li>
             <li>
-              <a class="dropdown-item" href="/glepnir/nvim/blame/main/lua/internal/winbar.lua">
+              <a class="dropdown-item" href="/glepnir/nvim/blame/main/lua/internal/tmux.lua">
                 View blame
               </a>
             </li>
@@ -1526,284 +1526,117 @@
 </svg>
 </span></template>
 
-  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="Lua" data-tagsearch-path="lua/internal/winbar.lua">
+  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="Lua" data-tagsearch-path="lua/internal/tmux.lua">
         <tr>
           <td id="L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>
-          <td id="LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">local</span> api <span class="pl-k">=</span> vim.<span class="pl-smi">api</span></td>
+          <td id="LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">local</span> tmux <span class="pl-k">=</span> {}</td>
         </tr>
         <tr>
           <td id="L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>
-          <td id="LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">local</span> winbar <span class="pl-k">=</span> {}</td>
+          <td id="LC2" class="blob-code blob-code-inner js-file-line">
+</td>
         </tr>
         <tr>
           <td id="L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>
-          <td id="LC3" class="blob-code blob-code-inner js-file-line">
-</td>
+          <td id="LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">function</span> <span class="pl-en">tmux.get_active_window</span>()</td>
         </tr>
         <tr>
           <td id="L4" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="4"></td>
-          <td id="LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">local</span> <span class="pl-k">function</span> <span class="pl-en">get_file_name</span>()</td>
+          <td id="LC4" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">if</span> <span class="pl-c1">os.getenv</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>$TERM_PROGRAM<span class="pl-pds">&#39;</span></span>) <span class="pl-k">~=</span> <span class="pl-s"><span class="pl-pds">&#39;</span>tmux<span class="pl-pds">&#39;</span></span> <span class="pl-k">then</span></td>
         </tr>
         <tr>
           <td id="L5" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="5"></td>
-          <td id="LC5" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">local</span> sep <span class="pl-k">=</span> vim.<span class="pl-smi">loop</span>.<span class="pl-c1">os_uname</span>().<span class="pl-smi">sysname</span> <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">&#39;</span>Windows<span class="pl-pds">&#39;</span></span> <span class="pl-k">and</span> <span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-cce">\\</span><span class="pl-pds">&#39;</span></span> <span class="pl-k">or</span> <span class="pl-s"><span class="pl-pds">&#39;</span>/<span class="pl-pds">&#39;</span></span></td>
+          <td id="LC5" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span></td>
         </tr>
         <tr>
           <td id="L6" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="6"></td>
-          <td id="LC6" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">local</span> path_list <span class="pl-k">=</span> vim.<span class="pl-c1">split</span>(vim.<span class="pl-smi">fn</span>.<span class="pl-c1">expand</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>%:~:.:h<span class="pl-pds">&#39;</span></span>), sep)</td>
+          <td id="LC6" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">end</span></td>
         </tr>
         <tr>
           <td id="L7" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="7"></td>
-          <td id="LC7" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">local</span> file_path <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span></td>
+          <td id="LC7" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">local</span> handle <span class="pl-k">=</span> <span class="pl-c1">io.popen</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>tmux list-windows<span class="pl-pds">&#39;</span></span>)</td>
         </tr>
         <tr>
           <td id="L8" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="8"></td>
-          <td id="LC8" class="blob-code blob-code-inner js-file-line">  <span class="pl-c"><span class="pl-c">--</span> Then generate winbar string. For example:</span></td>
+          <td id="LC8" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">local</span> output <span class="pl-k">=</span> handle:<span class="pl-c1">read</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>*a<span class="pl-pds">&#39;</span></span>)</td>
         </tr>
         <tr>
           <td id="L9" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="9"></td>
-          <td id="LC9" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">for</span> _, cur <span class="pl-k">in</span> <span class="pl-c1">ipairs</span>(path_list) <span class="pl-k">do</span></td>
+          <td id="LC9" class="blob-code blob-code-inner js-file-line">  handle:<span class="pl-c1">close</span>()</td>
         </tr>
         <tr>
           <td id="L10" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="10"></td>
-          <td id="LC10" class="blob-code blob-code-inner js-file-line">    file_path <span class="pl-k">=</span> (cur <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">&#39;</span>.<span class="pl-pds">&#39;</span></span> <span class="pl-k">or</span> cur <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">&#39;</span>~<span class="pl-pds">&#39;</span></span>) <span class="pl-k">and</span> <span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span></td>
+          <td id="LC10" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">local</span> lists <span class="pl-k">=</span> vim.<span class="pl-c1">split</span>(output, <span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-cce">\n</span><span class="pl-pds">&#39;</span></span>)</td>
         </tr>
         <tr>
           <td id="L11" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="11"></td>
-          <td id="LC11" class="blob-code blob-code-inner js-file-line">      <span class="pl-k">or</span> file_path <span class="pl-k">..</span> cur <span class="pl-k">..</span> <span class="pl-s"><span class="pl-pds">&#39;</span> <span class="pl-pds">&#39;</span></span> <span class="pl-k">..</span> <span class="pl-s"><span class="pl-pds">&#39;</span>%#LspSagaWinbarSep#&gt;%*<span class="pl-pds">&#39;</span></span> <span class="pl-k">..</span> <span class="pl-s"><span class="pl-pds">&#39;</span> %*<span class="pl-pds">&#39;</span></span></td>
+          <td id="LC11" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">local</span> current_window_name <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span></td>
         </tr>
         <tr>
           <td id="L12" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="12"></td>
-          <td id="LC12" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">end</span></td>
+          <td id="LC12" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">local</span> all_windows <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span></td>
         </tr>
         <tr>
           <td id="L13" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="13"></td>
-          <td id="LC13" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">local</span> ok, devicons <span class="pl-k">=</span> <span class="pl-c1">pcall</span>(require, <span class="pl-s"><span class="pl-pds">&#39;</span>nvim-web-devicons<span class="pl-pds">&#39;</span></span>)</td>
+          <td id="LC13" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">for</span> i, v <span class="pl-k">in</span> <span class="pl-c1">pairs</span>(lists) <span class="pl-k">do</span></td>
         </tr>
         <tr>
           <td id="L14" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="14"></td>
-          <td id="LC14" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">local</span> f_icon <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span></td>
+          <td id="LC14" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">if</span> <span class="pl-k">#</span>v <span class="pl-k">==</span> <span class="pl-c1">0</span> <span class="pl-k">then</span></td>
         </tr>
         <tr>
           <td id="L15" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="15"></td>
-          <td id="LC15" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">local</span> f_hl <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span></td>
+          <td id="LC15" class="blob-code blob-code-inner js-file-line">      <span class="pl-c1">table.remove</span>(lists, i)</td>
         </tr>
         <tr>
           <td id="L16" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="16"></td>
-          <td id="LC16" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">if</span> ok <span class="pl-k">then</span></td>
+          <td id="LC16" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">else</span></td>
         </tr>
         <tr>
           <td id="L17" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="17"></td>
-          <td id="LC17" class="blob-code blob-code-inner js-file-line">    f_icon, f_hl <span class="pl-k">=</span> devicons.<span class="pl-c1">get_icon_by_filetype</span>(vim.<span class="pl-smi">bo</span>.<span class="pl-smi">filetype</span>)</td>
+          <td id="LC17" class="blob-code blob-code-inner js-file-line">      all_windows <span class="pl-k">=</span> all_windows <span class="pl-k">..</span> <span class="pl-s"><span class="pl-pds">&#39;</span> <span class="pl-pds">&#39;</span></span> <span class="pl-k">..</span> v:<span class="pl-c1">match</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>%d:%s%w+<span class="pl-pds">&#39;</span></span>)</td>
         </tr>
         <tr>
           <td id="L18" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="18"></td>
-          <td id="LC18" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">end</span> <span class="pl-c"><span class="pl-c">--</span> if filetype doesn&#39;t match devicon will set f_icon to nil so add a patch</span></td>
+          <td id="LC18" class="blob-code blob-code-inner js-file-line">
+</td>
         </tr>
         <tr>
           <td id="L19" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="19"></td>
-          <td id="LC19" class="blob-code blob-code-inner js-file-line">  f_icon <span class="pl-k">=</span> f_icon <span class="pl-k">==</span> <span class="pl-c1">nil</span> <span class="pl-k">and</span> <span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span> <span class="pl-k">or</span> (f_icon <span class="pl-k">..</span> <span class="pl-s"><span class="pl-pds">&#39;</span> <span class="pl-pds">&#39;</span></span>) <span class="pl-c"><span class="pl-c">--</span> No icon no space after separator</span></td>
+          <td id="LC19" class="blob-code blob-code-inner js-file-line">      <span class="pl-k">if</span> v:<span class="pl-c1">find</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>active<span class="pl-pds">&#39;</span></span>) <span class="pl-k">then</span></td>
         </tr>
         <tr>
           <td id="L20" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="20"></td>
-          <td id="LC20" class="blob-code blob-code-inner js-file-line">  f_hl <span class="pl-k">=</span> f_hl <span class="pl-k">==</span> <span class="pl-c1">nil</span> <span class="pl-k">and</span> <span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span> <span class="pl-k">or</span> f_hl</td>
+          <td id="LC20" class="blob-code blob-code-inner js-file-line">        current_window_name <span class="pl-k">=</span> v:<span class="pl-c1">match</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>%d:%s%w+<span class="pl-pds">&#39;</span></span>)</td>
         </tr>
         <tr>
           <td id="L21" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="21"></td>
-          <td id="LC21" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">return</span> file_path</td>
+          <td id="LC21" class="blob-code blob-code-inner js-file-line">      <span class="pl-k">end</span></td>
         </tr>
         <tr>
           <td id="L22" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="22"></td>
-          <td id="LC22" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">..</span> <span class="pl-s"><span class="pl-pds">&#39;</span>%#<span class="pl-pds">&#39;</span></span></td>
+          <td id="LC22" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">end</span></td>
         </tr>
         <tr>
           <td id="L23" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="23"></td>
-          <td id="LC23" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">..</span> f_hl</td>
+          <td id="LC23" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">end</span></td>
         </tr>
         <tr>
           <td id="L24" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="24"></td>
-          <td id="LC24" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">..</span> <span class="pl-s"><span class="pl-pds">&#39;</span>#<span class="pl-pds">&#39;</span></span></td>
+          <td id="LC24" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">return</span> all_windows</td>
         </tr>
         <tr>
           <td id="L25" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="25"></td>
-          <td id="LC25" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">..</span> f_icon</td>
+          <td id="LC25" class="blob-code blob-code-inner js-file-line"><span class="pl-k">end</span></td>
         </tr>
         <tr>
           <td id="L26" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="26"></td>
-          <td id="LC26" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">..</span> <span class="pl-s"><span class="pl-pds">&#39;</span>%*<span class="pl-pds">&#39;</span></span></td>
+          <td id="LC26" class="blob-code blob-code-inner js-file-line">
+</td>
         </tr>
         <tr>
           <td id="L27" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="27"></td>
-          <td id="LC27" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">..</span> <span class="pl-s"><span class="pl-pds">&#39;</span>%#LspSagaWinbarFile#<span class="pl-pds">&#39;</span></span></td>
-        </tr>
-        <tr>
-          <td id="L28" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="28"></td>
-          <td id="LC28" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">..</span> vim.<span class="pl-smi">fn</span>.<span class="pl-c1">expand</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>%:t<span class="pl-pds">&#39;</span></span>)</td>
-        </tr>
-        <tr>
-          <td id="L29" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="29"></td>
-          <td id="LC29" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">..</span> <span class="pl-s"><span class="pl-pds">&#39;</span>%*<span class="pl-pds">&#39;</span></span></td>
-        </tr>
-        <tr>
-          <td id="L30" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="30"></td>
-          <td id="LC30" class="blob-code blob-code-inner js-file-line"><span class="pl-k">end</span></td>
-        </tr>
-        <tr>
-          <td id="L31" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="31"></td>
-          <td id="LC31" class="blob-code blob-code-inner js-file-line">
-</td>
-        </tr>
-        <tr>
-          <td id="L32" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="32"></td>
-          <td id="LC32" class="blob-code blob-code-inner js-file-line"><span class="pl-k">local</span> exclude_buffer <span class="pl-k">=</span> {</td>
-        </tr>
-        <tr>
-          <td id="L33" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="33"></td>
-          <td id="LC33" class="blob-code blob-code-inner js-file-line">  [<span class="pl-s"><span class="pl-pds">&#39;</span>telescope<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-c1">true</span>,</td>
-        </tr>
-        <tr>
-          <td id="L34" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="34"></td>
-          <td id="LC34" class="blob-code blob-code-inner js-file-line">  [<span class="pl-s"><span class="pl-pds">&#39;</span>terminal<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-c1">true</span>,</td>
-        </tr>
-        <tr>
-          <td id="L35" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="35"></td>
-          <td id="LC35" class="blob-code blob-code-inner js-file-line">  [<span class="pl-s"><span class="pl-pds">&#39;</span>dashboard<span class="pl-pds">&#39;</span></span>] <span class="pl-k">=</span> <span class="pl-c1">true</span>,</td>
-        </tr>
-        <tr>
-          <td id="L36" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="36"></td>
-          <td id="LC36" class="blob-code blob-code-inner js-file-line">}</td>
-        </tr>
-        <tr>
-          <td id="L37" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="37"></td>
-          <td id="LC37" class="blob-code blob-code-inner js-file-line">
-</td>
-        </tr>
-        <tr>
-          <td id="L38" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="38"></td>
-          <td id="LC38" class="blob-code blob-code-inner js-file-line"><span class="pl-k">local</span> <span class="pl-k">function</span> <span class="pl-en">config_winbar</span>()</td>
-        </tr>
-        <tr>
-          <td id="L39" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="39"></td>
-          <td id="LC39" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">if</span> exclude_buffer[vim.<span class="pl-smi">bo</span>.<span class="pl-smi">filetype</span>] <span class="pl-k">then</span></td>
-        </tr>
-        <tr>
-          <td id="L40" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="40"></td>
-          <td id="LC40" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">return</span></td>
-        </tr>
-        <tr>
-          <td id="L41" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="41"></td>
-          <td id="LC41" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">end</span></td>
-        </tr>
-        <tr>
-          <td id="L42" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="42"></td>
-          <td id="LC42" class="blob-code blob-code-inner js-file-line">
-</td>
-        </tr>
-        <tr>
-          <td id="L43" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="43"></td>
-          <td id="LC43" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">local</span> ok, lspsaga <span class="pl-k">=</span> <span class="pl-c1">pcall</span>(require, <span class="pl-s"><span class="pl-pds">&#39;</span>lspsaga.symbolwinbar<span class="pl-pds">&#39;</span></span>)</td>
-        </tr>
-        <tr>
-          <td id="L44" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="44"></td>
-          <td id="LC44" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">local</span> sym</td>
-        </tr>
-        <tr>
-          <td id="L45" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="45"></td>
-          <td id="LC45" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">if</span> ok <span class="pl-k">then</span></td>
-        </tr>
-        <tr>
-          <td id="L46" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="46"></td>
-          <td id="LC46" class="blob-code blob-code-inner js-file-line">    sym <span class="pl-k">=</span> lspsaga.<span class="pl-c1">get_symbol_node</span>()</td>
-        </tr>
-        <tr>
-          <td id="L47" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="47"></td>
-          <td id="LC47" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">end</span></td>
-        </tr>
-        <tr>
-          <td id="L48" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="48"></td>
-          <td id="LC48" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">local</span> win_val <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span><span class="pl-pds">&#39;</span></span></td>
-        </tr>
-        <tr>
-          <td id="L49" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="49"></td>
-          <td id="LC49" class="blob-code blob-code-inner js-file-line">  win_val <span class="pl-k">=</span> <span class="pl-c1">get_file_name</span>()</td>
-        </tr>
-        <tr>
-          <td id="L50" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="50"></td>
-          <td id="LC50" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">if</span> sym <span class="pl-k">~=</span> <span class="pl-c1">nil</span> <span class="pl-k">then</span></td>
-        </tr>
-        <tr>
-          <td id="L51" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="51"></td>
-          <td id="LC51" class="blob-code blob-code-inner js-file-line">    win_val <span class="pl-k">=</span> win_val <span class="pl-k">..</span> sym</td>
-        </tr>
-        <tr>
-          <td id="L52" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="52"></td>
-          <td id="LC52" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">end</span></td>
-        </tr>
-        <tr>
-          <td id="L53" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="53"></td>
-          <td id="LC53" class="blob-code blob-code-inner js-file-line">  vim.<span class="pl-smi">wo</span>.<span class="pl-smi">winbar</span> <span class="pl-k">=</span> win_val</td>
-        </tr>
-        <tr>
-          <td id="L54" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="54"></td>
-          <td id="LC54" class="blob-code blob-code-inner js-file-line"><span class="pl-k">end</span></td>
-        </tr>
-        <tr>
-          <td id="L55" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="55"></td>
-          <td id="LC55" class="blob-code blob-code-inner js-file-line">
-</td>
-        </tr>
-        <tr>
-          <td id="L56" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="56"></td>
-          <td id="LC56" class="blob-code blob-code-inner js-file-line">api.<span class="pl-c1">nvim_create_autocmd</span>(</td>
-        </tr>
-        <tr>
-          <td id="L57" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="57"></td>
-          <td id="LC57" class="blob-code blob-code-inner js-file-line">  { <span class="pl-s"><span class="pl-pds">&#39;</span>BufEnter<span class="pl-pds">&#39;</span></span>, <span class="pl-s"><span class="pl-pds">&#39;</span>BufWinEnter<span class="pl-pds">&#39;</span></span>, <span class="pl-s"><span class="pl-pds">&#39;</span>CursorMoved<span class="pl-pds">&#39;</span></span>, <span class="pl-s"><span class="pl-pds">&#39;</span>WinLeave<span class="pl-pds">&#39;</span></span>, <span class="pl-s"><span class="pl-pds">&#39;</span>User LspsagaUpdateSymbol<span class="pl-pds">&#39;</span></span> },</td>
-        </tr>
-        <tr>
-          <td id="L58" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="58"></td>
-          <td id="LC58" class="blob-code blob-code-inner js-file-line">  {</td>
-        </tr>
-        <tr>
-          <td id="L59" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="59"></td>
-          <td id="LC59" class="blob-code blob-code-inner js-file-line">    pattern <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&#39;</span>*<span class="pl-pds">&#39;</span></span>,</td>
-        </tr>
-        <tr>
-          <td id="L60" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="60"></td>
-          <td id="LC60" class="blob-code blob-code-inner js-file-line">    callback <span class="pl-k">=</span> <span class="pl-k">function</span>()</td>
-        </tr>
-        <tr>
-          <td id="L61" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="61"></td>
-          <td id="LC61" class="blob-code blob-code-inner js-file-line">      <span class="pl-k">if</span> vim.<span class="pl-smi">fn</span>.<span class="pl-c1">winheight</span>(<span class="pl-c1">0</span>) <span class="pl-k">&gt;</span> <span class="pl-c1">1</span> <span class="pl-k">then</span></td>
-        </tr>
-        <tr>
-          <td id="L62" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="62"></td>
-          <td id="LC62" class="blob-code blob-code-inner js-file-line">        <span class="pl-c1">config_winbar</span>()</td>
-        </tr>
-        <tr>
-          <td id="L63" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="63"></td>
-          <td id="LC63" class="blob-code blob-code-inner js-file-line">      <span class="pl-k">end</span></td>
-        </tr>
-        <tr>
-          <td id="L64" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="64"></td>
-          <td id="LC64" class="blob-code blob-code-inner js-file-line">    <span class="pl-k">end</span>,</td>
-        </tr>
-        <tr>
-          <td id="L65" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="65"></td>
-          <td id="LC65" class="blob-code blob-code-inner js-file-line">  }</td>
-        </tr>
-        <tr>
-          <td id="L66" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="66"></td>
-          <td id="LC66" class="blob-code blob-code-inner js-file-line">)</td>
-        </tr>
-        <tr>
-          <td id="L67" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="67"></td>
-          <td id="LC67" class="blob-code blob-code-inner js-file-line">
-</td>
-        </tr>
-        <tr>
-          <td id="L68" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="68"></td>
-          <td id="LC68" class="blob-code blob-code-inner js-file-line"><span class="pl-k">return</span> winbar</td>
+          <td id="LC27" class="blob-code blob-code-inner js-file-line"><span class="pl-k">return</span> tmux</td>
         </tr>
   </table>
 </div>
@@ -1829,7 +1662,7 @@
             Copy permalink
           </clipboard-copy>
         </li>
-        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/glepnir/nvim/blame/11b63e43d8e00813e3a6ba5449b10bed2bafa449/lua/internal/winbar.lua">View git blame</a></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/glepnir/nvim/blame/11b63e43d8e00813e3a6ba5449b10bed2bafa449/lua/internal/tmux.lua">View git blame</a></li>
           <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/glepnir/nvim/issues/new">Reference in new issue</a></li>
       </ul>
     </details-menu>

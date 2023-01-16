@@ -1,7 +1,5 @@
 local api = vim.api
-local autocmd = {}
-
-local my_group = vim.api.nvim_create_augroup('RakerGroup', {})
+local my_group = vim.api.nvim_create_augroup('GlepnirGroup', {})
 
 api.nvim_create_autocmd({ 'BufWritePre' }, {
   group = my_group,
@@ -28,6 +26,7 @@ api.nvim_create_autocmd('TextYankPost', {
 })
 
 api.nvim_create_autocmd({ 'WinEnter', 'BufEnter', 'InsertLeave' }, {
+  group = my_group,
   pattern = '*',
   callback = function()
     if vim.bo.filetype ~= 'dashboard' and not vim.opt_local.cursorline:get() then
@@ -37,6 +36,7 @@ api.nvim_create_autocmd({ 'WinEnter', 'BufEnter', 'InsertLeave' }, {
 })
 
 api.nvim_create_autocmd({ 'WinLeave', 'BufLeave', 'InsertEnter' }, {
+  group = my_group,
   pattern = '*',
   callback = function()
     if vim.bo.filetype ~= 'dashboard' and vim.opt_local.cursorline:get() then
@@ -45,6 +45,9 @@ api.nvim_create_autocmd({ 'WinLeave', 'BufLeave', 'InsertEnter' }, {
   end,
 })
 
+-- disable default syntax in these file.
+-- when file is larged ,load regex syntax
+-- highlight will cause very slow
 api.nvim_create_autocmd('Filetype', {
   group = my_group,
   pattern = '*.c,*.cpp,*.lua,*.go,*.rs,*.py,*.ts,*.tsx',

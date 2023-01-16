@@ -39,6 +39,7 @@ opt.showtabline = 2
 opt.winwidth = 30
 opt.pumheight = 15
 opt.showcmd = false
+
 opt.cmdheight = 0
 opt.laststatus = 3
 opt.list = true
@@ -67,8 +68,8 @@ opt.number = true
 opt.signcolumn = 'yes'
 opt.spelloptions = 'camel'
 
-opt.textwidth = 200
--- opt.colorcolumn = '100'
+opt.textwidth = 100
+opt.colorcolumn = '100'
 -- opt.conceallevel = 2
 -- opt.concealcursor = 'niv'
 
