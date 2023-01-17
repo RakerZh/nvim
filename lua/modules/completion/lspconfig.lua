@@ -105,6 +105,11 @@ lspconfig.rust_analyzer.setup({
   },
 })
 
+lspconfig.r_language_server.setup({
+  cmd = { 'R', '--slave', '-e', 'languageserver::run()' },
+  filetypes = { 'r', 'rmd' },
+})
+
 local servers = {
   'dockerls',
   'pyright',

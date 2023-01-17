@@ -31,7 +31,7 @@ package({
   end,
 })
 
-package({ 'rcarriga/nvim-notify', config = conf.notify })
+-- package({ 'rcarriga/nvim-notify', config = conf.notify })
 
 package({
   'folke/noice.nvim',
@@ -40,7 +40,6 @@ package({
       -- add any options here
     })
   end,
-  commit = 'eadc279a27abc34ffcde84596e24e7780add11b1',
   dependencies = {
     { 'MunifTanjim/nui.nvim' },
   },
