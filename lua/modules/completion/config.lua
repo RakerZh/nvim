@@ -8,10 +8,6 @@ function config.nvim_cmp()
   local cmp = require('cmp')
   cmp.setup({
     preselect = cmp.PreselectMode.Item,
-    window = {
-      -- completion = cmp.config.window.bordered(),
-      -- documentation = cmp.config.window.bordered(),
-    },
     formatting = {
       format = function(entry, vim_item)
         local lspkind_icons = {
@@ -76,10 +72,8 @@ end
 function config.lua_snip()
   local ls = require('luasnip')
   ls.config.set_config({
-    history = false,
-    updateevents = 'TextChanged,TextChangedI',
+    updateevents = 'TextChanged',
   })
-  require('luasnip.loaders.from_vscode').lazy_load()
   require('luasnip.loaders.from_vscode').lazy_load({
     paths = { './snippets/' },
   })

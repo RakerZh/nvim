@@ -1,6 +1,6 @@
 require('keymap.remap')
 local keymap = require('core.keymap')
-local nmap, imap, xmap, tmap = keymap.nmap, keymap.imap, keymap.xmap, keymap.tmap
+local nmap, imap, xmap = keymap.nmap, keymap.imap, keymap.xmap
 local silent, noremap, expr, remap = keymap.silent, keymap.noremap, keymap.expr, keymap.remap
 local opts = keymap.new_opts
 local cmd, cu = keymap.cmd, keymap.cu

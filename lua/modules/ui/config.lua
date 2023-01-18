@@ -151,7 +151,7 @@ function config.indent_blankline()
       'vista',
       'help',
       'todoist',
-      'NvimTree',
+      'Neotree',
       'git',
       'TelescopePrompt',
       'undotree',

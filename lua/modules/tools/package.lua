@@ -72,10 +72,3 @@ package({
   },
   config = conf.neotree,
 })
-
-package({
-  'nvim-neorg/neorg',
-  ft = 'norg',
-  dependencies = { { 'nvim-treesitter/nvim-treesitter' }, { 'nvim-telescope/telescope.nvim' } },
-  config = conf.neorg,
-})
