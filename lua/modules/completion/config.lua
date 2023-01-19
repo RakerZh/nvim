@@ -112,6 +112,7 @@ function config.lspsaga()
       },
     },
   })
+  vim.wo.winbar = require('lspsaga.symbolwinbar'):get_winbar()
 end
 
 return config
