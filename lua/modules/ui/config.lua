@@ -27,8 +27,8 @@ function config.dashboard()
   }
 
   -- db.preview_file_path = home .. '/.config/nvim/static/neovim.cat'
-  -- db.preview_file_height = 12
-  -- db.preview_file_width = 80
+  db.preview_file_height = 12
+  db.preview_file_width = 80
   db.custom_center = {
     {
       icon = '  ',
@@ -94,9 +94,20 @@ function config.dashboard()
       shortcut = 'SPC f g',
     },
   }
+  -- local count = require('lazy').stats().count
+  -- local load = '   "/==/' .. ' loaded ' .. '/==/   ' .. count .. '   /==/ plugins/==/"'
+  -- vim.cmd('highlight DashboardFooter guifg=#cad3e6')
+
+  --   '    /==/loaded  /==/   45   /==/plugins /==/
+  -- db.custom_footer = {
+  --   [["`-:-.   ,-;"`-:-.   ,-;"`-:-.   ,-;"`-:-.  ,-;"]],
+  --   [[ "`=`,'=/     `=`,'=/     `=`,'=/     `=`,'=/"]],
+  --   load,
+  --   [[ ",=,-<=`.    ,=,-<=`.    ,=,-<=`.    ,=,-<=`."]],
+  --   [[",-'-'   `-=_,-'-'   `-=_,-'-'   `-=_,-'-'   `-=_"]],
+  -- }
   vim.cmd('highlight DashboardCenter guifg=#9fb2ca')
-  vim.cmd('highlight DashboardHeader guifg=#e1acb8')
-  vim.cmd('highlight DashboardFooter guifg=#5E81AC')
+  vim.cmd('highlight DashboardHeader guifg=#ed733b')
 end
 
 function config.gitsigns()

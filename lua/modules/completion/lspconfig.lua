@@ -81,9 +81,9 @@ lspconfig.clangd.setup({
   cmd = {
     'clangd',
     '--background-index',
-    '--suggest-missing-includes',
+    -- '--suggest-missing-includes',
     '--clang-tidy',
-    '--header-insertion=iwyu',
+    -- '--header-insertion=iwyu',
   },
 })
 

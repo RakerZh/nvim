@@ -3,7 +3,10 @@ local conf = require('modules.ui.config')
 
 package({ 'RakerZh/zephyr-nvim', config = conf.zephyr })
 
-package({ 'glepnir/dashboard-nvim', config = conf.dashboard })
+package({
+  'glepnir/dashboard-nvim',
+  config = conf.dashboard,
+})
 
 package({
   'glepnir/galaxyline.nvim',

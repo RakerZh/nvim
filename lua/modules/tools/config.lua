@@ -40,7 +40,12 @@ function config.template_nvim()
   local temp = require('template')
   temp.temp_dir = '~/.config/nvim/template/'
   temp.author = 'RakerZh'
-  temp.keywords = { 'project' }
+  temp.keywords = {
+    project = {
+      'project_header.h',
+      'project_file.cpp',
+    },
+  }
   require('telescope').load_extension('find_template')
 end
 
