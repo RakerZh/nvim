@@ -9,7 +9,6 @@ function config.zephyr()
 end
 
 function config.dashboard()
-  local home = os.getenv('HOME')
   local db = require('dashboard')
   local z = require('zephyr')
 
@@ -63,13 +62,6 @@ function config.dashboard()
       desc = 'Find  word                              ',
       aciton = 'Telescope live_grep',
       shortcut = 'SPC f w',
-    },
-    {
-      icon = '  ',
-      icon_hl = { fg = z.redwine },
-      desc = 'Open Personal dotfiles                  ',
-      action = 'Telescope dotfiles path=' .. home .. '/.dotfiles',
-      shortcut = 'SPC f d',
     },
     {
       icon = '  ',
