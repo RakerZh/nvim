@@ -13,7 +13,6 @@ function config.dashboard()
   local db = require('dashboard')
   local z = require('zephyr')
 
-  db.session_directory = home .. '/.cache/nvim/session'
   -- db.preview_command = 'cat | lolcat -F 0.05 '
   -- db.custom_header = {
   --   '',
