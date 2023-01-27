@@ -5,6 +5,7 @@ package({ 'RakerZh/zephyr-nvim', config = conf.zephyr })
 
 package({
   'glepnir/dashboard-nvim',
+  event = 'VimEnter',
   config = conf.dashboard,
 })
 

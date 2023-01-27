@@ -26,87 +26,25 @@ function config.dashboard()
   -- }
 
   -- db.preview_file_path = home .. '/.config/nvim/static/neovim.cat'
-  db.preview_file_height = 12
-  db.preview_file_width = 80
-  db.custom_center = {
-    {
-      icon = '  ',
-      icon_hl = { fg = z.red },
-      desc = 'Update Plugins                          ',
-      shortcut = 'SPC p u',
-      action = 'PackerUpdate',
-    },
-    {
-      icon = '  ',
-      icon_hl = { fg = z.yellow },
-      desc = 'Recently opened files                   ',
-      action = 'Telescope oldfiles',
-      shortcut = 'SPC f h',
-    },
-    {
-      icon = '  ',
-      icon_hl = { fg = '#dce3e5' },
-      desc = 'Find  File                              ',
-      action = 'Telescope find_files find_command=rg,--hidden,--files',
-      shortcut = 'SPC f f',
-    },
-    {
-      icon = '  ',
-      icon_hl = { fg = z.blue },
-      desc = 'File Browser                            ',
-      action = 'Telescope file_browser',
-      shortcut = 'SPC f b',
-    },
-    {
-      icon = '  ',
-      icon_hl = { fg = '#e6653a' },
-      desc = 'Find  word                              ',
-      aciton = 'Telescope live_grep',
-      shortcut = 'SPC f w',
-    },
-    {
-      icon = '  ',
-      icon_hl = { fg = z.redwine },
-      desc = 'Open Personal dotfiles                  ',
-      action = 'Telescope dotfiles path=' .. home .. '/.dotfiles',
-      shortcut = 'SPC f d',
-    },
-    {
-      icon = '  ',
-      icon_hl = { fg = z.yellow },
-      desc = 'Change working directory                ',
-      action = 'Telescope zoxide',
-      shortcut = 'SPC f q',
-    },
-    {
-      icon = '  ',
-      icon_hl = { fg = z.gray },
-      desc = 'Show keymaps                            ',
-      action = 'Telescope keymaps',
-      shortcut = 'SPC f k',
-    },
-    {
-      icon = 'ﰖ  ',
-      icon_hl = { fg = z.violet },
-      desc = 'Search   commits                       ',
-      action = 'Telescope git_commits',
-      shortcut = 'SPC f g',
-    },
-  }
-  -- local count = require('lazy').stats().count
-  -- local load = '   "/==/' .. ' loaded ' .. '/==/   ' .. count .. '   /==/ plugins/==/"'
-  -- vim.cmd('highlight DashboardFooter guifg=#cad3e6')
-
-  --   '    /==/loaded  /==/   45   /==/plugins /==/
-  -- db.custom_footer = {
-  --   [["`-:-.   ,-;"`-:-.   ,-;"`-:-.   ,-;"`-:-.  ,-;"]],
-  --   [[ "`=`,'=/     `=`,'=/     `=`,'=/     `=`,'=/"]],
-  --   load,
-  --   [[ ",=,-<=`.    ,=,-<=`.    ,=,-<=`.    ,=,-<=`."]],
-  --   [[",-'-'   `-=_,-'-'   `-=_,-'-'   `-=_,-'-'   `-=_"]],
-  -- }
+  -- db.preview_file_height = 12
+  -- db.preview_file_width = 80
   vim.cmd('highlight DashboardCenter guifg=#9fb2ca')
   vim.cmd('highlight DashboardHeader guifg=#b0465d')
+  require('dashboard').setup({
+    theme = 'hyper',
+    config = {
+      shortcut = {
+        {
+          desc = '  Directories ',
+          group = 'DashboardShortCut',
+        },
+        {
+          desc = '  RakerZh',
+          group = 'Delimiter',
+        },
+      },
+    },
+  })
 end
 
 function config.gitsigns()
@@ -185,18 +123,18 @@ end
 
 function config.todo()
   require('todo-comments').setup({
-    -- TEST:
-    -- FIX:
+    -- TEST: TESTING, test
+    -- FIX: FIXME, BUG, FIXIT, ISSUE, fix
     -- TODO:
     -- WARN:
-    -- PERF:
+    -- PERF: OPTIM, PERFORMANCE, OPTIMIZE
     --
     -- NOTE:
     -- INFO:
     --
-    -- PASSED:
-    -- FAILED:
-    -- Link:
+    -- PASSED: pass PASS
+    -- FAILED: FAIL fail
+    -- Link: link Ref link
     keywords = {
       FIX = { icon = ' ', color = '#cc3b1d', alt = { 'FIXME', 'BUG', 'FIXIT', 'ISSUE', 'fix' } },
       PERF = { icon = ' ', color = '#64a9ab', alt = { 'OPTIM', 'PERFORMANCE', 'OPTIMIZE' } },

@@ -32,6 +32,7 @@ nmap({
   { 'gs', cmd('Lspsaga signature_help') },
   { 'gr', cmd('Lspsaga rename') },
   { 'gh', cmd('Lspsaga lsp_finder') },
+  { 'gk', cmd('!Open -a Safari https://github.com/RakerZh') },
   --  { '<Leader>g', cmd('Lspsaga term_toggle lazygit') },
   { '<Leader>o', cmd('Lspsaga outline') },
   -- dashboard create file
