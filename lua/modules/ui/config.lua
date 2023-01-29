@@ -13,7 +13,6 @@ function config.dashboard()
   local db = require('dashboard')
   local z = require('zephyr')
 
-  -- db.preview_command = 'cat | lolcat -F 0.05 '
   -- db.custom_header = {
   --   '',
   --   '  █████╗ ███████╗ █████╗ ██╗  ██╗██╗   ██╗     ██╗███╗   ██╗██╗   ██╗██╗  ██╗ ',
@@ -29,7 +28,7 @@ function config.dashboard()
   -- db.preview_file_height = 12
   -- db.preview_file_width = 80
   vim.cmd('highlight DashboardCenter guifg=#9fb2ca')
-  vim.cmd('highlight DashboardHeader guifg=#b0465d')
+  -- vim.cmd('highlight DashboardHeader guifg=#b0465d')
   require('dashboard').setup({
     theme = 'hyper',
     config = {
@@ -43,6 +42,12 @@ function config.dashboard()
           group = 'Delimiter',
         },
       },
+    },
+    preview = {
+      command = 'cat ', -- preview command
+      file_path = '~/.config/nvim/static/taoism.cat', -- preview file path
+      file_height = 6, -- preview file height
+      file_width = 54, -- preview file width
     },
   })
 end

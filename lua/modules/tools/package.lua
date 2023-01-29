@@ -47,8 +47,8 @@ package({
 
 package({
   'glepnir/template.nvim',
+  cmd = 'Template',
   config = conf.template_nvim,
-  ft = { 'lua', 'rust', 'go', 'cpp' },
 })
 
 package({ 'glepnir/coman.nvim', event = 'BufRead', config = conf.coman })

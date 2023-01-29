@@ -37,15 +37,35 @@ function config.vim_dadbod_ui()
 end
 
 function config.template_nvim()
-  local temp = require('template')
-  temp.temp_dir = '~/.config/nvim/template/'
-  temp.author = 'RakerZh'
-  temp.keywords = {
+  require('template').setup({
+    temp_dir = '~/.config/nvim/template',
+    author = 'RakerZh',
     project = {
-      'project_header.h',
-      'project_file.cpp',
+      ['test'] = {
+        ['default'] = { ['test'] = {} },
+        ['cpp'] = {
+          ['Tests'] = {
+            'CMakeLists.txt',
+          },
+        },
+      },
+      ['other'] = {
+        ['default'] = {
+          'README.md',
+          '.gitignore',
+        },
+        ['lua'] = {
+          '.stylua.toml',
+        },
+        ['cpp'] = {
+          '.clang-format',
+        },
+        ['python'] = {
+          'requirements.txt',
+        },
+      },
     },
-  }
+  })
   require('telescope').load_extension('find_template')
 end
 
