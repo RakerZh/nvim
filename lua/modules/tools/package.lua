@@ -47,7 +47,7 @@ package({
 
 package({
   'glepnir/template.nvim',
-  cmd = 'Template',
+  cmd = { 'TemProject', 'Template' },
   config = conf.template_nvim,
 })
 

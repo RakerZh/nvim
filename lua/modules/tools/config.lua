@@ -42,10 +42,11 @@ function config.template_nvim()
     author = 'RakerZh',
     project = {
       ['test'] = {
-        ['default'] = { ['test'] = {} },
-        ['cpp'] = {
-          ['Tests'] = {
-            'CMakeLists.txt',
+        ['lang'] = {
+          ['cpp'] = {
+            ['Tests'] = {
+              'CMakeLists.txt',
+            },
           },
         },
       },
@@ -54,14 +55,18 @@ function config.template_nvim()
           'README.md',
           '.gitignore',
         },
-        ['lua'] = {
-          '.stylua.toml',
-        },
-        ['cpp'] = {
-          '.clang-format',
-        },
-        ['python'] = {
-          'requirements.txt',
+        ['lang'] = {
+          ['lua'] = {
+            '.stylua.toml',
+          },
+          ['cpp'] = {
+            '.clang-format',
+            'main.cpp',
+            'CMakeLists.txt',
+          },
+          ['python'] = {
+            'requirements.txt',
+          },
         },
       },
     },

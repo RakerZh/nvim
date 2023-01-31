@@ -44,7 +44,7 @@ function config.dashboard()
       },
     },
     preview = {
-      command = 'cat ', -- preview command
+      command = 'lolcat ', -- preview command
       file_path = '~/.config/nvim/static/taoism.cat', -- preview file path
       file_height = 6, -- preview file height
       file_width = 54, -- preview file width
