@@ -22,7 +22,6 @@ opt.redrawtime = 1500
 opt.ignorecase = true
 opt.smartcase = true
 opt.infercase = true
-opt.relativenumber = true
 opt.number = true
 
 if vim.fn.executable('rg') == 1 then
