@@ -44,10 +44,7 @@ lspconfig.gopls.setup({
 })
 
 local home = os.getenv('HOME')
-lspconfig.sumneko_lua.setup({
-  on_attach = function(client, _)
-    client.server_capabilities.semanticTokensProvider = nil
-  end,
+lspconfig.lua_ls.setup({
   capabilities = capabilities,
   settings = {
     Lua = {
