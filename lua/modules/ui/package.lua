@@ -62,3 +62,5 @@ package({
     require('bufferline').setup()
   end,
 })
+
+package({ 'xiyaowong/nvim-transparent' })

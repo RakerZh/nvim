@@ -36,6 +36,7 @@ function config.nvim_cmp()
           Event = '',
           Operator = '',
           TypeParameter = ' ',
+          Copilot = ' ',
         }
 
         local meta_type = vim_item.kind

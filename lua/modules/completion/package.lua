@@ -15,6 +15,29 @@ package({
   event = 'InsertEnter',
   config = conf.nvim_cmp,
   dependencies = {
+    {
+      'zbirenbaum/copilot.lua',
+      cmd = 'Copilot',
+      event = 'InsertEnter',
+      dependencies = { 'zbirenbaum/copilot-cmp' },
+      config = function()
+        require('copilot').setup({
+          suggestion = {
+            enabled = true,
+            auto_trigger = true,
+            keymap = {
+              accept = '<C-l>',
+              accept_word = false,
+              accept_line = false,
+              decline = '<C-g>',
+              next = '<C-.>',
+              prev = '<C-,>',
+              dismiss = '<C-\\>',
+            },
+          },
+        })
+      end,
+    },
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/cmp-path' },
     { 'hrsh7th/cmp-buffer' },
@@ -27,3 +50,5 @@ package({ 'L3MON4D3/LuaSnip', event = 'InsertCharPre', config = conf.lua_snip })
 package({ 'windwp/nvim-autopairs', event = 'InsertEnter', config = conf.auto_pairs })
 
 package({ 'ray-x/go.nvim' })
+
+package({})
