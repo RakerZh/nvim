@@ -4,57 +4,75 @@ function config.nvim_lsp()
   require('modules.completion.lspconfig')
 end
 
+local lspkind_icons = {
+  Text = '',
+  Method = '',
+  Function = '',
+  Constructor = ' ',
+  Field = '',
+  Variable = '',
+  Class = '',
+  Interface = '',
+  Module = '硫',
+  Property = '',
+  Unit = ' ',
+  Value = '',
+  Enum = ' ',
+  Keyword = 'ﱃ',
+  Snippet = ' ',
+  Color = ' ',
+  File = ' ',
+  Reference = 'Ꮢ',
+  Folder = ' ',
+  EnumMember = ' ',
+  Constant = ' ',
+  Struct = ' ',
+  Event = '',
+  Operator = '',
+  TypeParameter = ' ',
+  Copilot = ' ',
+}
+
 function config.nvim_cmp()
   local cmp = require('cmp')
   cmp.setup({
     preselect = cmp.PreselectMode.Item,
     formatting = {
+      fields = { 'kind', 'abbr', 'menu' },
       format = function(entry, vim_item)
-        local lspkind_icons = {
-          Text = '',
-          Method = '',
-          Function = '',
-          Constructor = ' ',
-          Field = '',
-          Variable = '',
-          Class = '',
-          Interface = '',
-          Module = '硫',
-          Property = '',
-          Unit = ' ',
-          Value = '',
-          Enum = ' ',
-          Keyword = 'ﱃ',
-          Snippet = ' ',
-          Color = ' ',
-          File = ' ',
-          Reference = 'Ꮢ',
-          Folder = ' ',
-          EnumMember = ' ',
-          Constant = ' ',
-          Struct = ' ',
-          Event = '',
-          Operator = '',
-          TypeParameter = ' ',
-          Copilot = ' ',
-        }
-
-        local meta_type = vim_item.kind
-        vim_item.kind = lspkind_icons[vim_item.kind] .. ''
+        vim_item.kind = lspkind_icons[vim_item.kind]
         vim_item.menu = ({
-          buffer = ' Buffer',
-          nvim_lsp = meta_type,
-          path = ' Path',
-          luasnip = ' LuaSnip',
+          nvim_lsp = '',
+          nvim_lua = '',
+          luasnip = '',
+          buffer = '',
+          path = '',
+          emoji = '',
         })[entry.source.name]
+
+        if entry.source.name == 'copilot' then
+          vim_item.kind = ' '
+          vim_item.kind_hl_group = 'CmpItemKindCopilot'
+        end
 
         return vim_item
       end,
     },
-    -- You can set mappings if you want
     mapping = cmp.mapping.preset.insert({
-      ['<C-e>'] = cmp.config.disable,
-      ['<CR>'] = cmp.mapping.confirm({ select = true }),
+      ['<C-e>'] = cmp.mapping({
+        i = cmp.mapping.abort(),
+        c = cmp.mapping.close(),
+      }),
+      ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      -- Accept currently selected item. If none selected, `select` first item.
+      -- Set `select` to `false` to only confirm explicitly selected items.
+      -- ["<Enter>"] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false }),
+      ['<C-j>'] = cmp.mapping.select_next_item(),
+      ['<C-k>'] = cmp.mapping.select_prev_item(),
+      ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+      ['<Enter>'] = cmp.mapping.confirm({ select = true }),
+      ['<C-space>'] = cmp.mapping.complete(),
     }),
     snippet = {
       expand = function(args)
@@ -66,6 +84,7 @@ function config.nvim_cmp()
       { name = 'luasnip' },
       { name = 'path' },
       { name = 'buffer' },
+      { name = 'copilot' },
     },
   })
 end

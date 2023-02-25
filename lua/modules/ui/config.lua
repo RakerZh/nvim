@@ -1,7 +1,15 @@
 local config = {}
 
-function config.galaxyline()
-  require('modules.ui.eviline')
+-- function config.galaxyline()
+-- 	require("modules.ui.eviline")
+-- end
+
+function config.whisky()
+  require('whiskyline').setup()
+end
+
+function config.nordic()
+  vim.cmd('colorscheme nordic')
 end
 
 function config.zephyr()
@@ -11,7 +19,6 @@ end
 function config.dashboard()
   local home = os.getenv('HOME')
   local db = require('dashboard')
-  local z = require('zephyr')
 
   -- db.custom_header = {
   --   '',
@@ -46,8 +53,8 @@ function config.dashboard()
     preview = {
       command = 'lolcat ', -- preview command
       file_path = '~/.config/nvim/static/taoism.cat', -- preview file path
-      file_height = 6, -- preview file height
-      file_width = 54, -- preview file width
+      file_height = 22, -- preview file height
+      file_width = 60, -- preview file width
     },
   })
 end
@@ -144,6 +151,7 @@ function config.todo()
       FIX = { icon = ' ', color = '#cc3b1d', alt = { 'FIXME', 'BUG', 'FIXIT', 'ISSUE', 'fix' } },
       PERF = { icon = ' ', color = '#64a9ab', alt = { 'OPTIM', 'PERFORMANCE', 'OPTIMIZE' } },
       TEST = { icon = ' ', color = 'test', alt = { 'TESTING', 'test' } },
+      NOTE = { icon = ' ', color = '#FFFFF0', alt = { 'INFO' } },
       PASSED = { icon = ' ', color = '#6da063', alt = { 'PASS', 'pass' } },
       FAILED = { icon = ' ', color = '#d45d44', alt = { 'FAIL', 'fail' } },
       Ref = { icon = ' ', color = '#5a636b', alt = { 'Link', 'LINK', 'REF', 'link' } },

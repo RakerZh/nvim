@@ -1,7 +1,36 @@
 local package = require('core.pack').package
 local conf = require('modules.ui.config')
 
-package({ 'RakerZh/zephyr-nvim', config = conf.zephyr })
+-- package({
+--   'glepnir/flipped.nvim',
+-- })
+
+-- package({
+--   'glepnir/zephyr-nvim',
+--   config = conf.zephyr,
+-- })
+
+-- package({
+--   'AlexvZyl/nordic.nvim',
+--   config = conf.nordic,
+-- })
+
+package({
+  'catppuccin/nvim',
+  name = 'catppuccin',
+  config = function()
+    require('catppuccin').setup({
+      flavour = 'macchiato',
+      integration = {
+        neotree = true,
+        lspsaga = true,
+        Special = true,
+        noice = true,
+      },
+    })
+    vim.cmd('colorscheme catppuccin')
+  end,
+})
 
 package({
   'glepnir/dashboard-nvim',
@@ -9,9 +38,15 @@ package({
   config = conf.dashboard,
 })
 
+-- package({
+-- 	"glepnir/galaxyline.nvim",
+-- 	config = conf.galaxyline,
+-- 	dependencies = { "nvim-tree/nvim-web-devicons" },
+-- })
+
 package({
-  'glepnir/galaxyline.nvim',
-  config = conf.galaxyline,
+  'glepnir/whiskyline.nvim',
+  config = conf.whisky,
   dependencies = { 'nvim-tree/nvim-web-devicons' },
 })
 
@@ -64,3 +99,9 @@ package({
 })
 
 package({ 'xiyaowong/nvim-transparent' })
+
+--INFO: jobs market
+--INFO: resume salary job type job location environment introduction
+-- HR
+-- more resumes
+-- salary expectation
