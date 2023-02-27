@@ -1,8 +1,8 @@
 local config = {}
 
--- function config.galaxyline()
--- 	require("modules.ui.eviline")
--- end
+function config.galaxyline()
+  require('modules.ui.eviline')
+end
 
 function config.whisky()
   require('whiskyline').setup()

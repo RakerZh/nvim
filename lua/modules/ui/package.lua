@@ -32,6 +32,12 @@ package({
         Special = true,
         noice = true,
       },
+      custom_highlights = function()
+        return {
+          -- blue
+          TelescopePromptTitle = { fg = '#f5f5f5', bg = '#e06c75', bold = true },
+        }
+      end,
     })
     vim.cmd('colorscheme catppuccin')
   end,
@@ -105,9 +111,3 @@ package({
 })
 
 package({ 'xiyaowong/nvim-transparent' })
-
---INFO: jobs market
---INFO: resume salary job type job location environment introduction
--- HR
--- more resumes
--- salary expectation
