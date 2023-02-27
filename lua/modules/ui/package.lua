@@ -21,6 +21,11 @@ package({
   config = function()
     require('catppuccin').setup({
       flavour = 'macchiato',
+      color_overrides = {
+        macchiato = {
+          base = '#21252b',
+        },
+      },
       integration = {
         neotree = true,
         lspsaga = true,
@@ -34,6 +39,7 @@ package({
 
 package({
   'glepnir/dashboard-nvim',
+  commit = 'cd6d812',
   event = 'VimEnter',
   config = conf.dashboard,
 })

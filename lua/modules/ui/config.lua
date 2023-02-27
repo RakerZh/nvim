@@ -51,10 +51,11 @@ function config.dashboard()
       },
     },
     preview = {
-      command = 'lolcat ', -- preview command
-      file_path = '~/.config/nvim/static/taoism.cat', -- preview file path
+      -- command = 'bat --style=plain', -- preview command
+      command = 'catt', -- preview command
+      file_path = '~/.config/nvim/static/taoism', -- preview file path
       file_height = 22, -- preview file height
-      file_width = 60, -- preview file width
+      file_width = 58, -- preview file width
     },
   })
 end
