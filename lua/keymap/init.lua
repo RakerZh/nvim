@@ -48,8 +48,6 @@ nmap({
   { '<Leader>d', cmd('DiffviewOpen') },
   { '<Leader>e', cmd('NeoTreeFocusToggle') },
 
-  -- dadbodui
-  { '<Leader>od', cmd('DBUIToggle') },
   -- Telescope
   { '<Leader>b', cmd('Telescope buffers') },
   { '<Leader>fa', cmd('Telescope live_grep') },

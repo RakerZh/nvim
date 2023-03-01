@@ -1,13 +1,6 @@
 local package = require('core.pack').package
 local conf = require('modules.tools.config')
 
-package({
-  'kristijanhusak/vim-dadbod-ui',
-  cmd = { 'DBUIToggle', 'DBUIAddConnection', 'DBUI', 'DBUIFindBuffer', 'DBUIRenameBuffer' },
-  config = conf.vim_dadbod_ui,
-  dependencies = { 'tpope/vim-dadbod' },
-})
-
 --[[package{'Shatur/neovim-cmake',
   ft = {'cpp','c','h','hpp'},
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
