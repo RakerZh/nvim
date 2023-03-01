@@ -8,10 +8,6 @@ function config.whisky()
   require('whiskyline').setup()
 end
 
-function config.nordic()
-  vim.cmd('colorscheme nordic')
-end
-
 function config.zephyr()
   vim.cmd('colorscheme zephyr')
 end

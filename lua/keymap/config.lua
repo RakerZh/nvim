@@ -4,10 +4,6 @@ local has_words_before = function()
     and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match('%s') == nil
 end
 
-local t = function(str)
-  return vim.api.nvim_replace_termcodes(str, true, true, true)
-end
-
 --- move to prev/next item in completion menuone
 --- jump to prev/next snippet's placeholder
 _G.smart_tab = function()
