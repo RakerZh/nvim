@@ -1,13 +1,6 @@
 local package = require('core.pack').package
 local conf = require('modules.tools.config')
 
-package({
-  'kristijanhusak/vim-dadbod-ui',
-  cmd = { 'DBUIToggle', 'DBUIAddConnection', 'DBUI', 'DBUIFindBuffer', 'DBUIRenameBuffer' },
-  config = conf.vim_dadbod_ui,
-  dependencies = { 'tpope/vim-dadbod' },
-})
-
 --[[package{'Shatur/neovim-cmake',
   ft = {'cpp','c','h','hpp'},
   requires = {{'nvim-lua/plenary.nvim',opt = true}},
@@ -33,13 +26,13 @@ package({
 
 -- package({ 'rcarriga/nvim-notify', config = conf.notify })
 
-package({
-  'folke/noice.nvim',
-  config = conf.noice,
-  dependencies = {
-    { 'MunifTanjim/nui.nvim' },
-  },
-})
+-- package({
+--   'folke/noice.nvim',
+--   config = conf.noice,
+--   dependencies = {
+--     { 'MunifTanjim/nui.nvim' },
+--   },
+-- })
 
 package({
   'glepnir/template.nvim',
@@ -58,16 +51,16 @@ package({
 
 package({ 'jghauser/follow-md-links.nvim' })
 
-package({ 'RakerZh/min-preview.nvim' })
+-- package({ 'RakerZh/min-preview.nvim' })
 
-package({
-  'nvim-neo-tree/neo-tree.nvim',
-  dependencies = {
-    { 'nvim-lua/plenary.nvim' },
-    { 'nvim-tree/nvim-web-devicons' },
-  },
-  config = conf.neotree,
-})
+-- package({
+--   'nvim-neo-tree/neo-tree.nvim',
+--   dependencies = {
+--     { 'nvim-lua/plenary.nvim' },
+--     { 'nvim-tree/nvim-web-devicons' },
+--   },
+--   config = conf.neotree,
+-- })
 
 package({
   {

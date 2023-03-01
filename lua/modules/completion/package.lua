@@ -50,5 +50,3 @@ package({ 'L3MON4D3/LuaSnip', event = 'InsertCharPre', config = conf.lua_snip })
 package({ 'windwp/nvim-autopairs', event = 'InsertEnter', config = conf.auto_pairs })
 
 package({ 'ray-x/go.nvim' })
-
-package({})
