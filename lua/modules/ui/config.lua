@@ -50,13 +50,13 @@ function config.dashboard()
         },
       },
     },
-    preview = {
-      -- command = 'bat --style=plain', -- preview command
-      command = 'catt', -- preview command
-      file_path = '~/.config/nvim/static/taoism', -- preview file path
-      file_height = 22, -- preview file height
-      file_width = 58, -- preview file width
-    },
+    -- preview = {
+    -- command = 'bat --style=plain', -- preview command
+    --   command = 'catt', -- preview command
+    --   file_path = '~/.config/nvim/static/taoism', -- preview file path
+    --   file_height = 22, -- preview file height
+    --   file_width = 58, -- preview file width
+    -- },
   })
 end
 

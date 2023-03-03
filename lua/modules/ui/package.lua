@@ -52,17 +52,17 @@ package({
   config = conf.dashboard,
 })
 
-package({
-  'glepnir/galaxyline.nvim',
-  config = conf.galaxyline,
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
-})
-
 -- package({
---   'glepnir/whiskyline.nvim',
---   config = conf.whisky,
+--   'glepnir/galaxyline.nvim',
+--   config = conf.galaxyline,
 --   dependencies = { 'nvim-tree/nvim-web-devicons' },
 -- })
+
+package({
+  'RakerZh/whiskyline.nvim',
+  config = conf.whisky,
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
+})
 
 local enable_indent_filetype = {
   'go',

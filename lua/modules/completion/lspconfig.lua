@@ -50,7 +50,9 @@ lspconfig.lua_ls.setup({
     Lua = {
       diagnostics = {
         enable = true,
-        globals = { 'vim' },
+        globals = {
+          'vim',
+        },
       },
       runtime = {
         version = 'LuaJIT',
