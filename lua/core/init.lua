@@ -37,7 +37,6 @@ vim.g.markdown_fenced_languages = {
   'lua',
 }
 
-vim.opt.termguicolors = true
 vim.api.nvim_set_keymap('n', ' ', '', { noremap = true })
 vim.api.nvim_set_keymap('x', ' ', '', { noremap = true })
 

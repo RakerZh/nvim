@@ -43,6 +43,11 @@ lspconfig.gopls.setup({
   },
 })
 
+local function _attach(client, _)
+  vim.opt.omnifunc = 'v:lua.vim.lsp.omnifunc'
+  client.server_capabilities.semanticTokensProvider = nil
+end
+
 local home = os.getenv('HOME')
 lspconfig.lua_ls.setup({
   capabilities = capabilities,
@@ -80,9 +85,9 @@ lspconfig.clangd.setup({
   cmd = {
     'clangd',
     '--background-index',
-    -- '--suggest-missing-includes',
+    '--suggest-missing-includes',
     '--clang-tidy',
-    -- '--header-insertion=iwyu',
+    '--header-insertion=iwyu',
   },
 })
 
@@ -130,6 +135,7 @@ end
 
 vim.lsp.handlers['workspace/diagnostic/refresh'] = function(_, _, ctx)
   local ns = vim.lsp.diagnostic.get_namespace(ctx.client_id)
-  pcall(vim.diagnostic.reset, ns)
+  local bufnr = vim.api.nvim_get_current_buf()
+  vim.diagnostic.reset(ns, bufnr)
   return true
 end
