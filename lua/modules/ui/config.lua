@@ -37,7 +37,6 @@ function config.dashboard()
   vim.cmd('highlight DashboardCenter guifg=#9fb2ca')
   -- vim.cmd('highlight DashboardHeader guifg=#b0465d')
   require('dashboard').setup({
-    theme = 'hyper',
     config = {
       shortcut = {
         {
@@ -48,6 +47,9 @@ function config.dashboard()
           desc = '  RakerZh',
           group = 'Delimiter',
         },
+      },
+      week_header = {
+        enable = true,
       },
     },
     -- preview = {

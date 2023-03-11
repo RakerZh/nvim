@@ -1,8 +1,13 @@
 local lspconfig = require('lspconfig')
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+capabilities.offsetEncoding = { 'utf-16' }
+
+local function _attach(client, _)
+  vim.opt.omnifunc = 'v:lua.vim.lsp.omnifunc'
+  client.server_capabilities.semanticTokensProvider = nil
+end
 
 local signs = {
   Error = ' ',
@@ -27,6 +32,7 @@ vim.diagnostic.config({
 })
 
 lspconfig.gopls.setup({
+  on_attach = _attach,
   cmd = { 'gopls', 'serve' },
   capabilities = capabilities,
   init_options = {
@@ -43,13 +49,9 @@ lspconfig.gopls.setup({
   },
 })
 
-local function _attach(client, _)
-  vim.opt.omnifunc = 'v:lua.vim.lsp.omnifunc'
-  client.server_capabilities.semanticTokensProvider = nil
-end
-
 local home = os.getenv('HOME')
 lspconfig.lua_ls.setup({
+  on_attach = _attach,
   capabilities = capabilities,
   settings = {
     Lua = {
@@ -81,6 +83,7 @@ lspconfig.lua_ls.setup({
 })
 
 lspconfig.clangd.setup({
+  on_attach = _attach,
   capabilities = capabilities,
   cmd = {
     'clangd',
@@ -92,6 +95,7 @@ lspconfig.clangd.setup({
 })
 
 lspconfig.rust_analyzer.setup({
+  on_attach = _attach,
   capabilities = capabilities,
   settings = {
     ['rust-analyzer'] = {
@@ -113,14 +117,9 @@ lspconfig.rust_analyzer.setup({
   },
 })
 
-lspconfig.r_language_server.setup({
-  cmd = { 'R', '--slave', '-e', 'languageserver::run()' },
-  filetypes = { 'r', 'rmd' },
-})
-
 local servers = {
-  'dockerls',
   'pyright',
+  'dockerls',
   'bashls',
   'zls',
   'jsonls',
@@ -128,9 +127,7 @@ local servers = {
 }
 
 for _, server in ipairs(servers) do
-  lspconfig[server].setup({
-    capabilities = capabilities,
-  })
+  lspconfig[server].setup({})
 end
 
 vim.lsp.handlers['workspace/diagnostic/refresh'] = function(_, _, ctx)
