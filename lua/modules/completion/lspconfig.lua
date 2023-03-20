@@ -2,12 +2,11 @@ local lspconfig = require('lspconfig')
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-capabilities.offsetEncoding = { 'utf-16' }
-
-local function _attach(client, _)
-  vim.opt.omnifunc = 'v:lua.vim.lsp.omnifunc'
-  client.server_capabilities.semanticTokensProvider = nil
-end
+-- capabilities.offsetEncoding = { 'utf-16' }
+-- local function _attach(client, _)
+--   vim.opt.omnifunc = 'v:lua.vim.lsp.omnifunc'
+--   client.server_capabilities.semanticTokensProvider = nil
+-- end
 
 local signs = {
   Error = ' ',
@@ -32,7 +31,7 @@ vim.diagnostic.config({
 })
 
 lspconfig.gopls.setup({
-  on_attach = _attach,
+  -- on_attach = _attach,
   cmd = { 'gopls', 'serve' },
   capabilities = capabilities,
   init_options = {
@@ -51,7 +50,7 @@ lspconfig.gopls.setup({
 
 local home = os.getenv('HOME')
 lspconfig.lua_ls.setup({
-  on_attach = _attach,
+  -- on_attach = _attach,
   capabilities = capabilities,
   settings = {
     Lua = {
@@ -83,7 +82,7 @@ lspconfig.lua_ls.setup({
 })
 
 lspconfig.clangd.setup({
-  on_attach = _attach,
+  -- on_attach = _attach,
   capabilities = capabilities,
   cmd = {
     'clangd',
@@ -95,7 +94,7 @@ lspconfig.clangd.setup({
 })
 
 lspconfig.rust_analyzer.setup({
-  on_attach = _attach,
+  -- on_attach = _attach,
   capabilities = capabilities,
   settings = {
     ['rust-analyzer'] = {
