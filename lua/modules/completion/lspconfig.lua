@@ -1,12 +1,7 @@
 local lspconfig = require('lspconfig')
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
--- capabilities.offsetEncoding = { 'utf-16' }
--- local function _attach(client, _)
---   vim.opt.omnifunc = 'v:lua.vim.lsp.omnifunc'
---   client.server_capabilities.semanticTokensProvider = nil
--- end
+capabilities.offsetEncoding = { 'utf-16', 'utf-8' }
 
 local signs = {
   Error = ' ',

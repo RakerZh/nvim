@@ -9,6 +9,12 @@ function config.whisky()
 end
 
 function config.nordic()
+  require('nordic').setup({
+    transparent_bg = true,
+    cursorline = {
+      theme = 'dark',
+    },
+  })
   vim.cmd('colorscheme nordic')
 end
 
