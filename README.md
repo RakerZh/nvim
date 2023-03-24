@@ -7,12 +7,14 @@ You can also checkout [Cosynvim](https://github.com/glepnir/cosynvim).
 ## ScreenShot
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/76530956/201507316-c3493bee-fcb3-410e-afd3-70e4e62baffa.png" width=80% height=80%
+    <img width="1496" alt="Screenshot 2023-03-24 at 5 27 55 PM" src="https://user-images.githubusercontent.com/76530956/227646458-2d5fe6bf-a88f-431c-a2d8-34a59c3b1853.png">
 </p>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/76530956/201507323-5603bd53-8b3f-4adc-9047-367a625bae35.png" width=80% height=80%
+    <img width="1496" alt="Screenshot 2023-03-24 at 5 27 45 PM" src="https://user-images.githubusercontent.com/76530956/227646464-c54d3f23-9746-4e6a-ae4a-e6bc53ed9412.png">
 </p>
+
+
 
 ## Plugins
 
