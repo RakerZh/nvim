@@ -1,34 +1,37 @@
+local M = {}
 local lspconfig = require('lspconfig')
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 capabilities.offsetEncoding = { 'utf-16', 'utf-8' }
 
-local signs = {
-  Error = ' ',
-  Warn = ' ',
-  Info = ' ',
-  Hint = ' ',
-}
-for type, icon in pairs(signs) do
-  local hl = 'DiagnosticSign' .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+function M._attach(client, bufnr)
+  vim.opt.omnifunc = 'v:lua.vim.lsp.omnifunc'
+  client.server_capabilities.semanticTokensProvider = nil
 end
 
-vim.diagnostic.config({
-  signs = true,
-  update_in_insert = false,
-  underline = true,
-  severity_sort = true,
-  virtual_text = {
-    prefix = '🔥',
-    source = true,
-  },
-})
-
 lspconfig.gopls.setup({
-  -- on_attach = _attach,
   cmd = { 'gopls', 'serve' },
-  capabilities = capabilities,
+  on_attach = function(client, _)
+    local orignal = vim.notify
+    local mynotify = function(msg, level, opts)
+      if msg == 'No code actions available' then
+        return
+      end
+      orignal(msg, level, opts)
+    end
+
+    vim.notify = mynotify
+    M._attach(client)
+    -- vim.opt.omnifunc = "v:lua.vim.lsp.omnifunc"
+    -- if client.name == "gopls" and not client.server_capabilities.semanticTokensProvider then
+    -- 	local semantic = client.config.capabilities.textDocument.semanticTokens
+    -- 	client.server_capabilities.semanticTokensProvider = {
+    -- 		full = true,
+    -- 		legend = { tokenModifiers = semantic.tokenModifiers, tokenTypes = semantic.tokenTypes },
+    -- 		range = true,
+    -- 	}
+    -- end
+  end,
   init_options = {
     usePlaceholders = true,
     completeUnimported = true,
@@ -38,47 +41,33 @@ lspconfig.gopls.setup({
       analyses = {
         unusedparams = true,
       },
+      -- semanticTokens = true,
       staticcheck = true,
     },
   },
 })
 
-local home = os.getenv('HOME')
 lspconfig.lua_ls.setup({
-  -- on_attach = _attach,
-  capabilities = capabilities,
+  on_attach = M._attach,
   settings = {
     Lua = {
       diagnostics = {
         enable = true,
-        globals = {
-          'vim',
-        },
+        globals = { 'vim' },
       },
       runtime = {
         version = 'LuaJIT',
         path = vim.split(package.path, ';'),
       },
-      workspace = {
-        library = {
-          vim.env.VIMRUNTIME,
-        },
-        checkThirdParty = false,
-      },
       completion = {
         callSnippet = 'Replace',
-        keywordSnippet = 'Disable',
-      },
-      telemetry = {
-        enable = false,
       },
     },
   },
 })
 
 lspconfig.clangd.setup({
-  -- on_attach = _attach,
-  capabilities = capabilities,
+  on_attach = M._attach,
   cmd = {
     'clangd',
     '--background-index',
@@ -89,8 +78,7 @@ lspconfig.clangd.setup({
 })
 
 lspconfig.rust_analyzer.setup({
-  -- on_attach = _attach,
-  capabilities = capabilities,
+  on_attach = M._attach,
   settings = {
     ['rust-analyzer'] = {
       imports = {
@@ -105,23 +93,23 @@ lspconfig.rust_analyzer.setup({
         },
       },
       procMacro = {
-        enable = true,
+        enable = false,
       },
     },
   },
 })
 
 local servers = {
-  'pyright',
   'dockerls',
+  'pyright',
   'bashls',
   'zls',
-  'jsonls',
-  'tsserver',
 }
 
 for _, server in ipairs(servers) do
-  lspconfig[server].setup({})
+  lspconfig[server].setup({
+    on_attach = M._attach,
+  })
 end
 
 vim.lsp.handlers['workspace/diagnostic/refresh'] = function(_, _, ctx)
@@ -130,3 +118,5 @@ vim.lsp.handlers['workspace/diagnostic/refresh'] = function(_, _, ctx)
   vim.diagnostic.reset(ns, bufnr)
   return true
 end
+
+return M

@@ -1,10 +1,67 @@
 local package = require('core.pack').package
 local conf = require('modules.completion.config')
 
+local function lsp_fts(type)
+  type = type or nil
+  local fts = {}
+  fts.backend = {
+    'go',
+    'lua',
+    'sh',
+    'rust',
+    'c',
+    'cpp',
+    'zig',
+    'python',
+  }
+
+  fts.frontend = {
+    'javascript',
+    'javascriptreact',
+    'typescript',
+    'typescriptreact',
+    'json',
+  }
+  if not type then
+    return vim.list_extend(fts.backend, fts.frontend)
+  end
+  return fts[type]
+end
+
+local loaded = false
+local function diag_config()
+  local signs = {
+    Error = ' ',
+    Warn = ' ',
+    Info = ' ',
+    Hint = ' ',
+  }
+  for type, icon in pairs(signs) do
+    local hl = 'DiagnosticSign' .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+  end
+
+  vim.diagnostic.config({
+    signs = true,
+    severity_sort = true,
+    virtual_text = {
+      prefix = '🔥',
+      source = true,
+    },
+  })
+end
+
 package({
   'neovim/nvim-lspconfig',
   ft = { 'go', 'lua', 'sh', 'rust', 'c', 'cpp', 'python', 'json', 'typescript', 'typescriptreact' },
-  config = conf.nvim_lsp,
+  config = function()
+    if not loaded then
+      diag_config()
+      loaded = true
+    end
+    require('modules.completion.backend')
+    require('modules.completion.frontend')
+  end,
   dependencies = {
     { 'glepnir/lspsaga.nvim', event = 'BufRead', config = conf.lspsaga },
   },
@@ -18,8 +75,12 @@ package({
     {
       'zbirenbaum/copilot.lua',
       cmd = 'Copilot',
-      event = 'InsertEnter',
-      dependencies = { 'zbirenbaum/copilot-cmp' },
+      dependencies = {
+        'zbirenbaum/copilot-cmp',
+        config = function()
+          require('copilot_cmp').setup()
+        end,
+      },
       config = function()
         require('copilot').setup({
           suggestion = {
@@ -44,9 +105,5 @@ package({
     { 'saadparwaiz1/cmp_luasnip' },
   },
 })
-
-package({ 'L3MON4D3/LuaSnip', event = 'InsertCharPre', config = conf.lua_snip })
-
-package({ 'windwp/nvim-autopairs', event = 'InsertEnter', config = conf.auto_pairs })
 
 package({ 'ray-x/go.nvim' })

@@ -59,3 +59,15 @@ package({
     require('leap').set_default_keymaps()
   end,
 })
+
+package({
+  'L3MON4D3/LuaSnip',
+  event = 'InsertCharPre',
+  config = conf.lua_snip,
+})
+
+package({
+  'windwp/nvim-autopairs',
+  event = 'InsertEnter',
+  config = conf.auto_pairs,
+})

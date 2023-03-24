@@ -14,6 +14,25 @@ function config.nordic()
     cursorline = {
       theme = 'dark',
     },
+    integrations = {
+      treesitter = true,
+      native_lsp = true,
+      lsp_trouble = true,
+      lsp_saga = true,
+      gitgutter = false,
+      gitsigns = true,
+      telescope = true,
+      nvimtree = false,
+      barbar = true,
+      bufferline = false,
+      indent_blankline = true,
+      dashboard = true,
+      neogit = true,
+      vim_sneak = false,
+      vim_matchup = false,
+      vim_signify = false,
+      which_key = false,
+    },
   })
   vim.cmd('colorscheme nordic')
 end

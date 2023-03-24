@@ -55,8 +55,6 @@ opt.autoindent = true
 opt.tabstop = 2
 opt.shiftwidth = 2
 
-opt.diffopt:append('linematch:50')
-
 -- wrap
 opt.linebreak = true
 opt.whichwrap = 'h,l,<,>,[,],~'
@@ -67,12 +65,10 @@ opt.foldmethod = 'marker'
 
 opt.number = true
 opt.signcolumn = 'yes'
-opt.spelloptions = 'camel'
 
+opt.spelloptions = 'camel'
 opt.textwidth = 100
--- opt.colorcolumn = '100'
--- opt.conceallevel = 2
--- opt.concealcursor = 'niv'
+opt.colorcolumn = '100'
 
 if vim.fn.has('nvim-0.9') == 1 then
   local function get_signs()

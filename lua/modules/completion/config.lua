@@ -41,6 +41,10 @@ function config.nvim_cmp()
       fields = { 'kind', 'abbr', 'menu' },
       format = function(entry, vim_item)
         vim_item.kind = lspkind_icons[vim_item.kind]
+        if entry.source.name == 'copilot_cmp' then
+          vim_item.kind = lspkind_icons['Copilot']
+        end
+
         vim_item.menu = ({
           nvim_lsp = '',
           nvim_lua = '',
@@ -49,11 +53,6 @@ function config.nvim_cmp()
           path = '',
           emoji = '',
         })[entry.source.name]
-
-        if entry.source.name == 'copilot' then
-          vim_item.kind = ' '
-          vim_item.kind_hl_group = 'CmpItemKindCopilot'
-        end
 
         return vim_item
       end,
@@ -80,11 +79,11 @@ function config.nvim_cmp()
       end,
     },
     sources = {
-      { name = 'nvim_lsp' },
-      { name = 'luasnip' },
-      { name = 'path' },
-      { name = 'buffer' },
-      { name = 'copilot' },
+      { name = 'nvim_lsp', group_index = 2 },
+      { name = 'luasnip', group_index = 2 },
+      { name = 'path', group_index = 2 },
+      { name = 'buffer', group_index = 2 },
+      { name = 'copilot', group_index = 2 },
     },
   })
 end
@@ -113,7 +112,7 @@ end
 function config.lspsaga()
   require('lspsaga').setup({
     ui = {
-      border = 'double',
+      border = 'rounded',
       colors = {
         --float window normal bakcground color
         normal_bg = '#232835',
@@ -132,7 +131,7 @@ function config.lspsaga()
       },
     },
   })
-  vim.wo.winbar = require('lspsaga.symbolwinbar'):get_winbar()
+  -- vim.wo.winbar = require('lspsaga.symbolwinbar'):get_winbar()
 end
 
 return config

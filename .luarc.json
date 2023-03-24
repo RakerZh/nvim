@@ -47,5 +47,6 @@
         "/Users/rakerzhang/.local/share/nvim/lazy/nvim-tree.lua",
         "/usr/local/share/nvim/runtime",
         "${3rd}/luassert/library"
-    ]
+    ],
+    "workspace.checkThirdParty": false
 }
