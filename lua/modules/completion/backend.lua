@@ -2,7 +2,7 @@ local M = {}
 local lspconfig = require('lspconfig')
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-capabilities.offsetEncoding = { 'utf-16', 'utf-8' }
+capabilities.offsetEncoding = { 'utf-16' }
 
 function M._attach(client, bufnr)
   vim.opt.omnifunc = 'v:lua.vim.lsp.omnifunc'
@@ -68,6 +68,7 @@ lspconfig.lua_ls.setup({
 
 lspconfig.clangd.setup({
   on_attach = M._attach,
+  capabilities = capabilities,
   cmd = {
     'clangd',
     '--background-index',
@@ -79,6 +80,7 @@ lspconfig.clangd.setup({
 
 lspconfig.rust_analyzer.setup({
   on_attach = M._attach,
+  capabilities = capabilities,
   settings = {
     ['rust-analyzer'] = {
       imports = {
