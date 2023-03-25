@@ -73,31 +73,30 @@ package({
   config = conf.nvim_cmp,
   dependencies = {
     {
-      'zbirenbaum/copilot.lua',
-      cmd = 'Copilot',
+      'zbirenbaum/copilot-cmp',
+      config = function()
+        require('copilot_cmp').setup()
+      end,
       dependencies = {
-        'zbirenbaum/copilot-cmp',
+        'zbirenbaum/copilot.lua',
         config = function()
-          require('copilot_cmp').setup()
+          require('copilot').setup({
+            suggestion = {
+              enabled = false,
+              auto_trigger = false,
+              keymap = {
+                accept = '<C-l>',
+                accept_word = false,
+                accept_line = false,
+                decline = '<C-g>',
+                next = '<C-.>',
+                prev = '<C-,>',
+                dismiss = '<C-\\>',
+              },
+            },
+          })
         end,
       },
-      config = function()
-        require('copilot').setup({
-          suggestion = {
-            enabled = true,
-            auto_trigger = true,
-            keymap = {
-              accept = '<C-l>',
-              accept_word = false,
-              accept_line = false,
-              decline = '<C-g>',
-              next = '<C-.>',
-              prev = '<C-,>',
-              dismiss = '<C-\\>',
-            },
-          },
-        })
-      end,
     },
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/cmp-path' },
