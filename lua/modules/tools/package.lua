@@ -62,6 +62,12 @@ package({
   config = conf.neotree,
 })
 
+package({
+  'glepnir/easyformat.nvim',
+  ft = { 'c', 'cpp', 'rust', 'lua', 'go', 'typescript', 'javascrip', 'javascriptreact', 'python' },
+  config = conf.easyformat,
+})
+
 -- package({
 --   {
 --     'glepnir/easyformat.nvim',

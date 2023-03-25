@@ -10,7 +10,6 @@ end
 
 function config.nordic()
   require('nordic').setup({
-    transparent_bg = true,
     cursorline = {
       theme = 'dark',
     },
