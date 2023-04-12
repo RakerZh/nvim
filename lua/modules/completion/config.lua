@@ -5,12 +5,12 @@ function config.nvim_lsp()
 end
 
 local lspkind_icons = {
-  Text = '',
-  Method = '',
+  Text = ' ',
+  Method = ' ',
   Function = '',
   Constructor = ' ',
-  Field = '',
-  Variable = '',
+  Field = ' ',
+  Variable = ' ',
   Class = '',
   Interface = '',
   Module = '硫',
@@ -28,7 +28,7 @@ local lspkind_icons = {
   Constant = ' ',
   Struct = ' ',
   Event = '',
-  Operator = '',
+  Operator = ' ',
   TypeParameter = ' ',
   Copilot = ' ',
 }
@@ -60,10 +60,7 @@ function config.nvim_cmp()
       end,
     },
     mapping = cmp.mapping.preset.insert({
-      ['<C-e>'] = cmp.mapping({
-        i = cmp.mapping.abort(),
-        c = cmp.mapping.close(),
-      }),
+      ['<C-e>'] = cmp.mapping.close(),
       ['<C-d>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       -- Accept currently selected item. If none selected, `select` first item.
@@ -86,22 +83,6 @@ function config.nvim_cmp()
       { name = 'path', group_index = 2 },
       { name = 'buffer', group_index = 2 },
       { name = 'copilot', group_index = 2 },
-    },
-    sorting = {
-      priority_weight = 2,
-      comparators = {
-        require('copilot_cmp.comparators').prioritize,
-        cmp.config.compare.offset,
-    -- cmp.config.compare.scopes,
-        cmp.config.compare.exact,
-        cmp.config.compare.score,
-        cmp.config.compare.recently_used,
-        cmp.config.compare.locality,
-        cmp.config.compare.kind,
-        cmp.config.compare.sort_text,
-        cmp.config.compare.length,
-        cmp.config.compare.order,
-      },
     },
   })
 end

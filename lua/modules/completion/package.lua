@@ -45,15 +45,14 @@ local function diag_config()
     signs = true,
     severity_sort = true,
     virtual_text = {
-      prefix = '🔥',
-      source = true,
+      prefix = '󰶺 ',
     },
   })
 end
 
 package({
   'neovim/nvim-lspconfig',
-  ft = { 'go', 'lua', 'sh', 'rust', 'c', 'cpp', 'python', 'json', 'typescript', 'typescriptreact' },
+  ft = lsp_fts(),
   config = function()
     if not loaded then
       diag_config()
@@ -62,9 +61,6 @@ package({
     require('modules.completion.backend')
     require('modules.completion.frontend')
   end,
-  dependencies = {
-    { 'glepnir/lspsaga.nvim', event = 'BufRead', config = conf.lspsaga },
-  },
 })
 
 package({
@@ -103,6 +99,24 @@ package({
     { 'hrsh7th/cmp-buffer' },
     { 'saadparwaiz1/cmp_luasnip' },
   },
+})
+
+package({
+  'glepnir/lspsaga.nvim',
+  event = 'LspAttach',
+  cmd = 'Lspsaga term_toggle',
+  config = function()
+    require('lspsaga').setup({
+      diagnostic = {
+        on_insert = true,
+        on_insert_follow = true,
+        insert_winblend = 60,
+      },
+      symbol_in_winbar = {
+        ignore_patterns = { '%w_spec' },
+      },
+    })
+  end,
 })
 
 package({ 'ray-x/go.nvim' })
