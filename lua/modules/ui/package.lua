@@ -11,6 +11,12 @@ package({
 })
 
 package({
+  'akinsho/bufferline.nvim',
+  version = 'v3.*',
+  config = conf.bufferline,
+  dependencies = 'nvim-tree/nvim-web-devicons',
+})
+package({
   'RakerZh/whiskyline.nvim',
   config = conf.whisky,
   dependencies = {

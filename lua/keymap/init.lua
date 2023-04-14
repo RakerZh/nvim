@@ -63,6 +63,16 @@ nmap({
   -- zoxide
   { '<Leader>fq', cmd('Telescope zoxide list') },
   -- Buffline
+  { '<Leader>1', cmd('BufferLineGoToBuffer 1') },
+  { '<Leader>2', cmd('BufferLineGoToBuffer 2') },
+  { '<Leader>3', cmd('BufferLineGoToBuffer 3') },
+  { '<Leader>4', cmd('BufferLineGoToBuffer 4') },
+  { '<Leader>5', cmd('BufferLineGoToBuffer 5') },
+  { '<Leader>6', cmd('BufferLineGoToBuffer 6') },
+  { '<Leader>7', cmd('BufferLineGoToBuffer 7') },
+  { '<Leader>8', cmd('BufferLineGoToBuffer 8') },
+  { '<Leader>9', cmd('BufferLineGoToBuffer 9') },
+  { '<Leader>$', cmd('BufferLineGoToBuffer -1') },
   {
     '<Leader>t',
     function()

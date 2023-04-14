@@ -186,4 +186,8 @@ function config.todo()
   })
 end
 
+function config.bufferline()
+  require('bufferline').setup({})
+end
+
 return config

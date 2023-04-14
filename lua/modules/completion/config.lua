@@ -35,6 +35,7 @@ local lspkind_icons = {
 
 function config.nvim_cmp()
   local cmp = require('cmp')
+  local compare = require('cmp.config.compare')
   cmp.setup({
     preselect = cmp.PreselectMode.Item,
     formatting = {
@@ -42,9 +43,9 @@ function config.nvim_cmp()
       format = function(entry, vim_item)
         vim_item.kind = lspkind_icons[vim_item.kind]
         if entry.source.name == 'copilot_cmp' then
-          vim.api.nvim_set_hl(0, 'CmpItemKindCopilot', { fg = '#6CC644' })
           vim_item.kind = lspkind_icons['Copilot']
           vim_item.kind_hl_group = 'CmpItemKindCopilot'
+          vim.api.nvim_set_hl(0, 'CmpItemKindCopilot', { fg = '#6CC644' })
         end
 
         vim_item.menu = ({
