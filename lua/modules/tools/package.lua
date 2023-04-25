@@ -35,12 +35,12 @@ package({
 })
 
 package({
-  'glepnir/template.nvim',
+  'nvimdev/template.nvim',
   cmd = { 'TemProject', 'Template' },
   config = conf.template_nvim,
 })
 
-package({ 'glepnir/coman.nvim', event = 'BufRead', config = conf.coman })
+package({ 'nvimdev/coman.nvim', event = 'BufRead', config = conf.coman })
 
 package({
   'akinsho/git-conflict.nvim',
@@ -63,7 +63,7 @@ package({
 })
 
 package({
-  'glepnir/easyformat.nvim',
+  'nvimdev/easyformat.nvim',
   ft = { 'c', 'cpp', 'rust', 'lua', 'go', 'typescript', 'javascrip', 'javascriptreact', 'python' },
   config = conf.easyformat,
 })

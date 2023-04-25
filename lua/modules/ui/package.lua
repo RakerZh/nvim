@@ -1,27 +1,23 @@
-local package = require('core.pack').package
-local conf = require('modules.ui.config')
-
--- package({
---   'glepnir/flipped.nvim',
--- })
+local package = require("core.pack").package
+local conf = require("modules.ui.config")
 
 package({
-  'AlexvZyl/nordic.nvim',
-  config = conf.nordic,
+	"AlexvZyl/nordic.nvim",
+	config = conf.nordic,
 })
 
 package({
-  'akinsho/bufferline.nvim',
-  version = 'v3.*',
-  config = conf.bufferline,
-  dependencies = 'nvim-tree/nvim-web-devicons',
+	"akinsho/bufferline.nvim",
+	version = "v3.*",
+	config = conf.bufferline,
+	dependencies = "nvim-tree/nvim-web-devicons",
 })
 package({
-  'RakerZh/whiskyline.nvim',
-  config = conf.whisky,
-  dependencies = {
-    { 'nvim-tree/nvim-web-devicons' },
-  },
+	"RakerZh/whiskyline.nvim",
+	config = conf.whisky,
+	dependencies = {
+		{ "nvim-tree/nvim-web-devicons" },
+	},
 })
 
 -- package({
@@ -53,17 +49,17 @@ package({
 -- })
 
 package({
-  'glepnir/dashboard-nvim',
-  event = 'VimEnter',
-  config = conf.dashboard,
+	"nvimdev/dashboard-nvim",
+	event = "VimEnter",
+	config = conf.dashboard,
 })
 
 package({
-  'glepnir/flybuf.nvim',
-  cmd = 'FlyBuf',
-  config = function()
-    require('flybuf').setup({})
-  end,
+	"nvimdev/flybuf.nvim",
+	cmd = "FlyBuf",
+	config = function()
+		require("flybuf").setup({})
+	end,
 })
 
 -- package({
@@ -73,17 +69,26 @@ package({
 -- })
 
 package({
-  'lewis6991/gitsigns.nvim',
-  event = { 'BufRead', 'BufNewFile' },
-  config = conf.gitsigns,
+	"lewis6991/gitsigns.nvim",
+	event = { "BufRead", "BufNewFile" },
+	config = conf.gitsigns,
 })
 
-package({ 'mechatroner/rainbow_csv', ft = 'csv' })
+package({ "mechatroner/rainbow_csv", ft = "csv" })
 
 package({
-  'folke/todo-comments.nvim',
-  dependencies = { { 'nvim-lua/plenary.nvim' } },
-  config = conf.todo,
+	"folke/todo-comments.nvim",
+	dependencies = { { "nvim-lua/plenary.nvim" } },
+	config = conf.todo,
 })
 
-package({ 'xiyaowong/nvim-transparent' })
+-- package({ "xiyaowong/nvim-transparent" })
+
+package({
+	"nvimdev/indentmini.nvim",
+	event = { "BufEnter" },
+	config = function()
+		require("indentmini").setup({})
+	end,
+	dependencies = { "nvim-treesitter/nvim-treesitter" },
+})

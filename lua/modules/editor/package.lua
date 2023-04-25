@@ -31,7 +31,7 @@ package({
 })
 
 package({
-  'glepnir/mutchar.nvim',
+  'nvimdev/mutchar.nvim',
   ft = { 'c', 'go', 'lua', 'rust', 'cpp' },
   config = conf.smart_input,
 })
@@ -46,7 +46,7 @@ package({
 -- package({ 'phaazon/hop.nvim', config = conf.hop, event = 'BufRead', })
 
 package({
-  'glepnir/hlsearch.nvim',
+  'nvimdev/hlsearch.nvim',
   event = 'BufRead',
   config = function()
     require('hlsearch').setup()

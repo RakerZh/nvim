@@ -89,8 +89,9 @@ function cli:boot_strap()
     helper.green('🔸 Found lazy.nvim skip download')
     return
   end
-  helper.run_git('lazy.nvim', 'folke/lazy.nvim ' .. self.lazy_dir, 'Install')
-  helper.install_success('lazy.nvim')
+  local cmd = 'git clone htts://github.com/folke/lazy.nvim '
+  helper.run_git('lazy.nvim', cmd .. self.lazy_dir, 'Install')
+  helper.success('lazy.nvim')
 end
 
 function cli:installer(type)
@@ -108,7 +109,6 @@ function cli:installer(type)
       else
         local url = 'git clone https://github.com/'
         local cmd = type == 'install' and url .. name .. ' ' .. path or 'git -C ' .. path .. ' pull'
-        -- https://github.com/glepnir/lspsaga.nvim.git
         local failed = helper.run_git(name, cmd, type)
         table.insert(res, failed)
       end
@@ -135,7 +135,7 @@ function cli.clean()
   os.execute('rm -rf ' .. cli.lazy_dir)
 end
 
-function cli.doctor(pack_name)
+function cli.snapshot(pack_name)
   local list = cli:get_all_packages()
   if not list then
     return

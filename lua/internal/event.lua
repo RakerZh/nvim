@@ -1,5 +1,5 @@
 local api = vim.api
-local my_group = vim.api.nvim_create_augroup('GlepnirGroup', {})
+local my_group = vim.api.nvim_create_augroup('RakerZh', {})
 
 api.nvim_create_autocmd({ 'BufWritePre' }, {
   group = my_group,
