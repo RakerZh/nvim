@@ -134,4 +134,52 @@ function config.noice()
   })
 end
 
+function config.smart_input()
+  local filters = require('mutchar.context')
+  require('mutchar').setup({
+    ['c'] = {
+      rules = { '-', '->' },
+      filter = filters.non_space_before,
+    },
+    ['cpp'] = {
+      rules = {
+        { ',', ' <!>' },
+        { '-', '->' },
+      },
+      filter = {
+        filters.generic_in_cpp,
+        filters.non_space_before,
+      },
+      one_to_one = true,
+    },
+    ['rust'] = {
+      rules = {
+        { ';', ': ' },
+        { '-', '->' },
+        { ',', '<!>' },
+      },
+      filter = {
+        filters.semicolon_in_rust,
+        filters.minus_in_rust,
+        filters.generic_in_rust,
+      },
+      one_to_one = true,
+    },
+    ['lua'] = {
+      rules = { ';', ':' },
+      filter = filters.semicolon_in_lua,
+    },
+    ['go'] = {
+      rules = {
+        { ';', ' :=' },
+        { ',', ' <-' },
+      },
+      filter = {
+        filters.diagnostic_match({ 'initial', 'undeclare' }),
+        filters.go_arrow_symbol,
+      },
+      one_to_one = true,
+    },
+  })
+end
 return config

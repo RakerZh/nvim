@@ -8,6 +8,13 @@ local conf = require('modules.tools.config')
 }]]
 
 -- package({ 'github/copilot.vim' })
+--
+
+package({
+  'nvimdev/mutchar.nvim',
+  ft = { 'c', 'go', 'lua', 'rust', 'cpp' },
+  config = conf.smart_input,
+})
 
 package({
   'sindrets/diffview.nvim',
@@ -51,7 +58,7 @@ package({
 
 package({ 'jghauser/follow-md-links.nvim' })
 
-package({ 'RakerZh/min-preview.nvim' })
+-- package({ 'RakerZh/min-preview.nvim' })
 
 package({
   'nvim-neo-tree/neo-tree.nvim',

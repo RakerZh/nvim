@@ -53,56 +53,6 @@ function config.nvim_colorizer()
   require('colorizer').setup()
 end
 
-function config.smart_input()
-  local filters = require('mutchar.filters')
-  require('mutchar').setup({
-    ['c'] = {
-      rules = { '-', '->' },
-      filter = filters.non_space_before,
-    },
-    ['cpp'] = {
-      rules = {
-        { ',', ' <!>' },
-        { '-', '->' },
-      },
-      filter = {
-        filters.generic_in_cpp,
-        filters.non_space_before,
-      },
-    },
-    ['rust'] = {
-      rules = {
-        { ';', ': ' },
-        { '-', '->' },
-        { ',', '<!>' },
-      },
-      filter = {
-        filters.semicolon_in_rust,
-        filters.minus_in_rust,
-        filters.generic_in_rust,
-      },
-      one_to_one = true,
-    },
-    ['go'] = {
-      rules = {
-        { ';', ' :=' },
-        { ',', ' <-' },
-      },
-      filter = {
-        filters.find_diagnostic_msg({ 'initial', 'undeclare' }),
-        filters.go_arrow_symbol,
-      },
-      one_to_one = true,
-    },
-  })
-
-  --[[require('mutchar').setup({
-    ['go'] = { ';', ':=', ';' },
-    ['lua'] = { '!', '~=', '!' },
-    ['rust'] = { '90', '::', '90' },
-  })]]
-end
-
 function config.nvim_treesitter()
   vim.opt.foldmethod = 'expr'
   vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'

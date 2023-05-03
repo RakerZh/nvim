@@ -31,12 +31,6 @@ package({
 })
 
 package({
-  'nvimdev/mutchar.nvim',
-  ft = { 'c', 'go', 'lua', 'rust', 'cpp' },
-  config = conf.smart_input,
-})
-
-package({
   'norcalli/nvim-colorizer.lua',
   config = conf.nvim_colorizer,
 })
