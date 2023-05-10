@@ -21,7 +21,6 @@ function config.nordic()
       gitgutter = false,
       gitsigns = true,
       telescope = true,
-      nvimtree = false,
       barbar = true,
       bufferline = false,
       indent_blankline = true,
