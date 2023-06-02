@@ -134,52 +134,36 @@ function config.noice()
   })
 end
 
-function config.smart_input()
-  local filters = require('mutchar.context')
-  require('mutchar').setup({
-    ['c'] = {
-      rules = { '-', '->' },
-      filter = filters.non_space_before,
+function config.dyninput()
+  local rs = require('dyninput.lang.rust')
+  local ms = require('dyninput.lang.misc')
+  require('dyninput').setup({
+    c = {
+      ['-'] = { '->', ms.c_struct_pointer },
     },
-    ['cpp'] = {
-      rules = {
-        { ',', ' <!>' },
-        { '-', '->' },
-      },
-      filter = {
-        filters.generic_in_cpp,
-        filters.non_space_before,
-      },
-      one_to_one = true,
+    cpp = {
+      [','] = { ' <!>', ms.generic_in_cpp },
+      ['-'] = { '->', ms.c_struct_pointer },
     },
-    ['rust'] = {
-      rules = {
-        { ';', ': ' },
-        { '-', '->' },
-        { ',', '<!>' },
+    rust = {
+      [';'] = {
+        { '::', rs.double_colon },
+        { ': ', rs.single_colon },
       },
-      filter = {
-        filters.semicolon_in_rust,
-        filters.minus_in_rust,
-        filters.generic_in_rust,
-      },
-      one_to_one = true,
+      ['='] = { ' => ', rs.fat_arrow },
+      ['-'] = { ' -> ', rs.thin_arrow },
+      ['\\'] = { '|!| {}', rs.closure_fn },
     },
-    ['lua'] = {
-      rules = { ';', ':' },
-      filter = filters.semicolon_in_lua,
+    lua = {
+      [';'] = { ':', ms.semicolon_in_lua },
     },
-    ['go'] = {
-      rules = {
-        { ';', ' :=' },
-        { ',', ' <-' },
+    go = {
+      [';'] = {
+        { ' := ', ms.go_variable_define },
+        { ': ', ms.go_struct_field },
       },
-      filter = {
-        filters.diagnostic_match({ 'initial', 'undeclare' }),
-        filters.go_arrow_symbol,
-      },
-      one_to_one = true,
     },
   })
 end
+
 return config

@@ -11,9 +11,9 @@ local conf = require('modules.tools.config')
 --
 
 package({
-  'nvimdev/mutchar.nvim',
+  'nvimdev/dyninput.nvim',
   ft = { 'c', 'go', 'lua', 'rust', 'cpp' },
-  config = conf.smart_input,
+  config = conf.dyninput,
 })
 
 package({
