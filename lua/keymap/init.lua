@@ -80,6 +80,7 @@ nmap({
     end,
     opts(expr),
   },
+  { '<Leader>fn', cmd('Navbuddy') },
 })
 
 --  coman

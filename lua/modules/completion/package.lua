@@ -61,6 +61,17 @@ package({
     require('modules.completion.backend')
     require('modules.completion.frontend')
   end,
+  dependencies = {
+    'SmiteshP/nvim-navbuddy',
+    dependencies = {
+      'neovim/nvim-lspconfig',
+      'SmiteshP/nvim-navic',
+      'MunifTanjim/nui.nvim',
+      'numToStr/Comment.nvim', -- Optional
+      'nvim-telescope/telescope.nvim', -- Optional
+    },
+    opts = { lsp = { auto_attach = true } },
+  },
 })
 
 package({
