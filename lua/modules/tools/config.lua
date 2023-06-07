@@ -139,11 +139,17 @@ function config.dyninput()
   local ms = require('dyninput.lang.misc')
   require('dyninput').setup({
     c = {
-      ['-'] = { '->', ms.c_struct_pointer },
+      ['-'] = {
+        { '->', ms.c_struct_pointer },
+        { '_', ms.snake_case },
+      },
     },
     cpp = {
       [','] = { ' <!>', ms.generic_in_cpp },
-      ['-'] = { '->', ms.c_struct_pointer },
+      ['-'] = {
+        { '->', ms.c_struct_pointer },
+        { '_', ms.snake_case },
+      },
     },
     rust = {
       [';'] = {
@@ -151,19 +157,26 @@ function config.dyninput()
         { ': ', rs.single_colon },
       },
       ['='] = { ' => ', rs.fat_arrow },
-      ['-'] = { ' -> ', rs.thin_arrow },
+      ['-'] = {
+        { ' -> ', rs.thin_arrow },
+        { '_', ms.snake_case },
+      },
       ['\\'] = { '|!| {}', rs.closure_fn },
     },
     lua = {
       [';'] = { ':', ms.semicolon_in_lua },
+      ['-'] = { '_', ms.snake_case },
     },
     go = {
       [';'] = {
         { ' := ', ms.go_variable_define },
         { ': ', ms.go_struct_field },
       },
+      ['-'] = { '_', ms.snake_case },
     },
   })
+
+  exec_filetype('dyninput')
 end
 
 return config

@@ -99,6 +99,7 @@ function cli:installer(type)
 
   local packages = cli:get_all_packages()
   ---@diagnostic disable-next-line: unused-local, param-type-mismatch
+  ---
   local res = {}
   for name, v in pairs(packages or {}) do
     if v.type:find('Remote') then
