@@ -70,11 +70,15 @@ package({
 })
 
 package({
-  'nvimdev/easyformat.nvim',
+  'nvimdev/guard.nvim',
   ft = { 'c', 'cpp', 'rust', 'lua', 'go', 'typescript', 'javascrip', 'javascriptreact', 'python' },
-  config = conf.easyformat,
+  config = conf.guard,
 })
 
+package({
+  'ii14/emmylua-nvim',
+  ft = 'lua',
+})
 -- package({
 --   {
 --     'glepnir/easyformat.nvim',

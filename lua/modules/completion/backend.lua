@@ -1,36 +1,27 @@
 local M = {}
 local lspconfig = require('lspconfig')
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-capabilities.offsetEncoding = { 'utf-16' }
+-- local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- capabilities.offsetEncoding = { 'utf-16' }
 
-function M._attach(client, bufnr)
+function M._attach(client)
   vim.opt.omnifunc = 'v:lua.vim.lsp.omnifunc'
   client.server_capabilities.semanticTokensProvider = nil
+  local orignal = vim.notify
+  local mynotify = function(msg, level, opts)
+    if msg == 'No code actions available' or msg:find('overly') then
+      return
+    end
+    orignal(msg, level, opts)
+  end
+
+  vim.notify = mynotify
 end
 
 lspconfig.gopls.setup({
   cmd = { 'gopls', 'serve' },
   on_attach = function(client, _)
-    local orignal = vim.notify
-    local mynotify = function(msg, level, opts)
-      if msg == 'No code actions available' then
-        return
-      end
-      orignal(msg, level, opts)
-    end
-
-    vim.notify = mynotify
     M._attach(client)
-    -- vim.opt.omnifunc = "v:lua.vim.lsp.omnifunc"
-    -- if client.name == "gopls" and not client.server_capabilities.semanticTokensProvider then
-    -- 	local semantic = client.config.capabilities.textDocument.semanticTokens
-    -- 	client.server_capabilities.semanticTokensProvider = {
-    -- 		full = true,
-    -- 		legend = { tokenModifiers = semantic.tokenModifiers, tokenTypes = semantic.tokenTypes },
-    -- 		range = true,
-    -- 	}
-    -- end
   end,
   init_options = {
     usePlaceholders = true,
@@ -59,6 +50,13 @@ lspconfig.lua_ls.setup({
         version = 'LuaJIT',
         path = vim.split(package.path, ';'),
       },
+      workspace = {
+        library = {
+          vim.env.VIMRUNTIME,
+          vim.env.HOME .. '/.local/share/nvim/lazy/emmylua-nvim',
+        },
+        checkThirdParty = false,
+      },
       completion = {
         callSnippet = 'Replace',
       },
@@ -72,7 +70,6 @@ lspconfig.clangd.setup({
   cmd = {
     'clangd',
     '--background-index',
-    '--suggest-missing-includes',
     '--clang-tidy',
     '--header-insertion=iwyu',
   },

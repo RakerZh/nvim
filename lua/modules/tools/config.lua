@@ -84,21 +84,16 @@ function config.neotree()
   })
 end
 
-function config.easyformat()
-  local configs = require('easyformat.config')
-  configs.lua = {
-    ignore_patterns = { '%pspec', 'neovim/*' },
-  }
-  configs.use_default({
-    'cpp',
-    'go',
-    'rust',
-    'javascriptreact',
-  })
-  require('easyformat').setup({
-    fmt_on_save = true,
-  })
+function config.guard()
+  local ft = require('guard.filetype')
+  ft('c'):fmt('clang-format'):lint('clang-tidy')
+  ft('cpp'):fmt('clang-format'):lint('clang-tidy')
+  ft('lua'):fmt('stylua')
+  ft('go'):fmt('lsp'):append('golines') --:lint('golangci-lint')
+
+  require('guard').setup()
 end
+
 function config.noice()
   require('noice').setup({
     views = {
