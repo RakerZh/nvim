@@ -7,9 +7,6 @@ local conf = require('modules.tools.config')
   -- require dap
 }]]
 
--- package({ 'github/copilot.vim' })
---
-
 package({
   'nvimdev/dyninput.nvim',
   ft = { 'c', 'go', 'lua', 'rust', 'cpp' },

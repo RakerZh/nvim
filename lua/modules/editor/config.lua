@@ -51,6 +51,7 @@ end
 
 function config.nvim_colorizer()
   require('colorizer').setup()
+  exec_filetype('ColorizerSetup')
 end
 
 function config.nvim_treesitter()

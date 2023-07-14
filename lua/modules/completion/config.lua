@@ -30,7 +30,7 @@ local lspkind_icons = {
   Event = '',
   Operator = ' ',
   TypeParameter = ' ',
-  Copilot = ' ',
+  -- Copilot = ' ',
 }
 
 function config.nvim_cmp()
@@ -42,11 +42,11 @@ function config.nvim_cmp()
       fields = { 'kind', 'abbr', 'menu' },
       format = function(entry, vim_item)
         vim_item.kind = lspkind_icons[vim_item.kind]
-        if entry.source.name == 'copilot_cmp' then
-          vim_item.kind = lspkind_icons['Copilot']
-          vim_item.kind_hl_group = 'CmpItemKindCopilot'
-          vim.api.nvim_set_hl(0, 'CmpItemKindCopilot', { fg = '#6CC644' })
-        end
+        -- if entry.source.name == 'copilot_cmp' then
+        -- vim_item.kind = lspkind_icons['Copilot']
+        -- vim_item.kind_hl_group = 'CmpItemKindCopilot'
+        -- vim.api.nvim_set_hl(0, 'CmpItemKindCopilot', { fg = '#6CC644' })
+        -- end
 
         vim_item.menu = ({
           nvim_lsp = '',
@@ -64,9 +64,6 @@ function config.nvim_cmp()
       ['<C-e>'] = cmp.mapping.close(),
       ['<C-d>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
-      -- Accept currently selected item. If none selected, `select` first item.
-      -- Set `select` to `false` to only confirm explicitly selected items.
-      -- ["<Enter>"] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false }),
       ['<C-j>'] = cmp.mapping.select_next_item(),
       ['<C-k>'] = cmp.mapping.select_prev_item(),
       ['<Tab>'] = cmp.mapping.confirm({ select = true }),
@@ -83,7 +80,7 @@ function config.nvim_cmp()
       { name = 'luasnip', group_index = 2 },
       { name = 'path', group_index = 2 },
       { name = 'buffer', group_index = 2 },
-      { name = 'copilot', group_index = 2 },
+      -- { name = 'copilot', group_index = 2 },
     },
   })
 end
@@ -114,9 +111,7 @@ function config.lspsaga()
     ui = {
       border = 'rounded',
       colors = {
-        --float window normal bakcground color
         normal_bg = '#232835',
-        --title background color
         title_bg = '#5b97db',
         red = '#e95678',
         magenta = '#b33076',
@@ -131,7 +126,6 @@ function config.lspsaga()
       },
     },
   })
-  -- vim.wo.winbar = require('lspsaga.symbolwinbar'):get_winbar()
 end
 
 return config

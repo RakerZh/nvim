@@ -7,15 +7,6 @@ local lspconfig = require('lspconfig')
 function M._attach(client)
   vim.opt.omnifunc = 'v:lua.vim.lsp.omnifunc'
   client.server_capabilities.semanticTokensProvider = nil
-  local orignal = vim.notify
-  local mynotify = function(msg, level, opts)
-    if msg == 'No code actions available' or msg:find('overly') then
-      return
-    end
-    orignal(msg, level, opts)
-  end
-
-  vim.notify = mynotify
 end
 
 lspconfig.gopls.setup({
@@ -66,7 +57,6 @@ lspconfig.lua_ls.setup({
 
 lspconfig.clangd.setup({
   on_attach = M._attach,
-  capabilities = capabilities,
   cmd = {
     'clangd',
     '--background-index',
@@ -77,7 +67,6 @@ lspconfig.clangd.setup({
 
 lspconfig.rust_analyzer.setup({
   on_attach = M._attach,
-  capabilities = capabilities,
   settings = {
     ['rust-analyzer'] = {
       imports = {

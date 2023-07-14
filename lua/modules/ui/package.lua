@@ -2,22 +2,10 @@ local package = require('core.pack').package
 local conf = require('modules.ui.config')
 
 package({
-  'AlexvZyl/nordic.nvim',
-  config = conf.nordic,
-})
-
-package({
   'akinsho/bufferline.nvim',
   version = 'v3.*',
   config = conf.bufferline,
   dependencies = 'nvim-tree/nvim-web-devicons',
-})
-package({
-  'RakerZh/whiskyline.nvim',
-  config = conf.whisky,
-  dependencies = {
-    { 'nvim-tree/nvim-web-devicons' },
-  },
 })
 
 -- package({
@@ -55,18 +43,18 @@ package({
 })
 
 package({
+  'RakerZh/whiskyline.nvim',
+  config = conf.whisky,
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
+})
+
+package({
   'nvimdev/flybuf.nvim',
   cmd = 'FlyBuf',
   config = function()
-    require('flybuf').setup({})
+    require('flybuf').setup()
   end,
 })
-
--- package({
---   'glepnir/galaxyline.nvim',
---   config = conf.galaxyline,
---   dependencies = { 'nvim-tree/nvim-web-devicons' },
--- })
 
 package({
   'lewis6991/gitsigns.nvim',
@@ -83,18 +71,6 @@ package({
 })
 
 package({
-  {
-    'nvimdev/nerdicons.nvim',
-    cmd = 'NerdIcons',
-    config = function()
-      require('nerdicons').setup({})
-    end,
-  },
-})
-
--- package({ "xiyaowong/nvim-transparent" })
-
-package({
   'nvimdev/indentmini.nvim',
   event = { 'BufEnter' },
   config = function()
@@ -103,4 +79,15 @@ package({
     })
   end,
   dependencies = { 'nvim-treesitter/nvim-treesitter' },
+})
+
+-- package({
+-- 'glepnir/galaxyline.nvim',
+-- config = conf.galaxyline,
+-- dependencies = { 'nvim-tree/nvim-web-devicons' },
+-- })
+
+package({
+  'AlexvZyl/nordic.nvim',
+  config = conf.nordic,
 })

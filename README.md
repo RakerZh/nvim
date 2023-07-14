@@ -14,45 +14,45 @@ You can also checkout [dope](https://github.com/nvimdev/dope)
     <img width="1496" alt="Screenshot 2023-03-24 at 5 27 45 PM" src="https://user-images.githubusercontent.com/76530956/227646464-c54d3f23-9746-4e6a-ae4a-e6bc53ed9412.png">
 </p>
 
-## Plugins
+## My NeoVim Plugins
 
+- Comment.nvim
+- LuaSnip
+- bufferline.nvim
 - cmp-buffer
 - cmp-nvim-lsp
 - cmp-path
 - cmp_luasnip
 - coman.nvim
-- copilot-cmp
-- copilot.lua
 - dashboard-nvim
 - diffview.nvim
+- dyninput.nvim
+- emmylua-nvim
+- flybuf.nvim
 - follow-md-links.nvim
 - git-conflict.nvim
 - gitsigns.nvim
-- go.nvim
+- guard.nvim
 - hlsearch.nvim
+- indentmini.nvim
 - lazy.nvim
 - leap.nvim
 - lspsaga.nvim
-- min-preview.nvim
 - neo-tree.nvim
+- neogit
 - noice.nvim
 - nordic.nvim
 - nui.nvim
 - nvim-autopairs
 - nvim-cmp
 - nvim-colorizer.lua
-- nvim-transparent
+- nvim-lspconfig
+- nvim-navbuddy
+- nvim-navic
 - nvim-treesitter
 - nvim-treesitter-textobjects
 - nvim-web-devicons
 - plenary.nvim
-- todo-comments.nvim
-- whiskyline.nvim
-- LuaSnip
-- flybuf.nvim
-- mutchar.nvim
-- neogit
-- nvim-lspconfig
 - popup.nvim
 - rainbow_csv
 - telescope-file-browser.nvim
@@ -61,6 +61,6 @@ You can also checkout [dope](https://github.com/nvimdev/dope)
 - telescope-zoxide
 - telescope.nvim
 - template.nvim
+- todo-comments.nvim
+- whiskyline.nvim
 
-
-# Licenese MIT

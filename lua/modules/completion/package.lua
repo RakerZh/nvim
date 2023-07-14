@@ -31,7 +31,7 @@ end
 local loaded = false
 local function diag_config()
   local signs = {
-    Error = ' ',
+    Error = ' ',
     Warn = ' ',
     Info = ' ',
     Hint = ' ',
@@ -46,6 +46,20 @@ local function diag_config()
     severity_sort = true,
     virtual_text = true,
   })
+
+  vim.lsp.set_log_level('OFF')
+
+  --disable diagnostic in neovim test file *_spec.lua
+  vim.api.nvim_create_autocmd('FileType', {
+    group = vim.api.nvim_create_augroup('DisableInSpec', { clear = true }),
+    pattern = 'lua',
+    callback = function(opt)
+      local fname = vim.api.nvim_buf_get_name(opt.buf)
+      if fname:find('%w_spec%.lua') then
+        vim.diagnostic.disable(opt.buf)
+      end
+    end,
+  })
 end
 
 package({
@@ -58,6 +72,7 @@ package({
     end
     require('modules.completion.backend')
     require('modules.completion.frontend')
+    exec_filetype({ 'lspconfig', 'DisableInSpec' })
   end,
   dependencies = {
     'SmiteshP/nvim-navbuddy',
@@ -76,32 +91,6 @@ package({
   event = 'InsertEnter',
   config = conf.nvim_cmp,
   dependencies = {
-    {
-      'zbirenbaum/copilot-cmp',
-      config = function()
-        require('copilot_cmp').setup()
-      end,
-      dependencies = {
-        'zbirenbaum/copilot.lua',
-        config = function()
-          require('copilot').setup({
-            suggestion = {
-              enabled = true,
-              auto_trigger = true,
-              keymap = {
-                accept = '<C-l>',
-                accept_word = false,
-                accept_line = false,
-                decline = '<C-g>',
-                next = '<C-.>',
-                prev = '<C-,>',
-                dismiss = '<C-\\>',
-              },
-            },
-          })
-        end,
-      },
-    },
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/cmp-path' },
     { 'hrsh7th/cmp-buffer' },
