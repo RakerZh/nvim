@@ -28,7 +28,6 @@ local function lsp_fts(type)
   return fts[type]
 end
 
-local loaded = false
 local function diag_config()
   local signs = {
     Error = ' ',
@@ -66,29 +65,27 @@ package({
   'neovim/nvim-lspconfig',
   ft = lsp_fts(),
   config = function()
-    if not loaded then
-      diag_config()
-      loaded = true
-    end
+    diag_config()
     require('modules.completion.backend')
     require('modules.completion.frontend')
     exec_filetype({ 'lspconfig', 'DisableInSpec' })
   end,
   dependencies = {
-    'SmiteshP/nvim-navbuddy',
-    dependencies = {
-      'SmiteshP/nvim-navic',
-      'MunifTanjim/nui.nvim',
-      'numToStr/Comment.nvim', -- Optional
-      'nvim-telescope/telescope.nvim', -- Optional
-    },
-    opts = { lsp = { auto_attach = true } },
+    'ziglang/zig.vim',
+    -- 'SmiteshP/nvim-navbuddy',
+    -- dependencies = {
+    --   'SmiteshP/nvim-navic',
+    --   'MunifTanjim/nui.nvim',
+    --   'numToStr/Comment.nvim', -- Optional
+    --   'nvim-telescope/telescope.nvim', -- Optional
+    -- },
   },
 })
 
 package({
   'hrsh7th/nvim-cmp',
   event = 'InsertEnter',
+  ft = lsp_fts(),
   config = conf.nvim_cmp,
   dependencies = {
     { 'hrsh7th/cmp-nvim-lsp' },
@@ -99,13 +96,37 @@ package({
 })
 
 package({
+  'zbirenbaum/copilot.lua',
+  ft = lsp_fts(),
+  cmd = 'Copilot',
+  event = 'InsertEnter',
+  config = function()
+    require('copilot').setup({
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+    })
+  end,
+})
+
+package({
+  'zbirenbaum/copilot-cmp',
+  after = { 'copilot.lua' },
+  config = function()
+    require('copilot_cmp').setup()
+  end,
+})
+
+package({
   'nvimdev/lspsaga.nvim',
   ft = lsp_fts(),
   cmd = 'Lspsaga term_toggle',
   config = function()
     require('lspsaga').setup({
       symbol_in_winbar = {
-        ignore_patterns = { '%w_spec' },
+        hide_keyword = true,
+      },
+      outline = {
+        layout = 'float',
       },
     })
   end,

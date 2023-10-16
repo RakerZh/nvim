@@ -19,24 +19,15 @@ package({
   dependencies = { { 'nvim-lua/plenary.nvim' } },
 })
 
-package({
-  'TimUntersberger/neogit',
-  cmd = 'Neoload',
-  dependencies = { { 'nvim-lua/plenary.nvim' } },
-  config = function()
-    require('neogit')
-  end,
-})
-
 -- package({ 'rcarriga/nvim-notify', config = conf.notify })
 
-package({
-  'folke/noice.nvim',
-  config = conf.noice,
-  dependencies = {
-    { 'MunifTanjim/nui.nvim' },
-  },
-})
+-- package({
+--   'folke/noice.nvim',
+--   config = conf.noice,
+--   dependencies = {
+--     { 'MunifTanjim/nui.nvim' },
+--   },
+-- })
 
 package({
   'nvimdev/template.nvim',
@@ -48,9 +39,7 @@ package({ 'nvimdev/coman.nvim', event = 'BufRead', config = conf.coman })
 
 package({
   'akinsho/git-conflict.nvim',
-  config = function()
-    require('git-conflict').setup({})
-  end,
+  config = true,
 })
 
 package({ 'jghauser/follow-md-links.nvim' })
@@ -59,9 +48,11 @@ package({ 'jghauser/follow-md-links.nvim' })
 
 package({
   'nvim-neo-tree/neo-tree.nvim',
+  branch = 'v3.x',
   dependencies = {
-    { 'nvim-lua/plenary.nvim' },
-    { 'nvim-tree/nvim-web-devicons' },
+    'nvim-lua/plenary.nvim',
+    'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+    'MunifTanjim/nui.nvim',
   },
   config = conf.neotree,
 })
@@ -70,58 +61,42 @@ package({
   'nvimdev/guard.nvim',
   ft = { 'c', 'cpp', 'rust', 'lua', 'go', 'typescript', 'javascrip', 'javascriptreact', 'python' },
   config = conf.guard,
+  dependencies = {
+    'nvimdev/guard-collection',
+  },
 })
 
 package({
   'ii14/emmylua-nvim',
   ft = 'lua',
 })
--- package({
---   {
---     'glepnir/easyformat.nvim',
---     ft = { 'c', 'cpp', 'lua', 'rust', 'go' },
---     config = function()
---       require('easyformat').setup({
---         fmt_on_save = true,
---         c = {
---           cmd = 'clang-format',
---           args = { '-style=file', vim.api.nvim_buf_get_name(0) },
---           ignore_patterns = { 'neovim/*' },
---           find = '.clang-format',
---           stdin = false,
---           lsp = false,
---         },
---         cpp = {
---           cmd = 'clang-format',
---           args = { '-style=file', vim.api.nvim_buf_get_name(0) },
---           find = '.clang-format',
---           stdin = false,
---           lsp = false,
---         },
---         go = {
---           cmd = 'golines',
---           args = { '--max-len=80', vim.api.nvim_buf_get_name(0) },
---           stdin = false,
---           hook = function()
---             vim.lsp.buf.code_action({
---               context = { only = { 'source.organizeImports' } },
---               apply = true,
---             })
---           end,
---           lsp = true,
---         },
---         lua = {
---           cmd = 'stylua',
---           ignore_patterns = { '%pspec', 'neovim/*' },
---           find = '.stylua.toml',
---           args = { '-' },
---           stdin = true,
---           lsp = false,
---         },
---         json = {
---           cmd = 'jq',
---         },
---       })
---     end,
---   },
--- })
+
+package({
+  'nvimdev/rapid.nvim',
+  cmd = 'Rapid',
+  config = function()
+    require('rapid').setup()
+  end,
+})
+
+package({
+  'cshuaimin/ssr.nvim',
+  module = 'ssr',
+  -- Calling setup is optional.
+  config = function()
+    require('ssr').setup({
+      border = 'rounded',
+      min_width = 50,
+      min_height = 5,
+      max_width = 120,
+      max_height = 25,
+      keymaps = {
+        close = 'q',
+        next_match = 'n',
+        prev_match = 'N',
+        replace_confirm = '<cr>',
+        replace_all = '<leader><cr>',
+      },
+    })
+  end,
+})

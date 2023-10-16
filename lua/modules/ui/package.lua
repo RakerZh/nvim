@@ -1,12 +1,12 @@
 local package = require('core.pack').package
 local conf = require('modules.ui.config')
 
-package({
-  'akinsho/bufferline.nvim',
-  version = 'v3.*',
-  config = conf.bufferline,
-  dependencies = 'nvim-tree/nvim-web-devicons',
-})
+-- package({
+--   'akinsho/bufferline.nvim',
+--   version = 'v3.*',
+--   config = conf.bufferline,
+--   dependencies = 'nvim-tree/nvim-web-devicons',
+-- })
 
 -- package({
 --   'catppuccin/nvim',
@@ -52,7 +52,7 @@ package({
   'nvimdev/flybuf.nvim',
   cmd = 'FlyBuf',
   config = function()
-    require('flybuf').setup()
+    require('flybuf').setup({})
   end,
 })
 

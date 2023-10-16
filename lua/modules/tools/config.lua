@@ -40,8 +40,6 @@ end
 
 function config.coman()
   local custom_template = require('coman').custom_template
-  -- tbl is the function relate table. index 1 is function name
-  -- others are params name with type (if have)
   custom_template['c'] = function(tbl, cms)
     local insert = table.insert
     local space = ' '
@@ -74,22 +72,14 @@ function config.coman()
   end
 end
 
-function config.neotree()
-  require('neo-tree').setup({
-    filesystem = {
-      filtered_items = {
-        hide_dotfile = false,
-      },
-    },
-  })
-end
-
 function config.guard()
   local ft = require('guard.filetype')
   ft('c'):fmt('clang-format'):lint('clang-tidy')
   ft('cpp'):fmt('clang-format'):lint('clang-tidy')
   ft('lua'):fmt('stylua')
   ft('go'):fmt('lsp'):append('golines') --:lint('golangci-lint')
+  ft('rust'):fmt('rustfmt')
+  ft('typescript', 'javascript', 'typescriptreact', 'javascriptreact'):fmt('prettier')
 
   require('guard').setup()
   exec_filetype('Guard')
@@ -163,4 +153,13 @@ function config.dyninput()
   exec_filetype('dyninput')
 end
 
+function config.neotree()
+  require('neo-tree').setup({
+    filesystem = {
+      filtered_items = {
+        hide_dotfile = false,
+      },
+    },
+  })
+end
 return config

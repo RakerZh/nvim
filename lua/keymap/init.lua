@@ -34,6 +34,7 @@ nmap({
   { 'gh', cmd('Lspsaga lsp_finder') },
   { 'gk', cmd('!Open -a Safari https://github.com/RakerZh') },
   --  { '<Leader>g', cmd('Lspsaga term_toggle lazygit') },
+
   { '<Leader>o', cmd('Lspsaga outline') },
   -- dashboard create file
   { '<Leader>n', cmd('DashboardNewFile') },
@@ -46,10 +47,10 @@ nmap({
   --{'<Leader>kh',cmd('NvimTreeResize -10'),opts(noremap,silent)},
   --{'<Leader>kl',cmd('NvimTreeResize +2'),opts(noremap,silent)},
   { '<Leader>d', cmd('DiffviewOpen') },
-  { '<Leader>e', cmd('NeoTreeFocusToggle') },
+  { '<Leader>e', cmd('Neotree toggle') },
 
   -- Telescope
-  { '<Leader>b', cmd('Telescope buffers') },
+  { '<Leader>tb', cmd('Telescope buffers') },
   { '<Leader>fa', cmd('Telescope live_grep') },
   { '<Leader>fb', cmd('Telescope file_browser') },
   { '<Leader>ff', cmd('Telescope find_files') },
@@ -62,17 +63,9 @@ nmap({
   -- { '<Leader>gc', cmd('Telescope dotfiles path' .. home .. '/.dotfiles'),   },
   -- zoxide
   { '<Leader>fq', cmd('Telescope zoxide list') },
-  -- Buffline
-  { '<Leader>1', cmd('BufferLineGoToBuffer 1') },
-  { '<Leader>2', cmd('BufferLineGoToBuffer 2') },
-  { '<Leader>3', cmd('BufferLineGoToBuffer 3') },
-  { '<Leader>4', cmd('BufferLineGoToBuffer 4') },
-  { '<Leader>5', cmd('BufferLineGoToBuffer 5') },
-  { '<Leader>6', cmd('BufferLineGoToBuffer 6') },
-  { '<Leader>7', cmd('BufferLineGoToBuffer 7') },
-  { '<Leader>8', cmd('BufferLineGoToBuffer 8') },
-  { '<Leader>9', cmd('BufferLineGoToBuffer 9') },
-  { '<Leader>$', cmd('BufferLineGoToBuffer -1') },
+  { '<Leader>r', cmd('Rapid') },
+
+  { '<Leader>b', cmd('FlyBuf') },
   {
     '<Leader>t',
     function()
@@ -93,5 +86,8 @@ nmap({ '<A-d>', cmd('Lspsaga open_floaterm') })
 
 vim.keymap.set({ 'n', 't' }, '<A-d>', cmd('Lspsaga term_toggle'))
 vim.keymap.set({ 'n' }, '<Leader>g', cmd('Lspsaga term_toggle lazygit'))
+vim.keymap.set({ 'n', 'x' }, '<leader>sr', function()
+  require('ssr').open()
+end)
 
 xmap({ 'ga', cmd('Lspsaga code_action') })

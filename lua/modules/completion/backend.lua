@@ -11,9 +11,7 @@ end
 
 lspconfig.gopls.setup({
   cmd = { 'gopls', 'serve' },
-  on_attach = function(client, _)
-    M._attach(client)
-  end,
+  on_attach = M._attach,
   init_options = {
     usePlaceholders = true,
     completeUnimported = true,
@@ -23,7 +21,6 @@ lspconfig.gopls.setup({
       analyses = {
         unusedparams = true,
       },
-      -- semanticTokens = true,
       staticcheck = true,
     },
   },
@@ -91,7 +88,7 @@ local servers = {
   'dockerls',
   'pyright',
   'bashls',
-  'zls',
+  -- 'zls',
 }
 
 for _, server in ipairs(servers) do
@@ -101,9 +98,9 @@ for _, server in ipairs(servers) do
 end
 
 vim.lsp.handlers['workspace/diagnostic/refresh'] = function(_, _, ctx)
-  local ns = vim.lsp.diagnostic.get_namespace(ctx.client_id)
+  local ns = vim.lsp.diagnostic.get_namespace(ctx.client_id, false)
   local bufnr = vim.api.nvim_get_current_buf()
-  vim.diagnostic.reset(ns, bufnr)
+  vim.diagnostic.reset(ns)
   return true
 end
 

@@ -57,48 +57,53 @@ end
 function config.nvim_treesitter()
   vim.opt.foldmethod = 'expr'
   vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
-
-  local ignored = {
-    'phpdoc',
-    'astro',
-    'beancount',
-    'bibtex',
-    'bluprint',
-    'eex',
-    'embedded_template',
-    'vala',
-    'wgsl',
-    'verilog',
-    'twig',
-    'turtle',
-    'm68k',
-    'hocon',
-    'lalrpop',
-    'meson',
-    'mehir',
-    'rasi',
-    'rego',
-    'racket',
-    'pug',
-    'java',
-  }
-
   require('nvim-treesitter.configs').setup({
-    ensure_installed = 'all',
-    ignore_install = ignored,
-    highlight = {
+    ensure_installed = {
+      'c',
+      'cpp',
+      'rust',
+      'zig',
+      'lua',
+      'go',
+      'python',
+      'proto',
+      'typescript',
+      'javascript',
+      'tsx',
+      'bash',
+      'css',
+      'scss',
+      'diff',
+      'dockerfile',
+      'gomod',
+      'gosum',
+      'gowork',
+      'graphql',
+      'html',
+      'sql',
+      'markdown',
+      'markdown_inline',
+      'json',
+      'jsonc',
+      'java',
+
+      'cmake',
+      'cuda',
+      'dart',
+      'git_config',
+      'git_rebase',
+      'kotlin',
+      'latex',
+      'r',
+      'solidity',
+      'toml',
+      'tsx',
+    },
+    indent = {
       enable = true,
     },
-    textobjects = {
-      select = {
-        enable = true,
-        keymaps = {
-          ['af'] = '@function.outer',
-          ['if'] = '@function.inner',
-          ['ac'] = '@class.outer',
-          ['ic'] = '@class.inner',
-        },
-      },
+    highlight = {
+      enable = true,
     },
   })
 end
