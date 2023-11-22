@@ -51,8 +51,6 @@ opt.autoindent = true
 opt.tabstop = 2
 opt.shiftwidth = 2
 
--- wrap
-
 opt.foldlevelstart = 99
 opt.foldmethod = 'marker'
 
@@ -106,15 +104,4 @@ if vim.loop.os_uname().sysname == 'Darwin' then
     },
     cache_enabled = 0,
   }
-end
-
-if vim.g.neovide then
-  vim.g.neovide_fullscreen = false
-  vim.g.neovide_cursor_antialiasing = true
-  vim.o.guifont = 'Operator Mono Lig Light:h18'
-  vim.o.neovide_transparency = 0.0
-  vim.g.neovide_input_macos_alt_is_meta = false
-  vim.g.neovide_frameless = true
-  vim.g.neovide_scroll_animation_length = 0.13
-  vim.g.neovide_cursor_vfx_mode = 'railgun'
 end

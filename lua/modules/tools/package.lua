@@ -64,6 +64,7 @@ package({
   dependencies = {
     'nvimdev/guard-collection',
   },
+  cmd = { 'GuardFmt', 'GuardDisable', 'GuardEnable' },
 })
 
 package({

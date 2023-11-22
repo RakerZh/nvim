@@ -95,26 +95,26 @@ package({
   },
 })
 
-package({
-  'zbirenbaum/copilot.lua',
-  ft = lsp_fts(),
-  cmd = 'Copilot',
-  event = 'InsertEnter',
-  config = function()
-    require('copilot').setup({
-      suggestion = { enabled = false },
-      panel = { enabled = false },
-    })
-  end,
-})
+-- package({
+--   'zbirenbaum/copilot.lua',
+--   ft = lsp_fts(),
+--   cmd = 'Copilot',
+--   event = 'InsertEnter',
+--   config = function()
+--     require('copilot').setup({
+--       suggestion = { enabled = false },
+--       panel = { enabled = false },
+--     })
+--   end,
+-- })
 
-package({
-  'zbirenbaum/copilot-cmp',
-  after = { 'copilot.lua' },
-  config = function()
-    require('copilot_cmp').setup()
-  end,
-})
+-- package({
+--   'zbirenbaum/copilot-cmp',
+--   after = { 'copilot.lua' },
+--   config = function()
+--     require('copilot_cmp').setup()
+--   end,
+-- })
 
 package({
   'nvimdev/lspsaga.nvim',

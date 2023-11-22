@@ -77,9 +77,9 @@ nmap({
 })
 
 --  coman
-nmap({ 'gcc', cmd('ComComment') })
+nmap({ 'gcc', '<cmd>ComComment<cr>' })
 xmap({ 'gcc', ':ComComment<CR>' })
-nmap({ 'gcj', cmd('ComAnnotation') })
+nmap({ 'gcj', '<cmd>ComAnnotation<Cr>' })
 
 -- Lspsaga floaterminal
 nmap({ '<A-d>', cmd('Lspsaga open_floaterm') })

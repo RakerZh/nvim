@@ -72,11 +72,10 @@ package({
 
 package({
   'nvimdev/indentmini.nvim',
-  event = { 'BufEnter' },
+  event = 'BufEnter */*',
   config = function()
-    require('indentmini').setup({
-      vim.cmd.highlight('IndentLine guifg=#8b9ca9 '),
-    })
+    require('indentmini').setup({})
+    vim.cmd.highlight('IndentLine guifg=#8b9ca9 ')
   end,
   dependencies = { 'nvim-treesitter/nvim-treesitter' },
 })
