@@ -14,7 +14,6 @@ local function lsp_fts(type)
     'zig',
     'python',
   }
-
   fts.frontend = {
     'javascript',
     'javascriptreact',
@@ -82,19 +81,6 @@ package({
   },
 })
 
-package({
-  'hrsh7th/nvim-cmp',
-  event = 'InsertEnter',
-  ft = lsp_fts(),
-  config = conf.nvim_cmp,
-  dependencies = {
-    { 'hrsh7th/cmp-nvim-lsp' },
-    { 'hrsh7th/cmp-path' },
-    { 'hrsh7th/cmp-buffer' },
-    { 'saadparwaiz1/cmp_luasnip' },
-  },
-})
-
 -- package({
 --   'zbirenbaum/copilot.lua',
 --   ft = lsp_fts(),
@@ -132,4 +118,33 @@ package({
   end,
 })
 
+-- package({
+--   'nvimdev/epo.nvim',
+--   event = 'LspAttach',
+--   config = function()
+--     require('epo').setup({})
+--   end,
+-- })
+
+package({
+  'L3MON4D3/LuaSnip',
+  -- follow latest release.
+  version = 'v2.*', -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+  -- install jsregexp (optional!).
+  build = 'make install_jsregexp',
+})
+
+package({
+  'hrsh7th/nvim-cmp',
+  -- event = 'InsertEnter',
+  ft = lsp_fts(),
+  event = 'LspAttach',
+  config = conf.nvim_cmp,
+  dependencies = {
+    { 'hrsh7th/cmp-nvim-lsp' },
+    { 'hrsh7th/cmp-path' },
+    { 'hrsh7th/cmp-buffer' },
+    { 'saadparwaiz1/cmp_luasnip' },
+  },
+})
 -- package({ 'ray-x/go.nvim' })

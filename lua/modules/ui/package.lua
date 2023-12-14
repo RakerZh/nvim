@@ -87,6 +87,6 @@ package({
 -- })
 
 package({
-  'AlexvZyl/nordic.nvim',
+  'RakerZh/nordic.nvim',
   config = conf.nordic,
 })

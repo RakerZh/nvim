@@ -1,5 +1,5 @@
 local keymap = require('core.keymap')
-local nmap, imap, cmap = keymap.nmap, keymap.imap, keymap.cmap
+local nmap, imap, cmap, tmap = keymap.nmap, keymap.imap, keymap.cmap, keymap.tmap
 local silent, noremap = keymap.silent, keymap.noremap
 local expr = keymap.expr
 local opts = keymap.new_opts
@@ -48,7 +48,35 @@ imap({
     end,
     opts(expr),
   },
+  {
+    '<TAB>',
+    function()
+      if vim.fn.pumvisible() == 1 then
+        return '<C-n>'
+      elseif vim.snippet.jumpable(1) then
+        return cmd('lua vim.snippet.jump(1)<cr>')
+      else
+        return '<TAB>'
+      end
+    end,
+    { expr = true },
+  },
+  {
+    '<S-TAB>',
+    function()
+      if vim.fn.pumvisible() == 1 then
+        return '<C-p>'
+      elseif vim.snippet.jumpable(-1) then
+        return '<cmd>lua vim.snippet.jump(-1)<CR>'
+      else
+        return '<S-TAB>'
+      end
+    end,
+    { expr = true },
+  },
 })
+
+tmap({ '<Esc>', [[<C-\><C-n>]] })
 
 -- commandline remap
 cmap({
@@ -59,5 +87,12 @@ cmap({
   { '<C-d>', '<Del>' },
   { '<C-b>', '<BS>' },
 })
+
+vim.keymap.set('i', '<cr>', function()
+  if vim.fn.pumvisible() == 1 then
+    return '<C-y>'
+  end
+  return require('nvim-autopairs').autopairs_cr()
+end, { expr = true, noremap = true })
 
 -- tmap({ '<Esc>', [[<C-\><C-n>]] })

@@ -4,14 +4,6 @@ local nmap, imap, xmap = keymap.nmap, keymap.imap, keymap.xmap
 local silent, noremap, expr, remap = keymap.silent, keymap.noremap, keymap.expr, keymap.remap
 local opts = keymap.new_opts
 local cmd, cu = keymap.cmd, keymap.cu
-local home = os.getenv('HOME')
-require('keymap.config')
-
-imap({
-  -- tab key
-  { '<TAB>', _G.smart_tab, opts(expr, silent, remap) },
-  { '<S-TAB>', _G.smart_shift_tab, opts(expr, silent, remap) },
-})
 
 nmap({
   -- packer
@@ -60,7 +52,6 @@ nmap({
   { '<Leader>fh', cmd('Telescope oldfiles') },
   { '<Leader>fj', cmd('Telescope help_tags') },
   { '<Leader>fg', cmd('Telescope git_commits') },
-  -- { '<Leader>gc', cmd('Telescope dotfiles path' .. home .. '/.dotfiles'),   },
   -- zoxide
   { '<Leader>fq', cmd('Telescope zoxide list') },
   { '<Leader>r', cmd('Rapid') },

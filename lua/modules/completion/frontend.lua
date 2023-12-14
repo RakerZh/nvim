@@ -1,8 +1,5 @@
 local lspconfig = require('lspconfig')
 
--- local capabilities = require('cmp_nvim_lsp').default_capabilities()
--- capabilities.offsetEncoding = { 'utf-16' }
-
 local _attach = require('modules.completion.backend')._attach
 
 lspconfig.jsonls.setup({

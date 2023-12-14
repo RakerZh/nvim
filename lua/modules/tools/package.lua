@@ -14,6 +14,12 @@ package({
 })
 
 package({
+  'windwp/nvim-autopairs',
+  event = 'InsertEnter',
+  opts = {}, -- this is equalent to setup({}) function
+})
+
+package({
   'sindrets/diffview.nvim',
   config = conf.diffview,
   dependencies = { { 'nvim-lua/plenary.nvim' } },

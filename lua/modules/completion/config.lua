@@ -45,6 +45,9 @@ local lspkind_icons = {
 function config.nvim_cmp()
   local cmp = require('cmp')
   local compare = require('cmp.config.compare')
+  -- local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+  -- cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
+
   cmp.setup({
     preselect = cmp.PreselectMode.Item,
     formatting = {
@@ -92,7 +95,6 @@ function config.nvim_cmp()
     },
     sources = {
       { name = 'nvim_lsp', group_index = 2 },
-      -- { name = 'copilot', group_index = 2 },
       { name = 'luasnip', group_index = 2 },
       { name = 'path', group_index = 2 },
       { name = 'buffer', group_index = 2 },
@@ -108,17 +110,6 @@ function config.lua_snip()
   require('luasnip.loaders.from_vscode').lazy_load({
     paths = { './snippets/' },
   })
-end
-
-function config.auto_pairs()
-  require('nvim-autopairs').setup({})
-  local status, cmp = pcall(require, 'cmp')
-  if not status then
-    vim.cmd([[packadd nvim-cmp]])
-    cmp = require('cmp')
-  end
-  local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-  cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = '' } }))
 end
 
 function config.lspsaga()
