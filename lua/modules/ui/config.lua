@@ -35,10 +35,6 @@ function config.nordic()
   vim.cmd('colorscheme nordic')
 end
 
-function config.zephyr()
-  vim.cmd('colorscheme zephyr')
-end
-
 function config.dashboard()
   local db = require('dashboard')
 

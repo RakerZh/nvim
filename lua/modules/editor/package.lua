@@ -1,4 +1,3 @@
-local package = require('core.pack').package
 local conf = require('modules.editor.config')
 
 -- TODO: fzf-lua implemented
@@ -8,7 +7,7 @@ local conf = require('modules.editor.config')
   dependencies = {'kyazdani42/nvim-web-devicons'}
 }]]
 
-package({
+packadd({
   'nvimdev/hlsearch.nvim',
   event = 'BufRead',
   config = function()
@@ -16,7 +15,7 @@ package({
   end,
 })
 
-package({
+packadd({
   'folke/flash.nvim',
   event = 'VeryLazy',
   ---@type Flash.Config
@@ -31,14 +30,14 @@ package({
   },
 })
 
-package({
+packadd({
   'ggandor/leap.nvim',
   config = function()
     require('leap').set_default_keymaps()
   end,
 })
 
-package({
+packadd({
   'nvim-telescope/telescope.nvim',
   cmd = 'Telescope',
   config = conf.telescope,
@@ -52,7 +51,7 @@ package({
   },
 })
 
-package({
+packadd({
   'nvim-treesitter/nvim-treesitter',
   event = 'BufRead',
   run = ':TSUpdate',
@@ -60,12 +59,12 @@ package({
   dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
 })
 
-package({
+packadd({
   'norcalli/nvim-colorizer.lua',
   config = conf.nvim_colorizer,
 })
 
-package({
+packadd({
   'ggandor/leap.nvim',
   config = function()
     require('leap').set_default_keymaps()

@@ -1,4 +1,3 @@
-local package = require('core.pack').package
 local conf = require('modules.completion.config')
 
 local function lsp_fts(type)
@@ -60,14 +59,13 @@ local function diag_config()
   })
 end
 
-package({
+packadd({
   'neovim/nvim-lspconfig',
   ft = lsp_fts(),
   config = function()
     diag_config()
     require('modules.completion.backend')
     require('modules.completion.frontend')
-    exec_filetype({ 'lspconfig', 'DisableInSpec' })
   end,
   dependencies = {
     'ziglang/zig.vim',
@@ -102,10 +100,11 @@ package({
 --   end,
 -- })
 
-package({
+packadd({
   'nvimdev/lspsaga.nvim',
   ft = lsp_fts(),
   cmd = 'Lspsaga term_toggle',
+  after = 'nvim-lspconfig',
   config = function()
     require('lspsaga').setup({
       symbol_in_winbar = {
@@ -126,15 +125,13 @@ package({
 --   end,
 -- })
 
-package({
+packadd({
   'L3MON4D3/LuaSnip',
-  -- follow latest release.
   version = 'v2.*', -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-  -- install jsregexp (optional!).
   build = 'make install_jsregexp',
 })
 
-package({
+packadd({
   'hrsh7th/nvim-cmp',
   -- event = 'InsertEnter',
   ft = lsp_fts(),

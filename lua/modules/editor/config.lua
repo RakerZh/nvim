@@ -35,54 +35,12 @@ end
 
 function config.nvim_colorizer()
   require('colorizer').setup()
-  exec_filetype('ColorizerSetup')
 end
 
 function config.nvim_treesitter()
   vim.opt.foldmethod = 'expr'
   vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
   require('nvim-treesitter.configs').setup({
-    ensure_installed = {
-      'c',
-      'cpp',
-      'rust',
-      'zig',
-      'lua',
-      'go',
-      'python',
-      'proto',
-      'typescript',
-      'javascript',
-      'tsx',
-      'bash',
-      'css',
-      'scss',
-      'diff',
-      'dockerfile',
-      'gomod',
-      'gosum',
-      'gowork',
-      'graphql',
-      'html',
-      'sql',
-      'markdown',
-      'markdown_inline',
-      'json',
-      'jsonc',
-      'java',
-
-      'cmake',
-      'cuda',
-      'dart',
-      'git_config',
-      'git_rebase',
-      'kotlin',
-      'latex',
-      'r',
-      'solidity',
-      'toml',
-      'tsx',
-    },
     indent = {
       enable = true,
     },

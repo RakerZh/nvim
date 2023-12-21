@@ -1,4 +1,3 @@
-local package = require('core.pack').package
 local conf = require('modules.ui.config')
 
 -- package({
@@ -36,19 +35,19 @@ local conf = require('modules.ui.config')
 --   end,
 -- })
 
-package({
+packadd({
   'nvimdev/dashboard-nvim',
   event = 'VimEnter',
   config = conf.dashboard,
 })
 
-package({
+packadd({
   'RakerZh/whiskyline.nvim',
   config = conf.whisky,
   dependencies = { 'nvim-tree/nvim-web-devicons' },
 })
 
-package({
+packadd({
   'nvimdev/flybuf.nvim',
   cmd = 'FlyBuf',
   config = function()
@@ -56,21 +55,21 @@ package({
   end,
 })
 
-package({
+packadd({
   'lewis6991/gitsigns.nvim',
   event = { 'BufRead', 'BufNewFile' },
   config = conf.gitsigns,
 })
 
-package({ 'mechatroner/rainbow_csv', ft = 'csv' })
+packadd({ 'mechatroner/rainbow_csv', ft = 'csv' })
 
-package({
+packadd({
   'folke/todo-comments.nvim',
   dependencies = { { 'nvim-lua/plenary.nvim' } },
   config = conf.todo,
 })
 
-package({
+packadd({
   'nvimdev/indentmini.nvim',
   event = 'BufEnter */*',
   config = function()
@@ -86,7 +85,7 @@ package({
 -- dependencies = { 'nvim-tree/nvim-web-devicons' },
 -- })
 
-package({
+packadd({
   'RakerZh/nordic.nvim',
   config = conf.nordic,
 })

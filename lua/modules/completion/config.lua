@@ -1,9 +1,5 @@
 local config = {}
 
-function config.nvim_lsp()
-  require('modules.completion.lspconfig')
-end
-
 local has_words_before = function()
   if vim.api.nvim_get_option_value('buftype', { buf = 0 }) == 'prompt' then
     return false

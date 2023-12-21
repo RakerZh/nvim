@@ -31,7 +31,7 @@ function cli:get_all_packages()
   p:close()
 
   local lazy_keyword = {
-    'keys',
+    -- 'keys',
     'ft',
     'cmd',
     'event',
@@ -89,7 +89,7 @@ function cli:boot_strap()
     helper.green('🔸 Found lazy.nvim skip download')
     return
   end
-  local cmd = 'git clone htts://github.com/folke/lazy.nvim '
+  local cmd = 'git clone https://github.com/folke/lazy.nvim '
   helper.run_git('lazy.nvim', cmd .. self.lazy_dir, 'Install')
   helper.success('lazy.nvim')
 end
@@ -99,7 +99,6 @@ function cli:installer(type)
 
   local packages = cli:get_all_packages()
   ---@diagnostic disable-next-line: unused-local, param-type-mismatch
-  ---
   local res = {}
   for name, v in pairs(packages or {}) do
     if v.type:find('Remote') then

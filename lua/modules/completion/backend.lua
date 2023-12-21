@@ -1,11 +1,9 @@
 local M = {}
 local lspconfig = require('lspconfig')
 
-M.capabilities = require('cmp_nvim_lsp').default_capabilities()
-
 function M._attach(client, _)
   vim.opt.omnifunc = 'v:lua.vim.lsp.omnifunc'
-  -- client.server_capabilities.semanticTokensProvider = nil
+  client.server_capabilities.semanticTokensProvider = nil
   local orignal = vim.notify
   local mynotify = function(msg, level, opts)
     if msg == 'No code actions available' or msg:find('overly') then
@@ -19,7 +17,6 @@ end
 lspconfig.gopls.setup({
   cmd = { 'gopls', 'serve' },
   on_attach = M._attach,
-  capabilities = M.capabilities,
   init_options = {
     usePlaceholders = true,
     completeUnimported = true,
@@ -36,7 +33,6 @@ lspconfig.gopls.setup({
 
 lspconfig.lua_ls.setup({
   on_attach = M._attach,
-  capabilities = M.capabilities,
   settings = {
     Lua = {
       diagnostics = {
@@ -103,7 +99,6 @@ local servers = {
 for _, server in ipairs(servers) do
   lspconfig[server].setup({
     on_attach = M._attach,
-    capabilities = M.capabilities,
   })
 end
 

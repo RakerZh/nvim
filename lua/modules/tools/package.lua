@@ -1,4 +1,3 @@
-local package = require('core.pack').package
 local conf = require('modules.tools.config')
 
 --[[package{'Shatur/neovim-cmake',
@@ -7,19 +6,19 @@ local conf = require('modules.tools.config')
   -- require dap
 }]]
 
-package({
+packadd({
   'nvimdev/dyninput.nvim',
   ft = { 'c', 'go', 'lua', 'rust', 'cpp' },
   config = conf.dyninput,
 })
 
-package({
+packadd({
   'windwp/nvim-autopairs',
   event = 'InsertEnter',
   opts = {}, -- this is equalent to setup({}) function
 })
 
-package({
+packadd({
   'sindrets/diffview.nvim',
   config = conf.diffview,
   dependencies = { { 'nvim-lua/plenary.nvim' } },
@@ -35,24 +34,24 @@ package({
 --   },
 -- })
 
-package({
+packadd({
   'nvimdev/template.nvim',
   cmd = { 'TemProject', 'Template' },
   config = conf.template_nvim,
 })
 
-package({ 'nvimdev/coman.nvim', event = 'BufRead', config = conf.coman })
+packadd({ 'nvimdev/coman.nvim', event = 'BufRead', config = conf.coman })
 
-package({
+packadd({
   'akinsho/git-conflict.nvim',
   config = true,
 })
 
-package({ 'jghauser/follow-md-links.nvim' })
+packadd({ 'jghauser/follow-md-links.nvim' })
 
 -- package({ 'RakerZh/min-preview.nvim' })
 
-package({
+packadd({
   'nvim-neo-tree/neo-tree.nvim',
   branch = 'v3.x',
   dependencies = {
@@ -63,7 +62,7 @@ package({
   config = conf.neotree,
 })
 
-package({
+packadd({
   'nvimdev/guard.nvim',
   ft = { 'c', 'cpp', 'rust', 'lua', 'go', 'typescript', 'javascrip', 'javascriptreact', 'python' },
   config = conf.guard,
@@ -73,12 +72,12 @@ package({
   cmd = { 'GuardFmt', 'GuardDisable', 'GuardEnable' },
 })
 
-package({
+packadd({
   'ii14/emmylua-nvim',
   ft = 'lua',
 })
 
-package({
+packadd({
   'nvimdev/rapid.nvim',
   cmd = 'Rapid',
   config = function()
@@ -86,7 +85,7 @@ package({
   end,
 })
 
-package({
+packadd({
   'cshuaimin/ssr.nvim',
   module = 'ssr',
   -- Calling setup is optional.
