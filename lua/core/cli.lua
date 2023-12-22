@@ -185,6 +185,57 @@ function cli.modules()
   end
 end
 
+function cli.doc()
+  local packages = cli:get_all_packages()
+  helper.blue(' Generating documents for packages')
+
+  local file_path = 'readme.md'
+  local marker = '## plugins'
+
+  -- Read the entire file
+  local file = io.open(file_path, 'r')
+  if file then
+    local content = file:read('*a')
+    file:close()
+
+    -- Find the position of the marker
+    local start_pos, end_pos = string.find(content, marker, 1, true)
+
+    -- If the marker is found, truncate the content after it
+    if start_pos then
+      content = string.sub(content, 1, start_pos - 1)
+
+      -- Open the file in write mode to overwrite its content
+      file = io.open(file_path, 'w')
+      if file then
+        -- Write the truncated content back to the file
+        file:write(content)
+        file:close()
+        print('Content truncated successfully.')
+      else
+        print('Error opening the file for writing.')
+      end
+
+      -- add plugins info
+      file = io.open(file_path, 'a')
+      if file then
+        -- init ## plugins
+        file:write('## plugins\n')
+        --  add plugin name
+        for name, v in pairs(packages or {}) do
+          helper.blue(' ' .. name)
+          file:write('- [' .. name .. ']' .. '(https://github.com/' .. name .. ')\n')
+        end
+        file:close()
+      end
+    else
+      print('Marker not found.')
+    end
+  else
+    print('Error opening the file for reading.')
+  end
+end
+
 function cli:meta(arg)
   return function(data)
     self[arg](data)
