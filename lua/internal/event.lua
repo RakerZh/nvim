@@ -1,23 +1,20 @@
 local api = vim.api
+local au = api.nvim_create_autocmd
 local my_group = vim.api.nvim_create_augroup('RakerZh', {})
 
-api.nvim_create_autocmd({ 'BufWritePre' }, {
+au({ 'BufWritePre' }, {
   group = my_group,
   pattern = { '/tmp/*', 'COMMIT_EDITMSG', 'MERGE_MSG', '*.tmp', '*.bak' },
-  callback = function()
-    vim.opt_local.undofile = false
-  end,
+  command = 'setlocal noundofile',
 })
 
-api.nvim_create_autocmd('BufRead', {
+au('BufRead', {
   group = my_group,
   pattern = '*.conf',
-  callback = function()
-    api.nvim_buf_set_option(0, 'filetype', 'conf')
-  end,
+  command = 'setlocal filetype=conf',
 })
 
-api.nvim_create_autocmd('TextYankPost', {
+au('TextYankPost', {
   group = my_group,
   pattern = '*',
   callback = function()
@@ -25,7 +22,7 @@ api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-api.nvim_create_autocmd({ 'WinEnter', 'BufEnter', 'InsertLeave' }, {
+au({ 'BufEnter' }, {
   group = my_group,
   pattern = '*',
   callback = function()
@@ -35,7 +32,7 @@ api.nvim_create_autocmd({ 'WinEnter', 'BufEnter', 'InsertLeave' }, {
   end,
 })
 
-api.nvim_create_autocmd({ 'WinLeave', 'BufLeave', 'InsertEnter' }, {
+au({ 'WinLeave', 'BufLeave', 'InsertEnter' }, {
   group = my_group,
   pattern = '*',
   callback = function()
@@ -45,10 +42,8 @@ api.nvim_create_autocmd({ 'WinLeave', 'BufLeave', 'InsertEnter' }, {
   end,
 })
 
--- disable default syntax in these file.
--- when file is larged ,load regex syntax
--- highlight will cause very slow
-api.nvim_create_autocmd('Filetype', {
+-- disable default syntax for large file.
+au('Filetype', {
   group = my_group,
   pattern = '*.c,*.cpp,*.lua,*.go,*.rs,*.py,*.ts,*.tsx',
   callback = function()

@@ -1,5 +1,8 @@
 local M = {}
 local lspconfig = require('lspconfig')
+local vir = require('virtualtypes')
+
+M.capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 function M._attach(client, _)
   vim.opt.omnifunc = 'v:lua.vim.lsp.omnifunc'
@@ -16,7 +19,8 @@ end
 
 lspconfig.gopls.setup({
   cmd = { 'gopls', 'serve' },
-  on_attach = M._attach,
+  on_attach = require('virtualtypes').on_attach,
+  capabilities = M.capabilities,
   init_options = {
     usePlaceholders = true,
     completeUnimported = true,
@@ -32,7 +36,8 @@ lspconfig.gopls.setup({
 })
 
 lspconfig.lua_ls.setup({
-  on_attach = M._attach,
+  on_attach = require('virtualtypes').on_attach,
+  capabilities = M.capabilities,
   settings = {
     Lua = {
       diagnostics = {
@@ -58,7 +63,8 @@ lspconfig.lua_ls.setup({
 })
 
 lspconfig.clangd.setup({
-  on_attach = M._attach,
+  on_attach = require('virtualtypes').on_attach,
+  capabilities = M.capabilities,
   cmd = {
     'clangd',
     '--background-index',
@@ -68,7 +74,8 @@ lspconfig.clangd.setup({
 })
 
 lspconfig.rust_analyzer.setup({
-  on_attach = M._attach,
+  on_attach = require('virtualtypes').on_attach,
+  capabilities = M.capabilities,
   -- settings = {
   --   ['rust-analyzer'] = {
   --     imports = {
@@ -98,7 +105,9 @@ local servers = {
 
 for _, server in ipairs(servers) do
   lspconfig[server].setup({
-    on_attach = M._attach,
+    -- on_attach =  M._attach,
+    on_attach = require('virtualtypes').on_attach,
+    capabilities = M.capabilities,
   })
 end
 

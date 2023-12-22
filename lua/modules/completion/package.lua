@@ -69,6 +69,7 @@ packadd({
   end,
   dependencies = {
     'ziglang/zig.vim',
+    'jubnzv/virtual-types.nvim',
     -- 'SmiteshP/nvim-navbuddy',
     -- dependencies = {
     --   'SmiteshP/nvim-navic',
@@ -102,13 +103,13 @@ packadd({
 
 packadd({
   'nvimdev/lspsaga.nvim',
+  event = 'LspAttach',
   ft = lsp_fts(),
-  cmd = 'Lspsaga term_toggle',
-  after = 'nvim-lspconfig',
   config = function()
     require('lspsaga').setup({
       symbol_in_winbar = {
         hide_keyword = true,
+        folder_level = 0,
       },
       outline = {
         layout = 'float',
@@ -133,7 +134,6 @@ packadd({
 
 packadd({
   'hrsh7th/nvim-cmp',
-  -- event = 'InsertEnter',
   ft = lsp_fts(),
   event = 'LspAttach',
   config = conf.nvim_cmp,

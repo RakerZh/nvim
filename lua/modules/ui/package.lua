@@ -74,7 +74,6 @@ packadd({
   event = 'BufEnter */*',
   config = function()
     require('indentmini').setup({})
-    vim.cmd.highlight('IndentLine guifg=#8b9ca9 ')
   end,
   dependencies = { 'nvim-treesitter/nvim-treesitter' },
 })
@@ -89,3 +88,10 @@ packadd({
   'RakerZh/nordic.nvim',
   config = conf.nordic,
 })
+
+-- packadd({
+--   'nvimdev/nightsky.vim',
+--   config = function()
+--     vim.cmd('colorscheme nightsky')
+--   end,
+-- })

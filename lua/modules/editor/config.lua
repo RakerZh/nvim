@@ -33,9 +33,9 @@ function config.telescope()
   require('telescope').load_extension('zoxide')
 end
 
-function config.nvim_colorizer()
-  require('colorizer').setup()
-end
+-- function config.nvim_colorizer()
+--   require('colorizer').setup()
+-- end
 
 function config.nvim_treesitter()
   vim.opt.foldmethod = 'expr'

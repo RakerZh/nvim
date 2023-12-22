@@ -1,7 +1,5 @@
 local conf = require('modules.editor.config')
 
--- TODO: fzf-lua implemented
---
 --[[package{'ibhagwan/fzf-lua',
   config = conf.fzf_lua,
   dependencies = {'kyazdani42/nvim-web-devicons'}
@@ -31,13 +29,6 @@ packadd({
 })
 
 packadd({
-  'ggandor/leap.nvim',
-  config = function()
-    require('leap').set_default_keymaps()
-  end,
-})
-
-packadd({
   'nvim-telescope/telescope.nvim',
   cmd = 'Telescope',
   config = conf.telescope,
@@ -56,17 +47,31 @@ packadd({
   event = 'BufRead',
   run = ':TSUpdate',
   config = conf.nvim_treesitter,
-  dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
+})
+
+packadd({
+  'nvim-treesitter/nvim-treesitter-textobjects',
+  ft = { 'c', 'rust', 'go', 'lua' },
+  config = function()
+    vim.defer_fn(function()
+      require('nvim-treesitter.configs').setup({
+        textobjects = {
+          select = {
+            enable = true,
+            keymaps = {
+              ['af'] = '@function.outer',
+              ['if'] = '@function.inner',
+              ['ac'] = '@class.outer',
+              ['ic'] = { query = '@class.inner' },
+            },
+          },
+        },
+      })
+    end, 0)
+  end,
 })
 
 packadd({
   'norcalli/nvim-colorizer.lua',
   config = conf.nvim_colorizer,
-})
-
-packadd({
-  'ggandor/leap.nvim',
-  config = function()
-    require('leap').set_default_keymaps()
-  end,
 })

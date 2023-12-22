@@ -64,7 +64,7 @@ packadd({
 
 packadd({
   'nvimdev/guard.nvim',
-  ft = { 'c', 'cpp', 'rust', 'lua', 'go', 'typescript', 'javascrip', 'javascriptreact', 'python' },
+  ft = { 'c', 'cpp', 'rust', 'lua', 'go', 'typescript', 'javascrip', 'javascriptreact' },
   config = conf.guard,
   dependencies = {
     'nvimdev/guard-collection',
@@ -88,7 +88,6 @@ packadd({
 packadd({
   'cshuaimin/ssr.nvim',
   module = 'ssr',
-  -- Calling setup is optional.
   config = function()
     require('ssr').setup({
       border = 'rounded',

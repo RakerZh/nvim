@@ -108,26 +108,4 @@ function config.lua_snip()
   })
 end
 
-function config.lspsaga()
-  require('lspsaga').setup({
-    ui = {
-      border = 'rounded',
-      colors = {
-        normal_bg = '#232835',
-        title_bg = '#5b97db',
-        red = '#e95678',
-        magenta = '#b33076',
-        orange = '#FF8700',
-        yellow = '#f7bb3b',
-        green = '#afd700',
-        cyan = '#36d0e0',
-        blue = '#61afef',
-        purple = '#CBA6F7',
-        white = '#d1d4cf',
-        black = '#1c1c19',
-      },
-    },
-  })
-end
-
 return config

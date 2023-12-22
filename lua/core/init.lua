@@ -14,8 +14,6 @@ vim.g.loaded_logiPat = 1
 vim.g.loaded_rrhelper = 1
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-vim.g.loaded_netrwSettings = 1
-vim.g.loaded_netrwFileHandlers = 1
 
 vim.g.mapleader = ' '
 
@@ -40,7 +38,6 @@ vim.g.markdown_fenced_languages = {
 vim.api.nvim_set_keymap('n', ' ', '', { noremap = true })
 vim.api.nvim_set_keymap('x', ' ', '', { noremap = true })
 
-vim.opt.termguicolors = true
 require('core.pack'):boot_strap()
 require('core.options')
 require('keymap')

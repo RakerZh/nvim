@@ -13,18 +13,10 @@ function pack:load_modules_packages()
     return
   end
 
-  local disable_modules = {}
-
-  if fn.exists('g:disable_modules') == 1 then
-    disable_modules = vim.split(vim.g.disable_modules, ',', { trimempty = true })
-  end
-
   vim.iter(list):map(function(f)
     local _, pos = f:find(modules_dir)
     f = f:sub(pos - 6, #f - 4)
-    if not vim.tbl_contains(disable_modules, f) then
-      require(f)
-    end
+    require(f)
   end)
 end
 
@@ -44,7 +36,7 @@ function pack:boot_strap()
   local opts = {
     ---@diagnostic disable-next-line: param-type-mismatch
     lockfile = vim.fs.joinpath(self.data_path, 'lazy-lock.json'),
-    dev = { path = '~/workspace' },
+    dev = { path = '~/workconfig' },
   }
   self:load_modules_packages()
   lazy.setup(self.repos, opts)
