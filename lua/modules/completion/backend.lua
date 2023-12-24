@@ -1,6 +1,5 @@
 local M = {}
 local lspconfig = require('lspconfig')
-local vir = require('virtualtypes')
 
 M.capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -19,7 +18,7 @@ end
 
 lspconfig.gopls.setup({
   cmd = { 'gopls', 'serve' },
-  on_attach = require('virtualtypes').on_attach,
+  on_attach = M._attach,
   capabilities = M.capabilities,
   init_options = {
     usePlaceholders = true,
@@ -36,7 +35,7 @@ lspconfig.gopls.setup({
 })
 
 lspconfig.lua_ls.setup({
-  on_attach = require('virtualtypes').on_attach,
+  on_attach = M._attach,
   capabilities = M.capabilities,
   settings = {
     Lua = {
@@ -63,7 +62,7 @@ lspconfig.lua_ls.setup({
 })
 
 lspconfig.clangd.setup({
-  on_attach = require('virtualtypes').on_attach,
+  on_attach = M._attach,
   capabilities = M.capabilities,
   cmd = {
     'clangd',
@@ -74,26 +73,26 @@ lspconfig.clangd.setup({
 })
 
 lspconfig.rust_analyzer.setup({
-  on_attach = require('virtualtypes').on_attach,
+  on_attach = M._attach,
   capabilities = M.capabilities,
-  -- settings = {
-  --   ['rust-analyzer'] = {
-  --     imports = {
-  --       granularity = {
-  --         group = 'module',
-  --       },
-  --       prefix = 'self',
-  --     },
-  --     cargo = {
-  --       buildScripts = {
-  --         enable = true,
-  --       },
-  --     },
-  --     procMacro = {
-  --       enable = false,
-  --     },
-  --   },
-  -- },
+  settings = {
+    ['rust-analyzer'] = {
+      imports = {
+        granularity = {
+          group = 'module',
+        },
+        prefix = 'self',
+      },
+      cargo = {
+        buildScripts = {
+          enable = true,
+        },
+      },
+      procMacro = {
+        enable = false,
+      },
+    },
+  },
 })
 
 local servers = {
@@ -105,8 +104,7 @@ local servers = {
 
 for _, server in ipairs(servers) do
   lspconfig[server].setup({
-    -- on_attach =  M._attach,
-    on_attach = require('virtualtypes').on_attach,
+    on_attach = M._attach,
     capabilities = M.capabilities,
   })
 end

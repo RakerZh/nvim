@@ -69,7 +69,6 @@ packadd({
   end,
   dependencies = {
     'ziglang/zig.vim',
-    'jubnzv/virtual-types.nvim',
     -- 'SmiteshP/nvim-navbuddy',
     -- dependencies = {
     --   'SmiteshP/nvim-navic',
