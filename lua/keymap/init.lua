@@ -80,5 +80,20 @@ vim.keymap.set({ 'n' }, '<Leader>g', cmd('Lspsaga term_toggle lazygit'))
 vim.keymap.set({ 'n', 'x' }, '<leader>sr', function()
   require('ssr').open()
 end)
+-- For using enter as completion, may conflict with some autopair plugin
+vim.keymap.set('i', '<cr>', function()
+  if vim.fn.pumvisible() == 1 then
+    return '<C-y>'
+  end
+  return '<cr>'
+end, { expr = true, noremap = true })
+
+-- nvim-autopair compatibility
+vim.keymap.set('i', '<cr>', function()
+  if vim.fn.pumvisible() == 1 then
+    return '<C-y>'
+  end
+  return require('nvim-autopairs').autopairs_cr()
+end, { expr = true, noremap = true })
 
 xmap({ 'ga', cmd('Lspsaga code_action') })

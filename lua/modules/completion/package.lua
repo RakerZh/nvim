@@ -117,12 +117,15 @@ packadd({
   end,
 })
 
--- package({
+-- packadd({
 --   'nvimdev/epo.nvim',
 --   event = 'LspAttach',
---   config = function()
---     require('epo').setup({})
---   end,
+--   opts = {
+--     signature = false,
+--     kind_format = function(k)
+--       return k:lower()
+--     end,
+--   },
 -- })
 
 packadd({
