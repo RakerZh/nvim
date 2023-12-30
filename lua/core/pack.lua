@@ -36,7 +36,7 @@ function pack:boot_strap()
   local opts = {
     ---@diagnostic disable-next-line: param-type-mismatch
     lockfile = vim.fs.joinpath(self.data_path, 'lazy-lock.json'),
-    dev = { path = '~/workconfig' },
+    dev = { path = '~/space/nvim_plugin' },
   }
   self:load_modules_packages()
   lazy.setup(self.repos, opts)

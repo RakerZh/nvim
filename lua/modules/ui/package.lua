@@ -87,6 +87,7 @@ packadd({
 packadd({
   'RakerZh/nordic.nvim',
   config = conf.nordic,
+  dev = true,
 })
 
 -- packadd({

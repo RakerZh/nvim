@@ -1,5 +1,6 @@
 local opt = vim.opt
 local api = vim.api
+local uv = vim.uv
 
 opt.hidden = true
 opt.magic = true
@@ -62,7 +63,7 @@ opt.signcolumn = 'yes'
 
 opt.spelloptions = 'camel'
 opt.textwidth = 100
-opt.colorcolumn = '100'
+-- opt.colorcolumn = '100'
 
 local function get_signs()
   local buf = vim.api.nvim_get_current_buf()
@@ -91,7 +92,7 @@ end
 
 opt.stc = [[%!v:lua.show_stc()]]
 
-if vim.loop.os_uname().sysname == 'Darwin' then
+if uv.os_uname().sysname == 'Darwin' then
   vim.g.clipboard = {
     name = 'macOS-clipboard',
     copy = {

@@ -39,6 +39,7 @@ packadd({
     { 'jvgrootveld/telescope-zoxide' },
     {
       'RakerZh/telescope-cheat.nvim',
+      dev = true,
       dependencies = {
         'kkharji/sqlite.lua',
       },
