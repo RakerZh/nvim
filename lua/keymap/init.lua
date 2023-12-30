@@ -44,7 +44,7 @@ nmap({
   -- Telescope
   { '<Leader>tb', cmd('Telescope buffers') },
   { '<Leader>fa', cmd('Telescope live_grep') },
-  { '<Leader>fb', cmd('Telescope file_browser') },
+  -- { '<Leader>fb', cmd('Telescope file_browser') },
   { '<Leader>ff', cmd('Telescope find_files') },
   { '<Leader>fs', cmd('Telescope git_status') },
   { '<Leader>fk', cmd('Telescope keymaps') },

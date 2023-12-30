@@ -69,14 +69,14 @@ packadd({
   config = conf.todo,
 })
 
-packadd({
-  'nvimdev/indentmini.nvim',
-  event = 'BufEnter */*',
-  config = function()
-    require('indentmini').setup({})
-  end,
-  dependencies = { 'nvim-treesitter/nvim-treesitter' },
-})
+-- packadd({
+--   'nvimdev/indentmini.nvim',
+--   event = 'BufEnter */*',
+--   config = function()
+--     require('indentmini').setup({})
+--   end,
+--   dependencies = { 'nvim-treesitter/nvim-treesitter' },
+-- })
 
 -- package({
 -- 'glepnir/galaxyline.nvim',

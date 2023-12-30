@@ -6,9 +6,13 @@ function config.telescope()
       file_ignore_patterns = { 'build' },
       prompt_prefix = '  ',
       selection_caret = ' ',
+      layout_strategy = 'horizontal',
       layout_config = {
-        horizontal = { prompt_position = 'top', results_width = 0.6 },
-        vertical = { mirror = false },
+        prompt_position = 'top',
+        height = 24,
+        width = 0.8,
+        -- horizontal = { prompt_position = 'top', results_width = 0.6 },
+        -- vertical = { mirror = false },
       },
       sorting_strategy = 'ascending',
       file_previewer = require('telescope.previewers').vim_buffer_cat.new,
@@ -20,22 +24,20 @@ function config.telescope()
         override_generic_sorter = false,
         override_file_sorter = true,
       },
-      ['ui-select'] = {
-        require('telescope.themes').get_dropdown({}),
+      zoxide = {
+        prompt_title = '>_ ZOXIDE',
       },
     },
   })
-  require('telescope').load_extension('fzy_native')
   require('telescope').load_extension('dotfiles')
-  require('telescope').load_extension('gosource')
-  require('telescope').load_extension('file_browser')
-  require('telescope').load_extension('ui-select')
-  require('telescope').load_extension('zoxide')
+  require('telescope').load_extension('cheat')
+  -- require('telescope').load_extension('gosource')
+  -- require('telescope').load_extension('file_browser')
 end
 
--- function config.nvim_colorizer()
---   require('colorizer').setup()
--- end
+function config.nvim_colorizer()
+  require('colorizer').setup()
+end
 
 function config.nvim_treesitter()
   vim.opt.foldmethod = 'expr'
