@@ -38,7 +38,7 @@ packadd({
     { 'nvim-telescope/telescope-fzy-native.nvim' },
     { 'jvgrootveld/telescope-zoxide' },
     {
-      'nvim-telescope/telescope-cheat.nvim',
+      'RakerZh/telescope-cheat.nvim',
       dependencies = {
         'kkharji/sqlite.lua',
       },
