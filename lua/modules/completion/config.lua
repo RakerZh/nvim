@@ -41,8 +41,8 @@ local lspkind_icons = {
 function config.nvim_cmp()
   local cmp = require('cmp')
   local compare = require('cmp.config.compare')
-  -- local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-  -- cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
+  local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+  cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 
   cmp.setup({
     preselect = cmp.PreselectMode.Item,
