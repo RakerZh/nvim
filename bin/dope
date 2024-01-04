@@ -60,7 +60,7 @@ if argument == 'help' then
     { '\tmodules', '  Show all modules' },
     { '\tdmodule', '  dynamic disable modules for debug' },
     { '\thelp   ', '  show the usage of bot' },
-    { '\tdoc', '  write your plugins config and list' },
+    { '\tdoc    ', '  write your plugins config and list' },
   }
   for _, msg in pairs(usage) do
     helper.write('blue')(msg[1])
