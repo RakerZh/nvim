@@ -76,8 +76,4 @@ packadd({
   end,
 })
 
-packadd({
-  'norcalli/nvim-colorizer.lua',
-  event = 'InsertEnter',
-  config = conf.nvim_colorizer,
-})
+

@@ -7,6 +7,8 @@ local function lsp_fts(type)
     'go',
     'lua',
     'sh',
+    'zsh',
+    'bash',
     'rust',
     'c',
     'cpp',

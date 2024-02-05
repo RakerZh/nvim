@@ -84,6 +84,11 @@ packadd({
     require('rapid').setup()
   end,
 })
+packadd({
+  'nvimdev/dbsession.nvim',
+  cmd = { 'SessionSave', 'SessionLoad', 'SessionDelete' },
+  opts = true,
+})
 
 packadd({
   'cshuaimin/ssr.nvim',
