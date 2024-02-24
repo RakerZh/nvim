@@ -16,14 +16,14 @@ nmap({
   -- Lspsaga
   { '[e', cmd('Lspsaga diagnostic_jump_next') },
   { ']e', cmd('Lspsaga diagnostic_jump_prev') },
-  { '[c', cmd('Lspsaga show_cursor_diagnostics') },
+  { '[c', cmd('lspsaga show_cursor_diagnostics') },
   { 'K', cmd('Lspsaga hover_doc') },
   { 'ga', cmd('Lspsaga code_action') },
 
   { 'gd', cmd('Lspsaga peek_definition') },
   { 'gs', cmd('Lspsaga signature_help') },
   { 'gr', cmd('Lspsaga rename') },
-  { 'gh', cmd('Lspsaga lsp_finder') },
+  { 'gh', cmd('Lspsaga finder') },
   { 'gk', cmd('!Open -a Safari https://github.com/RakerZh') },
   --  { '<Leader>g', cmd('Lspsaga term_toggle lazygit') },
 

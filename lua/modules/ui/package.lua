@@ -36,6 +36,11 @@ local conf = require('modules.ui.config')
 -- })
 
 packadd({
+  'norcalli/nvim-colorizer.lua',
+  event = 'VimEnter',
+})
+
+packadd({
   'nvimdev/dashboard-nvim',
   event = 'VimEnter',
   config = conf.dashboard,
