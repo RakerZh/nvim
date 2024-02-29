@@ -23,8 +23,8 @@ nmap({
   { 'gd', cmd('Lspsaga peek_definition') },
   { 'gs', cmd('Lspsaga signature_help') },
   { 'gr', cmd('Lspsaga rename') },
-  { 'gh', cmd('Lspsaga finder') },
-  { 'gk', cmd('!Open -a Safari https://github.com/RakerZh') },
+  { 'gf', cmd('Lspsaga finder') },
+  { 'gh', cmd('!Open -a Safari https://github.com/RakerZh') },
   --  { '<Leader>g', cmd('Lspsaga term_toggle lazygit') },
 
   { '<Leader>o', cmd('Lspsaga outline') },
