@@ -110,3 +110,5 @@ packadd({
     })
   end,
 })
+
+packadd({ 'gennaro-tedesco/nvim-peekup' })

@@ -91,5 +91,10 @@
     "prefix": "useStore",
     "body": ["const store = useStore();"],
     "description": "Creates Redux useStore hook"
+  },
+  "Create useAtomValue hook": {
+    "prefix": "useAtomValue",
+    "body": ["const ${1:value} = useAtomValue();"],
+    "description": "Use Atom Value hook"
   }
 }
