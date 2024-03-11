@@ -19,8 +19,8 @@ nmap({
   { '[c', cmd('lspsaga show_cursor_diagnostics') },
   { 'K', cmd('Lspsaga hover_doc') },
   { 'ga', cmd('Lspsaga code_action') },
-
   { 'gd', cmd('Lspsaga peek_definition') },
+  { 'gp', cmd('Lspsaga goto_definition') },
   { 'gs', cmd('Lspsaga signature_help') },
   { 'gr', cmd('Lspsaga rename') },
   { 'gf', cmd('Lspsaga finder') },
