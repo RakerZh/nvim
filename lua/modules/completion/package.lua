@@ -105,12 +105,14 @@ packadd({
 packadd({
   'nvimdev/lspsaga.nvim',
   event = 'LspAttach',
-  ft = lsp_fts(),
   config = function()
     require('lspsaga').setup({
       symbol_in_winbar = {
         hide_keyword = true,
         folder_level = 0,
+      },
+      lightbulb = {
+        sign = false,
       },
       outline = {
         layout = 'float',

@@ -49,22 +49,32 @@ nmap({
   { '<Leader>fs', cmd('Telescope git_status') },
   { '<Leader>fk', cmd('Telescope keymaps') },
   { '<Leader>fw', cmd('Telescope grep_string') },
-  { '<Leader>fh', cmd('Telescope oldfiles') },
-  { '<Leader>fj', cmd('Telescope help_tags') },
+  { '<Leader>fo', cmd('Telescope oldfiles') },
+  { '<Leader>ft', cmd('Telescope help_tags') },
   { '<Leader>fg', cmd('Telescope git_commits') },
   -- zoxide
   { '<Leader>fq', cmd('Telescope zoxide list') },
   { '<Leader>r', cmd('Rapid') },
 
+  -- TrailBlazer
+  { 'mn', cmd('TrailBlazerNewTrailMark') },
+  { '<Leader>k', cmd('TrailBlazerPeekMovePreviousUp') },
+  { '<Leader>j', cmd('TrailBlazerPeekMoveNextDown') },
+  { '<Leader>md', cmd('TrailBlazerDeleteAllTrailMarks') },
+  { '<Leader>ml', cmd('TrailBlazerToggleTrailMarkList') },
+  { '<Leader>ms', cmd('TrailBlazerSaveSession') },
+  { '<Leader>mls', cmd('TrailBlazerLoadSession') },
+  { '<Leader>mds', cmd('TrailBlazerDeleteSession') },
+
   { '<Leader>b', cmd('FlyBuf') },
   {
-    '<Leader>t',
+    '<Leader>tm',
     function()
       return ':Template '
     end,
     opts(expr),
   },
-  { '<Leader>fn', cmd('Navbuddy') },
+  -- { '<Leader>fn', cmd('Navbuddy') },
 })
 
 --  coman

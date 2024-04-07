@@ -28,6 +28,16 @@ packadd({
   },
 })
 
+-- Using packer
+packadd({
+  'LeonHeidelbach/trailblazer.nvim',
+  config = function()
+    require('trailblazer').setup({
+      -- your custom config goes here
+    })
+  end,
+})
+
 packadd({
   'nvim-telescope/telescope.nvim',
   cmd = 'Telescope',
@@ -36,6 +46,7 @@ packadd({
     { 'nvim-lua/popup.nvim' },
     { 'nvim-lua/plenary.nvim' },
     { 'nvim-telescope/telescope-fzy-native.nvim' },
+    { 'nvim-treesitter/nvim-treesitter', tag = 'v0.9.2' },
     { 'jvgrootveld/telescope-zoxide' },
     {
       'RakerZh/telescope-cheat.nvim',
