@@ -7,34 +7,6 @@ local conf = require('modules.ui.config')
 --   dependencies = 'nvim-tree/nvim-web-devicons',
 -- })
 
--- package({
---   'catppuccin/nvim',
---   name = 'catppuccin',
---   config = function()
---     require('catppuccin').setup({
---       flavour = 'macchiato',
---       color_overrides = {
---         macchiato = {
---           mantle = '#222529',
---         },
---       },
---       integration = {
---         neotree = true,
---         lspsaga = true,
---         Special = true,
---         noice = true,
---       },
---       transparent_background = false,
---       custom_highlights = function()
---         return {
---           TelescopePromptTitle = { fg = '#f5f5f5', bg = '#e06c75', bold = true },
---         }
---       end,
---     })
---     vim.cmd('colorscheme catppuccin')
---   end,
--- })
-
 packadd({
   'norcalli/nvim-colorizer.lua',
   event = 'VimEnter',
