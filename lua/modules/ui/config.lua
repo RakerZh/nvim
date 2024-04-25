@@ -39,10 +39,24 @@ function config.dashboard()
   -- vim.cmd('highlight DashboardHeader guifg=#b0465d')
   db.setup({
     theme = 'hyper',
+    -- preview = {
+    -- },
+
     config = {
+      preview = {},
       project = {
         enable = true,
       },
+      -- header = {
+      --   '',
+      --   '  █████╗ ███████╗ █████╗ ██╗  ██╗██╗   ██╗     ██╗███╗   ██╗██╗   ██╗██╗  ██╗ ',
+      --   ' ██╔══██╗██╔════╝██╔══██╗██║  ██║██║   ██║     ██║████╗  ██║██║   ██║╚██╗██╔╝ ',
+      --   ' ███████║███████╗███████║███████║██║   ██║     ██║██╔██╗ ██║██║   ██║ ╚███╔╝ ',
+      --   ' ██╔══██║╚════██║██╔══██║██╔══██║██║   ██║     ██║██║╚██╗██║██║   ██║ ██╔██╗ ',
+      --   ' ██║  ██║███████║██║  ██║██║  ██║██║   ███████╗██║██║ ╚████║╚██████╔╝██╔╝ ██╗ ',
+      --   ' ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝   ╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝ ',
+      --   '',
+      -- },
       shortcut = {
         {
           desc = '  Directories ',
@@ -57,13 +71,6 @@ function config.dashboard()
         enable = true,
       },
     },
-    -- preview = {
-    -- command = 'bat --style=plain', -- preview command
-    --   command = 'catt', -- preview command
-    --   file_path = '~/.config/nvim/static/taoism', -- preview file path
-    --   file_height = 22, -- preview file height
-    --   file_width = 58, -- preview file width
-    -- },
   })
 end
 
