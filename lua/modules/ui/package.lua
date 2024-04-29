@@ -7,10 +7,10 @@ local conf = require('modules.ui.config')
 --   dependencies = 'nvim-tree/nvim-web-devicons',
 -- })
 
-packadd({
-  'norcalli/nvim-colorizer.lua',
-  event = 'VimEnter',
-})
+-- packadd({
+--   'norcalli/nvim-colorizer.lua',
+--   event = 'VimEnter',
+-- })
 
 packadd({
   'nvimdev/dashboard-nvim',
