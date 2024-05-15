@@ -141,7 +141,7 @@ packadd({
 packadd({
   'hrsh7th/nvim-cmp',
   ft = lsp_fts(),
-  event = 'LspAttach',
+  event = 'InsertEnter',
   config = conf.nvim_cmp,
   dependencies = {
     { 'hrsh7th/cmp-nvim-lsp' },

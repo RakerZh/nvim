@@ -4,6 +4,7 @@ local silent, noremap = keymap.silent, keymap.noremap
 local expr = keymap.expr
 local opts = keymap.new_opts
 local cmd = keymap.cmd
+local ls = require('modules.completion.luasnip')
 
 -- noremal remap
 nmap({
@@ -51,10 +52,10 @@ imap({
   {
     '<TAB>',
     function()
-      if vim.fn.pumvisible() == 1 then
-        return '<C-n>'
-      elseif vim.snippet.jumpable(1) then
-        return cmd('lua vim.snippet.jump(1)<cr>')
+      -- if vim.fn.pumvisible() == 1 then
+      -- return '<C-n>'
+      if ls.locally_jumpable(1) then
+        return ls.jump(1)
       else
         return '<TAB>'
       end
@@ -64,10 +65,10 @@ imap({
   {
     '<S-TAB>',
     function()
-      if vim.fn.pumvisible() == 1 then
-        return '<C-p>'
-      elseif vim.snippet.jumpable(-1) then
-        return '<cmd>lua vim.snippet.jump(-1)<CR>'
+      -- if vim.fn.pumvisible() == 1 then
+      -- return '<C-p>'
+      if ls.locally_jumpable(-1) then
+        return ls.jump(-1)
       else
         return '<S-TAB>'
       end

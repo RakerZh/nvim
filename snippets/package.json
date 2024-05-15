@@ -20,6 +20,10 @@
       {
         "language": "zig",
         "path": "./zig.json"
+      },
+      {
+        "language":"markdown",
+        "path": "./markdown.json"
       }
     ]
   }
