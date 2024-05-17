@@ -65,6 +65,15 @@ lspconfig.lua_ls.setup({
   },
 })
 
+lspconfig.marksman.setup({
+  on_attach = M._attach,
+  capabilities = M.capabilities,
+  cmd = {
+    'marksman',
+    'server',
+  },
+})
+
 lspconfig.clangd.setup({
   on_attach = M._attach,
   capabilities = M.capabilities,
