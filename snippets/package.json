@@ -24,6 +24,10 @@
       {
         "language":"markdown",
         "path": "./markdown.json"
+      },
+      {
+        "language":"rustdoc",
+        "path": "./rustdoc.json"
       }
     ]
   }
