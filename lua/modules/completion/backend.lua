@@ -20,6 +20,24 @@ function M._attach(client, _)
   vim.notify = mynotify
 end
 
+local client = vim.lsp.start_client({
+  name = 'educationlsp',
+  cmd = { '/Users/rakerzhang/space/educationlsp/main' },
+  on_attach = M._attach,
+})
+
+if not client then
+  vim.notify('client not in connection')
+  return
+end
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'markdown',
+  callback = function()
+    vim.lsp.buf_attach_client(0, client)
+  end,
+})
+
 lspconfig.gopls.setup({
   cmd = { 'gopls', 'serve' },
   on_attach = M._attach,
@@ -65,14 +83,14 @@ lspconfig.lua_ls.setup({
   },
 })
 
-lspconfig.marksman.setup({
-  on_attach = M._attach,
-  capabilities = M.capabilities,
-  cmd = {
-    'marksman',
-    'server',
-  },
-})
+-- lspconfig.marksman.setup({
+--   on_attach = M._attach,
+--   capabilities = M.capabilities,
+--   cmd = {
+--     'marksman',
+--     'server',
+--   },
+-- })
 
 lspconfig.clangd.setup({
   on_attach = M._attach,
