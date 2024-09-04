@@ -22,6 +22,7 @@ local function lsp_fts(type)
     'typescript',
     'typescriptreact',
     'json',
+    'vue',
   }
   if not type then
     return vim.list_extend(fts.backend, fts.frontend)
@@ -137,6 +138,10 @@ packadd({
   'L3MON4D3/LuaSnip',
   version = 'v2.*', -- Replace <CurrentMajor> by the latest released major (first number of latest release)
   build = 'make install_jsregexp',
+})
+
+packadd({
+  'norcalli/nvim-colorizer.lua',
 })
 
 packadd({
