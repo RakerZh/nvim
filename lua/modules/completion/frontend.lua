@@ -7,7 +7,7 @@ lspconfig.jsonls.setup({
   on_attach = _attach,
 })
 
-lspconfig.tsserver.setup({
+lspconfig.ts_ls.setup({
   filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
   on_attach = _attach,
   capabilities = capabilities,

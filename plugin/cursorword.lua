@@ -15,45 +15,44 @@ local function disable_cursorword()
   end
 end
 
-local function matchadd()
-  local bufname = api.nvim_buf_get_name(0)
-  if vim.bo.buftype == 'prompt' or #bufname == 0 then
-    return
-  end
+-- local function matchadd()
+--   local bufname = api.nvim_buf_get_name(0)
+--   if vim.bo.buftype == 'prompt' or #bufname == 0 then
+--     return
+--   end
 
-  if api.nvim_get_mode().mode == 'i' then
-    return
-  end
+--   if api.nvim_get_mode().mode == 'i' then
+--     return
+--   end
 
-  local column = api.nvim_win_get_cursor(0)[2]
-  local line = api.nvim_get_current_line()
-  local cursorword = fn.matchstr(line:sub(1, column + 1), [[\k*$]])
-    .. fn.matchstr(line:sub(column + 1), [[^\k*]]):sub(2)
+--   local column = api.nvim_win_get_cursor(0)[2]
+--   local line = api.nvim_get_current_line()
+--   local cursorword = fn.matchstr(line:sub(1, column + 1), [[\k*$]])
+--     .. fn.matchstr(line:sub(column + 1), [[^\k*]]):sub(2)
 
-  if cursorword == vim.w.cursorword then
-    return
-  end
-  vim.w.cursorword = cursorword
-  if vim.w.cursorword_match == 1 then
-    vim.call('matchdelete', vim.w.cursorword_id)
-  end
-  vim.w.cursorword_match = 0
-  if
-    cursorword == ''
-    or #cursorword > 100
-    or #cursorword < 3
-    or string.find(cursorword, '[\192-\255]+') ~= nil
-  then
-    return
-  end
-  local pattern = [[\<]] .. cursorword .. [[\>]]
-  vim.w.cursorword_id = fn.matchadd('CursorWord', pattern, -1)
-  vim.w.cursorword_match = 1
-end
+--   if cursorword == vim.w.cursorword then
+--     return
+--   end
+--   vim.w.cursorword = cursorword
+--   if vim.w.cursorword_match == 1 then
+--     vim.call('matchdelete', vim.w.cursorword_id)
+--   end
+--   vim.w.cursorword_match = 0
+--   if
+--     cursorword == ''
+--     or #cursorword > 100
+--     or #cursorword < 3
+--     or string.find(cursorword, '[\192-\255]+') ~= nil
+--   then
+--     return
+--   end
+--   local pattern = [[\<]] .. cursorword .. [[\>]]
+--   vim.w.cursorword_id = fn.matchadd('CursorWord', pattern, -1)
+--   vim.w.cursorword_match = 1
+-- end
 
 local function cursor_moved()
   if api.nvim_get_mode().mode == 'n' or vim.bo.filetype ~= 'help' then
-    matchadd()
   end
 end
 
