@@ -81,7 +81,14 @@ function config.guard()
   ft('rust'):fmt('rustfmt')
   ft('typescript', 'javascript', 'typescriptreact', 'javascriptreact'):fmt('prettier')
 
-  require('guard').setup()
+  vim.api.nvim_create_autocmd('User', {
+    pattern = 'GuardFmt',
+    callback = function(args)
+      if args.data.status == 'done' then
+        vim.diagnostic.show()
+      end
+    end,
+  })
 end
 
 function config.noice()
