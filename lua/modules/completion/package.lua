@@ -48,19 +48,7 @@ local function diag_config()
     virtual_text = true,
   })
 
-  vim.lsp.set_log_level('OFF')
-
-  --disable diagnostic in neovim test file *_spec.lua
-  vim.api.nvim_create_autocmd('FileType', {
-    group = vim.api.nvim_create_augroup('DisableInSpec', { clear = true }),
-    pattern = 'lua',
-    callback = function(opt)
-      local fname = vim.api.nvim_buf_get_name(opt.buf)
-      if fname:find('%w_spec%.lua') then
-        vim.diagnostic.disable(opt.buf)
-      end
-    end,
-  })
+  vim.lsp.set_log_level(vim.lsp.log_levels.OFF)
 end
 
 packadd({
@@ -109,9 +97,9 @@ packadd({
   event = 'LspAttach',
   config = function()
     require('lspsaga').setup({
+      ui = { use_nerd = false },
       symbol_in_winbar = {
-        hide_keyword = true,
-        folder_level = 0,
+        enable = false,
       },
       lightbulb = {
         sign = false,
