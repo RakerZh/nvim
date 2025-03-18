@@ -4,10 +4,6 @@ local config = {}
 -- require('modules.ui.eviline')
 -- end
 
-function config.whisky()
-  require('whiskyline').setup()
-end
-
 function config.nordic()
   require('nordic').setup({
     telescope = {

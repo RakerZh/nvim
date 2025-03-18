@@ -20,8 +20,10 @@ packadd({
 
 packadd({
   'RakerZh/whiskyline.nvim',
-  config = conf.whisky,
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  event = { 'BufReadPost */*', 'BufNewFile' },
+  config = function()
+    require('whiskyline').setup()
+  end,
 })
 
 packadd({
@@ -48,6 +50,7 @@ packadd({
 
 packadd({
   'nvimdev/indentmini.nvim',
+  event = 'BufEnter */*',
   config = function()
     require('indentmini').setup({})
   end,
