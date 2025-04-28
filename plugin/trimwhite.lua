@@ -66,4 +66,10 @@ if vim.fn.has('nvim-0.8') == 1 then
     trim_space,
     { nargs = '?', range = '%', addr = 'lines', preview = trim_space }
   )
+
+  vim.api.nvim_create_user_command(
+    'SepLines',
+    'echo "SepLines"',
+    { nargs = '?', range = '%', addr = 'lines' }
+  )
 end

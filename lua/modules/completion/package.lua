@@ -133,6 +133,10 @@ packadd({
   'norcalli/nvim-colorizer.lua',
 })
 
+-- packadd({
+--   'mfussenegger/nvim-jdtls',
+-- })
+
 packadd({
   'hrsh7th/nvim-cmp',
   ft = lsp_fts(),

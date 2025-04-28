@@ -6,6 +6,62 @@ local conf = require('modules.tools.config')
   -- require dap
 }]]
 
+-- packadd(
+--   {
+--   "yetone/avante.nvim",
+--   event = "VeryLazy",
+--   version = false,
+--   opts = {
+--     provider = "openai",
+--     openai = {
+--       endpoint = "https://api.openai.com/v1",
+--       model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
+--       timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
+--       temperature = 0,
+--       max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
+--       --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
+--     },
+--   },
+--   build = "make",
+--   dependencies = {
+--     "nvim-treesitter/nvim-treesitter",
+--     "stevearc/dressing.nvim",
+--     "nvim-lua/plenary.nvim",
+--     "MunifTanjim/nui.nvim",
+--     --- The below dependencies are optional,
+--     "echasnovski/mini.pick", -- for file_selector provider mini.pick
+--     "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
+--     "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
+--     "ibhagwan/fzf-lua", -- for file_selector provider fzf
+--     "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
+--     "zbirenbaum/copilot.lua", -- for providers='copilot'
+--     {
+-- -- support for image pasting
+--       "HakonHarnes/img-clip.nvim",
+--       event = "VeryLazy",
+--       opts = {
+--        -- recommended settings
+--         default = {
+--           embed_image_as_base64 = false,
+--           prompt_for_file_name = false,
+--           drag_and_drop = {
+--             insert_mode = true,
+--           },
+--          -- required for Windows users
+--           use_absolute_path = true,
+--         },
+--       },
+--     },
+--     {
+--      -- Make sure to set this up properly if you have lazy=true
+--       'MeanderingProgrammer/render-markdown.nvim',
+--       opts = {
+--         file_types = { "markdown", "Avante" },
+--       },
+--       ft = { "markdown", "Avante" },
+--     },
+--   },
+-- })
 packadd({
   'nvimdev/dyninput.nvim',
   ft = { 'c', 'go', 'lua', 'rust', 'cpp' },
@@ -13,11 +69,51 @@ packadd({
 })
 
 packadd({
-  'nvim-neorg/neorg',
-  lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
-  version = '*', -- Pin Neorg to the latest stable release
-  config = true,
+  'monaqa/dial.nvim',
+  config = function()
+    local augend = require('dial.augend')
+    require('dial.config').augends:register_group({
+      default = {
+        augend.integer.alias.decimal,
+        augend.integer.alias.hex,
+        augend.date.alias['%Y/%m/%d'],
+      },
+      typescript = {
+        augend.integer.alias.decimal,
+        augend.integer.alias.hex,
+        augend.constant.new({ elements = { 'let', 'const' } }),
+      },
+
+      visual = {
+        augend.integer.alias.decimal,
+        augend.integer.alias.hex,
+        augend.date.alias['%Y/%m/%d'],
+        augend.constant.alias.alpha,
+        augend.constant.alias.Alpha,
+      },
+    })
+
+    -- change augends in VISUAL mode
+  end,
 })
+
+-- packadd({
+--   'MeanderingProgrammer/render-markdown.nvim',
+--  -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+--  -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+--   dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+--   ---@module 'render-markdown'
+--   ---@type render.md.UserConfig
+--   opts = {},
+--   config = function()
+--     require('render-markdown').setup({
+--       heading = {
+--         position = 'inline',
+--         icons = { '󰉫 ', '󰉬 ', '󰉭 ', '󰉮 ', '󰉯 ', '󰉰 ' },
+--       },
+--     })
+--   end,
+-- })
 
 packadd({
   'windwp/nvim-autopairs',
@@ -58,15 +154,44 @@ packadd({ 'jghauser/follow-md-links.nvim' })
 
 -- package({ 'RakerZh/min-preview.nvim' })
 
+-- packadd({
+--   'nvim-neo-tree/neo-tree.nvim',
+--   branch = 'v3.x',
+--   dependencies = {
+--     'nvim-lua/plenary.nvim',
+--     'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+--     'MunifTanjim/nui.nvim',
+--   },
+--   config = conf.neotree,
+-- })
+
 packadd({
-  'nvim-neo-tree/neo-tree.nvim',
-  branch = 'v3.x',
-  dependencies = {
-    'nvim-lua/plenary.nvim',
-    'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
-    'MunifTanjim/nui.nvim',
-  },
-  config = conf.neotree,
+  'stevearc/oil.nvim',
+  ---@module 'oil'
+  ---@type oil.SetupOpts
+  opts = {},
+  -- Optional dependencies
+  -- dependencies = { { 'echasnovski/mini.icons', opts = {} } },
+  dependencies = { 'nvim-tree/nvim-web-devicons' }, -- use if you prefer nvim-web-devicons
+  -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+  lazy = false,
+  config = function()
+    require('oil').setup({
+      columns = { 'icon' },
+      keymaps = {
+        ['q'] = 'actions.close',
+        -- ['<C-h>'] = false,
+        -- ['<C-l>'] = false,
+        -- ['<C-k>'] = false,
+        -- ['<C-j>'] = false,
+        ['<M-h>'] = 'actions.select_split',
+      },
+      win_options = {
+        wrap = true,
+        winblend = 0,
+      },
+    })
+  end,
 })
 
 packadd({

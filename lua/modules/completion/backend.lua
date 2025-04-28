@@ -20,6 +20,14 @@ function M._attach(client, _)
   vim.notify = mynotify
 end
 
+-- lspconfig.jdtls.setup({
+--   cmd = { 'jdtls' },
+--   root_dir = vim.fs.dirname(
+--     vim.fs.find({ '.git', 'mvnw', 'gradlew', 'pom.xml' }, { upward = true })[1]
+--   ),
+--   capabilities = M.capabilities,
+-- })
+
 lspconfig.gopls.setup({
   cmd = { 'gopls', 'serve' },
   on_attach = M._attach,
