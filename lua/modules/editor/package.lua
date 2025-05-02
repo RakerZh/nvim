@@ -28,7 +28,6 @@ packadd({
   },
 })
 
--- Using packer
 packadd({
   'LeonHeidelbach/trailblazer.nvim',
   config = function()

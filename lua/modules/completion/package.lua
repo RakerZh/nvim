@@ -133,9 +133,12 @@ packadd({
   'norcalli/nvim-colorizer.lua',
 })
 
--- packadd({
---   'mfussenegger/nvim-jdtls',
--- })
+packadd({
+  'mfussenegger/nvim-jdtls',
+  dependencies = {
+    'nvim-lua/plenary.nvim',
+  },
+})
 
 packadd({
   'hrsh7th/nvim-cmp',

@@ -43,7 +43,7 @@ function config.nvim_treesitter()
       'c',
       'cpp',
       'rust',
-      'java',
+      -- 'java',
       'zig',
       'lua',
       'go',

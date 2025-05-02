@@ -6,7 +6,6 @@ local opts = keymap.new_opts
 local cmd, cu = keymap.cmd, keymap.cu
 
 nmap({
-  -- packer
   { '<Leader>pu', cmd('Lazy update') },
   { '<Leader>pi', cmd('Lazy install') },
   -- Lsp
