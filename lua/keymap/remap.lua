@@ -29,60 +29,60 @@ nmap({
   -- resize window
   { '<A-[>', cmd('vertical resize -5') },
   { '<A-]>', cmd('vertical resize +5') },
-  { '-', '<CMD>Oil --float<CR>', { desc = 'Open parent directory' } },
-  { '_', '<CMD>Oil . --float <CR>', { desc = 'Open root directory' } },
-  {
-    '<C-a>',
-    function()
-      require('dial.map').manipulate('increment', 'normal')
-    end,
-  },
-  {
-    '<C-x>',
-    function()
-      require('dial.map').manipulate('decrement', 'normal')
-    end,
-  },
-  {
-    'g<C-a>',
-    function()
-      require('dial.map').manipulate('increment', 'gnormal')
-    end,
-  },
-  {
-    'g<C-x>',
-    function()
-      require('dial.map').manipulate('decrement', 'gnormal')
-    end,
-  },
+  { '-', cmd('Oil --float') },
+  { '_', cmd('Oil . --float <CR>') },
+  -- {
+  --   '<C-a>',
+  --   function()
+  --     require('dial.map').manipulate('increment', 'normal')
+  --   end,
+  -- },
+  -- {
+  --   '<C-x>',
+  --   function()
+  --     require('dial.map').manipulate('decrement', 'normal')
+  --   end,
+  -- },
+  -- {
+  --   'g<C-a>',
+  --   function()
+  --     require('dial.map').manipulate('increment', 'gnormal')
+  --   end,
+  -- },
+  -- {
+  --   'g<C-x>',
+  --   function()
+  --     require('dial.map').manipulate('decrement', 'gnormal')
+  --   end,
+  -- },
   -- {"<C-a>", }
 })
 
 vmap({
-  {
-    '<C-a>',
-    function()
-      require('dial.map').manipulate('increment', 'visual')
-    end,
-  },
-  {
-    '<C-x>',
-    function()
-      require('dial.map').manipulate('decrement', 'visual')
-    end,
-  },
-  {
-    'g<C-a>',
-    function()
-      require('dial.map').manipulate('increment', 'gvisual')
-    end,
-  },
-  {
-    'g<C-x>',
-    function()
-      require('dial.map').manipulate('decrement', 'gvisual')
-    end,
-  },
+  -- {
+  --   '<C-a>',
+  --   function()
+  --     require('dial.map').manipulate('increment', 'visual')
+  --   end,
+  -- },
+  -- {
+  --   '<C-x>',
+  --   function()
+  --     require('dial.map').manipulate('decrement', 'visual')
+  --   end,
+  -- },
+  -- {
+  --   'g<C-a>',
+  --   function()
+  --     require('dial.map').manipulate('increment', 'gvisual')
+  --   end,
+  -- },
+  -- {
+  --   'g<C-x>',
+  --   function()
+  --     require('dial.map').manipulate('decrement', 'gvisual')
+  --   end,
+  -- },
 })
 -- insertmode remap
 imap({

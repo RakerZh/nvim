@@ -1,9 +1,11 @@
 local conf = require('modules.editor.config')
 
---[[package{'ibhagwan/fzf-lua',
-  config = conf.fzf_lua,
-  dependencies = {'kyazdani42/nvim-web-devicons'}
-}]]
+packadd({
+  'ibhagwan/fzf-lua',
+  -- config = conf.fzf_lua,
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  opts = {},
+})
 
 packadd({
   'nvimdev/hlsearch.nvim',
@@ -47,13 +49,6 @@ packadd({
     { 'nvim-telescope/telescope-fzy-native.nvim' },
     { 'nvim-treesitter/nvim-treesitter', tag = 'v0.9.2' },
     { 'jvgrootveld/telescope-zoxide' },
-    {
-      'RakerZh/telescope-cheat.nvim',
-      dev = true,
-      dependencies = {
-        'kkharji/sqlite.lua',
-      },
-    },
   },
 })
 

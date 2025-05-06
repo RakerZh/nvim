@@ -68,34 +68,32 @@ packadd({
   config = conf.dyninput,
 })
 
-packadd({
-  'monaqa/dial.nvim',
-  config = function()
-    local augend = require('dial.augend')
-    require('dial.config').augends:register_group({
-      default = {
-        augend.integer.alias.decimal,
-        augend.integer.alias.hex,
-        augend.date.alias['%Y/%m/%d'],
-      },
-      typescript = {
-        augend.integer.alias.decimal,
-        augend.integer.alias.hex,
-        augend.constant.new({ elements = { 'let', 'const' } }),
-      },
+-- packadd({
+--   'monaqa/dial.nvim',
+--   config = function()
+--     local augend = require('dial.augend')
+--     require('dial.config').augends:register_group({
+--       default = {
+--         augend.integer.alias.decimal,
+--         augend.integer.alias.hex,
+--         augend.date.alias['%Y/%m/%d'],
+--       },
+--       typescript = {
+--         augend.integer.alias.decimal,
+--         augend.integer.alias.hex,
+--         augend.constant.new({ elements = { 'let', 'const' } }),
+--       },
 
-      visual = {
-        augend.integer.alias.decimal,
-        augend.integer.alias.hex,
-        augend.date.alias['%Y/%m/%d'],
-        augend.constant.alias.alpha,
-        augend.constant.alias.Alpha,
-      },
-    })
-
-    -- change augends in VISUAL mode
-  end,
-})
+--       visual = {
+--         augend.integer.alias.decimal,
+--         augend.integer.alias.hex,
+--         augend.date.alias['%Y/%m/%d'],
+--         augend.constant.alias.alpha,
+--         augend.constant.alias.Alpha,
+--       },
+--     })
+--   end,
+-- })
 
 -- packadd({
 --   'MeanderingProgrammer/render-markdown.nvim',
@@ -154,22 +152,19 @@ packadd({ 'jghauser/follow-md-links.nvim' })
 
 -- package({ 'RakerZh/min-preview.nvim' })
 
-packadd({
-  'nvim-neo-tree/neo-tree.nvim',
-  branch = 'v3.x',
-  dependencies = {
-    'nvim-lua/plenary.nvim',
-    'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
-    'MunifTanjim/nui.nvim',
-    -- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
-  },
-  lazy = false, -- neo-tree will lazily load itself
-  ---@module "neo-tree"
-  ---@type neotree.Config?
-  opts = {
-    -- fill any relevant options here
-  },
-})
+-- packadd({
+--   'nvim-neo-tree/neo-tree.nvim',
+--   branch = 'main',
+--   dependencies = {
+--     'nvim-lua/plenary.nvim',
+--     'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+--     'MunifTanjim/nui.nvim',
+--   },
+--   ---@module "neo-tree"
+--   ---@type neotree.Config?
+--   opts = {
+--   },
+-- })
 
 packadd({
   'stevearc/oil.nvim',
@@ -249,4 +244,4 @@ packadd({
   end,
 })
 
-packadd({ 'gennaro-tedesco/nvim-peekup' })
+-- packadd({ 'gennaro-tedesco/nvim-peekup' })

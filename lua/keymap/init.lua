@@ -38,7 +38,7 @@ nmap({
   --{'<Leader>kh',cmd('NvimTreeResize -10'),opts(noremap,silent)},
   --{'<Leader>kl',cmd('NvimTreeResize +2'),opts(noremap,silent)},
   { '<Leader>d', cmd('DiffviewOpen') },
-  { '<Leader>e', cmd('Neotree toggle') },
+  { '<Leader>e', cmd('Oil --float') },
 
   -- Telescope
   { '<Leader>tb', cmd('Telescope buffers') },

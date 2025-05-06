@@ -30,7 +30,7 @@ function config.telescope()
     },
   })
   require('telescope').load_extension('dotfiles')
-  require('telescope').load_extension('cheat')
+  -- require('telescope').load_extension('cheat')
   -- require('telescope').load_extension('gosource')
   -- require('telescope').load_extension('file_browser')
 end
@@ -85,16 +85,6 @@ function config.nvim_treesitter()
     additional_vim_regex_highlighting = false,
   })
 
-  --set indent for jsx tsx
-  vim.api.nvim_create_autocmd('FileType', {
-    pattern = { 'javascriptreact', 'typescriptreact' },
-    callback = function(opt)
-      if vim.bo[opt.buf].filetype == 'lua' and api.nvim_buf_get_name(opt.buf):find('%_spec') then
-        vim.treesitter.stop(opt.buf)
-      end
-      vim.bo[opt.buf].indentexpr = 'nvim_treesitter#indent()'
-    end,
-  })
 end
 
 return config

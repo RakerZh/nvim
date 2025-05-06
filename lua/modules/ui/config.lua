@@ -1,9 +1,5 @@
 local config = {}
 
--- function config.galaxyline()
--- require('modules.ui.eviline')
--- end
-
 function config.nordic()
   require('nordic').setup({
     telescope = {
@@ -31,7 +27,7 @@ function config.dashboard()
   -- db.preview_file_path = home .. '/.config/nvim/static/neovim.cat'
   -- db.preview_file_height = 12
   -- db.preview_file_width = 80
-  vim.cmd('highlight DashboardCenter guifg=#9fb2ca')
+  -- vim.cmd('highlight DashboardCenter guifg=#9fb2ca')
   -- vim.cmd('highlight DashboardHeader guifg=#b0465d')
   db.setup({
     theme = 'hyper',

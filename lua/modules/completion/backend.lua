@@ -7,18 +7,18 @@ M.capabilities = require('cmp_nvim_lsp').default_capabilities()
 --   vim.lsp.protocol.make_client_capabilities(),
 -- )
 
-function M._attach(client, _)
-  vim.opt.omnifunc = 'v:lua.vim.lsp.omnifunc'
-  client.server_capabilities.semanticTokensProvider = nil
-  local orignal = vim.notify
-  local mynotify = function(msg, level, opts)
-    if msg == 'No code actions available' or msg:find('overly') then
-      return
-    end
-    orignal(msg, level, opts)
-  end
-  vim.notify = mynotify
-end
+-- function M._attach(client, _)
+--   vim.opt.omnifunc = 'v:lua.vim.lsp.omnifunc'
+--   client.server_capabilities.semanticTokensProvider = nil
+--   local orignal = vim.notify
+--   local mynotify = function(msg, level, opts)
+--     if msg == 'No code actions available' or msg:find('overly') then
+--       return
+--     end
+--     orignal(msg, level, opts)
+--   end
+--   vim.notify = mynotify
+-- end
 
 -- lspconfig.jdtls.setup({
 --   cmd = { 'jdtls' },
@@ -30,7 +30,7 @@ end
 
 lspconfig.gopls.setup({
   cmd = { 'gopls', 'serve' },
-  on_attach = M._attach,
+  -- on_attach = M._attach,
   capabilities = M.capabilities,
   init_options = {
     usePlaceholders = true,
@@ -78,7 +78,7 @@ lspconfig.lua_ls.setup({
 -- })
 
 lspconfig.clangd.setup({
-  on_attach = M._attach,
+  -- on_attach = M._attach,
   capabilities = M.capabilities,
   cmd = {
     'clangd',
@@ -127,7 +127,7 @@ end
 
 for _, server in ipairs(servers) do
   lspconfig[server].setup({
-    on_attach = M._attach,
+    -- on_attach = M._attach,
     capabilities = M.capabilities,
   })
 end

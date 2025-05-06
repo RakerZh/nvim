@@ -72,27 +72,6 @@ packadd({
   },
 })
 
--- package({
---   'zbirenbaum/copilot.lua',
---   ft = lsp_fts(),
---   cmd = 'Copilot',
---   event = 'InsertEnter',
---   config = function()
---     require('copilot').setup({
---       suggestion = { enabled = false },
---       panel = { enabled = false },
---     })
---   end,
--- })
-
--- package({
---   'zbirenbaum/copilot-cmp',
---   after = { 'copilot.lua' },
---   config = function()
---     require('copilot_cmp').setup()
---   end,
--- })
-
 packadd({
   'nvimdev/lspsaga.nvim',
   event = 'LspAttach',
@@ -112,17 +91,6 @@ packadd({
   end,
 })
 
--- packadd({
---   'nvimdev/epo.nvim',
---   event = 'LspAttach',
---   opts = {
---     signature = false,
---     kind_format = function(k)
---       return k:lower()
---     end,
---   },
--- })
-
 packadd({
   'L3MON4D3/LuaSnip',
   version = 'v2.*', -- Replace <CurrentMajor> by the latest released major (first number of latest release)
@@ -131,13 +99,6 @@ packadd({
 
 packadd({
   'norcalli/nvim-colorizer.lua',
-})
-
-packadd({
-  'mfussenegger/nvim-jdtls',
-  dependencies = {
-    'nvim-lua/plenary.nvim',
-  },
 })
 
 packadd({

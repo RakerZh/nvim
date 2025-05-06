@@ -74,9 +74,19 @@ end
 
 function config.guard()
   local ft = require('guard.filetype')
-  ft('c'):fmt('clang-format'):lint('clang-tidy')
+  ft('c'):fmt({
+    cmd = 'clang-format',
+    stdin = true,
+  }):lint('clang-tidy')
+
   ft('cpp'):fmt('clang-format'):lint('clang-tidy')
-  ft('lua'):fmt('stylua')
+  ft('lua'):fmt({
+    cmd = 'stylua',
+    args = { '-' },
+    stdin = true,
+    ignore_patterns = 'function.*_spec%.lua',
+    find = '.stylua.toml',
+  })
   ft('go'):fmt('lsp'):append('golines') --:lint('golangci-lint')
   ft('rust'):fmt('rustfmt')
   ft('typescript', 'javascript', 'typescriptreact', 'javascriptreact'):fmt('prettier')
