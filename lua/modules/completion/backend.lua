@@ -82,8 +82,8 @@ lspconfig.clangd.setup({
   capabilities = M.capabilities,
   cmd = {
     'clangd',
-    '--background-index',
-    '--header-insertion=never',
+    -- '--background-index',
+    -- '--header-insertion=never',
   },
 })
 

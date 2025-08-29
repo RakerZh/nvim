@@ -26,6 +26,17 @@ nmap({
   { '<C-j>', '<C-w>j' },
   { '<C-k>', '<C-w>k' },
   { '<esc>', cmd('noh') },
+  -- {
+  --   '<Leader>ju',
+  --   cmd(
+  --     '!osascript -e tell application "Arc" to activatetell application "System Events" key code 121 end tell'
+  --   ),
+  -- },
+
+  -- {
+  --   '<Leader>ak',
+  --   '<Cmd>silent !osascript -e \'tell application "Arc" to do JavaScript "window.scrollBy(0, -window.innerHeight)" in document 1\'<CR>',
+  -- },
   -- resize window
   { '<A-[>', cmd('vertical resize -5') },
   { '<A-]>', cmd('vertical resize +5') },

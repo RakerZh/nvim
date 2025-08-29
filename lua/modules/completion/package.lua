@@ -12,7 +12,7 @@ local function lsp_fts(type)
     'rust',
     'c',
     'cpp',
-    'java',
+    -- 'java',
     'zig',
     'python',
     'markdown',

@@ -21,8 +21,9 @@ packadd({
 packadd({
   'RakerZh/whiskyline.nvim',
   event = { 'BufReadPost */*', 'BufNewFile' },
+  dev = true,
   config = function()
-    require('modeline').setup()
+    require('whiskyline').setup()
   end,
 })
 
