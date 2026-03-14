@@ -57,7 +57,7 @@ packadd({
     { 'nvim-lua/popup.nvim' },
     { 'nvim-lua/plenary.nvim' },
     { 'nvim-telescope/telescope-fzy-native.nvim' },
-    { 'nvim-treesitter/nvim-treesitter', tag = 'v0.9.2' },
+    { 'nvim-treesitter/nvim-treesitter' },
     { 'jvgrootveld/telescope-zoxide' },
   },
 })

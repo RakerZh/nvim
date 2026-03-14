@@ -59,3 +59,4 @@ You can also explore [dope](https://github.com/nvimdev/dope) for config and [nvi
 - [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [nvim-telescope/telescope-fzy-native.nvim](https://github.com/nvim-telescope/telescope-fzy-native.nvim)
 - [ii14/emmylua-nvim](https://github.com/ii14/emmylua-nvim)
+

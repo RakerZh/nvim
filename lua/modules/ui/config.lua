@@ -4,7 +4,7 @@ function config.nordic()
   require('nordic').setup({
     telescope = {
       -- Available styles: `classic`, `flat`.
-      style = 'classic',
+      style = 'flat',
     },
   })
   require('nordic').load()
@@ -93,6 +93,7 @@ function config.todo()
     -- PASSED: pass PASS
     -- FAILED: FAIL fail
     -- Link: link Ref link
+    signs = true,
     keywords = {
       FIX = { icon = ' ', color = '#cc3b1d', alt = { 'FIXME', 'BUG', 'FIXIT', 'ISSUE', 'fix' } },
       PERF = { icon = ' ', color = '#64a9ab', alt = { 'OPTIM', 'PERFORMANCE', 'OPTIMIZE' } },
@@ -101,6 +102,9 @@ function config.todo()
       PASSED = { icon = ' ', color = '#6da063', alt = { 'PASS', 'pass' } },
       FAILED = { icon = ' ', color = '#d45d44', alt = { 'FAIL', 'fail' } },
       Ref = { icon = ' ', color = '#5a636b', alt = { 'Link', 'LINK', 'REF', 'link' } },
+    },
+    highlight = {
+      comments_only = false,
     },
   })
 end
