@@ -90,6 +90,8 @@ function config.guard()
   ft('go'):fmt('lsp'):append('golines') --:lint('golangci-lint')
   ft('rust'):fmt('rustfmt')
   ft('typescript', 'javascript', 'typescriptreact', 'javascriptreact'):fmt('prettier')
+  ft('python'):fmt({ cmd = 'ruff', args = { 'format', '-' }, stdin = true })
+  ft('zig'):fmt('lsp')
 
   vim.api.nvim_create_autocmd('User', {
     pattern = 'GuardFmt',

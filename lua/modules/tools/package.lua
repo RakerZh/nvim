@@ -76,9 +76,6 @@ packadd({
     'nvim-lua/plenary.nvim',
     'MunifTanjim/nui.nvim',
   },
-  opts = {
-    lang = 'python',
-  },
 })
 
 -- packadd({
@@ -115,7 +112,6 @@ packadd({
   dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
   ---@module 'render-markdown'
   ---@type render.md.UserConfig
-  opts = {},
   config = function()
     require('render-markdown').setup({
       heading = {
@@ -156,10 +152,10 @@ packadd({
 
 packadd({ 'nvimdev/coman.nvim', event = 'BufRead', config = conf.coman })
 
-packadd({
-  'akinsho/git-conflict.nvim',
-  config = true,
-})
+-- packadd({
+--   'akinsho/git-conflict.nvim',
+--   config = true,
+-- })
 
 packadd({ 'jghauser/follow-md-links.nvim' })
 
@@ -210,7 +206,18 @@ packadd({
 
 packadd({
   'nvimdev/guard.nvim',
-  ft = { 'c', 'cpp', 'rust', 'lua', 'go', 'typescript', 'javascrip', 'javascriptreact' },
+  ft = {
+    'c',
+    'cpp',
+    'zig',
+    'rust',
+    'lua',
+    'go',
+    'typescript',
+    'javascript',
+    'javascriptreact',
+    'python',
+  },
   config = conf.guard,
   dependencies = {
     'nvimdev/guard-collection',
@@ -233,7 +240,6 @@ packadd({
 
 packadd({
   'cshuaimin/ssr.nvim',
-  module = 'ssr',
   config = function()
     require('ssr').setup({
       border = 'rounded',

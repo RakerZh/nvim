@@ -31,32 +31,31 @@ local function lsp_fts(type)
   return fts[type]
 end
 
-local function diag_config()
-  local signs = {
-    Error = ' ',
-    Warn = ' ',
-    Info = ' ',
-    Hint = ' ',
-  }
-  for type, icon in pairs(signs) do
-    local hl = 'DiagnosticSign' .. type
-    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-  end
+-- local function diag_config()
+--   local signs = {
+--     Error = ' ',
+--     Warn = ' ',
+--     Info = ' ',
+--     Hint = ' ',
+--   }
+--   for type, icon in pairs(signs) do
+--     local hl = 'DiagnosticSign' .. type
+--     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+--   end
 
-  vim.diagnostic.config({
-    signs = true,
-    severity_sort = true,
-    virtual_text = true,
-  })
+--   vim.diagnostic.config({
+--     signs = true,
+--     severity_sort = true,
+--     virtual_text = true,
+--   })
 
-  vim.lsp.set_log_level(vim.lsp.log_levels.OFF)
-end
+--   vim.lsp.set_log_level(vim.lsp.log_levels.OFF)
+-- end
 
 packadd({
   'neovim/nvim-lspconfig',
   ft = lsp_fts(),
   config = function()
-    diag_config()
     require('modules.completion.backend')
     require('modules.completion.frontend')
   end,
@@ -97,9 +96,12 @@ packadd({
   build = 'make install_jsregexp',
 })
 
-packadd({
-  'norcalli/nvim-colorizer.lua',
-})
+-- packadd({
+--   'norcalli/nvim-colorizer.lua',
+--   config = function()
+--     require('colorizer').setup()
+--   end,
+-- })
 
 packadd({
   'hrsh7th/nvim-cmp',

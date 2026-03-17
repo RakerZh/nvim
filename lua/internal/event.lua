@@ -48,6 +48,7 @@ au('UIEnter', {
   callback = function()
     vim.schedule(function()
       vim.lsp.enable({
+        'jsonls',
         'lua_ls',
         'gopls',
         -- 'emmylua_ls',
@@ -56,6 +57,7 @@ au('UIEnter', {
         'rust_analyzer',
         'basedpyright',
         -- 'ruff',
+        'eslint',
         'zls',
         'cmake',
         'bashls',
@@ -102,7 +104,7 @@ au('UIEnter', {
 -- disable default syntax for large file.
 au('Filetype', {
   group = group,
-  pattern = '*.c,*.cpp,*.lua,*.go,*.rs,*.py,*.ts,*.tsx',
+  pattern = { 'c', 'cpp', 'lua', 'go', 'rust', 'python', 'typescript', 'typescriptreact' },
   callback = function()
     vim.cmd('syntax off')
   end,

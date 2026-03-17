@@ -6,7 +6,6 @@ local opts = keymap.new_opts
 local cmd = keymap.cmd
 local ls = require('modules.completion.luasnip')
 
-local a = true
 -- noremal remap
 nmap({
   -- close buffer
@@ -26,75 +25,12 @@ nmap({
   { '<C-j>', '<C-w>j' },
   { '<C-k>', '<C-w>k' },
   { '<esc>', cmd('noh') },
-  -- {
-  --   '<Leader>ju',
-  --   cmd(
-  --     '!osascript -e tell application "Arc" to activatetell application "System Events" key code 121 end tell'
-  --   ),
-  -- },
-
-  -- {
-  --   '<Leader>ak',
-  --   '<Cmd>silent !osascript -e \'tell application "Arc" to do JavaScript "window.scrollBy(0, -window.innerHeight)" in document 1\'<CR>',
-  -- },
-  -- resize window
   { '<A-[>', cmd('vertical resize -5') },
   { '<A-]>', cmd('vertical resize +5') },
   { '-', cmd('Oil --float') },
   { '_', cmd('Oil . --float <CR>') },
-  -- {
-  --   '<C-a>',
-  --   function()
-  --     require('dial.map').manipulate('increment', 'normal')
-  --   end,
-  -- },
-  -- {
-  --   '<C-x>',
-  --   function()
-  --     require('dial.map').manipulate('decrement', 'normal')
-  --   end,
-  -- },
-  -- {
-  --   'g<C-a>',
-  --   function()
-  --     require('dial.map').manipulate('increment', 'gnormal')
-  --   end,
-  -- },
-  -- {
-  --   'g<C-x>',
-  --   function()
-  --     require('dial.map').manipulate('decrement', 'gnormal')
-  --   end,
-  -- },
-  -- {"<C-a>", }
 })
 
-vmap({
-  -- {
-  --   '<C-a>',
-  --   function()
-  --     require('dial.map').manipulate('increment', 'visual')
-  --   end,
-  -- },
-  -- {
-  --   '<C-x>',
-  --   function()
-  --     require('dial.map').manipulate('decrement', 'visual')
-  --   end,
-  -- },
-  -- {
-  --   'g<C-a>',
-  --   function()
-  --     require('dial.map').manipulate('increment', 'gvisual')
-  --   end,
-  -- },
-  -- {
-  --   'g<C-x>',
-  --   function()
-  --     require('dial.map').manipulate('decrement', 'gvisual')
-  --   end,
-  -- },
-})
 -- insertmode remap
 imap({
   { '<C-w>', '<C-[>diwa' },
@@ -118,8 +54,6 @@ imap({
   {
     '<TAB>',
     function()
-      -- if vim.fn.pumvisible() == 1 then
-      -- return '<C-n>'
       if ls.locally_jumpable(1) then
         return ls.jump(1)
       else
@@ -131,8 +65,6 @@ imap({
   {
     '<S-TAB>',
     function()
-      -- if vim.fn.pumvisible() == 1 then
-      -- return '<C-p>'
       if ls.locally_jumpable(-1) then
         return ls.jump(-1)
       else
@@ -145,7 +77,6 @@ imap({
 
 tmap({ '<Esc>', [[<C-\><C-n>]] })
 
--- commandline remap
 cmap({
   { '<C-h>', '<Left>' },
   { '<C-l>', '<Right>' },
@@ -154,12 +85,3 @@ cmap({
   { '<C-d>', '<Del>' },
   { '<C-b>', '<BS>' },
 })
-
-vim.keymap.set('i', '<cr>', function()
-  if vim.fn.pumvisible() == 1 then
-    return '<C-y>'
-  end
-  return require('nvim-autopairs').autopairs_cr()
-end, { expr = true, noremap = true })
-
--- tmap({ '<Esc>', [[<C-\><C-n>]] })

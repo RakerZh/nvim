@@ -10,12 +10,12 @@ nmap({
   { '<Leader>pi', cmd('Lazy install') },
   -- Lsp
   { '<Leader>li', cmd('LspInfo') },
-  { '<Leader>ll', cmd('LspLog') },
+  -- { '<Leader>ll', cmd('LspLog') },
   { '<Leader>lr', cmd('LspRestart') },
   -- Lspsaga
-  { '[e', cmd('Lspsaga diagnostic_jump_next') },
-  { ']e', cmd('Lspsaga diagnostic_jump_prev') },
-  { '[c', cmd('lspsaga show_cursor_diagnostics') },
+  { ']e', cmd('Lspsaga diagnostic_jump_next') },
+  { '[e', cmd('Lspsaga diagnostic_jump_prev') },
+  { '[c', cmd('Lspsaga show_cursor_diagnostics') },
   { 'K', cmd('Lspsaga hover_doc') },
   { 'ga', cmd('Lspsaga code_action') },
   { 'gd', cmd('Lspsaga peek_definition') },
@@ -29,7 +29,7 @@ nmap({
   { '<Leader>o', cmd('Lspsaga outline') },
   -- dashboard create file
   { '<Leader>n', cmd('DashboardNewFile') },
-  { '<Leader>ll', cmd('Lspsaga show_line_diagnostics') },
+  -- { '<Leader>ld', cmd('Lspsaga show_line_diagnostics') },
   { '<Leader>ci', cmd('Lspsaga incoming_calls') },
   { '<Leader>co', cmd('Lspsaga outgoing_calls') },
   { '<Leader>ss', cmd('SessionSave') },
@@ -81,28 +81,10 @@ nmap({ 'gcc', '<cmd>ComComment<cr>' })
 xmap({ 'gcc', ':ComComment<CR>' })
 nmap({ 'gcj', '<cmd>ComAnnotation<Cr>' })
 
--- Lspsaga floaterminal
-nmap({ '<A-d>', cmd('Lspsaga open_floaterm') })
-
 vim.keymap.set({ 'n', 't' }, '<A-d>', cmd('Lspsaga term_toggle'))
 vim.keymap.set({ 'n' }, '<Leader>g', cmd('Lspsaga term_toggle lazygit'))
 vim.keymap.set({ 'n', 'x' }, '<leader>sr', function()
   require('ssr').open()
 end)
--- For using enter as completion, may conflict with some autopair plugin
-vim.keymap.set('i', '<cr>', function()
-  if vim.fn.pumvisible() == 1 then
-    return '<C-y>'
-  end
-  return '<cr>'
-end, { expr = true, noremap = true })
-
--- nvim-autopair compatibility
-vim.keymap.set('i', '<cr>', function()
-  if vim.fn.pumvisible() == 1 then
-    return '<C-y>'
-  end
-  return require('nvim-autopairs').autopairs_cr()
-end, { expr = true, noremap = true })
 
 xmap({ 'ga', cmd('Lspsaga code_action') })

@@ -1,13 +1,15 @@
 -- local lspconfig = require('lspconfig')
 -- local lspconfig = vim.lsp.config
-local _attach = require('modules.completion.backend')._attach
-local capabilities = require('modules.completion.backend').capabilities
+-- local capabilities = require('modules.completion.backend').capabilities
 
 vim.lsp.config('jsonls', {
-  cmd = { 'vscode-json-languageserver' },
-  on_attach = _attach,
+  cmd = { 'vscode-json-language-server', '--stdio' },
+  filetypes = { 'json', 'jsonc' },
 })
 
+vim.lsp.config('eslint', {
+  filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'vue' },
+})
 -- lspconfig.jsonls.setup({
 --   cmd = { 'vscode-json-languageserver' },
 --   on_attach = _attach,

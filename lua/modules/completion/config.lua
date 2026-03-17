@@ -99,14 +99,4 @@ function config.nvim_cmp()
   })
 end
 
-function config.lua_snip()
-  local ls = require('luasnip')
-  ls.config.set_config({
-    updateevents = 'TextChanged',
-  })
-  require('luasnip.loaders.from_vscode').lazy_load({
-    paths = { './snippets/' },
-  })
-end
-
 return config

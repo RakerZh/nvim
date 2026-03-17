@@ -2,7 +2,7 @@ local conf = require('modules.editor.config')
 
 packadd({
   'ibhagwan/fzf-lua',
-  -- config = conf.fzf_lua,
+  cmd = { 'FzfLua' },
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   opts = {},
 })
@@ -42,10 +42,9 @@ packadd({
 
 packadd({
   'LeonHeidelbach/trailblazer.nvim',
+  keys = { '<A-l>', '<A-b>' },
   config = function()
-    require('trailblazer').setup({
-      -- your custom config goes here
-    })
+    require('trailblazer').setup({})
   end,
 })
 
@@ -54,39 +53,25 @@ packadd({
   cmd = 'Telescope',
   config = conf.telescope,
   dependencies = {
-    { 'nvim-lua/popup.nvim' },
     { 'nvim-lua/plenary.nvim' },
     { 'nvim-telescope/telescope-fzy-native.nvim' },
-    { 'nvim-treesitter/nvim-treesitter' },
     { 'jvgrootveld/telescope-zoxide' },
   },
 })
 
 packadd({
   'nvim-treesitter/nvim-treesitter',
-  event = 'BufRead',
-  run = ':TSUpdate',
+  branch = 'main',
+  build = ':TSUpdate',
+  lazy = false,
   config = conf.nvim_treesitter,
 })
 
 packadd({
   'nvim-treesitter/nvim-treesitter-textobjects',
-  ft = { 'c', 'rust', 'go', 'lua' },
-  -- config = function()
-  --   vim.defer_fn(function()
-  --     require('nvim-treesitter.configs').setup({
-  --       textobjects = {
-  --         select = {
-  --           enable = true,
-  --           keymaps = {
-  --             ['af'] = '@function.outer',
-  --             ['if'] = '@function.inner',
-  --             ['ac'] = '@class.outer',
-  --             ['ic'] = { query = '@class.inner' },
-  --           },
-  --         },
-  --       },
-  --     })
-  --   end, 0)
-  -- end,
+  branch = 'main',
+  config = conf.nvim_treesitter_textobjects,
+  dependencies = {
+    'nvim-treesitter/nvim-treesitter',
+  },
 })

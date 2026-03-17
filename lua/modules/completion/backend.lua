@@ -133,12 +133,12 @@ vim.lsp.config('rust_analyzer', {
 --   },
 -- })
 
-local servers = {
-  'dockerls',
-  'pyright',
-  'bashls',
-  'zls',
-}
+-- local servers = {
+--   'dockerls',
+--   'pyright',
+--   'bashls',
+--   'zls',
+-- }
 
 -- for _, method in ipairs({ 'textDocument/diagnostic', 'workspace/diagnostic' }) do
 --   local default_diagnostic_handler = vim.lsp.handlers[method]
