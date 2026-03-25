@@ -12,10 +12,6 @@ require('prosesitter'):setup()({
       lint_target = 'both',
       disabled = false,
     },
-    tex = {
-      lint_target = 'strings',
-      disabled = false,
-    },
     sh = {
       lint_target = 'comments',
     },

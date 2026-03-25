@@ -62,7 +62,6 @@ au('UIEnter', {
         'cmake',
         'bashls',
         'dockerls',
-        'texlab',
         -- 'tsls',
       })
 

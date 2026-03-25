@@ -16,7 +16,6 @@ local function lsp_fts(type)
     'zig',
     'python',
     'markdown',
-    'tex',
   }
   fts.frontend = {
     'javascript',

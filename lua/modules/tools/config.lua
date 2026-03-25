@@ -170,32 +170,4 @@ function config.dyninput()
   })
 end
 
-function config.vimtex()
-  vim.g.tex_flavor = 'latex'         -- treat .tex as LaTeX not plain TeX
-  vim.g.vimtex_view_method = 'skim'
-  vim.g.vimtex_view_skim_activate = 1
-  vim.g.vimtex_compiler_method = 'latexmk'
-  vim.g.vimtex_compiler_latexmk = {
-    options = {
-      '-pdf',
-      '-shell-escape',
-      '-verbose',
-      '-file-line-error',
-      '-synctex=1',
-      '-interaction=nonstopmode',
-    },
-  }
-  vim.g.vimtex_quickfix_mode = 0     -- don't auto-open quickfix on warning
-  -- Start Neovim with a named server for nvr inverse search
-  if vim.fn.serverlist()[1] == nil then
-    vim.fn.serverstart('/tmp/nvim.sock')
-  end
-end
-
-function config.zotcite()
-  vim.g.zotcite_filetypes = { 'tex', 'markdown' }
-  -- zotcite reads from Zotero's SQLite DB directly; set data dir if non-default:
-  -- vim.g.zotero_data = vim.fn.expand('~/Zotero')
-end
-
 return config

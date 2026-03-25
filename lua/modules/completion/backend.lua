@@ -112,30 +112,6 @@ vim.lsp.config('rust_analyzer', {
   },
 })
 
-vim.lsp.config('texlab', {
-  cmd = { 'texlab' },
-  filetypes = { 'tex', 'plaintex', 'bib' },
-  capabilities = M.capabilities,
-  settings = {
-    texlab = {
-      build = {
-        executable = 'latexmk',
-        args = { '-pdf', '-interaction=nonstopmode', '-synctex=1', '%f' },
-        onSave = false,              -- vimtex handles compilation
-        forwardSearchAfter = false,
-      },
-      forwardSearch = {
-        executable = 'displayline',  -- Skim CLI binary
-        args = { '-reuse', '-activate', '%l', '%p', '%f' },
-      },
-      chktex = {
-        onOpenAndSave = true,
-        onEdit = false,
-      },
-      diagnosticsDelay = 300,
-    },
-  },
-})
 --
 -- lspconfig.rust_analyzer.setup({
 --   settings = {
