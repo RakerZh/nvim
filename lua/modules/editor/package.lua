@@ -68,6 +68,12 @@ packadd({
 })
 
 packadd({
+  'lervag/vimtex',
+  ft = { 'tex', 'bib' },
+  config = conf.vimtex,
+})
+
+packadd({
   'nvim-treesitter/nvim-treesitter-textobjects',
   branch = 'main',
   config = conf.nvim_treesitter_textobjects,

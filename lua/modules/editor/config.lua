@@ -102,4 +102,27 @@ function config.nvim_treesitter_textobjects()
   end)
 end
 
+function config.vimtex()
+  vim.g.vimtex_view_method = 'skim'
+  vim.g.vimtex_compiler_method = 'latexmk'
+  vim.g.vimtex_compiler_latexmk = {
+    options = {
+      '-shell-escape',
+      '-synctex=1',
+      '-interaction=nonstopmode',
+    },
+    engines = {
+      _ = '-pdf',
+      pdflatex = '-pdf',
+      lualatex = '-lualatex',
+      xelatex = '-xelatex',
+    },
+  }
+  -- Default engine is pdflatex. Override per-project with modeline:
+  --   % !TEX program = xelatex
+  --   % !TEX program = lualatex
+  -- Or set a global default engine:
+  -- vim.g.vimtex_compiler_latexmk_engines = { ['_'] = '-xelatex' }
+end
+
 return config
