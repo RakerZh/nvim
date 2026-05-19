@@ -50,6 +50,11 @@ packadd({
 })
 
 packadd({
+  'brenoprata10/nvim-highlight-colors',
+  config = conf.highlight_colors,
+})
+
+packadd({
   'nvimdev/indentmini.nvim',
   event = 'BufEnter */*',
   config = function()

@@ -74,6 +74,12 @@ packadd({
 })
 
 packadd({
+  'mrjones2014/smart-splits.nvim',
+  lazy = false,
+  config = conf.smart_splits,
+})
+
+packadd({
   'nvim-treesitter/nvim-treesitter-textobjects',
   branch = 'main',
   config = conf.nvim_treesitter_textobjects,

@@ -113,4 +113,11 @@ function config.bufferline()
   require('bufferline').setup({})
 end
 
+function config.highlight_colors()
+  require('nvim-highlight-colors').setup({
+    enable_named_colors = true,
+    enable_tailwind = true,
+  })
+end
+
 return config
