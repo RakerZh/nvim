@@ -3,7 +3,7 @@ local config = {}
 function config.telescope()
   require('telescope').setup({
     defaults = {
-      file_ignore_patterns = { 'build' },
+      file_ignore_patterns = { '%.git/', '%.log$', 'node_modules/', 'build/', '%.DS_Store' },
       prompt_prefix = '  ',
       selection_caret = ' ',
       layout_strategy = 'horizontal',
@@ -15,6 +15,12 @@ function config.telescope()
         -- vertical = { mirror = false },
       },
       sorting_strategy = 'ascending',
+    },
+    pickers = {
+      find_files = {
+        hidden = true,
+        no_ignore = true,
+      },
     },
     extensions = {
       fzy_native = {
