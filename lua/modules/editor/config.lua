@@ -3,7 +3,7 @@ local config = {}
 function config.telescope()
   require('telescope').setup({
     defaults = {
-      file_ignore_patterns = { '%.git/', '%.log$', 'node_modules/', 'build/', '%.DS_Store' },
+      file_ignore_patterns = { '%.git/', '%.DS_Store' },
       prompt_prefix = '  ',
       selection_caret = ' ',
       layout_strategy = 'horizontal',
@@ -20,6 +20,10 @@ function config.telescope()
       find_files = {
         hidden = true,
         no_ignore = true,
+        file_ignore_patterns = { 'node_modules/', '%.git/', '%.DS_Store', 'dist/', 'build/' },
+      },
+      live_grep = {
+        additional_args = { '--hidden', '--no-ignore' },
       },
     },
     extensions = {
